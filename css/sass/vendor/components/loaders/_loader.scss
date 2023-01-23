@@ -1,0 +1,13 @@
+.loader {
+	display:block;
+	width: $loader-width;
+	height: $loader-height;
+	border: 3px solid $loader-bg;
+	border-radius: 15px;
+	background-color: transparent !important;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.0);
+	animation-name: rotateAnimation;
+	animation-duration: 1s;
+	animation-delay: 0.2s;
+	animation-iteration-count: infinite;
+}

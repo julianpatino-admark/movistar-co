@@ -1,0 +1,86 @@
+p,
+a,
+span,
+li,
+label {
+
+    @if($font-custom){
+        font-family: map_get($font-family-brand, regular);
+    }@else{
+        font-family: $font-family-primary;
+        font-weight: map_get($font-weight, regular);
+    }
+
+    color: $font-color-primary;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @if($font-custom){
+        font-family: map_get($font-family-brand, bold);
+    }@else{
+        font-family: $font-family-primary;
+        font-weight: map_get($font-weight, medium);
+    }
+
+    color: $font-color-primary;
+}
+
+a {
+    color: $font-color-accent;
+
+    &:hover {
+        color: darken($font-color-accent, 25%);
+    }
+}
+
+
+
+// Titles, Subtitles, emphasis
+.title-section {
+
+    font-size: map_get($title-font-size, xs);
+
+    @if $font-custom{
+
+        font-family: $font-bold;
+
+    } @else{
+
+        font-weight: map_get($font-weight, 'bold');
+
+    }
+
+}
+
+.subtitle-section {
+    font-size: map_get($subtitle-font-size, xs);
+
+    @if $font-custom{
+
+        font-family: $font-bold;
+
+    } @else{
+
+        font-weight: map_get($font-weight, 'medium');
+
+    }
+
+}
+
+@include media-breakpoint-up(lg) {
+
+    .title-section {
+
+        font-size: map_get($title-font-size, lg);
+    }
+
+    .subtitle-section {
+        font-size: map_get($subtitle-font-size, lg);
+
+    }
+}

@@ -1,0 +1,37 @@
+{
+	"name": "gulp-landings",
+	"version": "1.0.0",
+	"description": "Dependencias gulp landing",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"dependencies": {
+		"admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.14"
+	},
+	"devDependencies": {
+		"axios": "^1.1.2",
+		"laravel-vite-plugin": "^0.6.0",
+		"lodash": "^4.17.19",
+		"postcss": "^8.1.14",
+		"vite": "^3.0.0",
+		"@babel/core": "^7.16.0",
+		"@babel/plugin-proposal-class-properties": "^7.16.0",
+		"@babel/plugin-proposal-decorators": "^7.16.4",
+		"@babel/plugin-transform-arrow-functions": "^7.16.0",
+		"@babel/plugin-transform-runtime": "^7.16.4",
+		"@babel/preset-env": "^7.16.4",
+		"babel-loader": "^8.2.3",
+		"gulp-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-gulp-landings.git#3.1.1",
+		"eslint": "^8.25.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.7.1",
+		"whatwg-fetch": "^3.6.2"
+	},
+	"author": "Admark B12",
+	"license": "ISC"
+}

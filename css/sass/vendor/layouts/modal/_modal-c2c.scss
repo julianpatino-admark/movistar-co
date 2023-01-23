@@ -1,0 +1,27 @@
+.modal-c2c{
+
+	.form{
+		max-width: 397px;
+		margin: 0 auto;
+	}
+
+	.btn-form{
+
+		max-width: 223px;
+		margin: 0 auto;
+		background-image: $btn-form-bg;
+
+
+		&:hover,
+		&.loading{
+
+			background: $color-brand-highlight-dark;
+
+		}
+
+		svg:last-of-type{
+			margin-left: 10px;
+		}
+
+	}
+}

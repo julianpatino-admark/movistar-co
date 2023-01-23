@@ -1,0 +1,19 @@
+// btn common
+$btn-rounded: true;
+$btn-border-radius: 22px;
+$btn-padding: 0 7px;
+$btn-font: map_get($font-family-brand, regular);
+
+$btn-height: 48px;
+
+$btn-font-size: 16px;
+
+$btn-color: #fff;
+$btn-color-hover: #fff;
+
+$btn-bg: $color-brand-degraded;
+$btn-bg-hover: $color-brand-degraded-dark;
+
+$btn-svg-height: 15px;
+$btn-svg-fill: $color-white;
+

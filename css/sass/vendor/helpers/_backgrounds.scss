@@ -1,0 +1,35 @@
+.bg-brand{
+	background: $color-brand;
+}
+
+.bg-accent{
+	background: $color-brand-highlight;
+}
+.bg-highlight-degraded{
+	background-image: $color-brand-highlight-degraded;
+}
+
+.bg-black{
+	background: #000;
+}
+
+.bg-white{
+	background: #fff;
+}
+
+.bg-grey{
+	background: #E0E6EA;
+}
+.bg-transparent{
+	background: transparent;
+}
+
+.bg-img-none{
+	background-image: none;
+}
+
+@each $name, $color in $bg-colors {
+	.color-#{$name} {
+		background-color: $color;
+	}
+}

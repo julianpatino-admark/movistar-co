@@ -1,0 +1,10 @@
+.form-underline {
+
+    input[type=text],
+    input[type=phone],
+    input[type=email],
+    input[type=password] {
+        border: 0;
+        border: $form-underline-border;
+    }
+}

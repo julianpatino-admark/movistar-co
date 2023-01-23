@@ -1,0 +1,98 @@
+{
+  "name": "laravel/laravel",
+  "description": "The Laravel Framework.",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^8.0.2",
+    "guzzlehttp/guzzle": "^7.2",
+    "laravel/framework": "^9.19",
+    "laravel/sanctum": "^3.0",
+    "laravel/tinker": "^2.7",
+    "admark/tracking": "9.*",
+    "admark/inconcert": "9.*",
+    "admark/cobalt": "9.*"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.9.1",
+    "laravel/pint": "^1.0",
+    "laravel/sail": "^1.0.1",
+    "mockery/mockery": "^1.4.4",
+    "nunomaduro/collision": "^6.1",
+    "phpunit/phpunit": "^9.5.10",
+    "spatie/laravel-ignition": "^1.0",
+    "admark/commands" : "9.*"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-tracking.git"
+    },
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-anubis.git"
+    },
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-soap.git"
+    },
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-inconcert.git"
+    },
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-landing-commands.git"
+    },
+    {
+      "type": "git",
+      "url": "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-time-helpers.git"
+    },
+    {
+      "type": "git",
+      "url" : "git@konecta.bitbucket.org:grupokonecta/web-composer-laravel-cobalt.git"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "database/seeders",
+      "database/factories"
+    ],
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": [
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}

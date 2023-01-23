@@ -1,0 +1,46 @@
+.main-c2c_container {
+    display: none;
+}
+
+@include media-breakpoint-up(lg) {
+
+    .main-c2c_container {
+        display: block;
+        position: relative;
+        height: 0;
+    }
+
+    .main-c2c_wrapper{
+        width: $main-c2c-width;
+        position: absolute;
+        top: -40px;
+        right: 15px;
+        z-index: $main-c2c-z-index;
+    }
+
+    .main-c2c {
+        box-sizing: border-box;
+        background-color: $main-c2c-bg;
+        padding: 15px 15px 10px 15px;
+    }
+
+    .main-c2c_title {
+        text-align: center;
+        font-size: 19px;
+        line-height: 23px;
+        color: $main-c2c-text-color;
+
+        b {
+            text-transform: uppercase;
+        }
+    }
+
+    .main-c2c_cta{
+        margin-top: 15px;
+
+        .btn-flex{
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,100 @@
+.modal-cobertura {
+    label {
+        color: $color-black;
+        font-size: 16px;
+    }
+
+    .form-control {
+        height: 42px;
+        border: none;
+        border-radius: 4px;
+
+        &.provincia {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    .form-control_btn:disabled {
+        background-image: $color-disabled-gradient !important;
+        border: none !important;
+    }
+
+    .form-text-title {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .form-group_item-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .btn-form_content {
+        height: 43px;
+
+        svg:first-child {
+            height: 15px;
+        }
+    }
+    .form-group-item_check{
+        display: flex;
+        margin-top: 10px;
+        input{
+            margin-right: 5px;
+            top: 3px;
+            position: relative;
+        }
+        .c2c-checkbox_text{
+            font-size: 11px;
+        }
+        a{
+            color: #212529;
+            text-decoration: underline;
+        }
+    }
+}
+
+.autocomplete {
+    background: white;
+    z-index: 99999999;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 1px solid rgba(50, 50, 50, 0.6);
+    max-height: 145px !important;
+
+    strong {
+        font-weight: bold;
+    }
+}
+
+.autocomplete * {
+    font: inherit;
+}
+
+.autocomplete > div {
+    padding: 0 4px;
+}
+
+.autocomplete .group {
+    background: #eee;
+}
+
+.autocomplete > div:hover:not(.group),
+.autocomplete > div.selected {
+    background: $form-cobertura-bg-selected;
+    color: $white;
+    cursor: pointer;
+}
+
+@include media-breakpoint-up(md) {
+    label {
+        //font-size: 12px !important;
+    }
+
+    .form-text-title {
+        font-size: 18px !important;
+    }
+}
+

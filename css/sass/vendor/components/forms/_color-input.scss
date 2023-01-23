@@ -1,0 +1,70 @@
+$color-input-bg: $color-brand-highlight;
+$color-input-size: 22px;
+$color-input-padding: 4px;
+$color-input-margin: $color-input-padding /2;
+$color-input-border: 1px solid #000;
+
+.color-input[type=radio] {
+    height: $color-input-size;
+    width: $color-input-size;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: $color-input-size - $color-input-padding;
+        height: $color-input-size - $color-input-padding;
+        margin: $color-input-margin 0 0 $color-input-margin;
+        border-radius: $color-input-size / 2;
+    }
+
+    &:checked:before {
+        background-color: $color-brand-highlight;
+        border: 1px solid white;
+    }
+}
+
+$color-input-checkbox-margin: $color-input-margin / 2;
+
+.color-input[type=checkbox],
+.color-input.checkbox{
+    display: block;
+    position: relative;
+    height: $color-input-size;
+    width: $color-input-size;
+    border-radius: 0;
+    border: $color-input-border;
+}
+
+.color-input[type=checkbox]{
+
+    &:before{
+        content: "";
+        border-radius: 0;
+        display: inline-block;
+        width: $color-input-size - $color-input-margin;
+        height: $color-input-size - $color-input-margin;
+        margin: $color-input-checkbox-margin 0 0 $color-input-checkbox-margin;
+    }
+
+    &:checked:before{
+        background-color: $color-brand-highlight;
+        border: 2px solid white;
+        outline: 1px solid #777;
+    }
+
+}
+
+.color-input.checkbox{
+
+    width: auto;
+    height: auto;
+
+    .selected{
+        display: block;
+        width: $color-input-size - ($color-input-margin * 2);
+        height: $color-input-size - ($color-input-margin * 2);
+        margin: $color-input-checkbox-margin * 2;
+        background-color: $color-brand-highlight;
+    }
+
+}

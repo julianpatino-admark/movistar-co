@@ -1,0 +1,11 @@
+@each $size, $radius in $border-radius{
+
+	.border-radius-#{$size}{
+		border-radius: $radius !important;
+	}
+
+}
+
+.border-radius-reset{
+	@include  border-radius(0 !important) ;
+}

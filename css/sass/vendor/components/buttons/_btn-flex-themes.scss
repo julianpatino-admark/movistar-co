@@ -1,0 +1,9 @@
+.btn-flex.btn-accent {
+    background: $btn-accent-bg;
+    color: $btn-accent-color;
+
+    &:hover {
+        color: $btn-accent-color-hover;
+        background: $btn-accent-bg-hover;
+    }
+}

@@ -1,0 +1,45 @@
+.form-check-label {
+    color: $form-font-color;
+
+    a {
+        color: $form-font-color;
+
+        &:hover {
+
+            text-decoration: underline;
+
+        }
+    }
+}
+
+.form-simple_title {
+    text-align: center;
+    font-size: 16px;
+}
+
+/*.form-group_select {
+    display: flex;
+    max-width: 300px;
+    margin: 0 auto;
+}*/
+
+.form-simple-checkbox_item {
+    padding-left: 1.25rem;
+}
+
+@include media-breakpoint-up(md) {
+
+    .form-simple_title {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .form-privacy {
+        font-size: 10px;
+
+        input {
+
+            top: 3px;
+        }
+    }
+}

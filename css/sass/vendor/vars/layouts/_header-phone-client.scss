@@ -1,0 +1,20 @@
+$header-phone-client-bg: #fff;
+
+$header-phone-client-width: (
+        xs : 61px,
+        md : 85px
+);
+
+$header-phone-client-title-color: $color-brand-highlight;
+$header-phone-client-title-size: (
+        xs : 11px,
+        md : 12px
+);
+
+$header-phone-client-link-size: (
+        xs : 15px,
+        md : 21px
+);
+
+$header-phone-client-icon-fill: $header-phone-client-title-color;
+

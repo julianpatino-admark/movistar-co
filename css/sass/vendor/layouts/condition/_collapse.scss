@@ -1,0 +1,42 @@
+.condition-collapse_wrapper {
+
+    padding: 10px 0;
+    background-color: $condition-collapse-bg;
+
+}
+
+.condition-collapse_header {
+
+    .btn-link {
+        color: $condition-collapse-color;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+
+        svg {
+            width: 9px;
+            transform: rotate(0deg);
+            margin-left: 10px;
+
+            polygon{
+
+                fill: $condition-collapse-icon-fill;
+
+            }
+
+        }
+
+        &.collapsed {
+
+            svg {
+
+                transform: rotate(-90deg);
+
+            }
+        }
+    }
+}
+
+.condition-collapse_body {
+    color: $condition-collapse-body-color;
+}

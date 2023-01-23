@@ -1,0 +1,38 @@
+.main_wrapper{
+
+    display: block;
+    margin-top: map_get($main-wrapper-mt, xs);
+
+}
+
+@include media-breakpoint-up(sm){
+    .main_wrapper{
+
+        margin-top: map_get($main-wrapper-mt, sm);
+
+    }
+}
+
+@include media-breakpoint-up(md){
+    .main_wrapper{
+
+        @if($nav-bar){
+            margin-top: map_get($main-wrapper-mt, md) + map_get($navbar-height, md);
+        }@else{
+            margin-top: map_get($main-wrapper-mt, md);
+        }
+
+    }
+}
+
+@include media-breakpoint-up(md){
+    .main_wrapper{
+
+        @if($nav-bar){
+            margin-top: map_get($main-wrapper-mt, lg) + map_get($navbar-height, lg);
+        }@else{
+            margin-top: map_get($main-wrapper-mt, lg);
+        }
+
+    }
+}

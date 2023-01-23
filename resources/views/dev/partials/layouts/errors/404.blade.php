@@ -1,0 +1,11 @@
+<div class="main_wrapper text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3 pt-3 pb-2">
+                <h1>ERROR 404</h1>
+                <p>La página solicitada no existe</p>
+                <p><a href="{{url('/')}}" class="btn-flex">VOLVER A LA HOME</a></p>
+            </div>
+        </div>
+    </div>
+</div>

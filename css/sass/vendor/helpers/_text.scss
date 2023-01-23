@@ -1,0 +1,23 @@
+.text-xxs {
+    font-size: map_get($font-size, xxs);
+}
+
+.text-xs {
+    font-size: map_get($font-size, xs);
+}
+
+.text-xs {
+    font-size: map_get($font-size, sm);
+}
+
+.text-md {
+    font-size: map_get($font-size, md);
+}
+
+.text-lg {
+    font-size: map_get($font-size, lg);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}

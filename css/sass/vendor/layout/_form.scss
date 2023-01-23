@@ -1,0 +1,25 @@
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+textarea{
+    border: $form-border;
+
+    @if ($form-rounded) {
+        @include border-radius($form-border-radius $form-border-radius $form-border-radius $form-border-radius, 0);
+    } @else {
+        @include border-radius(0 0 0 0, 0);
+    }
+}
+
+label.error {
+    padding: 0;
+    margin-top: 0;
+    min-height: 0;
+    color: $color-danger;
+    font-size: map_get($font-size,xxs);
+
+    &:empty{
+        display: none;
+    }
+}

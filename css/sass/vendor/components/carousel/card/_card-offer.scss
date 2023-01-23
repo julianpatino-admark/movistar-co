@@ -1,0 +1,91 @@
+.card-offer {
+    display: block;
+    width: 100%;
+    max-width: $card-offer-max-width;
+    position: relative;
+    margin: $card-offer-label-height auto;
+    background-color: $color-white;
+
+    @if ($card-offer-rounded) {
+        @include border-radius($card-offer-border-radius);
+    } @else {
+        @include border-radius(0);
+    }
+}
+
+.card-offer_wrapper {
+    border: 1px solid $color-grey-60;
+}
+
+.card-offer_label {
+    display: block;
+    position: absolute;
+    top: - $card-offer-label-height;
+    left: (100% - $card-offer-label-width) / 2;
+    width: $card-offer-label-width;
+    height: $card-offer-label-height;
+
+    background-color: $card-offer-label-bg;
+    font-size: $card-offer-label-font-size;
+
+    margin: 0 auto;
+    text-align: center;
+
+    @if ($card-offer-rounded) {
+        @include border-radius($card-offer-border-radius);
+    } @else {
+        @include border-radius(0);
+    }
+}
+
+.card-offer_header {
+    background-color: $card-offer-header-bg;
+    height: $card-offer-header-height;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    @if ($card-offer-rounded) {
+        @include border-radius($card-offer-border-radius $card-offer-border-radius 0 0);
+    } @else {
+        @include border-radius(0);
+    }
+
+    .title {
+        font-size: $card-offer-header-font-size;
+        margin: 0;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin: 0;
+    }
+
+}
+
+.card-offer_body {
+    display: block;
+    padding-top: 10px;
+    min-height: map_get($card-offer-min-height, xs);
+    text-align: center;
+}
+
+.card-offer_band {
+    height: 30px;
+    width: 100%;
+    margin: 5px 0 20px;
+    background-color: $color-brand-highlight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .band-text {
+        margin: 0;
+        color: $color-white;
+    }
+}
+
+.card-offer_footer {
+    padding: 15px;
+}

@@ -1,0 +1,40 @@
+.cta-sticky-desktop_wrapper {
+    display: none;
+}
+
+@include media-breakpoint-up(lg) {
+
+    .cta-sticky-desktop_wrapper {
+        display: block;
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top: $cta-sticky-wrapper-top;
+
+        &.sticky {
+            display: flex;
+            position: fixed;
+            top: $cta-sticky-visible-top;
+            width: 100%;
+            z-index: 9;
+
+        }
+
+    }
+
+    .cta-sticky-desktop {
+        width: $cta-sticky-desktop-width;
+        position: relative;
+        margin-left: auto;
+        display: flex;
+        flex-grow: 1;
+
+        .btn-flex{
+            width: 100%;
+            text-align: left;
+            line-height: 1;
+            height: $cta-sticky-btn-height;
+        }
+
+    }
+}

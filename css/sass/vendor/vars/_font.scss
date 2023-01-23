@@ -1,0 +1,45 @@
+//FUENTES
+// Si se usan fuentes personaliazadas o no
+$font-custom: false;
+
+$fonts: (
+
+        Inter-Thin : "Inter_thin",
+        Inter-Regular : "Inter_regular",
+        Inter-Bold : "Inter_bold",
+        Inter-Medium: "Inter_medium",
+
+);
+
+@each $file, $fontName in $fonts {
+    @include fontfacemix($fontName, $file);
+}
+
+$font-family-primary: "Helvetica", "Arial", sans-serif;
+$font-family-secondary: "Helvetica", "Arial", sans-serif;
+
+$font-regular: "Inter_regular", sans-serif;
+$font-bold: "Inter_bold", sans-serif;
+$font-medium: "Inter_medium", sans-serif;
+
+$font-color-primary: $color-black;
+$font-color-secundary: $color-grey-20;
+$font-color-accent: $color-brand-highlight;
+
+$font-weight: (
+        thin: 300,
+        regular : 400,
+        medium : 500,
+        bold: 700,
+        extra-bold: 900
+);
+
+//PESOS DE FUENTES
+$font-family-brand: (
+        regular : $font-regular,
+        bold : $font-bold,
+        medium: $font-medium,
+);
+
+
+

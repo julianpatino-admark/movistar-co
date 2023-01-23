@@ -1,0 +1,51 @@
+.btn-carousel {
+    min-width: $btn-carousel-min-width;
+    margin: 0;
+    position: relative;
+    background-color: $btn-carousel-bg;
+    color: $btn-carousel-color;
+    font-size: map_get($btn-carousel-font-size, xs);
+    height: $btn-carousel-height;
+    border: $btn-carousel-border;
+    font-family: map_get($font-family-brand, regular);
+    border: 1px solid white;
+
+
+    @if ($btn-carousel-rounded) {
+
+        border-radius: $btn-carousel-border-radius;
+
+    }
+
+    svg {
+        display: none;
+        position: absolute;
+        bottom: -11px;
+        left: calc(50% - 8px);
+    }
+
+
+
+    &.active {
+
+        background-color: $btn-carousel-bg-hover;
+        color: $btn-carousel-color-active;
+        font-weight: bold;
+
+        svg {
+            display: block;
+            .btn-carousel_svg-fill{
+                fill: $btn-carousel-bg-hover;
+            }
+        }
+
+    }
+
+}
+
+@include media-breakpoint-up(sm) {
+    .btn-carousel {
+        font-size: map_get($btn-carousel-font-size, sm);
+    }
+}
+

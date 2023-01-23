@@ -1,0 +1,28 @@
+$modal-header-phone-title-size: 22px;
+$modal-header-phone-link-size: 35px;
+
+.modal-header-phone {
+	width: 100%;
+}
+
+.modal-header-phone_title {
+	font-size: $modal-header-phone-title-size;
+	color: $modal-header-phone-color;
+	margin: 0;
+}
+
+.modal-header-phone_link {
+	font-size: $modal-header-phone-link-size;
+	line-height: $modal-header-phone-link-size;
+	font-weight: bold;
+	color: $modal-header-phone-color;
+}
+
+.modal-header_privacy {
+	color: $modal-header-phone-color;
+
+	a {
+		color: $modal-header-phone-color;
+		text-decoration: underline;
+	}
+}

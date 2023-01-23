@@ -1,0 +1,19 @@
+@include media-breakpoint-up(lg){
+
+    .carousel-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .carousel-item {
+            display: block;
+            position: relative;
+            float: none;
+            width: 25%;
+            margin: 0;
+            padding: 6px;;
+        }
+    }
+
+}

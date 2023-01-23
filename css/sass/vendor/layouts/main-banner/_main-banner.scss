@@ -1,0 +1,35 @@
+.main-banner_wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: map_get($mb-height, xs);
+    margin-top:map_get($mb-margin-top, xs);
+    background: map_get($mb-bg, xs);
+}
+
+.main-banner_title {
+    text-align: left;
+    font-size: 16px;
+}
+
+.main-banner{
+    padding: map_get($mb-padding, xs);
+}
+
+@include media-breakpoint-up(lg) {
+
+    .main-banner_wrapper {
+        @if($nav-bar){
+
+            margin-top: map_get($mb-margin-top, lg) + map_get($navbar-height, md);
+        }@else{
+            margin-top: map_get($mb-margin-top, lg);
+        }
+        height: map_get($mb-height, lg);
+        background: map_get($mb-bg, lg);
+
+    }
+    .main-banner{
+        padding: map_get($mb-padding, lg);
+    }
+}

@@ -1,0 +1,47 @@
+//COLOR-BRAND
+$color-brand: #3a7213;
+$color-brand-dark: darken($color-brand, 25% );
+$color-brand-light: lighten($color-brand, 5%);
+
+//COLOR HIGHLIGHT
+$color-brand-highlight: #9ec36e;
+$color-brand-highlight-dark: darken($color-brand-highlight, 25%);
+$color-brand-highlight-light: lighten($color-brand-highlight, 5%);
+
+//COLOR-BRAND-DEGRADED
+$color-brand-degraded: linear-gradient($color-brand-light, $color-brand);
+$color-brand-degraded-dark: linear-gradient(darken($color-brand-light, 5%), darken($color-brand, 5%));
+
+
+//COLOR HIGHLIGHT DEGRADED
+$color-brand-highlight-degraded: linear-gradient($color-brand-highlight, $color-brand-highlight);
+$color-brand-highlight-degraded-dark: linear-gradient(darken($color-brand-highlight, 25%), darken($color-brand-highlight, 25%));
+
+//COLOR-BRAND-ALT
+$color-brand-alt:#333333;
+$color-brand-alt-dark: darken($color-brand-alt, 25%);
+$color-brand-alt-light: darken($color-brand-alt, 25%);
+
+//COLOR-BRAND-ALT-DEGRADED
+$color-brand-alt-degraded: linear-gradient($color-brand-alt, #000);
+$color-brand-alt-degraded-dark: linear-gradient(darken($color-brand-alt, 25%), darken(#000, 25%));
+
+$color-danger: #FF0000;
+
+//SPECIFIC COLORS
+$color-white:#fff;
+$color-black:#000;
+
+$color-grey-20:#bdbcbc;
+$color-grey-60:#707070;
+$color-grey-80:#2d2d2d;
+
+
+
+
+
+
+
+
+
+

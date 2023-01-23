@@ -1,0 +1,62 @@
+.btn-form {
+    display: block;
+    height: $btn-height;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    border: 0 none;
+    outline: none;
+    background: $btn-form-bg;
+
+    @if $btn-rounded {
+
+        border-radius: $btn-border-radius !important;
+
+    }
+
+    &:focus,
+    &:hover {
+        color: $btn-form-color;
+        background: $btn-form-bg-hover;
+        outline: none;
+    }
+
+    &.loading {
+
+        .btn-form_content {
+            opacity: 0;
+            top: - $btn-height;
+        }
+
+        .btn-form_loader {
+            opacity: 1;
+            top: - $btn-height;
+        }
+    }
+}
+
+.btn-form_content {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    padding: $btn-content-padding;
+    height: $btn-height;
+    opacity: 1;
+    color: $btn-form-color;
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+
+    @include transition($btn-form-transition);
+}
+
+.btn-form_loader {
+    position: relative;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    place-content: center;
+    height: $btn-height;
+    @include transition($btn-form-transition);
+}

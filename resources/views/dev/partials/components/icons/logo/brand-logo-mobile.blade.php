@@ -1,0 +1,20 @@
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+     x="0px" y="0px" width="68.7px" height="45px" viewBox="0 0 68.7 45" style="enable-background:new 0 0 68.7 45;"
+     xml:space="preserve">
+<style type="text/css">
+    .brand-logo-mobile-path{fill:#ffffff;}
+</style>
+    <defs>
+    </defs>
+    <g>
+        <path class="brand-logo-mobile-path" d="M0,45V6h9c6.6,0,9.9,3.8,9.9,11.5c0,2.3-0.4,4.3-1.1,5.9c-0.7,1.6-2,2.9-3.8,3.9l6,17.8h-5.9L8.9,28.4H5.6V45
+		H0z M5.6,11.3v12.2h3.2c1,0,1.8-0.1,2.4-0.4c0.6-0.3,1-0.7,1.4-1.2c0.3-0.5,0.5-1.1,0.6-1.9c0.1-0.7,0.2-1.6,0.2-2.6
+		s-0.1-1.9-0.2-2.6c-0.1-0.7-0.3-1.4-0.7-1.9c-0.7-1-2-1.5-3.9-1.5H5.6z"/>
+        <path class="brand-logo-mobile-path" d="M23.4,45V6H29v33.4h11.1V45H23.4z"/>
+    </g>
+    <circle class="brand-logo-mobile-path" cx="39.3" cy="25.9" r="5.9"/>
+    <circle class="brand-logo-mobile-path" cx="55.7" cy="12.9" r="12.9"/>
+    <circle class="brand-logo-mobile-path" cx="51.6" cy="35.9" r="4.1"/>
+</svg>

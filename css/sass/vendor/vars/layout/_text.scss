@@ -1,0 +1,42 @@
+$text-xxs-size: 10px;
+$text-xs-size: 10px;
+$text-md-size: 12px;
+$text-lg-size: 18px;
+
+
+$text-regular: 400;
+$text-bold: 600;
+
+// Sections Title and Subtitle
+
+$font-size: (
+        xxs : 9px,
+        xs : 12px,
+        lg : 18px,
+);
+
+$title-font-size: (
+        xs : 18px,
+        lg : 30px,
+);
+
+$subtitle-font-size: (
+        xs : 15px,
+        lg : 23px,
+);
+
+$colors: (
+        "black": #000 !important,
+        "white": #fff !important,
+        "grey": $color-brand-alt !important,
+        "brand": $color-brand !important,
+        "blue": #0555fa !important,
+        "orange": #fe8314 !important
+);
+
+@each $name, $color in $colors {
+    .font-#{$name} {
+        color: $color;
+    }
+}
+

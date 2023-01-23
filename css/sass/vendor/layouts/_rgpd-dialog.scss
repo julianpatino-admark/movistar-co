@@ -1,0 +1,12 @@
+$rgpd-link-color: $color-brand;
+
+.rgpd-consent_link{
+
+    color: $rgpd-link-color !important;
+   font-family: $font-bold;
+
+    &:hover{
+        color: $rgpd-link-color !important;
+    }
+
+}

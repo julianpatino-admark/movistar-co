@@ -1,0 +1,20 @@
+$mb-height: (
+        xs : 365px,
+        lg : 590px
+);
+
+$mb-padding: (
+        xs : 15px 0 0 0,
+        lg : 35px 0 0 0
+);
+
+$mb-margin-top: (
+        xs : 55px,
+        lg : 89px
+);
+
+$mb-bg: (
+        xs : #fff url('/img/generica/main-banner/main-banner-xs.jpg') top center,
+        lg : #fff url('/img/generica/main-banner/main-banner-lg.jpg') top center,
+        xl : #fff url('/img/generica/main-banner/main-banner-md.jpg') top center,
+);

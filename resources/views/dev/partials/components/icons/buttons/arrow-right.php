@@ -1,0 +1,10 @@
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="15.09px" height="27.57px" viewBox="0 0 15.09 27.57" style="enable-background:new 0 0 15.09 27.57;"
+     xml:space="preserve"><style type="text/css">.btn-arrow_path {
+            fill: #FFFFFF;
+        }</style>
+    <defs></defs>
+    <g>
+        <polygon class="btn-arrow_path" points="1.31,27.57 0.02,26.28 12.5,13.8 0,1.29 1.29,0 15.09,13.8 	"/>
+    </g></svg>

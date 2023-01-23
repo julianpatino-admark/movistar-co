@@ -1,0 +1,29 @@
+.btn-flex {
+    display: flex;
+    height: $btn-height;
+    position: relative;
+    place-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+    color: $btn-color;
+    background: $btn-bg;
+    justify-content: space-around;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+
+    @if $btn-rounded {
+        border-radius: $btn-border-radius;
+
+    }
+
+    &:hover{
+        color: $btn-color-hover;
+        background: $btn-bg-hover;
+        text-decoration: none;
+    }
+
+
+}

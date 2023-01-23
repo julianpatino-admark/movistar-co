@@ -1,0 +1,23 @@
+$card-offer-rounded: false;
+$card-offer-border-radius: 30px;
+$card-offer-max-width: 265px;
+$card-offer-min-height:(
+        xs : 185px,
+        md : 335px,
+        lg : 195px,
+        xl : 182px
+);
+
+//Card Offer Label
+$card-offer-label-height:30px;
+$card-offer-label-bg: $color-brand-highlight;
+$card-offer-label-width:85%;
+$card-offer-label-font-size:16px;
+
+//Card Offer Header
+$card-offer-header-bg: $color-brand;
+$card-offer-header-height: 70px;
+$card-offer-header-font-size: 20px;
+
+
+

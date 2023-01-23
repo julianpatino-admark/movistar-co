@@ -1,0 +1,55 @@
+.header-phone-client_wrapper {
+    width: map_get($header-phone-client-width, xs);
+    height: 44px;
+    margin-right: 6px;
+    background: $header-phone-client-bg;
+    text-align: center;
+}
+
+.header-phone-client{
+    padding-top: 2px;
+
+    // Dar color al SVG
+    path{
+        fill: $header-phone-client-icon-fill;
+    }
+}
+
+.header-phone-client_title{
+    margin: 0;
+    color: $header-phone-client-title-color;
+    font-size: map_get($header-phone-client-title-size, xs);
+    line-height: map_get($header-phone-client-title-size, xs) +  2px;
+}
+
+.header-phone-client_link{
+    font-size: map_get($header-phone-client-link-size, xs);
+
+    svg{
+        height: map_get($header-phone-client-link-size, xs);
+        width: auto;
+    }
+}
+
+@include media-breakpoint-up(md) {
+
+    .header-phone-client_wrapper {
+        width: map_get($header-phone-client-width, md);
+        margin-right: 22px;
+    }
+
+    .header-phone-client_title{
+        font-size: map_get($header-phone-client-title-size, md);
+        line-height: map_get($header-phone-client-title-size, md) +  2px;
+    }
+
+    .header-phone-client_link{
+        font-size: map_get($header-phone-client-link-size, md);
+
+        svg{
+            height: map_get($header-phone-client-link-size, md);
+            width: auto;
+        }
+    }
+
+}
