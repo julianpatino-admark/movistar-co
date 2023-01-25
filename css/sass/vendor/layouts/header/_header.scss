@@ -1,7 +1,7 @@
 .header {
     display: block;
     position: fixed;
-    top: 0;
+    top: 50px;
     width: 100%;
     background: $header-bg-color;
     z-index: 3;
@@ -11,34 +11,33 @@
         }
     }
 
-}
-
-.header-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header_logo{
-    svg{
-        width: map_get($header-logo-width, xs);
-        height: auto;
+    &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
-}
 
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+    &-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-.header_hamburguer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
+    &_logo{
+        svg{
+            width: map_get($header-logo-width, xs);
+            height: auto;
+        }
+    }
+
+    &_hamburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+    }
 }
 
 @include media-breakpoint-up(lg) {

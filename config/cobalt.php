@@ -11,6 +11,7 @@ return [
      */
     'ws' => [
         'cache_wsdl' => WSDL_CACHE_NONE,
+        'trace' => 1
     ],
 
     /**

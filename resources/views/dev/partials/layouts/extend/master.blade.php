@@ -18,6 +18,7 @@
 </head>
 <body>
 <div id="main">
+	@include("dev.partials.layouts.header.top-header")
 	@include('dev.partials.layouts.header.header')
 	@if($nav === true)
 		@include('dev.partials.layouts.navbar.nav')

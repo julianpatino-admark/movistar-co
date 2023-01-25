@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "vendor/bootstrap/bootstrap";
 @import "vendor/mixins/fontface";
 //VARS
 
@@ -69,7 +69,7 @@
 @import "vendor/components/modal/text";
 @import "vendor/components/modal/header-phone";
 
-
+@import "vendor/layouts/header/top-header";
 @import "vendor/layouts/header/header";
 @import "vendor/layouts/header/header-phone";
 @import "vendor/layouts/header/header-phone-client";

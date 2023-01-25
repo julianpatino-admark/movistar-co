@@ -21,7 +21,7 @@
     display: block;
     position: absolute;
     top: - $card-offer-label-height;
-    left: (100% - $card-offer-label-width) / 2;
+    left: calc((100% - $card-offer-label-width) / 2);
     width: $card-offer-label-width;
     height: $card-offer-label-height;
 
