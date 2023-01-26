@@ -6,10 +6,14 @@
 
     grid-gap: 10px;
     grid-template-rows: 1fr;
-    grid-template-columns: 105px 210px;
+    grid-template-columns: minmax(85px, 105px) minmax(170px, 210px);
   }
 
   &_discount{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     color: white;
 
     font-size: 20px;
@@ -17,18 +21,18 @@
     text-align: center;
     font-weight: bold;
 
-    padding: 20px 5px;
+    padding: 15px 10px;
     border-radius: 13px;
     background-color: $color-brand-highlight;
 
     &-number{
-      font-size: 48px;
-      line-height: 45px;
+      font-size: 32px;
     }
   }
 
   &_offert{
-    font-size: 12px;
+    font-size: 8px;
+    line-height: 5px;
     text-align: center;
 
     padding: 5px 15px 10px;
@@ -39,24 +43,53 @@
       color: $color-brand-highlight;
 
       font-weight: bold;
-      font-size: 20px;
-      line-height: 40px;
+      font-size: 16px;
+      line-height: 23px;
     }
 
     &-price{
       font-weight: bold;
-      font-size: 48px;
+      font-size: 32px;
       line-height: 35px;
     }
   }
 
   &_tyc{
     color: white;
-    font-size: 12px;
+    font-size: 8px;
 
     text-align: end;
     grid-column: span 2;
 
     margin: -5px 20px 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &_discount{
+      padding: 20px 5px;
+
+      &-number{
+        font-size: 48px;
+        line-height: 45px;
+      }
+    }
+
+    &_offert{
+      font-size: 12px;
+      line-height: 15px;
+
+      &-speed{
+        font-size: 20px;
+        line-height: 42px;
+      }
+
+      &-price{
+        font-size: 48px;
+      }
+    }
+
+    &_tyc{
+      font-size: 12px;
+    }
   }
 }

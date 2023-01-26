@@ -1,5 +1,5 @@
 <div class="main-banner_wrapper">
-    <div class="container">
+    <div class="container h-100">
         <div class="main-banner">
             <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
             <div class="main-banner_container">
