@@ -1,57 +1,62 @@
 .navbar-nav {
+    display: none;
 
-    hr {
-        background: $navbar-border-color;
-        width: 100%;
-        border-style: none;
-        height: 1px;
+    ul{
+        display: flex;
+        justify-content: space-around;
+
+        list-style: none;
         margin: 0;
-    }
+        padding: 0;
 
-    .nav-item {
-        font-size: map_get($navbar-font-size, xs);
+        .nav-item{
+            font-size: map_get($navbar-font-size, xs);
 
-        &.active {
-            border: none;
-            text-decoration: underline;
-        }
+            .nav-link{
+                display: flex;
+                color: white;
 
-        .nav-link {
-            padding: 10px 5px;
-            color: $color-black;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+                align-items: center;
 
-            svg {
-                width: 10px;
-                height: auto;
-                fill: $color-black;
-                margin-right: 5px;
+                svg{
+                    fill: white;
+                    margin-right: 5px;
+
+                    &.pymes{
+                        stroke: white;
+                    }
+                }
+            }
+
+            &.active{
+                .nav-link{
+                    font-weight: bold;
+                    color: $color-brand-highlight;
+
+                    svg{
+                        fill: $color-brand-highlight;
+
+                        &.pymes{
+                            stroke: $color-brand-highlight;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
     .navbar-nav {
-        .nav-item {
-            height: map_get($nav-item-height, md);
-            font-size: map_get($navbar-font-size, md);
-            padding: 0 8px;
-            justify-content: flex-start;
+        flex: 1;
+        display: inline-block;
 
-            &.active {
-                border-bottom: 4px solid $color-brand;
+        ul{
+            .nav-item {
+                font-size: map_get($navbar-font-size, md);
             }
         }
 
-        hr {
-            width: 1px;
-            border-style: none;
-            height: auto;
-            margin: 5px 0;
-        }
     }
 
 }

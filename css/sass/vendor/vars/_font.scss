@@ -15,8 +15,8 @@ $fonts: (
     @include fontfacemix($fontName, $file);
 }
 
-$font-family-primary: "Helvetica", "Arial", sans-serif;
-$font-family-secondary: "Helvetica", "Arial", sans-serif;
+$font-family-primary: "Roboto", "Arial", sans-serif;
+$font-family-secondary: "Roboto", "Arial", sans-serif;
 
 $font-regular: "Inter_regular", sans-serif;
 $font-bold: "Inter_bold", sans-serif;

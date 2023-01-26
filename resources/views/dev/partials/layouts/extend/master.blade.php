@@ -13,6 +13,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="facebook-domain-verification" content="u1y6tiqbwjdq7da92oq6cg5t8w7ybq"/>
 	<meta id="provider" name="provider" content="{{$provider}}">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
 	@section('metadata')
 	@show
 </head>
@@ -20,9 +24,7 @@
 <div id="main">
 	@include("dev.partials.layouts.header.top-header")
 	@include('dev.partials.layouts.header.header')
-	@if($nav === true)
-		@include('dev.partials.layouts.navbar.nav')
-	@endif
+	@include('dev.partials.layouts.navbar.mobile-nav')
 	@if($main_c2c === true)
 		@include('dev.partials.layouts.c2c.main')
 		@include('dev.partials.layouts.cta.desktop-sticky')

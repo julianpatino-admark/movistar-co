@@ -1,6 +1,6 @@
 // Header phone
-$header-phone-bg: $color-brand-highlight;
-$header-phone-text-color: $color-white;
+$header-phone-bg: white;
+$header-phone-text-color: $color-brand-highlight;;
 $header-phone-link-hover: darken($color-brand, 25%);
 $header-phone-icon-fill: $color-white;
 
@@ -15,18 +15,18 @@ $header-phone-content-height: (
 );
 
 $header-phone-title-size: (
-        xs : 11px,
-        lg : 17px
+        xs : 12px,
+        lg : 20px
 );
 
 $header-phone-title-line-height: (
-        xs : 28px,
-        lg : 41px
+        xs : 12px,
+        lg : 20px
 );
 
 $header-phone-link-size: (
-        xs : 19px,
-        lg : 28px
+        xs : 12px,
+        lg : 20px
 );
 
 $header-phone-icon-height: (

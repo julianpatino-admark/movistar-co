@@ -15,13 +15,18 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
     }
 
     &-right {
+        flex: 1;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-end;
+
+        .digital-partner-image{
+            width: 66px;
+            height: 36px;
+        }
     }
 
     &_logo{
@@ -41,11 +46,16 @@
 }
 
 @include media-breakpoint-up(lg) {
-    .header_logo {
-        svg {
+    .header{
+        &-right .digital-partner-image{
+            width: 126px;
+            height: 70px;
+        }
 
-            width: map_get($header-logo-width, lg)
-
+        &_logo {
+            svg {
+                width: map_get($header-logo-width, lg)
+            }
         }
     }
 }
