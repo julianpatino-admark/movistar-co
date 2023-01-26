@@ -1,12 +1,14 @@
 <div class="promo-cards poker">
     <div class="promo-cards_discount">
-        <div class="promo-cards_discount-number">20%</div>
+        <div class="promo-cards_discount-number">{{ $discount }}%</div>
         de dto
     </div>
     <div class="promo-cards_offert">
-        <div class="promo-cards_offert-speed">350 MB Simétricas</div>
-        <div class="promo-cards_offert-price">$64.392</div>
-        por 12 meses
+        <div class="promo-cards_offert-speed">
+            {{ $slot }}
+        </div>
+        <div class="promo-cards_offert-price">${{ $price }}</div>
+        {{ $months }}
     </div>
     <p class="promo-cards_tyc">*Aplican terminos y condiciones</p>
 </div>

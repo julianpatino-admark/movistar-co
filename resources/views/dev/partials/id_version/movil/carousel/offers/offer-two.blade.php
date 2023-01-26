@@ -1,0 +1,48 @@
+<div class="card-offer">
+
+	<div class="card-offer_label">
+		<p class="label-text">oferta recomendada</p>
+	</div>
+
+	<div class="card-offer_wrapper">
+
+		<div class="card-offer_header">
+			<h3 class="title">OFFER 2</h3>
+			<p class="subtitle">lorem ipsum</p>
+		</div>
+
+		<div class="card-offer_body">
+
+			<p class="body-title">texto inicio</p>
+
+			<div class="card-simple_offer-price">
+				<p class="offer-price_number mb-0">19,90€<span>/mes</span></p>
+				<p class="offer-price_text">Oferta durante 6 meses</p>
+			</div>
+
+			<div class="card-offer_band">
+				<p class="band-text">y hasta un 20%dto.</p>
+			</div>
+
+			<p class="card-simple_collapse">
+				<a data-toggle="collapse" href="#collapse-offer_one" role="button" aria-expanded="false"
+				   aria-controls="collapseExample" class="collapse-open collapsed">Ver más</a></p>
+
+			<div class="card-simple_info collapse" id="collapse-offer_one">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</div>
+
+		</div>
+
+		<div class="card-offer_footer">
+			<a class="btn-flex btn-accent w-100" data-c2c="offer-one"
+			   data-show-element="#modal-header-phone" data-toggle="modal" data-target="#modal-c2c"
+			   data-tag-page="/modal/offer-one/c2c">
+				Más información
+				@include('dev.partials.components.icons.buttons.arrow-right')
+			</a>
+		</div>
+	</div>
+
+
+</div>

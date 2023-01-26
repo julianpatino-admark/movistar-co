@@ -6,14 +6,39 @@ use Illuminate\View\Component;
 
 class PromoCards extends Component
 {
+
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public $discount;
+
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public $price;
+
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public $months;
+
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($discount, $price, $months)
     {
-        //
+        $this->discount = $discount;
+        $this->price = $price;
+        $this->months = $months;
     }
 
     /**

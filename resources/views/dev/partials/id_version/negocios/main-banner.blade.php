@@ -1,0 +1,26 @@
+<div class="main-banner_wrapper">
+    <div class="container h-100">
+        <div class="main-banner">
+            <h1 class="main-banner_title">Fibra óptica y planes Pospago móvil para tu negocio</h1>
+            <div class="main-banner_container">
+                <h2>
+                    Tus proyectos hacen click
+                    con fibra Movistar
+                </h2>
+                <x-promo-cards
+                    discount="20"
+                    price="66.795"
+                    months="por 12 meses"
+                >
+                    350 MB Simétricas
+                </x-promo-cards>
+
+                <div class="main-banner_cta">
+                    <a class="btn-flex btn-accent">
+                        Calcula tu precio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
