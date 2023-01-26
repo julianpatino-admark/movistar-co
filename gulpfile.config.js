@@ -7,7 +7,9 @@ var constants = {
     versionLanding : "generica",
 
     versions : [
-        'generica'
+        'generica',
+        'movil',
+        'negocios'
     ],
 
     versionIndex : function(){
@@ -92,6 +94,7 @@ var plugins = {
 
             default: [
 
+                "./resources/views/components/**/*.php",
                 "./resources/views/dev/tracking/{versionLanding}.blade.php",
                 "./resources/views/dev/partials/id_version/{versionLanding}/**/*.php",
                 "./resources/views/dev/partials/components/**/*.php",
@@ -136,6 +139,8 @@ var plugins = {
 
             folders : [
                 'tracking',
+                'tracking/movil',
+                'tracking/negocios',
                 'tracking/aviso-legal',
                 'tracking/privacy',
                 'tracking/privacidad-basica',

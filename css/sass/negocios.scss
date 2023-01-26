@@ -1,0 +1,94 @@
+@import "vendor/bootstrap/bootstrap";
+@import "vendor/mixins/fontface";
+//VARS
+
+@import "vendor/vars/color";
+@import "vendor/vars/font";
+@import "vendor/vars/shadow";
+@import "vendor/vars/vendor";
+@import "vendor/vars/background";
+@import "vendor/vars/border-raidus";
+
+// VARS - LAYOUT
+@import "vendor/vars/layout/text";
+@import "vendor/vars/layout/form";
+@import "vendor/vars/layout/comun";
+@import "vendor/vars/layout/main";
+
+//VARS - LAYOUTS
+@import "vendor/vars/layouts/header";
+@import "vendor/vars/layouts/header-phone";
+@import "vendor/vars/layouts/header-phone-client";
+@import "vendor/vars/layouts/navbar";
+@import "vendor/vars/layouts/footer";
+@import "vendor/vars/layouts/banner";
+@import "vendor/vars/layouts/main-banner";
+@import "vendor/vars/layouts/c2c";
+@import "vendor/vars/layouts/cta/cta";
+@import "vendor/vars/layouts/cta/mobile-fixed";
+@import "vendor/vars/layouts/list";
+@import "vendor/vars/layouts/condition/collapse";
+
+//VARS - COMPONENTS
+@import "vendor/vars/components/buttons/btn-carousel";
+@import "vendor/vars/components/buttons/btn-flex";
+@import "vendor/vars/components/buttons/btn-flex-themes";
+@import "vendor/vars/components/buttons/btn-form";
+@import "vendor/vars/components/carousel/card-offer";
+@import "vendor/vars/components/form-underline";
+@import "vendor/vars/components/loader";
+@import "vendor/vars/components/modal";
+
+//VIEWS BLADE COMPONENTS
+@import "vendor/views/promo-cards";
+
+@import "vendor/layout/text";
+@import "vendor/layout/form";
+@import "vendor/layout/main";
+
+@import "vendor/helpers/backgrounds";
+@import "vendor/helpers/highlight";
+@import "vendor/helpers/text";
+
+@import "vendor/components/animations/animations";
+@import "vendor/components/buttons/btn-form";
+@import "vendor/components/buttons/btn-flex";
+@import "vendor/components/buttons/btn-flex-themes";
+@import "vendor/components/buttons/btn-hamburger";
+@import "vendor/components/buttons/btn-carousel";
+
+
+@import "vendor/components/carousel/carousel-offers";
+@import "vendor/components/carousel/card/card-offer";
+@import "vendor/components/carousel/carousel-indicators";
+
+@import "vendor/components/loaders/loader";
+@import "vendor/components/loaders/loader-themes";
+@import "vendor/components/forms/simple";
+@import "vendor/components/forms/calcula";
+@import "vendor/components/forms/underline";
+@import "vendor/components/modal/brand";
+@import "vendor/components/modal/c2c";
+@import "vendor/components/modal/text";
+@import "vendor/components/modal/header-phone";
+
+@import "vendor/layouts/header/top-header";
+@import "vendor/layouts/header/header";
+@import "vendor/layouts/header/header-phone";
+@import "vendor/layouts/header/header-phone-client";
+
+/*NAV*/
+@import "vendor/layouts/navbar/navbar-collapse";
+@import "vendor/layouts/navbar/navbar-nav";
+
+@import "vendor/layouts/cta/mobile-fixed";
+@import "vendor/layouts/cta/sticky-desktop";
+@import "vendor/layouts/c2c/main";
+@import "vendor/layouts/list/list-services";
+@import "vendor/layouts/condition/collapse";
+@import "vendor/layouts/modal/modal-c2c";
+@import "vendor/layouts/footer/footer";
+@import "vendor/layouts/main-banner/negocios";
+
+
+@import "vendor/layouts/banners/banner-simple";

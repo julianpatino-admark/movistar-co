@@ -1,20 +1,42 @@
 $mb-height: (
-        xs : 365px,
-        lg : 590px
+        xs : 605px,
+        lg : 320px,
+        xl : 485px
 );
 
 $mb-padding: (
-        xs : 15px 0 0 0,
-        lg : 35px 0 0 0
+        xs : 30px 10px,
+        sm : 30px 20px,
+        lg : 40px 0 40px 0,
+        xl : 65px 0 65px 0
 );
 
 $mb-margin-top: (
-        xs : 55px,
-        lg : 89px
+        xs : 110px auto 0,
+        sm : 140px auto 0,
+        lg : 180px
 );
 
 $mb-bg: (
-        xs : #fff url('/img/generica/main-banner/main-banner-xs.jpg') top center,
-        lg : #fff url('/img/generica/main-banner/main-banner-lg.jpg') top center,
-        xl : #fff url('/img/generica/main-banner/main-banner-md.jpg') top center,
+        xs : #fff url('/img/generica/main-banner/main-banner-xs.webp') no-repeat center / 325px 100%,
+        sm : #fff url('/img/generica/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
+        md : #fff url('/img/generica/main-banner/main-banner-md.webp') no-repeat center / 100%,
+        lg : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 100%,
+        xl : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 1600px 100%,
+);
+
+$mb-bg-movil: (
+        xs : #fff url('/img/movil/main-banner/main-banner-xs.webp') no-repeat center / 325px 100%,
+        sm : #fff url('/img/movil/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
+        md : #fff url('/img/movil/main-banner/main-banner-md.webp') no-repeat center / 100%,
+        lg : #fff url('/img/movil/main-banner/main-banner-lg.webp') no-repeat center / 100%,
+        xl : #fff url('/img/movil/main-banner/main-banner-lg.webp') no-repeat center / 1600px 100%,
+);
+
+$mb-bg-negocios: (
+        xs : #fff url('/img/negocios/main-banner/main-banner-xs.webp') no-repeat center / 325px 100%,
+        sm : #fff url('/img/negocios/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
+        md : #fff url('/img/negocios/main-banner/main-banner-md.webp') no-repeat center / 100%,
+        lg : #fff url('/img/negocios/main-banner/main-banner-lg.webp') no-repeat center / 100%,
+        xl : #fff url('/img/negocios/main-banner/main-banner-lg.webp') no-repeat center / 1600px 100%,
 );

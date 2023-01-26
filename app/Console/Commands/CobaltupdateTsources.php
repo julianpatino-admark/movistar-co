@@ -89,7 +89,6 @@ class CobaltupdateTsources extends Command
     private function updateAllTsources(){
 
         $tsourcesArray = $this->cobalt->getTsources();
-        var_dump($tsourcesArray);
 
         foreach ($tsourcesArray as $tsource => $tsourceData){
 
