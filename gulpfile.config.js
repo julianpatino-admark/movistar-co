@@ -92,6 +92,7 @@ var plugins = {
 
             default: [
 
+                "./resources/views/components/**/*.php",
                 "./resources/views/dev/tracking/{versionLanding}.blade.php",
                 "./resources/views/dev/partials/id_version/{versionLanding}/**/*.php",
                 "./resources/views/dev/partials/components/**/*.php",

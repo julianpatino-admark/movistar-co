@@ -1,0 +1,62 @@
+.promo-cards{
+  font-family: $font-family-primary;
+
+  &.poker{
+    display: grid;
+
+    grid-gap: 10px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 105px 210px;
+  }
+
+  &_discount{
+    color: white;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+
+    padding: 20px 5px;
+    border-radius: 13px;
+    background-color: $color-brand-highlight;
+
+    &-number{
+      font-size: 48px;
+      line-height: 45px;
+    }
+  }
+
+  &_offert{
+    font-size: 12px;
+    text-align: center;
+
+    padding: 5px 15px 10px;
+    border-radius: 13px;
+    background-color: white;
+
+    &-speed{
+      color: $color-brand-highlight;
+
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 40px;
+    }
+
+    &-price{
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 35px;
+    }
+  }
+
+  &_tyc{
+    color: white;
+    font-size: 12px;
+
+    text-align: end;
+    grid-column: span 2;
+
+    margin: -5px 20px 0;
+  }
+}

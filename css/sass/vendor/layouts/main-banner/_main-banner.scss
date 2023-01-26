@@ -8,8 +8,11 @@
 }
 
 .main-banner_title {
+    color: white;
+
     text-align: left;
     font-size: 16px;
+    font-weight: normal;
 }
 
 .main-banner{
@@ -19,17 +22,50 @@
 @include media-breakpoint-up(lg) {
 
     .main-banner_wrapper {
-        @if($nav-bar){
 
-            margin-top: map_get($mb-margin-top, lg) + map_get($navbar-height, md);
-        }@else{
-            margin-top: map_get($mb-margin-top, lg);
-        }
+        margin-top: map_get($mb-margin-top, lg);
         height: map_get($mb-height, lg);
         background: map_get($mb-bg, lg);
 
     }
     .main-banner{
         padding: map_get($mb-padding, lg);
+
+        &_title{
+            margin-bottom: 40px;
+        }
+
+        &_container{
+            max-width: 330px;
+
+            h2, > p{
+                padding: 0;
+                margin: 0;
+                color: white;
+                text-align: center;
+            }
+
+            h2{
+                font-size: 24px;
+            }
+
+            > p{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &_cta .btn-flex{
+            font-family: $font-family-primary;
+            font-weight: bold;
+            text-decoration: none;
+
+            height: inherit;
+            display: inline-flex;
+
+            padding: 15px 35px;
+            margin-top: 35px;
+            border-radius: 24px;
+        }
     }
 }
