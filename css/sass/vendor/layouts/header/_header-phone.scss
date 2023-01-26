@@ -1,9 +1,10 @@
 .header-phone_wrapper {
     display: flex;
-    align-items: center;
-    width: map_get($header-phone-width, xs);
-    height: map_get($header-phone-content-height, xs);
+
     background: $header-phone-bg;
+    border-radius: 8px;
+
+    margin: 10px 5px 10px 0;
 
     &.no-phone {
         background: transparent;
@@ -11,56 +12,59 @@
 }
 
 .header-phone {
-    text-align: center;
-    margin: 7px auto 0;
-}
+    padding: 5px 15px;
 
-.header-phone_title {
-    margin: 0;
-    font-size: map_get($header-phone-title-size, xs);
-    line-height: map_get($header-phone-title-size, xs);
-    color: $header-phone-text-color;
-}
-
-.header-phone_link-wrapper {
-    margin: 0;
-
-    svg {
-        height: map_get($header-phone-icon-height, xs);
-        width: auto;
-        margin-right: 4px;
+    &_title {
+        margin: 0;
+        padding: 0;
+        font-size: map_get($header-phone-title-size, xs);
+        line-height: map_get($header-phone-title-size, xs);
+        color: $header-phone-text-color;
     }
 
+    &_link-wrapper {
+        margin: 0;
 
-    .icon-phone_path {
-        fill: $header-phone-icon-fill !important;
-        stroke-width: 1px;
+        svg {
+            height: map_get($header-phone-icon-height, xs);
+            width: auto;
+            margin-right: 4px;
+        }
+
+
+        .icon-phone_path {
+            fill: $header-phone-icon-fill !important;
+            stroke-width: 1px;
+        }
     }
-}
 
-.header-phone_link {
-    font-size: map_get($header-phone-link-size, xs);
-    line-height: map_get($header-phone-title-line-height, xs);
-    font-weight: bold;
-    color: $header-phone-text-color;
+        &_link {
+            text-decoration: none;
+            font-size: map_get($header-phone-link-size, xs);
+            line-height: map_get($header-phone-title-line-height, xs);
+            font-weight: 900;
+            color: $header-phone-text-color;
 
-    &:hover {
-        color: $header-phone-link-hover;
-    }
+            &:hover {
+                text-decoration: underline;
+                color: $header-phone-link-hover;
+            }
+        }
 }
 
 @include media-breakpoint-up(lg) {
 
-    .header-phone_wrapper {
-        width: map_get($header-phone-width, lg);
-        height: map_get($header-phone-content-height, lg);
-        margin-right: 0;
+    .header-phone_wrapper{
+        border-radius: 20px;
+    }
+
+    .header-phone{
+        padding: 10px 40px;
     }
 
     .header-phone_title {
         font-size: map_get($header-phone-title-size, lg);
         line-height: map_get($header-phone-title-size, lg);
-        margin-top: 8px;
     }
 
     .header-phone_link-wrapper {
