@@ -12,67 +12,62 @@
 
 
     <p class="form-simple_title">
-        ¿Ya eres cliente?
+        Escoge tus servicios
     </p>
 
-    <div class="mb-2">
-
-        <div class="d-flex align-items-center justify-content-center">
-
-            <div class="form-check">
-                <input id="{{ $id }}-cliente" class="form-check-input" type="radio" name="escliente" required
-                       data-toggle="enable-fields" data-enable="#{{ $id }}-motivo"
-                       data-set="batch_id:V_DIG_CLIENTE{{$batch_suffix}}"
-                       data-parent="#{{$id}}" value="si">
-                <label class="form-check-label" for="{{ $id }}-cliente">Sí</label>
-            </div>
-
-            <div class="ms-1 me-1">
-                <select id="{{ $id }}-motivo" name="Lote" class="form-control" data-set="batch_id"
-                        data-parent="#{{$id}}"
-                        data-company="" required="" disabled="">
-                    <option value="" selected="">Seleccionar</option>
-                    <option value="V_DIG_C2C{{$batch_suffix}}">Información de productos</option>
-                    <option value="V_DIG_CLIENTE{{$batch_suffix}}">Gestiones de mi contrato</option>
-                </select>
-            </div>
-
-            <div class="form-check">
-                <input id="{{ $id }}-nocliente" class="form-check-input" type="radio" name="escliente"
-                       data-toggle="enable-fields" data-disable="#{{ $id }}-motivo"
-                       data-set="batch_id:V_DIG_C2C{{$batch_suffix}}"
-                       data-parent="#{{$id}}" value="no">
-                <label class="form-check-label" for="{{ $id }}-nocliente">No</label>
-            </div>
-
+    <div class="form-simple_services">
+        <div class="form-check">
+            <label class="form-check-label" for="{{ $id }}-checkbox-internet">
+                @include('dev.partials.components.icons.menu.wifi-icon')
+                Internet Fibra
+            </label>
+            <input
+                checked
+                name="servicios"
+                type="checkbox"
+                id="{{ $id }}-checkbox-internet"
+                value="internet"
+            >
         </div>
 
-        <label for="escliente" class="error mb-2"></label>
+        <div class="form-check">
+            <label class="form-check-label" for="{{ $id }}-checkbox-movil">
+                @include('dev.partials.components.icons.menu.movil')
+                Móvil
+            </label>
+            <input
+                name="servicios"
+                type="checkbox"
+                id="{{ $id }}-checkbox-movil"
+                value="movil"
+            >
+        </div>
     </div>
 
-    <div class="mb-2">
-        <input type="text" name="phone" class="form-control" placeholder="Teléfono" required data-rule-phone="col">
+    <p class="form-simple_description">
+        !Déjanos tus datos y te ofrecemos el mejor precio!
+    </p>
+
+    <div>
+        <input type="text" name="phone" class="form-control" placeholder="* Número de Celular" required data-rule-phone="col">
     </div>
 
-    <div class="mb-2">
-        <label class="text-xxs">
-            <input type="checkbox" name="legal" required> Marcando esta casilla aceptas la
-            <a class="text-xxs" href="#" data-toggle="modal" data-target="#modal-text"
-               data-content="{{url('/privacy')}}" data-modal-title="Política de Privacidad"
-               title="Política de privacidad">política de privacidad</a> de {{config('app.name')}} <a class="text-xxs"
-                                                                                                      href="#"
-                                                                                                      data-toggle="modal"
-                                                                                                      data-target="#modal-info-basica-privacidad"
-                                                                                                      data-modal-title="Política de Privacidad"
-                                                                                                      title="Política de privacidad">+
-                info</a></label>
+    <div>
+        <input type="text" name="dni" class="form-control" placeholder="Número de identificación">
+    </div>
+
+    <div class="form-simple_tyc">
+        <input type="checkbox" name="legal" required>
+        <label for="legal" class="text-xxs">
+            Acepto política de privacidad y tratamiento de datos personales.
+        </label>
         <label for="legal" class="error d-block"></label>
     </div>
 
     <div class="mb-2">
         <button class="form-control btn-form bg-degraded" data-c2c="TE LLAMAMOS">
             <div class="btn-form_content font-family-bold">
-                Llámame GRATIS @include('dev.partials.components.icons.buttons.arrow-right')
+                Llámame
             </div>
             <span class="btn-form_loader">
                 <span class="loader"></span>
