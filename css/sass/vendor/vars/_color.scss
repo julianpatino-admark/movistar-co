@@ -8,6 +8,8 @@ $color-brand-highlight: #00b0f3;
 $color-brand-highlight-dark: darken($color-brand-highlight, 25%);
 $color-brand-highlight-light: lighten($color-brand-highlight, 5%);
 
+$color-brand-highlight-secondary: #f15a24;
+
 //COLOR-BRAND-DEGRADED
 $color-brand-degraded: linear-gradient($color-brand-light, $color-brand);
 $color-brand-degraded-dark: linear-gradient(darken($color-brand-light, 5%), darken($color-brand, 5%));
@@ -28,11 +30,15 @@ $color-brand-alt-degraded-dark: linear-gradient(darken($color-brand-alt, 25%), d
 
 $color-danger: #FF0000;
 
+
 //SPECIFIC COLORS
 $color-white:#fff;
 $color-black:#000;
 
-$color-grey-20:#bdbcbc;
+$color-blue-80:#1c4a62;
+
+$color-grey-20:#a7a7a9;
+$color-grey-40:#cccccc;
 $color-grey-60:#929292;
 $color-grey-80:#2c3235;
 

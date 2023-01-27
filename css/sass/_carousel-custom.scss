@@ -20,9 +20,9 @@
     touch-action: pan-y;
 }
 .carousel-inner {
-    position: relative;
     width: 100%;
-    overflow: hidden;
+    position: relative;
+    overflow: visible;
     @include clearfix();
 
 }

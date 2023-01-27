@@ -1,0 +1,45 @@
+.carousel-wrapper{
+  margin-top: 45px;
+
+  .title-section, .subtitle-section{
+    text-align: center;
+  }
+
+  .title-section{
+    font-size: 20px;
+    color: $color-blue-80;
+  }
+
+  .subtitle-section{
+    font-size: 18px;
+    font-weight: normal;
+    color: $color-grey-20;
+
+    margin-bottom: 40px;
+  }
+
+  .terminos-condiciones{
+    text-align: center;
+    font-size: 16px;
+
+    color: $color-grey-20;
+
+    margin: 40px 0;
+  }
+
+  @include media-breakpoint-up(lg){
+    .title-section{
+      font-size: 32px;
+    }
+
+    .subtitle-section{
+      font-size: 28px;
+
+      margin-bottom: 30px;
+    }
+
+    .terminos-condiciones{
+      margin: 75px 0;
+    }
+  }
+}
