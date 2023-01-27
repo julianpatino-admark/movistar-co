@@ -1,7 +1,6 @@
 .carousel-indicators {
     position: relative;
-    margin: 0;
-    height: 77px;
+    margin: 40px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,17 +9,17 @@
 
 .carousel-indicators_btn {
     display: inline-flex;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 0 10px 0;
     border-radius: 50%;
-    border: 2px solid $btn-carousel-border;
-    background-color: transparent;
+    border: 0;
+    background-color: $color-grey-40;
 
     &:hover,
     &:focus,
     &.active {
-        background: $btn-carousel-border;
+        background: $color-grey-80;
         outline: none;
     }
 }

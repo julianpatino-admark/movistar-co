@@ -12,7 +12,3 @@
 	@include('dev.partials.layouts.list.list-services')
 	@include('dev.partials.layouts.conditions.collapse')
 @stop
-
-
-
-

@@ -1,31 +1,12 @@
 <div class="carousel-wrapper ">
 	<div class="container">
-		<h2 class="title-section text-center mb-2">title</h2>
-		<h3 class="subtitle-section text-center mb-3">subtitle</h3>
+		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
+		<h3 class="subtitle-section">Planes de Internet Fibra óptica con velocidades que te dan libertad a un precio justo.</h3>
 
 		<div id="offersCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
-			<div class="carousel-indicators ">
-				<button data-target="#offersCarousel" aria-label="offer one" data-slide-to="0" class="btn-carousel">
-					OFFER ONE
-					@include('dev.partials.components.icons.triangle-down')
-				</button>
-				<button data-target="#offersCarousel" aria-label="offer two" data-slide-to="1" class="btn-carousel ">
-					OFFER TWO
-					@include('dev.partials.components.icons.triangle-down')
-				</button>
-				<button data-target="#offersCarousel" aria-label="offer three" data-slide-to="2"
-				        class="btn-carousel active">
-					OFFER THREE
-					@include('dev.partials.components.icons.triangle-down')
-				</button>
-				<button data-target="#offersCarousel" aria-label="osoa custom" data-slide-to="3" class="btn-carousel">
-					OFFER CUSTOM
-					@include('dev.partials.components.icons.triangle-down')
-				</button>
-			</div>
 
 			<div class="carousel-inner">
-				<div class="carousel-item">
+				<div class="carousel-item active">
 					<!-- card--->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-one')
 				</div>
@@ -33,7 +14,7 @@
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-two')
 				</div>
-				<div class="carousel-item active">
+				<div class="carousel-item">
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-three')
 				</div>
@@ -45,7 +26,7 @@
 
 			<div class="carousel-indicators">
 				<button data-target="#offersCarousel" aria-label="offers carousel 0" data-slide-to="0"
-				        class="carousel-indicators_btn"></button>
+				        class="carousel-indicators_btn active"></button>
 				<button data-target="#offersCarousel" aria-label="offers carousel 1" data-slide-to="1"
 				        class="carousel-indicators_btn"></button>
 				<button data-target="#offersCarousel" aria-label="offers carousel 2" data-slide-to="2"
@@ -54,6 +35,10 @@
 				        class="carousel-indicators_btn "></button>
 			</div>
 		</div>
+
+		<p class="terminos-condiciones">
+			*Aplican términos y condiciones. Basado en el análisis realizado por Ookla de los datos de SpeedTest Intelligence® para el segundo y tercer trimestre de 2022. Las marcas registradas de Ookla se usan bajo licencia y se reimprimen con permiso.
+		</p>
 	</div>
 </div>
 
