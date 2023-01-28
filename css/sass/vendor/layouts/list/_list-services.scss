@@ -1,87 +1,63 @@
 .list-services {
-    padding: 40px 0;
+    background-color: $color-grey-10;
+    padding-bottom: 72px;
 
-    hr {
-        width: 90%;
-        color: $color-grey-80;
-        margin: 2px auto;
-    }
-}
+    &_item {
+        max-width: 275px;
 
-.list-services_item {
-    margin: 0;
-    padding: 15px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    width: 100%;
-
-}
-
-.list-services_icon {
-    margin-right: 7px;
-
-    svg {
-        width: map_get($icons-list-size, xs);
-        fill: $list-icon-fill;
-    }
-}
-
-.list-services_info {
-    padding: 0 5px;
-    line-height: 1.3;
-
-    .info_title {
-        font-size: map_get($list-title, xs);
-        color: $list-color_title;
-    }
-
-    .info_subtitle {
-        font-size: map_get($list-subtitle, xs);
-        color: $list-color_subtitle;
-        margin: 0;
-    }
-}
-
-
-@include media-breakpoint-up(lg) {
-    .list-services {
-        hr {
-            display: none;
-        }
-    }
-
-    .list-services_item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        border: none;
-        width: 20%;
-        padding: 10px 5px;
-    }
-
-    .list-services_icon {
-        height: 60px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 0;
+        flex-wrap: wrap;
+        background-color: $color-grey-80;
 
-        svg {
-            width: map_get($icons-list-size, lg);
+        padding: 25px;
+        margin: 0 auto;
+
+        border-radius: 10px;
+    }
+
+    &_icon{
+        flex: 1 1 0;
+
+        svg{
+            fill: $color-brand-highlight;
         }
     }
 
-    .list-services_info {
-        .info_title {
+    &_info{
+        flex: 7 1 0;
+
+        .info_title, .info_subtitle{
             margin: 0;
-            font-size: map_get($list-title, lg);
-            padding: 10px 0;
 
+            color: white;
         }
 
-        .info_subtitle {
-            font-size: map_get($list-subtitle, lg);
+        .info_title{
+            font-size: 16px;
+        }
+
+        .info_subtitle{
+            font-size: 12px;
         }
     }
+
+    &_cta{
+        margin-top: 20px;
+    }
+
+    .carousel{
+        padding: 0;
+    }
+
+    .carousel-inner .carousel-item{
+        padding: 5px;
+
+        &:first-child{
+            .list-services_cta{
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {}
 }
