@@ -1,84 +1,119 @@
 .banner-simple {
-    background-color: $banner-simple_bg;
-    padding: map_get($banner-simple_padding, xs);
-    margin: 30px 0;
+    background-color: $color-grey-10;
+    padding-bottom: 80px;
 
-    button {
-        width: 100%;
-        max-width: 233px;
-        margin: 0;
-    }
-}
+    &_title{
+        background-color: $color-brand-highlight;
+        padding: 20px 0;
 
-
-.banner-simple_container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 650px;
-    align-items: center;
-
-    a {
-        background: $color-brand-highlight-degraded;
-        width: 217px;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        border: 1px solid white;
-
-    }
-}
-
-.banner-simple_info {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-}
-
-.banner-simple_icon {
-    margin-right: 10px;
-
-    svg {
-        height: 52px;
-        width: 69px;
-        fill: $color-white;
-    }
-}
-
-.banner-simple_text {
-    .text-title {
-        margin: 0;
-        color: $banner-simple_color;
-        font-size: map_get($banner-simple_title, xs);
-    }
-
-    .text-subtitle {
-        margin: 0;
-        color: $banner-simple_color;
-        font-size: map_get($banner-simple_subtitle, xs);
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    .banner-simple {
-        width: 733px;
-        margin: 0 auto;
-    }
-
-    .banner-simple_container {
-        flex-direction: row;
-    }
-
-    .banner-simple_text {
-        .text-title {
-            font-size: map_get($banner-simple_title, lg);
+        .container{
+            display: grid;
         }
 
-        .text-subtitle {
-            font-size: map_get($banner-simple_subtitle, lg);
+        h1{
+            color: white;
+            grid-column: 2;
         }
     }
 
+    &_container{}
+
+        &_info{
+            background-color: white;
+
+            display: grid;
+
+            padding: 0 45px 30px 45px;
+            margin-top: 35px;
+            border-radius: 15px;
+
+            &-image{
+                margin-top: -50px;
+                justify-self: center;
+
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            &-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                text-align: center;
+
+                .text-title{
+                    margin: 24px 0 0;
+                    color: $color-brand-highlight;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+
+                .text-subtitle{
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: 0 0 24px 0;
+                    font-size: 24px;
+
+                    span{
+                        color: $color-blue-80;
+                    }
+                }
+
+                .text-cta{
+                    display: flex;
+                    justify-content: center;
+
+                    .btn-flex{
+                        font-weight: bold;
+                        padding: 15px 35px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    @include media-breakpoint-up(lg) {
+        &_title .container{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &_info{
+            grid-template-columns: 1fr 1fr;
+
+            padding: 30px 0;
+
+            &-image{
+                margin-top: -180px;
+
+                img{
+                    width: 400px;
+                    height: 380px;
+                }
+            }
+
+            &-text {
+                text-align: left;
+
+                padding: 0;
+                justify-content: flex-start;
+
+                .text-title{
+                    margin: 0;
+                }
+
+                .text-subtitle{
+                    display: inline-block;
+                }
+
+                .text-cta{
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
 }
+
