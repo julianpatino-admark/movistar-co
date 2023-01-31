@@ -104,7 +104,7 @@
                 }
 
                 .months{
-                    padding: 2px 10px;
+                    padding: 2px 5px;
                 }
             }
         }
@@ -140,8 +140,12 @@
 
         .package-item{
             display: flex;
+            align-items: center;
 
             svg{
+                width: 23px;
+                height: 23px;
+                fill: $color-brand-highlight;
                 margin-right: 3px;
             }
 

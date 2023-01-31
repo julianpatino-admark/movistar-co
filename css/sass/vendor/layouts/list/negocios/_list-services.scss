@@ -1,0 +1,71 @@
+.list-services {
+    background-color: $color-grey-10;
+    padding: 70px 0 35px 0;
+
+    .container{
+        display: grid;
+        justify-content: center;
+        grid-template-columns:  365px;
+
+    }
+
+    &_item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-grey-80;
+
+        padding: 40px 45px;
+        margin-bottom: 15px;
+
+        border-radius: 10px;
+    }
+
+    &_info{
+        flex: 7 1 0;
+
+        .info_title, .info_subtitle{
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .info_title{
+            font-size: 20px;
+        }
+
+        .info_subtitle{
+            font-size: 14px;
+        }
+    }
+
+    &_cta{
+        margin-top: 30px;
+    }
+
+    .carousel{
+        padding: 0;
+    }
+
+    .carousel-inner .carousel-item{
+        padding: 5px;
+
+        &:first-child{
+            .list-services_cta{
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .container{
+            grid-template-columns: repeat(2, 365px);
+            column-gap: 18px;
+        }
+
+        &_item{
+            margin: 0 auto;
+        }
+    }
+}

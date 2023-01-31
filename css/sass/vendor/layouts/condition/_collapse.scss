@@ -8,6 +8,7 @@
 .condition-collapse_header {
 
     .btn-link {
+        text-decoration: none;
         color: $condition-collapse-color;
         display: flex;
         align-items: center;
@@ -38,5 +39,8 @@
 }
 
 .condition-collapse_body {
+    font-size: 10px;
     color: $condition-collapse-body-color;
+
+    padding: 15px 0;
 }
