@@ -1,1 +1,1 @@
-<div class="main_wrapper text-center"><div class="container"><div class="row"><div class="col-12 col-md-6 offset-md-3 pt-3 pb-2"><h1>ERROR 404</h1><p>La página solicitada no existe</p><p><a href="{{url('/')}}" class="btn-flex">VOLVER A LA HOME</a></p></div></div></div></div>
+<div class="main_wrapper text-center error-404"><div class="error-404_wrapper"><img width="453" height="281" src="{{ asset('/img/common/error-404.webp') }}"><div><a href="{{url('/')}}" class="btn-flex btn-accent">Llévame a la home</a></div></div></div>

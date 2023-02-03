@@ -32,12 +32,12 @@
 
 			<div class="card-offer_cta">
 				<a
-						class="btn-flex btn-carousel"
-						data-c2c="offer-one"
-						data-toggle="modal"
-						data-target="#modal-c2c"
-						data-tag-page="/modal/offer-one/c2c"
-						data-show-element="#modal-header-phone"
+					class="btn-flex btn-carousel"
+					data-c2c="offer-one"
+					data-toggle="modal"
+					data-target="#modal-velocidades"
+					data-tag-page="/modal/offer-one/c2c"
+					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
 				</a>

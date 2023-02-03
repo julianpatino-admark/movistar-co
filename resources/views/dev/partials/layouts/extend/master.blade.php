@@ -13,6 +13,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="facebook-domain-verification" content="u1y6tiqbwjdq7da92oq6cg5t8w7ybq"/>
 	<meta id="provider" name="provider" content="{{$provider}}">
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +39,7 @@
 
 	@section('modal')
 		@include('dev.partials.layouts.modal.c2c')
+		@include('dev.partials.layouts.modal.c2c-velocidades')
 		@include('dev.partials.layouts.modal.rgpd-config')
 		@include('dev.partials.layouts.modal.info-basica-privacidad')
 		@include('dev.partials.layouts.modal.privacy')

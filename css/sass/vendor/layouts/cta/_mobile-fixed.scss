@@ -1,7 +1,10 @@
 .cta-mobile_wrapper {
-    display: flex;
-    position: fixed;
     width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 7px;
+    position: fixed;
     bottom: 0;
     z-index: 3;
 }
@@ -18,10 +21,13 @@
     place-content: center;
     align-items: center;
     padding: 5px;
+    text-decoration: none;
     text-align: center;
     color: $cta-mobile-btn-color;
+    font-weight: bold;
     font-family: $cta-mobile-btn-font;
     font-size: $cta-mobile-btn-font-size;
+    border-radius: 6px;
     line-height: 1;
     border: 0;
     flex-grow: 1;
@@ -30,10 +36,6 @@
         margin-bottom: 3px;
         height: 24px;
         fill: $cta-mobile-svg-fill-color;
-
-        .icon-euro-circle {
-            fill: $cta-mobile-svg-fill-color;
-        }
     }
 }
 
@@ -42,6 +44,7 @@
     background-image: url('/img/common/icon-white-phone_cta-mobile-xxs.png');
     background-repeat: no-repeat;
     background-position: center 5px;
+    background-size: 24px;
     padding-top: $cta-mobile-btn-c2c_padding;
     background-color: map_get($cta-mobile-bg-color_phone, normal);
 

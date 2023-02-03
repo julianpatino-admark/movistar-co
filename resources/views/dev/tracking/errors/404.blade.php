@@ -1,6 +1,6 @@
 @extends('dev.partials.layouts.extend.master',[
     'nav' => false,
-    'header_phone' => false,
+    'header_phone' => true,
     'main_c2c' => false
 ])
 
@@ -12,7 +12,3 @@
 @section('content')
 	@include('dev.partials.layouts.errors.404')
 @stop
-
-
-
-

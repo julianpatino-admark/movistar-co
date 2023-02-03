@@ -1,3 +1,7 @@
+@php
+    $showServices = isset($showServices) ? $showServices : true;
+@endphp
+
 <form id="{{ $id }}"
       method="post"
       data-toggle="form-simple"
@@ -10,44 +14,45 @@
     <input type="hidden" name="tsource" value="{{$tsource}}">
     <input type="hidden" name="batch_id" value="V_DIG_C2C{{$batch_suffix}}">
 
+    @if($showServices)
+        <p class="form-simple_title">
+            Escoge tus servicios
+        </p>
 
-    <p class="form-simple_title">
-        Escoge tus servicios
-    </p>
+        <div class="form-simple_services">
+            <div class="form-check">
+                <label class="form-check-label" for="{{ $id }}-checkbox-internet">
+                    @include('dev.partials.components.icons.menu.wifi-icon')
+                    Internet Fibra
+                </label>
+                <input
+                    checked
+                    name="servicios"
+                    type="checkbox"
+                    id="{{ $id }}-checkbox-internet"
+                    value="internet"
+                >
+            </div>
 
-    <div class="form-simple_services">
-        <div class="form-check">
-            <label class="form-check-label" for="{{ $id }}-checkbox-internet">
-                @include('dev.partials.components.icons.menu.wifi-icon')
-                Internet Fibra
-            </label>
-            <input
-                checked
-                name="servicios"
-                type="checkbox"
-                id="{{ $id }}-checkbox-internet"
-                value="internet"
-            >
+            <div class="form-check">
+                <label class="form-check-label" for="{{ $id }}-checkbox-movil">
+                    @include('dev.partials.components.icons.menu.movil')
+                    Móvil
+                </label>
+                <input
+                    name="servicios"
+                    type="checkbox"
+                    id="{{ $id }}-checkbox-movil"
+                    value="movil"
+                >
+            </div>
         </div>
 
-        <div class="form-check">
-            <label class="form-check-label" for="{{ $id }}-checkbox-movil">
-                @include('dev.partials.components.icons.menu.movil')
-                Móvil
-            </label>
-            <input
-                name="servicios"
-                type="checkbox"
-                id="{{ $id }}-checkbox-movil"
-                value="movil"
-            >
-        </div>
-    </div>
+        <p class="form-simple_description">
+            !Déjanos tus datos y te ofrecemos el mejor precio!
+        </p>
 
-    <p class="form-simple_description">
-        !Déjanos tus datos y te ofrecemos el mejor precio!
-    </p>
-
+    @endif
     <div>
         <input type="text" name="phone" class="form-control" placeholder="* Número de Celular" required data-rule-phone="col">
     </div>

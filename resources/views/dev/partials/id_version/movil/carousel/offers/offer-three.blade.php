@@ -42,7 +42,7 @@
 
 		<div class="card-offer_footer">
 			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.phone")
+				@include("vendor.partials.components.icons.menu.movil")
 				<div>
 					<h4>Minutos ilimitados</h4>
 					<p>USA, CANADA Y COLOMBIA</p>
