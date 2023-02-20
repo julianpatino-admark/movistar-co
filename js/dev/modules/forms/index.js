@@ -5,9 +5,12 @@ const init = () => {
 
   document.querySelectorAll("[data-toggle=form-simple]").forEach((el) => {
     $(el).on("form-finished", (ev, data) => {
-      console.log("data", data)
+      /*console.log("data", data)
       const { origin, search, hash } = window.location;
-      if(data) window.location.href = `${origin}/gracias${search}${hash}`;
+      if(data === true) {
+        window.location.href = `${origin}/gracias${search}${hash}`;
+      }
+       */
     });
   });
 }
