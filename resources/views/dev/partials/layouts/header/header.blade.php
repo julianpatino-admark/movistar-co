@@ -19,7 +19,6 @@
 		</div>
 		@include('dev.partials.layouts.navbar.nav')
 		<div class="header-right">
-			{{ $phone }}
 			@if(strlen($phone) >= 9)
 				<div class="header-phone_wrapper">
 					<div class="header-phone">
