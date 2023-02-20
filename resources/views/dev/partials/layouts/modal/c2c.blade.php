@@ -2,18 +2,16 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				@if(strlen($phone) === 9)
-					<div id="modal-header-phone" class="modal-header-phone">
-						<p class="modal-header-phone_title">Infórmate gratis</p>
-						<a href="tel:{{$phone}}" data-tag-page="/phone/modal/click" aria-label="telefono informate"
-						   class="goo-phone modal-header-phone_link">{{$phone_formatted}}</a>
-					</div>
-				@endif
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+				<div class="brands">
+					@include('dev.partials.components.icons.logo.brand-logo')
+					<img class="digital-partner-image" height="70" width="126" src="{{ asset('/img/common/partner-aliado-movistar.svg') }}" alt="Etiqueta de aliado digital Movistar" />
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+				</div>
 			</div>
 			<div class="modal-body">
 				<div class="modal-c2c_title">
-					<p class="text-uppercase font-family-bold">o te llamamos GRATIS</p>
+					<p>Déjanos tu número y nos pondremos en contacto contigo</p>
+					<p>Te llamamos GRATIS</p>
 				</div>
 				<div class="modal-c2c_form">
 					@include('dev.partials.components.forms.simple',['id' => 'modal-c2c', 'class' => 'form-underline'])

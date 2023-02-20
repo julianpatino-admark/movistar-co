@@ -35,6 +35,7 @@
 					class="btn-flex btn-carousel"
 					data-c2c="offer-one"
 					data-toggle="modal"
+					data-modal-title="350 Mb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-one/c2c"
 					data-show-element="#modal-header-phone"

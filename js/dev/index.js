@@ -41,6 +41,7 @@ import "admark-landings/src/validation/lang/messages_es";
 
 import "admark-landings/src/validation/phone";
 
+import LocalForms from "./modules/forms/index";
 import FormSimple from "admark-landings/src/forms/form-simple";
 import EnableFields from "admark-landings/src/forms/enable-fields";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
@@ -61,6 +62,8 @@ RGPD.init(
   RgpdHTML
 );
 
+
+LocalForms.init();
 FormSimple.init();
 EnableFields.init();
 ToggleEnabled.init();

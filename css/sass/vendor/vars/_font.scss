@@ -11,10 +11,6 @@ $fonts: (
 
 );
 
-@each $file, $fontName in $fonts {
-    @include fontfacemix($fontName, $file);
-}
-
 $font-family-primary: "Roboto", "Arial", sans-serif;
 $font-family-secondary: "Roboto", "Arial", sans-serif;
 

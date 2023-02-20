@@ -18,7 +18,7 @@
 					OFFER THREE
 					@include('dev.partials.components.icons.triangle-down')
 				</button>
-				<button data-target="#offersCarousel" aria-label="osoa custom" data-slide-to="3" class="btn-carousel">
+				<button data-target="#offersCarousel" aria-label="offer custom" data-slide-to="3" class="btn-carousel">
 					OFFER CUSTOM
 					@include('dev.partials.components.icons.triangle-down')
 				</button>

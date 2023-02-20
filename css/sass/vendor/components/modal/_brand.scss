@@ -7,9 +7,7 @@
 
 		border: none;
 
-		@if $modal-rounded == false {
-			@include border-radius(0);
-		}
+		border-radius: 27px 27px 0 0;
 
 	}
 
@@ -21,13 +19,13 @@
 		text-align: center;
 		border-bottom: 0;
 		z-index:6;
-		//box-shadow: $box-shadow;
 
-		@if $modal-rounded == false {
-			@include border-radius(0);
-		}
+		border-radius: 25px 25px 0 0;
 
 		.close {
+			line-height: 10px;
+			font-size: 25px;
+
 			position: absolute;
 			top: 15px;
 			right: 15px;

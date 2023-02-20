@@ -30,7 +30,8 @@
 						class="btn-flex btn-carousel"
 						data-c2c="offer-one"
 						data-toggle="modal"
-						data-target="#modal-c2c"
+						data-modal-title="40 Gb"
+						data-target="#modal-velocidades"
 						data-tag-page="/modal/offer-one/c2c"
 						data-show-element="#modal-header-phone"
 				>

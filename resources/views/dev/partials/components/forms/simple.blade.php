@@ -12,7 +12,7 @@
     <input type="hidden" name="c2c" value="LLÁMAME GRATIS">
     <input type="hidden" name="id_version" value="{{$id_version}}">
     <input type="hidden" name="tsource" value="{{$tsource}}">
-    <input type="hidden" name="batch_id" value="V_DIG_C2C{{$batch_suffix}}">
+    <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_800_Q12">
 
     @if($showServices)
         <p class="form-simple_title">
@@ -80,3 +80,4 @@
         </button>
     </div>
 </form>
+

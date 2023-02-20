@@ -1,15 +1,14 @@
 // Modal brand
 $modal-rounded: false;
-$modal-header-bg: $color-brand;
+$modal-header-bg: black;
 $modal-header-min-height: 68px;
 $modal-header-font: $font-family-brand;
 $modal-header-font-size: 18px;
-$modal-text-color: #fff;
+$modal-text-color: $color-brand-highlight;
 
 // Modal Header Phone
 $modal-header-phone-color: #ffffff;
 $modal-band-bg-color: $color-brand-alt;
 $modal-band-font-size: 15px;
-$modal-text-color: 15px;
 $modal-header-text-color: $color-brand-highlight;
 $modal-header-icon-fill-color: $color-brand-highlight;

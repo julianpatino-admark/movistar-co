@@ -17,13 +17,62 @@
     .container {
         background-color: $navbar-bg;
     }
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            font-size: 15px;
+            background-color: $color-brand-alt;
+            font-weight: bold;
+
+            &.nav-item{
+                font-size: 15px;
+
+                .nav-link{
+                    display: flex;
+                    color: white;
+
+                    align-items: center;
+
+                    img{
+                        width: 23px;
+                        height: 23px;
+
+                        margin-right: 5px;
+
+                        &.icono-active{
+                            display: none;
+                        }
+                    }
+                }
+
+                &.active{
+                    .nav-link{
+                        font-weight: bold;
+                        color: $color-brand-highlight;
+
+                        img{
+                            &.icono-active{
+                                display: inline-block;
+                            }
+
+                            &.icono-default{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md) {
     .navbar-collapse {
-        height: map_get($navbar-height, md);
         top: map_get($navbar-top, md);
-        background: $navbar-bg;
         width: 100%;
         position: fixed;
         left: 0;

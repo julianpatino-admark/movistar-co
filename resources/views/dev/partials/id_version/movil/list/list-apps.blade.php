@@ -2,6 +2,8 @@
 	<div class="container">
 		<div class="row">
 			<div id="servicesCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
+				<h4 class="title">Descubre cómo activar tus ElegiApps</h4>
+				<p class="subtitle">Ingresando al App <a>Mi Movistar</a></p>
 
 				<div class="carousel-inner">
 					<div class="carousel-item active">
