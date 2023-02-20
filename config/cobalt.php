@@ -35,7 +35,7 @@ return [
         'page' => 'home',
         'client' => 'movistarco',
         'id_version' => 'default',
-        'tsource' => '6352',
+        'tsource' => 'default',
         'priority' => '4',
         'lead_type' => 'C2C',
         'provider' => 'b12-admark',
