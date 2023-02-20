@@ -1,7 +1,9 @@
 @extends('dev.partials.layouts.extend.master')
 
 @section('metadata')
-	<title>Landing Genérica</title>
+	<meta name="keywords" content="MOVISTAR Pymes"/>
+	<meta name="description" content="Internet fibra óptica con velocidad simétrica para tu negocio con 20% de descuento por 12 meses y web Movistar." />
+	<title>Movistar Co | Planes de Internet fibra óptica para tu negocio</title>
 	<!-- inject-style src="../../css/purged/negocios.css" -->
 @stop
 

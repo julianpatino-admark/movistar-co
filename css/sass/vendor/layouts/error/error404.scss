@@ -1,0 +1,15 @@
+.error-404{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_wrapper{
+    width: 490px;
+
+    img{
+      width: 100%;
+      margin-bottom: 110px;
+    }
+  }
+}

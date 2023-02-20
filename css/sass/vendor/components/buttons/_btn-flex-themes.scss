@@ -8,6 +8,22 @@
     }
 }
 
+.btn-flex.btn-accent-b {
+    display: inline-flex;
+    font-weight: bold;
+    text-decoration: none;
+    background: $btn-accent-b-color;
+    color: $btn-accent-color;
+
+    border: 2px solid $btn-carousel-bg;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $btn-accent-b-color;
+        background: $btn-accent-bg-hover;
+    }
+}
+
 .btn-flex.btn-carousel {
     width: 100%;
     height: inherit;

@@ -1,4 +1,65 @@
-.modal-c2c_title{
+.modal-velocidades{
 	font-size: 19px;
 	text-align: center;
+
+	.modal-header{
+		display: flex;
+		flex-direction: column;
+
+		padding: 0;
+
+		.brands{
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			padding: 20px 40px;
+
+			svg{
+				width: 122px;
+				height: 29px;
+			}
+
+			.digital-partner-image{
+				width: 85px;
+				height: 46px;
+
+				margin-right: 10px;
+			}
+		}
+
+		.modal-header-text{
+			width: 100%;
+
+			background-color: $color-brand-highlight;
+
+			padding: 20px 0;
+
+			h2 {
+				color: white;
+				margin: 0;
+			}
+		}
+	}
+
+	.modal-body{
+		.modal-velocidades_title{
+			font-size: 16px;
+          	line-height: 16px;
+
+			p:first-child{
+				color: $color-grey-70;
+			}
+
+			p:last-child{
+				font-weight: bold;
+			}
+		}
+
+		.form-velocidades{
+			padding: 20px 80px;
+		}
+	}
 }

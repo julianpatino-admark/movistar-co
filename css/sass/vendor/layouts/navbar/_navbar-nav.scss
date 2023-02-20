@@ -18,12 +18,14 @@
 
                 align-items: center;
 
-                svg{
-                    fill: white;
+                img{
+                    width: 23px;
+                    height: 23px;
+
                     margin-right: 5px;
 
-                    &.pymes{
-                        stroke: white;
+                    &.icono-active{
+                        display: none;
                     }
                 }
             }
@@ -33,11 +35,13 @@
                     font-weight: bold;
                     color: $color-brand-highlight;
 
-                    svg{
-                        fill: $color-brand-highlight;
+                    img{
+                        &.icono-active{
+                            display: inline-block;
+                        }
 
-                        &.pymes{
-                            stroke: $color-brand-highlight;
+                        &.icono-default{
+                            display: none;
                         }
                     }
                 }

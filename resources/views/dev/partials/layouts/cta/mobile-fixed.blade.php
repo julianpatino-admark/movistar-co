@@ -1,22 +1,27 @@
+@php
+	$phone = '01800000000';
+    $phone_formatted = "01800 000 000";
+@endphp
+
 <div class="cta-mobile_wrapper">
 
-	@if(strlen($phone) === 9)
+	<a class="cta-mobile_btn cta-mobile_btn-calcula" data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/calcula-mobile-fijo/c2c">
+		@include('dev.partials.components.icons.buttons.toggle')
+		Calcula tu precio
+	</a>
+
+	@if(strlen($phone) >= 9)
 		<a class="cta-mobile_btn cta-mobile_btn-phone goo-phone" href="tel:{{$phone}}"
-		   data-tag-page="/phone/cta-mobile-fijo/clic" title="Llamanos GRATIS: {{$phone_formatted}}">
+		   data-tag-page="/phone/cta-mobile-fijo/clic" title="Llama Gratis: {{$phone_formatted}}">
+			Llama Gratis
 			{{$phone_formatted}}
 		</a>
 	@endif
 
 	<a data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/cta-mobile-fijo/c2c"
 	   class="cta-mobile_btn cta-mobile_btn-c2c" data-hiden-element="#modal-header-phone">
-		@include('dev.partials.components.icons.buttons.headphones')
-		TE LLAMAMOS<br>GRATIS
-	</a>
-
-	<a class="cta-mobile_btn cta-mobile_btn-calcula" data-toggle="modal" data-target="#modal-c2c-calcula"
-	   data-tag-page="/modal/calcula-mobile-fijo/c2c">
-		@include('dev.partials.components.icons.buttons.euro-circle')
-		PERSONALIZA<br> TU TARIFA
+		@include('dev.partials.components.icons.cards.phone')
+		Te llamamos GRATIS
 	</a>
 
 </div>

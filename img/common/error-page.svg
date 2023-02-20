@@ -1,0 +1,94 @@
+<svg width="486" height="282" viewBox="0 0 486 282" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="l2lyxrxgfa" d="M0 281.145h485.179V0H0z"/>
+        <path d="M0 3.024a3.025 3.025 0 0 0 3.022 3.022 3.026 3.026 0 0 0 3.024-3.022A3.03 3.03 0 0 0 3.022 0 3.029 3.029 0 0 0 0 3.024" id="nc8m2qlo9c"/>
+        <path d="M0 2.649a2.653 2.653 0 0 0 2.651 2.654 2.655 2.655 0 0 0 2.654-2.654A2.65 2.65 0 0 0 2.651 0 2.648 2.648 0 0 0 0 2.649" id="w34v71okxf"/>
+        <path id="tks1hbwxni" d="M.213 0h.574v5.197H.213z"/>
+        <path id="gliitj83lk" d="M0 .212h5.192v.576H0z"/>
+        <path d="M0 3.024a3.028 3.028 0 0 0 3.022 3.023 3.028 3.028 0 0 0 3.024-3.023A3.027 3.027 0 0 0 3.022 0 3.026 3.026 0 0 0 0 3.024" id="wstwuvzv1m"/>
+        <path d="M0 2.652a2.655 2.655 0 0 0 2.651 2.656 2.657 2.657 0 0 0 2.654-2.656A2.653 2.653 0 0 0 2.651 0 2.65 2.65 0 0 0 0 2.652" id="tsks3k15sp"/>
+        <path id="f36dco5s0s" d="M.213 0h.574v5.192H.213z"/>
+        <path id="nrqvadnfxu" d="M0 .211h5.192v.578H0z"/>
+        <radialGradient cx="33.236%" cy="42.83%" fx="33.236%" fy="42.83%" r="85.114%" id="evwyag85pd">
+            <stop stop-color="#878383" offset="0%"/>
+            <stop stop-color="#D4D4D4" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="33.236%" cy="42.829%" fx="33.236%" fy="42.829%" r="85.128%" gradientTransform="matrix(.99962 0 0 1 0 0)" id="edir6otymg">
+            <stop stop-color="#3D3B3B" offset="0%"/>
+            <stop stop-color="#B1B1B1" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="33.236%" cy="42.831%" fx="33.236%" fy="42.831%" r="85.119%" gradientTransform="matrix(1 0 0 .99984 0 0)" id="5jrl2iqu1n">
+            <stop stop-color="#878383" offset="0%"/>
+            <stop stop-color="#D4D4D4" offset="100%"/>
+        </radialGradient>
+        <radialGradient cx="33.236%" cy="42.821%" fx="33.236%" fy="42.821%" r="85.136%" gradientTransform="matrix(1 0 0 .99943 0 0)" id="b2hzar4pwq">
+            <stop stop-color="#3D3B3B" offset="0%"/>
+            <stop stop-color="#B1B1B1" offset="100%"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M131.492 49.706c0-10.729-8.694-19.423-19.423-19.423a19.28 19.28 0 0 0-6.658 1.202 13.43 13.43 0 0 0-3.543-2.421c.152-.976.252-1.966.252-2.983 0-10.724-8.693-19.42-19.414-19.42-6.944 0-13.024 3.659-16.455 9.138a27.768 27.768 0 0 0-11.448-2.474c-11.985 0-22.174 7.567-26.122 18.177a19.424 19.424 0 0 0-11.42 11.274 13.46 13.46 0 0 0-3.807-.552C6.024 42.224 0 48.246 0 55.676c0 7.428 6.024 13.45 13.454 13.45h99.535v-.049c10.298-.481 18.503-8.954 18.503-19.37M368.405 96.875c0-11.885 9.236-21.589 20.92-22.382 1.553-4.994 6.211-8.62 11.724-8.62 2.203 0 4.265.59 6.06 1.61a26.932 26.932 0 0 1 10.81-2.263c11.581 0 21.431 7.284 25.291 17.512a18.788 18.788 0 0 1 6.187-1.06c8.205 0 15.164 5.251 17.746 12.57a12.989 12.989 0 0 1 4.992-.995c7.204 0 13.043 5.84 13.043 13.043 0 7.203-5.839 13.042-13.043 13.042-.132 0-.259-.015-.392-.018a12.934 12.934 0 0 1-7.078 2.095c-1.099 0-2.166-.148-3.19-.408a12.916 12.916 0 0 1-5.89 1.417c-1.662 0-3.235-.318-4.698-.883a12.96 12.96 0 0 1-5.912 1.425 12.96 12.96 0 0 1-6.492-1.74 12.976 12.976 0 0 1-9.385 4.003c-.355 0-.697-.023-1.039-.049a23.306 23.306 0 0 1-10.14 2.33c-5.223 0-10.032-1.726-13.925-4.614a12.981 12.981 0 0 1-7.435 2.333c-4.873 0-9.119-2.679-11.357-6.64-9.66-2.512-16.797-11.266-16.797-21.708" fill="#D4D4D4"/>
+            <path d="M336.905 266.115c0 8.302-36.24 15.03-80.939 15.03-44.704 0-80.942-6.728-80.942-15.03 0-8.303 36.238-15.03 80.942-15.03 44.698 0 80.94 6.727 80.94 15.03" fill="#000"/>
+            <path d="M178.198 270.247c9.676-6.292 40.791-10.898 77.768-10.898 36.974 0 68.09 4.606 77.763 10.898 2.026-1.315 3.176-2.7 3.176-4.132 0-8.303-36.24-15.03-80.939-15.03-44.704 0-80.942 6.727-80.942 15.03 0 1.431 1.151 2.817 3.174 4.132" fill="#666"/>
+            <mask id="foeo1fwhvb" fill="#fff">
+                <use xlink:href="#l2lyxrxgfa"/>
+            </mask>
+            <path fill="#D4D4D4" mask="url(#foeo1fwhvb)" d="M250.591 281.145h10.661V96.365h-10.661z"/>
+            <path mask="url(#foeo1fwhvb)" d="M250.538 190.79h10.851v-25.023h-10.851z"/>
+            <path fill="#00B0F3" mask="url(#foeo1fwhvb)" d="m221.386 166.968-48.904-48.9V48.905L221.386 0h69.159l48.905 48.905v69.163l-48.905 48.9z"/>
+            <path d="M224.97 158.312h61.984l43.83-43.832V52.493l-43.83-43.831H224.97l-43.826 43.83v61.988l43.826 43.832zm63.639 3.998h-65.294l-46.171-46.175V50.837l46.17-46.171h65.295l46.174 46.17v65.299l-46.174 46.175z" fill="#FFF" mask="url(#foeo1fwhvb)"/>
+        </g>
+        <g transform="translate(252.961 12.757)">
+            <mask id="27df69ujte" fill="#fff">
+                <use xlink:href="#nc8m2qlo9c"/>
+            </mask>
+            <path d="M0 3.024a3.025 3.025 0 0 0 3.022 3.022 3.026 3.026 0 0 0 3.024-3.022A3.03 3.03 0 0 0 3.022 0 3.029 3.029 0 0 0 0 3.024" fill="url(#evwyag85pd)" mask="url(#27df69ujte)"/>
+        </g>
+        <g transform="translate(253.332 13.132)">
+            <mask id="wbpr47hiuh" fill="#fff">
+                <use xlink:href="#w34v71okxf"/>
+            </mask>
+            <path d="M0 2.649a2.653 2.653 0 0 0 2.651 2.654 2.655 2.655 0 0 0 2.654-2.654A2.65 2.65 0 0 0 2.651 0 2.648 2.648 0 0 0 0 2.649" fill="url(#edir6otymg)" mask="url(#wbpr47hiuh)"/>
+        </g>
+        <g transform="translate(255.485 13.15)">
+            <mask id="oxu3hx3fzj" fill="#fff">
+                <use xlink:href="#tks1hbwxni"/>
+            </mask>
+            <path mask="url(#oxu3hx3fzj)" d="M.213 5.197h.574V0H.213z"/>
+        </g>
+        <g transform="translate(253.388 15.248)">
+            <mask id="lp1yd13npl" fill="#fff">
+                <use xlink:href="#gliitj83lk"/>
+            </mask>
+            <path mask="url(#lp1yd13npl)" d="M0 .788h5.192V.212H0z"/>
+        </g>
+        <g transform="translate(252.961 148.169)">
+            <mask id="m5vu5lp3mo" fill="#fff">
+                <use xlink:href="#wstwuvzv1m"/>
+            </mask>
+            <path d="M0 3.024a3.028 3.028 0 0 0 3.022 3.023 3.028 3.028 0 0 0 3.024-3.023A3.027 3.027 0 0 0 3.022 0 3.026 3.026 0 0 0 0 3.024" fill="url(#5jrl2iqu1n)" mask="url(#m5vu5lp3mo)"/>
+        </g>
+        <g transform="translate(253.332 148.541)">
+            <mask id="z73vg48yhr" fill="#fff">
+                <use xlink:href="#tsks3k15sp"/>
+            </mask>
+            <path d="M0 2.652a2.655 2.655 0 0 0 2.651 2.656 2.657 2.657 0 0 0 2.654-2.656A2.653 2.653 0 0 0 2.651 0 2.65 2.65 0 0 0 0 2.652" fill="url(#b2hzar4pwq)" mask="url(#z73vg48yhr)"/>
+        </g>
+        <g transform="translate(255.485 148.563)">
+            <mask id="uu1qg3a1st" fill="#fff">
+                <use xlink:href="#f36dco5s0s"/>
+            </mask>
+            <path mask="url(#uu1qg3a1st)" d="M.213 5.192h.574V0H.213z"/>
+        </g>
+        <g transform="translate(253.388 150.659)">
+            <mask id="1szfhklvqv" fill="#fff">
+                <use xlink:href="#nrqvadnfxu"/>
+            </mask>
+            <path mask="url(#1szfhklvqv)" d="M0 .789h5.192V.211H0z"/>
+        </g>
+        <text font-family="Montserrat-Bold, Montserrat" font-size="54.918" font-weight="bold" fill="#FFF">
+                    <tspan x="199.906" y="103.901">404</tspan>
+                </text>
+    </g>
+</svg>

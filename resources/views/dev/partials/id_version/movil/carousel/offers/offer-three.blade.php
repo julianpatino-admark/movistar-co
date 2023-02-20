@@ -30,7 +30,8 @@
 					class="btn-flex btn-carousel"
 					data-c2c="offer-two"
 					data-toggle="modal"
-					data-target="#modal-c2c"
+					data-modal-title="70 Gb"
+					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-two/c2c"
 					data-show-element="#modal-header-phone"
 				>
@@ -42,7 +43,7 @@
 
 		<div class="card-offer_footer">
 			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.phone")
+				@include("vendor.partials.components.icons.menu.movil")
 				<div>
 					<h4>Minutos ilimitados</h4>
 					<p>USA, CANADA Y COLOMBIA</p>

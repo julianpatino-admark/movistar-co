@@ -79,7 +79,7 @@
 					<div class="carousel-item">
 						<div class=" list-services_item">
 							<div class="list-services_icon">
-								@include('dev.partials.components.icons.menu.pymes')
+								<img class="mr-1" height="20px" width="20px" src="{{ asset('img/menu/icons-pymes-active.png') }}" alt="Icono de un ordenador de escritorio">
 							</div>
 							<div class="list-services_info">
 								<h3 class="info_title font-weight-bold">Soluciones para tu negocio</h3>

@@ -1,12 +1,12 @@
 // CTA mobile Fixed
 $cta-mobile-color: #fff;
-$cta-mobile-font: $font-family-sans-serif;
+$cta-mobile-font: $font-family-primary;
 $cta-mobile-font-size: 13px;
 $cta-mobile-btn-content: "Llama GRATIS";
 $cta-mobile-calcula-color: $color-white;
 $cta-mobile-btn-color:#fff;
-$cta-mobile-btn-font:$font-family-sans-serif;
-$cta-mobile-btn-font-size:15px;
+$cta-mobile-btn-font:$font-family-primary;
+$cta-mobile-btn-font-size:14px;
 $cta-mobile-svg-fill-color:#fff;
 $cta-mobile-btn-call-content:hola;
 
@@ -17,8 +17,8 @@ $cta-mobile-bg-color_c2c: (
         hover : darken($color-brand, 15%)
 );
 $cta-mobile-bg-color_phone: (
-        normal : $color-brand-highlight,
-        hover : darken($color-brand-highlight, 15%)
+        normal : $color-blue-20,
+        hover : darken($color-blue-20, 15%)
 );
 $cta-mobile-bg-color_calcula: (
         normal : $color-brand-highlight,

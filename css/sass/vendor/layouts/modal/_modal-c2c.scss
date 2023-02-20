@@ -24,4 +24,63 @@
 		}
 
 	}
+
+	.modal-content{
+		background-color: $color-grey-80;
+
+		.modal-header{
+			display: flex;
+			flex-direction: column;
+
+			padding: 0;
+
+			.brands{
+				width: 100%;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				padding: 20px 40px;
+
+				svg{
+					width: 122px;
+					height: 29px;
+				}
+
+				.digital-partner-image{
+					width: 85px;
+					height: 46px;
+
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.modal-body{
+			.modal-c2c_title{
+				text-align: center;
+
+				font-size: 16px;
+				line-height: 16px;
+
+				margin: 20px 0 15px 0;
+
+				p{
+					color: white;
+					margin: 0;
+
+					&:last-child{
+						font-weight: bold;
+					}
+				}
+			}
+
+			.form-simple_services{
+				margin: 0 auto;
+				max-width: 60%;
+			}
+		}
+	}
+
 }

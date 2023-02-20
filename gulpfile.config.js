@@ -145,7 +145,8 @@ var plugins = {
                 'tracking/privacy',
                 'tracking/privacidad-basica',
                 'tracking/cookies',
-                'tracking/errors'
+                'tracking/errors',
+                'tracking/gracias'
             ],
 
             dest: "./resources/views/vendor/"

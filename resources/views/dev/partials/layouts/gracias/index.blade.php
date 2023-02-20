@@ -1,0 +1,22 @@
+@php
+	$path = request()->path();
+@endphp
+
+<div class="thankyou">
+
+	<div class="container">
+		<div class="thankyou_content">
+			<h1>GRACIAS</h1>
+			<h4>HEMOS RECIBIDO TU <br>REGISTRO CORRECTAMENTE</h4>
+			<p>En breve te contactaremos para brindarte toda la información</p>
+			<div>
+				<a
+						href="/?{{request()->getQueryString()}}"
+						class="btn-flex btn-accent-b"
+				>
+					Volver al home
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

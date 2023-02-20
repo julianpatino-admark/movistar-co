@@ -1,0 +1,87 @@
+.thankyou{
+  height: 85vh;
+
+  background: url("img/common/thankyou/gracias@2x.webp") no-repeat center 100px, linear-gradient(270deg, #54cbe3 30%, #22bcd9 70%);
+  background-size: contain;
+
+  .container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-bottom: 20px;
+  }
+
+  &_content{
+    max-width: 485px;
+    text-align: center;
+
+    h1, h4{
+      color: $white;
+      font-family: $font-family-primary;
+      font-weight: bold;
+    }
+
+    h1{
+      font-size: 40px;
+      margin-bottom: 25px;
+    }
+
+    h4{
+      font-size: 20px;
+      margin: 24px 0;
+    }
+
+    p{
+      font-family: $font-family-secondary;
+      color: $white;
+      font-size: 14px;
+    }
+
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .thankyou {
+    height: 85vh;
+    background-position: center 100px;
+
+    &_content {
+      padding: 0 15px;
+
+      h1 {
+        font-size: 64px;
+      }
+
+      h4 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .thankyou {
+    background-position: center 135px;
+    background-size: 1375px;
+
+    .container{
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .thankyou {
+    background-position: center 135px;
+    background-size: 1700px;
+  }
+}
+

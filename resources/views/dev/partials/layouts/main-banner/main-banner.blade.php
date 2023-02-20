@@ -38,4 +38,3 @@
 		<p class="main-banner_text-month">Oferta por 6 meses</p>
 	</div>
 </div>
-</div>
