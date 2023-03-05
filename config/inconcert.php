@@ -23,12 +23,12 @@ return array(
     'campaign' 			=>  		"",
     'batch_id' 			=> 			"",
     'phone_type' 		=> 			"HOME",
-    'country_id' 		=> 			"+34",
+    'country_id' 		=> 			"+57",
     'area_id' 			=> 			"",
     'schedule_date' 	=> 			"",
     'time_zone' 		=> 			"CET",
     'contact_id_prefix' => 			"CRC2C_",
-    'number_prefix' 	=> 			"+34",
+    'number_prefix' 	=> 			"+57",
     /*
     |--------------------------------------------------------------------
     | Horas que tienen que pasar para que se pueda realizar otra

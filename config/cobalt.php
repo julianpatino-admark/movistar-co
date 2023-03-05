@@ -6,6 +6,7 @@ return [
      */
     'endpoint' => 'http://panel.digitalion.com/wss/cobalt.php?wsdl',
 
+
     /**
      * La configuración del cliente SOAP Cobalt (inserción de leads)
      */
@@ -26,6 +27,15 @@ return [
         'compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
     ],
 
+    /*
+    |--------------------------------------------------------------------
+    | Extra data  que se debe enviar a Cobalt en params
+    |--------------------------------------------------------------------
+    */
+    'extra_data' => [
+        'dni'
+    ],
+
     /**
      * Configuración por defecto de los datos enviados
      */
@@ -39,7 +49,8 @@ return [
         'priority' => '4',
         'lead_type' => 'C2C',
         'provider' => 'b12-admark',
-        'origin' => '1'
+        'origin' => '1',
+        'extra_observaciones' => true,
 
     ],
 

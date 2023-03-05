@@ -1,25 +1,35 @@
-<div class="text-group">
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda blanditiis cumque, dolores error illo ipsam iste itaque laboriosam maxime nemo nisi perferendis quisquam quo, reiciendis reprehenderit veniam voluptas voluptates.</span><span>Architecto explicabo harum iste itaque iusto provident quaerat quam reiciendis sapiente ut! Adipisci autem dolore iure molestiae non? Aspernatur autem dolores eum fuga in molestias nobis numquam quos reiciendis repudiandae.</span><span>Ad dolores eaque, facere illum laudantium mollitia neque possimus totam ullam vero? At doloribus eius enim est, eveniet, facilis illo iste iusto quis quo rerum, tempore. Ab incidunt nihil officiis!</span><span>Adipisci animi beatae consectetur consequuntur cum debitis earum eos est exercitationem facilis impedit iure minima modi, non numquam obcaecati odio, placeat praesentium quod recusandae, reprehenderit saepe sapiente sit veritatis voluptatum.</span><span>Aliquid debitis excepturi labore modi nemo! Commodi consequatur consequuntur cupiditate deserunt doloremque earum est ex, expedita facere hic id incidunt laboriosam minus molestias non omnis perferendis quis tempora tempore voluptates.</span>
-    </p>
-</div>
+<p><b>Konecta Digital</b>., en adelante <b>-Konecta Digital-</b>, en cumplimiento de la Ley 1581 de
+    2012 y demás
+    normas concordantes, es responsable del tratamiento de sus datos; por lo que se permite informar que los datos
+    personales incluidos en las bases de datos se han recopilado para el desarrollo de diversos procedimientos
+    relacionados directamente con su objeto social, entre los que se destacan los siguientes:</p>
+<ul>
+    <li>Dar a conocer los servicios ofrecidos y realizar ofertas comerciales.</li>
+    <li>Suministrar información de promociones o descuentos</li>
+    <li>Invitar a la participación de eventos organizados por Konecta Digital o sus clientes y/o aliados de negocios.</li>
+    <li>Evaluar la calidad de los servicios.</li>
+    <li>Atender solicitudes realizadas por el Ministerio de Comercio, Industria y Turismo de Colombia o cualquier otra
+        autoridad.
+    </li>
+</ul>
+<p>Los mecanismos a través de los cuales hacemos uso de los datos son seguros y confidenciales, pues contamos con los
+    medios tecnológicos idóneos para asegurar que sean almacenados de manera tal que se impida el acceso indeseado por
+    parte de terceras personas y, en ese mismo orden, aseguramos la confidencialidad de estos.</p>
 
-<div class="text-group">
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda blanditiis cumque, dolores error illo ipsam iste itaque laboriosam maxime nemo nisi perferendis quisquam quo, reiciendis reprehenderit veniam voluptas voluptates.</span><span>Architecto explicabo harum iste itaque iusto provident quaerat quam reiciendis sapiente ut! Adipisci autem dolore iure molestiae non? Aspernatur autem dolores eum fuga in molestias nobis numquam quos reiciendis repudiandae.</span><span>Ad dolores eaque, facere illum laudantium mollitia neque possimus totam ullam vero? At doloribus eius enim est, eveniet, facilis illo iste iusto quis quo rerum, tempore. Ab incidunt nihil officiis!</span><span>Adipisci animi beatae consectetur consequuntur cum debitis earum eos est exercitationem facilis impedit iure minima modi, non numquam obcaecati odio, placeat praesentium quod recusandae, reprehenderit saepe sapiente sit veritatis voluptatum.</span><span>Aliquid debitis excepturi labore modi nemo! Commodi consequatur consequuntur cupiditate deserunt doloremque earum est ex, expedita facere hic id incidunt laboriosam minus molestias non omnis perferendis quis tempora tempore voluptates.</span>
-    </p>
-</div>
+<p>Como titular de información usted tiene derecho a conocer, actualizar y rectificar sus datos personales y, sólo en
+    los casos en que sea procedente, a suprimirlos o revocar la autorización otorgada para su tratamiento.</p>
 
-<div class="text-group">
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda blanditiis cumque, dolores error illo ipsam iste itaque laboriosam maxime nemo nisi perferendis quisquam quo, reiciendis reprehenderit veniam voluptas voluptates.</span><span>Architecto explicabo harum iste itaque iusto provident quaerat quam reiciendis sapiente ut! Adipisci autem dolore iure molestiae non? Aspernatur autem dolores eum fuga in molestias nobis numquam quos reiciendis repudiandae.</span><span>Ad dolores eaque, facere illum laudantium mollitia neque possimus totam ullam vero? At doloribus eius enim est, eveniet, facilis illo iste iusto quis quo rerum, tempore. Ab incidunt nihil officiis!</span><span>Adipisci animi beatae consectetur consequuntur cum debitis earum eos est exercitationem facilis impedit iure minima modi, non numquam obcaecati odio, placeat praesentium quod recusandae, reprehenderit saepe sapiente sit veritatis voluptatum.</span><span>Aliquid debitis excepturi labore modi nemo! Commodi consequatur consequuntur cupiditate deserunt doloremque earum est ex, expedita facere hic id incidunt laboriosam minus molestias non omnis perferendis quis tempora tempore voluptates.</span>
-    </p>
-</div>
+<p>Si desea presentar una consulta, reclamo o petición de información relacionada con la protección de datos personales
+    puede comunicarse al correo electrónico <a href="mailto:habeasdata@grupoadmark.com">habeasdata@grupoadmark.com</a> o
+    acercarse a la Sede Principal de la empresa en
+    Colombia, Ubicada en la carrera 22 No. 166-78 de la Ciudad de Bogotá.
+</p>
 
-<div class="text-group">
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda blanditiis cumque, dolores error illo ipsam iste itaque laboriosam maxime nemo nisi perferendis quisquam quo, reiciendis reprehenderit veniam voluptas voluptates.</span><span>Architecto explicabo harum iste itaque iusto provident quaerat quam reiciendis sapiente ut! Adipisci autem dolore iure molestiae non? Aspernatur autem dolores eum fuga in molestias nobis numquam quos reiciendis repudiandae.</span><span>Ad dolores eaque, facere illum laudantium mollitia neque possimus totam ullam vero? At doloribus eius enim est, eveniet, facilis illo iste iusto quis quo rerum, tempore. Ab incidunt nihil officiis!</span><span>Adipisci animi beatae consectetur consequuntur cum debitis earum eos est exercitationem facilis impedit iure minima modi, non numquam obcaecati odio, placeat praesentium quod recusandae, reprehenderit saepe sapiente sit veritatis voluptatum.</span><span>Aliquid debitis excepturi labore modi nemo! Commodi consequatur consequuntur cupiditate deserunt doloremque earum est ex, expedita facere hic id incidunt laboriosam minus molestias non omnis perferendis quis tempora tempore voluptates.</span>
-    </p>
-</div>
+<p>
+    En el caso de requerir más información consulte nuestra política de tratamiento de datos personales y los cambios o
+    modificaciones que se produzcan en ella, en el siguiente link: <a data-toggle="modal" data-target="#modal-manual"
+                                                                      data-modal-title="Tratamiento de datos personales"
+                                                                      data-tag-page="/modal/manual" class="privacy-btn" href="#"
+                                                                      title="POLÍTICAS DE TRATAMIENTO Y TRANSFERENCIA DE DATOS PERSONALES" aria-label="POLÍTICAS DE TRATAMIENTO">Manual Políticas Tratamiento de Datos</a>.
 
-<div class="text-group">
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda blanditiis cumque, dolores error illo ipsam iste itaque laboriosam maxime nemo nisi perferendis quisquam quo, reiciendis reprehenderit veniam voluptas voluptates.</span><span>Architecto explicabo harum iste itaque iusto provident quaerat quam reiciendis sapiente ut! Adipisci autem dolore iure molestiae non? Aspernatur autem dolores eum fuga in molestias nobis numquam quos reiciendis repudiandae.</span><span>Ad dolores eaque, facere illum laudantium mollitia neque possimus totam ullam vero? At doloribus eius enim est, eveniet, facilis illo iste iusto quis quo rerum, tempore. Ab incidunt nihil officiis!</span><span>Adipisci animi beatae consectetur consequuntur cum debitis earum eos est exercitationem facilis impedit iure minima modi, non numquam obcaecati odio, placeat praesentium quod recusandae, reprehenderit saepe sapiente sit veritatis voluptatum.</span><span>Aliquid debitis excepturi labore modi nemo! Commodi consequatur consequuntur cupiditate deserunt doloremque earum est ex, expedita facere hic id incidunt laboriosam minus molestias non omnis perferendis quis tempora tempore voluptates.</span>
-    </p>
-</div>
-
+</p>

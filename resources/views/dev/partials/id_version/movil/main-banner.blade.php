@@ -11,17 +11,25 @@
                     discount="50"
                     price="18.995"
                     months="los meses 2 y 3"
+                    text="$37.990/mes a partir del cuarto mes"
                 >
                     40 GB de Internet
                 </x-promo-cards>
 
-                <p>Navega libre en las 4 apps que elijas</p>
+                <h4>Elige hasta 4 Apps de redes sociales</h4>
 
                 <div class="main-banner_cta">
-                    <a class="btn-flex btn-accent">
+                    <a
+                        data-toggle="modal"
+                        data-target="#modal-c2c"
+                        data-tag-page="/c2c/principal/calcula"
+                        class="btn-flex btn-accent-b"
+                    >
                         Calcula tu precio
                     </a>
                 </div>
+
+                <div class="main-banner_tyc">* Aplican términos y condiciones. Las Apps que el cliente puede elegir depende del plan que adquiera. Las Apps de música y video incluyen la navegación móvil, no la suscripción. Esta capacidad ya incluye el 50% de Gigas si eres Movistar Total: Productos Hogar + Pospago.</div>
             </div>
         </div>
     </div>

@@ -43,9 +43,12 @@
             margin-bottom: 25px;
         }
 
-        > p{
-            font-weight: bold;
-            margin: 15px 0;
+        h4{
+            text-align: center;
+            color: white;
+            font-size: 15px;
+
+            margin-top: 10px;
         }
     }
 
@@ -61,9 +64,15 @@
             height: inherit;
             display: inline-flex;
 
-            padding: 15px 35px;
+            padding: 10px 35px;
             border-radius: 24px;
         }
+    }
+
+    &_tyc{
+        color: white;
+        font-size: 8px;
+        margin-top: 10px;
     }
 }
 
@@ -152,10 +161,6 @@
                 font-size: 17px;
                 line-height: 17px;
             }
-        }
-
-        &_cta .btn-flex{
-            margin-top: 25px;
         }
     }
 }

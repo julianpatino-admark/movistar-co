@@ -28,6 +28,6 @@ return [
     | Si se Genera o No id de lead
     |--------------------------------------------------------------------
     */
-    'generate_id' => true
+    'generate_id' => false
 
 ];

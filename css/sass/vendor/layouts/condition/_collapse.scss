@@ -40,7 +40,9 @@
 
 .condition-collapse_body {
     font-size: 10px;
-    color: $condition-collapse-body-color;
-
     padding: 15px 0;
+
+    p{
+        color: $condition-collapse-body-color;
+    }
 }

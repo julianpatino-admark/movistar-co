@@ -9,8 +9,8 @@
                 </h2>
                 <x-promo-cards
                     discount="20"
-                    price="66.795"
-                    months="por 12 meses"
+                    price="63.395"
+                    text="por 12 meses"
                 >
                     350 MB Simétricas
                 </x-promo-cards>

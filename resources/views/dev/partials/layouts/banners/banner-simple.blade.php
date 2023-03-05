@@ -1,7 +1,7 @@
 <section class="banner-simple">
 	<div class="banner-simple_title">
 		<div class="container">
-			<h1>¡Instalación en 24 horas!</h1>
+			<h1>&af;</h1>
 		</div>
 	</div>
 	<div class="banner-simple_container container">
