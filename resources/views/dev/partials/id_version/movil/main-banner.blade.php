@@ -18,11 +18,15 @@
 
                 <h4>Elige hasta 4 Apps de redes sociales</h4>
 
+                <div class="d-flex justify-content-center my-2">
+                    <img width="144" height="39" src="{{ asset('img/movil/apps/banner-apps-lg.webp') }}" >
+                </div>
+
                 <div class="main-banner_cta">
                     <a
                         data-toggle="modal"
                         data-target="#modal-c2c"
-                        data-tag-page="/c2c/principal/calcula"
+                        data-tag-page="/modal/oferta-main-banner/c2c"
                         class="btn-flex btn-accent-b"
                     >
                         Calcula tu precio

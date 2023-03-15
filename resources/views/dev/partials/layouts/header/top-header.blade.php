@@ -4,11 +4,11 @@
 		<div class="phone-text row">
 			<div class="col-12 d-flex">
 				<p >Atención al cliente</p>
-				<a href="tel:01800112123"
+				<a href="tel:{{$phone}}"
 				   data-tag-page="/phone/att-cliente/click"
 				   title="Teléfono Atención al Cliente"
 				>
-					01800112123
+					018000930930
 				</a>
 			</div>
 		</div>

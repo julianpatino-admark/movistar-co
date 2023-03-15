@@ -1,14 +1,15 @@
 <div class="card-offer destacado">
 
 	<div class="card-offer_label">
-		<p class="label-text">Incluye 2 DECOS</p>
+		<p class="label-text">Megas simétricas</p>
 	</div>
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<p class="subtitle">NUESTRA MEJOR OFERTA</p>
-			<h3 class="title">900 Mb</h3>
+			<p class="title">NUESTRA MEJOR OFERTA</p>
+			<h3 class="main-title">900 Mb</h3>
+			<h6 class="subtitle">&af;</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -22,10 +23,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$208.395
+					$189.195
 				</p>
 				<p class="card-offer_price-text">
-					Normal: $258.990
+					Normal: $234.990
 				</p>
 			</div>
 

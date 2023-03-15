@@ -1,8 +1,3 @@
-@php
-	$phone = '01800000000';
-    $phone_formatted = "01800 000 000";
-@endphp
-
 <div class="cta-mobile_wrapper">
 
 	<a class="cta-mobile_btn cta-mobile_btn-calcula" data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/calcula-mobile-fijo/c2c">
@@ -13,7 +8,7 @@
 	@if(strlen($phone) >= 9)
 		<a class="cta-mobile_btn cta-mobile_btn-phone goo-phone" href="tel:{{$phone}}"
 		   data-tag-page="/phone/cta-mobile-fijo/clic" title="Llama Gratis: {{$phone_formatted}}">
-			Llama Gratis
+			Llámanos al<br>
 			{{$phone_formatted}}
 		</a>
 	@endif

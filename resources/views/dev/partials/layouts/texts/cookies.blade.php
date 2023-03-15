@@ -157,7 +157,7 @@
 <p>La forma de deshabilitar las “cookies” es diferente para cada navegador, pero
     normalmente puede hacerse desde el menú Herramientas u Opciones.</p>
 
-<p>Por ejemplo, puede encontrar información sobre cómo hacerlo en el caso que utilice
+<p>Por ejemplo, puede encontrar información sobre cómo hacerlo en el caso de que utilice
     los siguientes navegadores:</p>
 
 <ul>

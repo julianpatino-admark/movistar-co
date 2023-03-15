@@ -16,7 +16,12 @@
                 </x-promo-cards>
 
                 <div class="main-banner_cta">
-                    <a class="btn-flex btn-accent">
+                    <a
+                        data-toggle="modal"
+                        data-target="#modal-c2c"
+                        data-tag-page="/modal/oferta-main-banner/c2c"
+                        class="btn-flex btn-accent"
+                    >
                         Calcula tu precio
                     </a>
                 </div>

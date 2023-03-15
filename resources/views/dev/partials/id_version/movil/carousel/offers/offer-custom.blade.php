@@ -1,14 +1,15 @@
 <div class="card-offer destacado">
 
 	<div class="card-offer_label">
-		<p class="label-text">Datos Ilimitados</p>
+		<p class="label-text">MEJOR OFERTA</p>
 	</div>
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<p class="subtitle">NUESTRA MEJOR OFERTA</p>
-			<h3 class="title" style="font-size: 40px">ILIMIDATOS</h3>
+			<p class="title">PRIMER MES GRATIS</p>
+			<h3 class="main-title" style="font-size: 40px">ILIMIDATOS</h3>
+			<h6 class="subtitle">DATOS ILIMITADOS</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -16,7 +17,7 @@
 			<div class="body-title">
 				<div class="body-title_container">
 					<div class="discount">50%dcto</div>
-					<div class="months">x12 meses</div>
+					<div class="months">meses 2 y 3</div>
 				</div>
 			</div>
 
@@ -37,7 +38,7 @@
 						data-toggle="modal"
 						data-modal-title="ILIMITADOS"
 						data-target="#modal-velocidades"
-						data-tag-page="/modal/offer-two/c2c"
+						data-tag-page="/modal/offer-4-mobile/c2c"
 						data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
@@ -48,14 +49,16 @@
 
 		<div class="card-offer_footer">
 			<div class="package-item">
-				@include("vendor.partials.components.icons.menu.movil")
+				<div>
+					@include("vendor.partials.components.icons.menu.movil")
+				</div>
 				<div>
 					<h4>Minutos ilimitados</h4>
-					<p>USA, CANADA Y COLOMBIA</p>
+					<p>USA, CANADA, PUERTO RICO Y COLOMBIA</p>
 				</div>
 			</div>
 
-			<div class="package-item">
+			<div class="package-item" style="margin-bottom: 43px">
 				@include("vendor.partials.components.icons.menu.wifi-icon")
 				<div>
 					<h4>10 GB para compartir</h4>

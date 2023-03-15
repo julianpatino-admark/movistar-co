@@ -1,9 +1,14 @@
 <div class="card-offer">
 
+	<div class="card-offer_label">
+		<p class="label-text">Incluye 2 DECOS</p>
+	</div>
+
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="title">450 Mb</h3>
+			<h3 class="main-title">450 Mb</h3>
+			<h6 class="subtitle">SI ERES POSPAGO</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -17,10 +22,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$78.792
+					$117.192
 				</p>
 				<p class="card-offer_price-text">
-					Normal $96.990
+					Normal $144.990
 				</p>
 			</div>
 
@@ -32,7 +37,7 @@
 					data-toggle="modal"
 					data-modal-title="450 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-two/c2c"
+					data-tag-page="/modal/offer-2-trio/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO

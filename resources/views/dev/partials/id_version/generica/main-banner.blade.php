@@ -9,7 +9,7 @@
                     discount="20"
                     price="96.392"
                     months="por 12 meses"
-                    text="Si eres pospago"
+                    text="Normal $118.990"
                 >
                     350 MB Simétricas
                 </x-promo-cards>
@@ -18,7 +18,7 @@
                     <a
                         data-toggle="modal"
                         data-target="#modal-c2c"
-                        data-tag-page="/c2c/principal/calcula"
+                        data-tag-page="/modal/oferta-main-banner/c2c"
                         class="btn-flex btn-accent-b"
                     >
                         Calcula tu precio
@@ -30,4 +30,3 @@
         </div>
     </div>
 </div>
-

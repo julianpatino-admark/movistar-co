@@ -12,7 +12,7 @@
 
 		<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#conditions">
 			<div class="condition-collapse_body">
-				<p><u><b>Términos y Condiciones ofertas Hogar</b></u></p>
+				<p><a class="conditions_tyc_link" href="{{ secure_url('public/documents/tyc_online_marzo_2023.pdf') }}" target="_blank">Términos y Condiciones ofertas Hogar</a></p>
 
 				<p><b>Términos y Condiciones Móvil:</b> Oferta vigente del 1 al 15 de marzo 2023, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $37.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual.</p>
 
@@ -20,5 +20,4 @@
 			</div>
 		</div>
 	</div>
-
 </section>

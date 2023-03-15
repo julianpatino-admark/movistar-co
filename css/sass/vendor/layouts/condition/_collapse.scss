@@ -45,4 +45,13 @@
     p{
         color: $condition-collapse-body-color;
     }
+
+    .conditions_tyc_link{
+        font-weight: bold;
+        color: $condition-collapse-body-color;
+
+        &:hover{
+            color: $color-grey-40;
+        }
+    }
 }

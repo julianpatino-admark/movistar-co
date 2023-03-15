@@ -18,12 +18,12 @@
 					<div class="text-cta">
 						<button
 							class="btn-flex btn-accent font-family-bold"
-							data-c2c="name"
+							data-c2c="AYUDA ELEGIR"
 							data-toggle="modal"
 							data-target="#modal-c2c"
-							aria-label="name"
+							aria-label="AYUDA ELEGIR"
 							data-show-element="#modal-header-phone"
-							data-tag-page="/modal/name/c2c"
+							data-tag-page="/modal/ayuda/c2c"
 						>
 							¡Ayúdenme a elegir!
 						</button>

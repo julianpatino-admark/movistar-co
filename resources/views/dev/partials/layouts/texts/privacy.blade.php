@@ -1,4 +1,4 @@
-<p><b>Konecta Digital</b>., en adelante <b>-Konecta Digital-</b>, en cumplimiento de la Ley 1581 de
+<p><b>Konecta Digital Mk Agency</b>., en adelante <b>-Konecta Digital-</b>, en cumplimiento de la Ley 1581 de
     2012 y demás
     normas concordantes, es responsable del tratamiento de sus datos; por lo que se permite informar que los datos
     personales incluidos en las bases de datos se han recopilado para el desarrollo de diversos procedimientos
@@ -20,13 +20,13 @@
     los casos en que sea procedente, a suprimirlos o revocar la autorización otorgada para su tratamiento.</p>
 
 <p>Si desea presentar una consulta, reclamo o petición de información relacionada con la protección de datos personales
-    puede comunicarse al correo electrónico <a href="mailto:habeasdata@grupoadmark.com">habeasdata@grupoadmark.com</a> o
+    puede comunicarse al correo electrónico <a href="mailto:habeasdata@grupokonecta.com">habeasdata@grupokonecta.com</a> o
     acercarse a la Sede Principal de la empresa en
     Colombia, Ubicada en la carrera 22 No. 166-78 de la Ciudad de Bogotá.
 </p>
 
 <p>
-    En el caso de requerir más información consulte nuestra política de tratamiento de datos personales y los cambios o
+    En el caso de requerir más información, consulte nuestra política de tratamiento de datos personales y los cambios o
     modificaciones que se produzcan en ella, en el siguiente link: <a data-toggle="modal" data-target="#modal-manual"
                                                                       data-modal-title="Tratamiento de datos personales"
                                                                       data-tag-page="/modal/manual" class="privacy-btn" href="#"

@@ -1,6 +1,0 @@
-[submodule "css/sass/vendor/sass-landing"]
-	path = css/sass/vendor/sass-landing
-	url = git@bitbucket.org:grupokonecta/web-landing-madre-sass.git
-[submodule "resources/views/dev/repository"]
-	path = resources/views/dev/repository
-	url = git@bitbucket.org:grupokonecta/web-landing-madre-vistas.git

@@ -8,12 +8,12 @@
 			<div class="list-services_cta">
 				<button
 						class="btn-flex btn-accent font-family-bold"
-						data-c2c="name"
+						data-c2c="TE LLAMAMOS Solo Fibra"
 						data-toggle="modal"
 						data-target="#modal-c2c"
-						aria-label="name"
+						aria-label="TE LLAMAMOS Solo Fibra"
 						data-show-element="#modal-header-phone"
-						data-tag-page="/modal/name/c2c"
+						data-tag-page="/modal/solo-fibra/c2c"
 				>
 					Quiero información
 				</button>
@@ -28,12 +28,12 @@
 			<div class="list-services_cta">
 				<button
 					class="btn-flex btn-accent font-family-bold"
-					data-c2c="name"
+					data-c2c="INFORMACION Movil"
 					data-toggle="modal"
 					data-target="#modal-c2c"
-					aria-label="name"
+					aria-label="INFORMACIÓN Movil"
 					data-show-element="#modal-header-phone"
-					data-tag-page="/modal/name/c2c"
+					data-tag-page="/modal/movil/c2c"
 				>
 					Quiero información
 				</button>

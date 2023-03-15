@@ -72,6 +72,7 @@
     &_tyc{
         color: white;
         font-size: 8px;
+        font-weight: 300;
         margin-top: 10px;
     }
 }
@@ -85,6 +86,10 @@
         &_container {
             margin: 0 auto;
             max-width: 310px;
+        }
+
+        &_tyc{
+            margin-right: -30px;
         }
     }
 
@@ -147,7 +152,7 @@
         padding: map_get($mb-padding, xl);
 
         &_title{
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         &_container{
@@ -155,6 +160,7 @@
             h2 {
                 font-size: 22px;
                 line-height: 22px;
+                margin-bottom: 10px;
             }
 
             > p{
