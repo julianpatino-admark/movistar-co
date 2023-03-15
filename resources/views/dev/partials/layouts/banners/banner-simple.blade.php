@@ -1,7 +1,7 @@
 <section class="banner-simple">
 	<div class="banner-simple_title">
 		<div class="container">
-			<h1>¡Instalación en 24 horas!</h1>
+			<h1>&af;</h1>
 		</div>
 	</div>
 	<div class="banner-simple_container container">
@@ -18,12 +18,12 @@
 					<div class="text-cta">
 						<button
 							class="btn-flex btn-accent font-family-bold"
-							data-c2c="name"
+							data-c2c="AYUDA ELEGIR"
 							data-toggle="modal"
 							data-target="#modal-c2c"
-							aria-label="name"
+							aria-label="AYUDA ELEGIR"
 							data-show-element="#modal-header-phone"
-							data-tag-page="/modal/name/c2c"
+							data-tag-page="/modal/ayuda/c2c"
 						>
 							¡Ayúdenme a elegir!
 						</button>

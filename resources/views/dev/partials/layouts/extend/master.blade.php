@@ -59,6 +59,7 @@
 		@include('dev.partials.layouts.modal.loaded-content')
 		@include('dev.partials.layouts.modal.legal')
 		@include('dev.partials.layouts.modal.response')
+		@include('dev.partials.layouts.modal.manual')
 	@show
 
 	<div id="current-phone" class="d-none">{{$phone_formatted}}</div>

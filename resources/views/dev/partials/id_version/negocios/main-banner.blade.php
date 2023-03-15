@@ -9,14 +9,19 @@
                 </h2>
                 <x-promo-cards
                     discount="20"
-                    price="66.795"
-                    months="por 12 meses"
+                    price="63.395"
+                    text="por 12 meses"
                 >
                     350 MB Simétricas
                 </x-promo-cards>
 
                 <div class="main-banner_cta">
-                    <a class="btn-flex btn-accent">
+                    <a
+                        data-toggle="modal"
+                        data-target="#modal-c2c"
+                        data-tag-page="/modal/oferta-main-banner/c2c"
+                        class="btn-flex btn-accent"
+                    >
                         Calcula tu precio
                     </a>
                 </div>

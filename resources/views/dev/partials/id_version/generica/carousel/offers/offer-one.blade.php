@@ -7,8 +7,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<p class="subtitle">NUESTRA MEJOR OFERTA</p>
-			<h3 class="title">350 Mb</h3>
+			<p class="title">NUESTRA MEJOR OFERTA</p>
+			<h3 class="main-title">350 Mb</h3>
+			<h6 class="subtitle">SI ERES POSPAGO</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -22,10 +23,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$64.392
+					$96.392
 				</p>
 				<p class="card-offer_price-text">
-					Normal $78.990
+					Normal $118.990
 				</p>
 			</div>
 
@@ -37,7 +38,7 @@
 					data-toggle="modal"
 					data-modal-title="350 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-one/c2c"
+					data-tag-page="/modal/offer-1-trio/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO

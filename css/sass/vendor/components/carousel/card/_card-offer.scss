@@ -6,14 +6,18 @@
             border: 3px solid $color-brand-highlight;
         }
 
+        &_label .label-text{
+            background-color: $color-brand-highlight-secondary;
+        }
+
         &_header{
             background-color: $color-brand-highlight;
 
-            .title {
-                margin: 0 0 10px;
+            .main-title {
+                margin: 0;
             }
 
-            .subtitle {
+            .title {
                 margin: 15px 0 0;
             }
         }
@@ -49,7 +53,7 @@
             line-height: $card-offer-label-font-size;
             font-size: $card-offer-label-font-size;
 
-            background-color: $color-brand-highlight-secondary;
+            background-color: $color-brand-highlight;
 
             padding: 5px 20px;
             margin: 0;
@@ -67,16 +71,30 @@
 
         .title {
             color: $card-offer-header-font-color;
+            font-size: $card-offer-header-title-font-size;
+        }
+
+        .main-title {
+            color: $card-offer-header-font-color;
             font-size: $card-offer-header-font-size;
             line-height: $card-offer-header-font-size;
-            margin: 40px 0 10px;
+            margin: 40px 0 0;
         }
 
-        .subtitle {
-            color: $card-offer-header-font-color;
+        .subtitle{
             font-size: $card-offer-header-subtitle-font-size;
+            color: $card-offer-header-font-color;
         }
 
+        &.header-movil{
+            .title{
+                margin: 20px 0 0;
+            }
+
+            .main-title{
+                margin: 5px 0 12px 0;
+            }
+        }
     }
 
     &_body {
@@ -140,7 +158,7 @@
 
         .package-item{
             display: flex;
-            align-items: center;
+            align-items: start;
 
             svg{
                 width: 23px;

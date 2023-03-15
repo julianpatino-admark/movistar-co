@@ -31,7 +31,7 @@
 					<div class="carousel-item">
 						<div class="list-apps_item">
 							<div class="list-apps_images">
-								@include("vendor.partials.id_version.negocios.list.icons.computer")
+								<img width="54" height="54" src="{{ asset('img/common/service-computer-icon.png') }}" alt="Icono de un ordenador de escritorio con fondo azul">
 							</div>
 							<div class="list-apps_info">
 								<h4 class="info_title">Tu Web Movistar</h4>

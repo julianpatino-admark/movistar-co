@@ -3,7 +3,8 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="title">350 Mb</h3>
+			<h3 class="main-title">350 Mb</h3>
+			<h6 class="subtitle">PAGANDO 250 MB</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -17,10 +18,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$66.795
+					$63.395
 				</p>
 				<p class="card-offer_price-text">
-					Normal $81.990
+					Normal $78.990
 				</p>
 			</div>
 

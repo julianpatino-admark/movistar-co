@@ -28,17 +28,25 @@ class PromoCards extends Component
      */
     public $months;
 
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public $text;
+
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($discount, $price, $months)
+    public function __construct($discount, $text, $price, $months='')
     {
         $this->discount = $discount;
         $this->price = $price;
         $this->months = $months;
+        $this->text = $text;
     }
 
     /**

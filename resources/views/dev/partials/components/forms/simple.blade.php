@@ -64,7 +64,28 @@
     <div class="form-simple_tyc">
         <input type="checkbox" name="legal" required>
         <label for="legal" class="text-xxs">
-            Acepto política de privacidad y tratamiento de datos personales.
+            Acepto
+            <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+            >
+                política de privacidad
+            </a>
+            y tratamiento de
+            <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+            >
+                datos personales.
+            </a>
         </label>
         <label for="legal" class="error d-block"></label>
     </div>

@@ -30,7 +30,7 @@
 			<div class="customer-service">
 				Llámanos al
 				<a href="tel:01800000000" class="big-number">
-					01800000000
+					{{$phone_formatted}}
 				</a>
 			</div>
 		</div>

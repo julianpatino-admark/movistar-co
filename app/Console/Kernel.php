@@ -24,7 +24,17 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule
+            ->command('queue:insert')
+            ->everyFifteenMinutes()
+            ->sendOutputTo('storage/logs/crontabs/crontab.log')
+            ->timezone('America/Bogota');
+
+        $schedule
+            ->command('cobalt:update')
+            ->everyTwoHours()
+            ->sendOutputTo('storage/logs/crontabs/tsource.log')
+            ->timezone('America/Bogota');
     }
 
     /**

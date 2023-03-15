@@ -2,8 +2,9 @@
 
 	<div class="card-offer_wrapper">
 
-		<div class="card-offer_header">
-			<h3 class="title">40 GB</h3>
+		<div class="card-offer_header header-movil">
+			<p class="title">PRIMER MES GRATIS</p>
+			<h3 class="main-title">40 GB</h3>
 		</div>
 
 		<div class="card-offer_body">
@@ -32,7 +33,7 @@
 						data-toggle="modal"
 						data-modal-title="40 Gb"
 						data-target="#modal-velocidades"
-						data-tag-page="/modal/offer-one/c2c"
+						data-tag-page="/modal/offer-1-mobile/c2c"
 						data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
@@ -43,18 +44,22 @@
 
 		<div class="card-offer_footer">
 			<div class="package-item">
-				@include("vendor.partials.components.icons.menu.movil")
+				<div>
+					@include("vendor.partials.components.icons.menu.movil")
+				</div>
 				<div>
 					<h4>Minutos ilimitados</h4>
-					<p>USA, CANADA Y COLOMBIA</p>
+					<p>USA, CANADA, PUERTO RICO Y COLOMBIA</p>
 				</div>
 			</div>
 
-			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.movistar")
+			<div class="package-item" style="margin-bottom: 38px">
+				<div>
+					@include("vendor.partials.components.icons.cards.movistar")
+				</div>
 				<div>
 					<h4>Elige hasta 4 apps</h4>
-					<p>de navegación libre</p>
+					<p>de Redes Sociales</p>
 				</div>
 			</div>
 		</div>
