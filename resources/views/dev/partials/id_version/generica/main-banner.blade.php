@@ -16,8 +16,10 @@
 
                 <div class="main-banner_cta">
                     <a
+                        data-c2c="CALCULA TU PRECIO"
                         data-toggle="modal"
                         data-target="#modal-c2c"
+                        data-test-id= "calcula-banner-btn"
                         data-tag-page="/modal/oferta-main-banner/c2c"
                         class="btn-flex btn-accent-b"
                     >

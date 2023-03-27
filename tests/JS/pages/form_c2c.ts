@@ -1,9 +1,9 @@
 const { I } = inject();
-import {clienteNoClienteEnum, Default, FormFields} from "./default";
+import {Default, FormFields} from "./default";
 
 
 interface ClicToCallFields extends FormFields{
-    clienteNoCliente: string
+    dniInput: string
 }
 
 export default class FormClicToCall extends Default {
@@ -11,8 +11,8 @@ export default class FormClicToCall extends Default {
 
     constructor() {
         let fields:ClicToCallFields = {
-            clienteNoCliente: "select#%s-select-clientenocliente",
             cellphoneInput: '$input-c2c-phone',
+            dniInput: `input[name="dni"]`,
             legalCheckbox: 'input[name="legal"]',
         };
         super(fields);
@@ -22,11 +22,11 @@ export default class FormClicToCall extends Default {
         return locate('a').withAttr({ "data-c2c" : value })
     };
 
-    fillForm(clienteNoClienteSelect:clienteNoClienteEnum=clienteNoClienteEnum.no) {
+    fillForm() {
 
-        I.fillField(this.fields.cellphoneInput, 3210000001);
+        I.fillField(this.fields.cellphoneInput, 3211234567);
 
-        I.selectOption(this.fields.clienteNoCliente, clienteNoClienteSelect);
+        I.fillField(this.fields.dniInput, 123456789);
 
         I.checkOption(this.fields.legalCheckbox)
 

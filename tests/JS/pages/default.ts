@@ -44,15 +44,14 @@ class Default {
      * Intercepts the request to the server and simulates a response with a custom data in the message
      */
     mock() {
-        I.mockRoute('**/api/form/filter', route => {
+        I.mockRoute('**/api/form/send', route => {
             route.fulfill({
                 status: 200,
                 contentType: 'application/json',
                 headers: {"Access-Control-Allow-Origin": "*"},
                 body: JSON.stringify({
                     detail: "InConcert.TRUE",
-                    status: true,
-                    message:"<img width='95' height='95' src='/img/common/icons-check-orange.svg'><h3>Tu solicitud se ha enviado correctamente<\/h3><p>Muchas gracias por tu interés, <br> nos pondremos en contacto lo antes posible.<\/p>",
+                    status: true
                 })
             });
         })
@@ -90,7 +89,7 @@ class Default {
     validForm(withErrors:boolean=false, validators={} ):void{
         let labelListSelector = {
             phone: "#phone-error",
-            privacy : locate("label.error.d-block").inside('div.privacy-policy'),
+            privacy : locate("label.error.d-block").inside('div.form-simple_tyc'),
             ...validators
         }
 

@@ -11,6 +11,14 @@ input.form-control{
         opacity: 0.5;
         color: #bdbcbc;
     }
+
+    &.error{
+        margin-bottom: 0;
+
+        & + label{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .form-check-label {
@@ -100,6 +108,7 @@ input.form-control{
 
     &_tyc{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-bottom: 15px;
@@ -138,11 +147,16 @@ input.form-control{
         }
 
         .text-xxs{
+            flex: 1;
             width: 200px;
 
             font-size: 10px;
             line-height: 10px;
             color: $color-grey-60;
+        }
+
+        label.error{
+            flex-basis: 100%;
         }
     }
 }

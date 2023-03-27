@@ -2,7 +2,7 @@
     $showServices = isset($showServices) ? $showServices : true;
 @endphp
 
-<form id="{{ $id }}"
+<form id="{{ $id }}-form"
       method="post"
       data-toggle="form-simple"
       class="form @if(isset($class)){{$class}}@endif"
@@ -54,7 +54,15 @@
 
     @endif
     <div>
-        <input type="text" name="phone" class="form-control" placeholder="* Número de Celular" required data-rule-phone="col">
+        <input
+            type="text"
+            name="phone"
+            class="form-control"
+            placeholder="* Número de Celular"
+            data-rule-phone="col"
+            data-test-id="input-c2c-phone"
+            required
+        >
     </div>
 
     <div>
@@ -62,7 +70,7 @@
     </div>
 
     <div class="form-simple_tyc">
-        <input type="checkbox" name="legal" required>
+        <input type="checkbox" name="legal" id="legal" required>
         <label for="legal" class="text-xxs">
             Acepto
             <a
@@ -91,7 +99,11 @@
     </div>
 
     <div class="mb-2">
-        <button class="form-control btn-form bg-degraded" data-c2c="TE LLAMAMOS">
+        <button
+            id="btn-submit-{{ $id }}-form"
+            class="form-control btn-form bg-degraded"
+            data-c2c="TE LLAMAMOS"
+        >
             <div class="btn-form_content font-family-bold">
                 Llámame
             </div>

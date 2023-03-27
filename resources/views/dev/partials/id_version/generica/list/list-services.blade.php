@@ -14,7 +14,7 @@
 								<p class="info_subtitle">Descubre cómo activar tus elegiapps TV</p>
 							</div>
 							<div class="list-services_cta">
-								<button
+								<a
 									class="btn-flex btn-accent font-family-bold"
 									data-c2c="INFORMACION Internet + Elegiapps"
 									data-toggle="modal"
@@ -24,7 +24,7 @@
 									data-tag-page="/modal/internet-elegiapps/c2c"
 								>
 									Quiero información
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
 								<p class="info_subtitle">6MB | 10MB</p>
 							</div>
 							<div class="list-services_cta">
-								<button
+								<a
 									class="btn-flex btn-accent font-family-bold"
 									data-c2c="TE LLAMAMOS Solo Fibra"
 									data-toggle="modal"
@@ -48,7 +48,7 @@
 									data-tag-page="/modal/solo-fibra/c2c"
 								>
 									Quiero información
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -62,7 +62,7 @@
 								<p class="info_subtitle">Movistar Pospago</p>
 							</div>
 							<div class="list-services_cta">
-								<button
+								<a
 									class="btn-flex btn-accent font-family-bold"
 									data-c2c="INFORMACION Movil"
 									data-toggle="modal"
@@ -72,7 +72,7 @@
 									data-tag-page="/modal/movil/c2c"
 								>
 									Quiero información
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -86,7 +86,7 @@
 								<p class="info_subtitle">Productividad total</p>
 							</div>
 							<div class="list-services_cta">
-								<button
+								<a
 									class="btn-flex btn-accent font-family-bold"
 									data-c2c="INFORMACION Empresa"
 									data-toggle="modal"
@@ -96,7 +96,7 @@
 									data-tag-page="/modal/empresas/c2c"
 								>
 									Quiero información
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>

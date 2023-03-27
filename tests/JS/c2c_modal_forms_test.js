@@ -1,9 +1,9 @@
-const MODAL_ID = "modal-c2c-velocidades";
+const MODAL_ID = "modal-velocidades";
 const FORM_ID = `${MODAL_ID}-form`;
 const CONTEXT = `#${MODAL_ID}.show`;
-const CONTEXT_RESPONSE = "#modal-response";
+const CONTEXT_RESPONSE = "#thankyou_container";
 
-const clienteNoClienteLabelError = `label#${FORM_ID}-select-clientenocliente-error`;
+
 
 const Utils = require("./utilities/main");
 
@@ -47,9 +47,7 @@ Scenario("Modal - Visualization and valid initial errors on form", async ({ I, f
 
   await within(CONTEXT, () => {
     formC2CPage.sendFormMock(false);
-    formC2CPage.validForm(true, {
-      cliente: clienteNoClienteLabelError
-    });
+    formC2CPage.validForm(true);
   })
 
 })
@@ -61,13 +59,13 @@ Scenario("Modal 'Choose promos and plans'", async ({ I, formC2CPage }) => {
   I.waitForVisible(CONTEXT);
 
   await within(CONTEXT, () => {
-    formC2CPage.fillForm(Utils.clienteNoClienteEnum.siContratar);
-    formC2CPage.validForm(false, {
-      cliente: clienteNoClienteLabelError
-    });
+    formC2CPage.fillForm();
+    formC2CPage.validForm(false);
     formC2CPage.sendFormMock();
-  })
+  });
 
-  I.waitForVisible(CONTEXT_RESPONSE);
-  I.see("Tu solicitud se ha enviado correctamente", CONTEXT_RESPONSE);
-})
+  I.wait(10);
+
+  I.waitInUrl('/gracias');
+  I.see("En breve te contactaremos para brindarte toda la información", CONTEXT_RESPONSE);
+});

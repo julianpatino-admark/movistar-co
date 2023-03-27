@@ -8,7 +8,7 @@
 <header id="header" class="header">
 	<div class="header-container container">
 		<div class="header_logo-wrapper">
-			<a href="{{URL('/').$query}}">
+			<a href="{{URL('/').$query}}" aria-describedby="desc">
                 <span class="header_logo d-none d-lg-block">
 	                @include('dev.partials.components.icons.logo.brand-logo')
 	            </span>
@@ -16,13 +16,14 @@
                     @include('dev.partials.components.icons.logo.brand-logo')
                 </span>
 			</a>
+			<div id="desc" style="display:none">Logo de telemark con link de acceso al inicio</div>
 		</div>
 		@include('dev.partials.layouts.navbar.nav')
 		<div class="header-right">
 			@if(strlen($phone) >= 9)
 				<div class="header-phone_wrapper">
 					<div class="header-phone">
-						<p class="header-phone_title">Llámanos al</p>
+						<p class="header-phone_title">Línea de Ventas</p>
 						<div class="header-phone_link-wrapper d-inline-flex align-items-center">
 							<a href="tel:{{$phone}}" class="header-phone_link goo-phone"
 							   data-tag-page="/phone/cabecera/click"

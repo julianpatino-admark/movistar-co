@@ -16,7 +16,7 @@
 						<span>Te asesoramos</span><span> sobre lo que necesitas</span>
 					</p>
 					<div class="text-cta">
-						<button
+						<a
 							class="btn-flex btn-accent font-family-bold"
 							data-c2c="AYUDA ELEGIR"
 							data-toggle="modal"
@@ -26,7 +26,7 @@
 							data-tag-page="/modal/ayuda/c2c"
 						>
 							¡Ayúdenme a elegir!
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>

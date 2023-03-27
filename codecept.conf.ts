@@ -22,9 +22,6 @@ export const config: CodeceptJS.MainConfig = {
     }
   },
   include: {
-    I: './steps_file',
-    "formCoberturaPage": "./tests/JS/pages/form_cobertura.ts",
-    "formCalculaPage": "./tests/JS/pages/form_calcula.ts",
     "formC2CPage": "./tests/JS/pages/form_c2c.ts",
   },
   name: 'movistar'

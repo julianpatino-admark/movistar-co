@@ -8,7 +8,7 @@
 
 		<div class="card-offer_header">
 			<h3 class="main-title">650 Mb</h3>
-			<h6 class="subtitle">SI ERES POSPAGO</h6>
+			<h4 class="subtitle">SI ERES POSPAGO</h4>
 		</div>
 
 		<div class="card-offer_body">
@@ -33,7 +33,7 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="offer-two"
+					data-c2c="TRIO 650 MB"
 					data-toggle="modal"
 					data-modal-title="650 Mb"
 					data-target="#modal-velocidades"

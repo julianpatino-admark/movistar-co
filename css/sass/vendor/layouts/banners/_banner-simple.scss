@@ -67,6 +67,10 @@
                     display: flex;
                     justify-content: center;
 
+                    a{
+                        text-decoration: none;
+                    }
+
                     .btn-flex{
                         font-weight: bold;
                         padding: 15px 35px;
