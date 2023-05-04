@@ -18,12 +18,5 @@
 				Móvil
 			</a>
 		</li>
-		<li class="nav-item @if($path == 'negocios') active font-weight-bold @endif">
-			<a class="nav-link" href="/negocios?{{request()->getQueryString()}}">
-				<img class="icono-default" src="{{ asset('img/menu/icons-pymes.png') }}" alt="Icono de un ordenador de escritorio">
-				<img class="icono-active" src="{{ asset('img/menu/icons-pymes-active.png') }}" alt="Icono de un ordenador de escritorio">
-				Pymes
-			</a>
-		</li>
 	</ul>
 </nav>

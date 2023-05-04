@@ -3,7 +3,6 @@
 
     ul{
         display: flex;
-        justify-content: space-around;
 
         list-style: none;
         margin: 0;
@@ -18,6 +17,8 @@
 
                 align-items: center;
 
+                padding: 0 15px;
+
                 img{
                     width: 23px;
                     height: 23px;
@@ -27,6 +28,12 @@
                     &.icono-active{
                         display: none;
                     }
+                }
+            }
+
+            &:first-child{
+                .nav-link{
+                    padding-left: 30px;
                 }
             }
 

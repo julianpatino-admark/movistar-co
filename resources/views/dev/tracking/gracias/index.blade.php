@@ -8,7 +8,7 @@
 ])
 
 @section('metadata')
-	<title>ETB | Gracias por tu registro</title>
+	<title>Movistar Co | Gracias por tu registro</title>
 	<!-- inject-style src="../../css/purged/generica.css" -->
 
 	<link rel="shortcut icon" type="image/svg" href="{{ asset('/img/common/favicon.svg') }}">

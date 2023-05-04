@@ -27,7 +27,7 @@
                     </a>
                 </div>
 
-                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta válida del 1 al 15 de marzo del 2023</div>
+                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta valida del 1 al 31 de Mayo del 2023.</div>
             </div>
         </div>
     </div>

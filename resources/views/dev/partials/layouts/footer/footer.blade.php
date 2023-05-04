@@ -29,7 +29,7 @@
 			</ul>
 			<div class="customer-service">
 				Llámanos al
-				<a href="tel:01800000000" class="big-number">
+				<a href="tel:{{$phone}}" class="big-number">
 					{{$phone_formatted}}
 				</a>
 			</div>
