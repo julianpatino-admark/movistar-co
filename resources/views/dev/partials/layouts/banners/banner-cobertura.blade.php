@@ -6,10 +6,10 @@
 				class="btn-flex btn-dark font-family-bold"
 				data-c2c="AYUDA ELEGIR"
 				data-toggle="modal"
-				data-target="#modal-c2c"
+				data-target="#modal-cobertura"
 				aria-label="AYUDA ELEGIR"
 				data-show-element="#modal-header-phone"
-				data-tag-page="/modal/ayuda/c2c"
+				data-tag-page="/modal/cobertura/c2c"
 			>
 				@include('dev.partials.components.icons.signal')
 				<span>Consulta tu cobertura</span>

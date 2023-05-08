@@ -7,4 +7,12 @@
         border: 0;
         border: $form-underline-border;
     }
+
+    select {
+        color: $color-grey-20;
+        font-size: 16px;
+
+        border-radius: 6px;
+        padding: 12px 10px;
+    }
 }

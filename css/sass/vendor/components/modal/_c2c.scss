@@ -63,3 +63,130 @@
 		}
 	}
 }
+
+.modal-cobertura{
+	font-size: 19px;
+	text-align: center;
+
+	.modal-header{
+		display: flex;
+		flex-direction: column;
+
+		padding: 0;
+
+		.brands{
+			width: 100%;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			padding: 20px 40px;
+
+			svg{
+				width: 122px;
+				height: 29px;
+			}
+
+			.digital-partner-image{
+				width: 85px;
+				height: 46px;
+
+				margin-right: 10px;
+			}
+		}
+
+		.modal-header-text{
+			width: 100%;
+
+			background-color: $color-brand-highlight;
+
+			padding: 20px 0;
+
+			h2 {
+				color: white;
+				margin: 0;
+			}
+		}
+	}
+
+	&_label {
+		color: white;
+		font-size: 16px;
+		font-weight: bold;
+		font-family: $font-family-primary;
+		background-color: $color-brand-highlight;
+
+		padding: 10px 0;
+
+		svg{
+			width: 18px;
+			height: 18px;
+			fill: white;
+		}
+	}
+
+	.modal-body{
+
+		.modal-cobertura_title p{
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		input{
+			border: 1px solid #979797;
+		}
+
+		.form-cobertura_noFound{
+			text-align: left;
+			font-size: 14px;
+
+			margin-top: 25px;
+
+			label{
+				color: $color-grey-70;
+			}
+		}
+
+		.form-cobertura_description{
+			text-align: left;
+
+			color: $color-grey-70;
+			font-size: 20px;
+			line-height: 22px;
+			font-weight: normal;
+
+			margin: 15px 0;
+			padding: 0;
+
+			b{
+				color: black;
+			}
+		}
+
+		.form-simple_tyc .text-xxs{
+			text-align: left;
+		}
+
+		.form-simple_cta{
+			display: inline-flex;
+			margin: 35px 0 10px 0;
+
+			.btn-form{
+				border-radius: 8px !important;
+				padding: 0 15px;
+
+				.btn-form_content{
+					font-size: 16px;
+
+					svg{
+						width: 12px;
+						height: 12px;
+						fill: white;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}

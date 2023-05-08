@@ -53,6 +53,7 @@
 	@section('modal')
 		@include('dev.partials.layouts.modal.c2c')
 		@include('dev.partials.layouts.modal.c2c-velocidades')
+		@include('dev.partials.layouts.modal.cobertura')
 		@include('dev.partials.layouts.modal.rgpd-config')
 		@include('dev.partials.layouts.modal.info-basica-privacidad')
 		@include('dev.partials.layouts.modal.privacy')

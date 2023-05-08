@@ -1,0 +1,24 @@
+<div id="modal-cobertura" class="modal modal-brand modal-cobertura fade" tabindex="-1" role="dialog" data-show="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="brands">
+					@include('dev.partials.components.icons.logo.brand-logo')
+					<img class="digital-partner-image" height="70" width="126" src="{{ asset('/img/common/partner-aliado-movistar.svg') }}" alt="Etiqueta de aliado digital Movistar" />
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+				</div>
+			</div>
+			<div class="modal-cobertura_label"> @include('dev.partials.components.icons.signal') Consulta tu cobertura</div>
+			<div class="modal-body">
+				<div class="modal-cobertura_title">
+					<p>Dónde quieres tu servicio Movistar</p>
+				</div>
+				<div class="modal-cobertura_form">
+					@include('dev.partials.components.forms.cobertura', ['id' => 'modal-cobertura', 'class' => 'form-underline'])
+				</div>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
+</div>
