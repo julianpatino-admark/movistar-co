@@ -3,6 +3,7 @@ export default function() {
     const provinceSelect = $formulario_cobertura.querySelector("#selectProvince");
     const citySelect = $formulario_cobertura.querySelector("#selectCity");
     const cellPhone = $formulario_cobertura.querySelector("#userCoberturaCellPhone");
+    const checkboxNoFinded = document.getElementById("noFound");
 
 
     /**
@@ -52,6 +53,7 @@ export default function() {
     function initEvents() {
         provinceSelect.addEventListener('change', provinceSelectHandler);
         citySelect.addEventListener('change', citySelectHandler);
+        checkboxNoFinded.addEventListener('change', checkboxNoFindedHandler);
     }
 
     /**

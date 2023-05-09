@@ -11,6 +11,7 @@
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
 
     <div class="input-group mb-3">
+        <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
         <select
                 id="selectProvince"
                 name="departamento"
@@ -24,10 +25,10 @@
         >
             <option selected value="" hidden>Departamento</option>
         </select>
-        <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
     </div>
 
     <div class="input-group">
+        <label class="input-group-text statusLoader d-none" for="selectCity"> <i class="select-loader"></i></label>
         <select
                 id="selectCity"
                 name="ciudad"
@@ -42,11 +43,10 @@
         >
             <option selected value="" hidden> Ciudad / Municipio </option>
         </select>
-        <label class="input-group-text statusLoader d-none" for="selectCity"> <i class="select-loader"></i></label>
     </div>
 
     <div class="form-cobertura_noFound">
-        <input type="checkbox" name="noFound" id="noFound" required>
+        <input type="checkbox" name="noFound" id="noFound">
         <label for="noFound">
             No encuentro mi Ciudad / Municipio
         </label>
