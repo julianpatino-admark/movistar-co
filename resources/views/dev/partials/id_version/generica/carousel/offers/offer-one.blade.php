@@ -1,7 +1,7 @@
 <div class="card-offer destacado">
 
 	<div class="card-offer_label">
-		<p class="label-text">Incluye 2 DECOS</p>
+		<p class="label-text">Paga 250 y recibe</p>
 	</div>
 
 	<div class="card-offer_wrapper">
@@ -23,10 +23,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$96.392
+					$66.792
 				</p>
 				<p class="card-offer_price-text">
-					Normal $118.990
+					Normal $81.990
 				</p>
 			</div>
 
@@ -59,8 +59,8 @@
 			<div class="package-item">
 				@include("vendor.partials.components.icons.cards.movistar")
 				<div>
-					<h4>Movistar TV</h4>
-					<p>Desde 87 canales HD</p>
+					<h4>Movistar TV App</h4>
+					<p>8 canales nacionales en vivo</p>
 				</div>
 			</div>
 		</div>

@@ -27,7 +27,7 @@
                         data-toggle="modal"
                         data-target="#modal-c2c"
                         data-tag-page="/modal/oferta-main-banner/c2c"
-                        class="btn-flex btn-accent-b"
+                        class="btn-flex btn-accent-b shadow"
                     >
                         Calcula tu precio
                     </a>

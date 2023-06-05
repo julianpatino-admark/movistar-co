@@ -23,7 +23,8 @@
 
     padding: 15px 10px;
     border-radius: 13px;
-    background-color: $color-blue-80;
+    background-color: transparent;
+    border: 3px solid white;
 
     &-number{
       font-size: 32px;
@@ -32,6 +33,7 @@
     &-text{
       color: white;
       font-size: 10px;
+      line-height: 12px;
     }
   }
 
@@ -61,7 +63,7 @@
 
   @include media-breakpoint-up(xl) {
     &_discount{
-      padding: 15px 5px 5px;
+      padding: 10px 5px;
 
       &-number{
         font-size: 48px;

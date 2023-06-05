@@ -20,7 +20,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="facebook-domain-verification" content="u1y6tiqbwjdq7da92oq6cg5t8w7ybq"/>
+	<meta name="facebook-domain-verification" content="mtpr61q04or29fm9e5nv3t48up9th9" />
 	<meta id="provider" name="provider" content="{{$provider}}">
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -50,6 +50,8 @@
 	@include('dev.partials.layouts.footer.footer')
 	@include('dev.partials.layouts.cta.mobile-fixed')
 
+
+
 	@section('modal')
 		@include('dev.partials.layouts.modal.c2c')
 		@include('dev.partials.layouts.modal.c2c-velocidades')
@@ -65,8 +67,6 @@
 
 	<div id="current-phone" class="d-none">{{$phone_formatted}}</div>
 	<div id="current-phone-link" class="d-none">{{$phone}}</div>
-
-	<div data-toggle="rgpd-dialog"></div>
 </div>
 @section('footer-scripts')
 	<script type="text/javascript">

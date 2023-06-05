@@ -1,0 +1,28 @@
+.form-whatsapp{
+  input.form-control, select.form-control{
+    height: 35px;
+    border: 0;
+
+    background: transparent;
+
+    border-bottom: solid 1px #27b825;
+    border-radius: 0;
+
+    margin: 0;
+
+    &::placeholder {
+      text-align: left;
+      color: $color-grey-20;
+    }
+  }
+
+  select.form-control{
+    color: $color-grey-20;
+  }
+
+  .cta{
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+}

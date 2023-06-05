@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="82"
+   height="82"
+   viewBox="0 0 82 82"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="logo-whatsapp.svg"
+   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview30"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="9.875"
+     inkscape:cx="29.721519"
+     inkscape:cy="39.037975"
+     inkscape:window-width="1974"
+     inkscape:window-height="1205"
+     inkscape:window-x="214"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g26" />
+  <defs
+     id="defs20">
+    <linearGradient
+       x1="38.388783"
+       y1="4.624999"
+       x2="38.388783"
+       y2="68.45256"
+       id="chw28pn3tb"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-10.886076,-12.683544)">
+      <stop
+         stop-color="#4AC14B"
+         offset="0%"
+         id="stop2" />
+      <stop
+         stop-color="#06853A"
+         offset="100%"
+         id="stop4" />
+    </linearGradient>
+    <filter
+       x="-0.097297297"
+       y="-0.097297297"
+       width="1.1945946"
+       height="1.2486486"
+       filterUnits="objectBoundingBox"
+       id="oqo0uj06ba">
+      <feOffset
+         dy="4"
+         in="SourceAlpha"
+         result="shadowOffsetOuter1"
+         id="feOffset7" />
+      <feGaussianBlur
+         stdDeviation="3"
+         in="shadowOffsetOuter1"
+         result="shadowBlurOuter1"
+         id="feGaussianBlur9" />
+      <feColorMatrix
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
+         in="shadowBlurOuter1"
+         result="shadowMatrixOuter1"
+         id="feColorMatrix11" />
+      <feMerge
+         id="feMerge17">
+        <feMergeNode
+           in="shadowMatrixOuter1"
+           id="feMergeNode13" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode15" />
+      </feMerge>
+    </filter>
+  </defs>
+  <g
+     transform="translate(15,15)"
+     filter="url(#oqo0uj06ba)"
+     fill="none"
+     fill-rule="evenodd"
+     id="g26">
+    <path
+       d="m 27.502924,-8.058544 c -17.6009999,0 -31.9139999,14.316 -31.9139999,31.915 0,6.98 2.257,13.45 6.078,18.712 l -3.986,11.85 12.262,-3.927 a 31.722,31.722 0 0 0 17.5599999,5.275 c 17.593,0 31.911,-14.316 31.911,-31.913 0,-17.596 -14.318,-31.912 -31.911,-31.912 z"
+       fill="url(#chw28pn3tb)"
+       id="path22"
+       style="fill:url(#chw28pn3tb)" />
+    <path
+       d="m 63.113924,23.363456 c 0,19.905 -16.265,36.045 -36.327,36.045 a 36.352,36.352 0 0 1 -17.5599999,-4.485 l -20.1130001,6.393 6.5550001,-19.338 a 35.664,35.664 0 0 1 -5.2100001,-18.612 c -10e-4,-19.912 16.2630001,-36.05 36.327,-36.05 20.066,0 36.328,16.138 36.328,36.047 z m -36.327,-30.306 c -16.8459999,0 -30.5429999,13.595 -30.5429999,30.306 0,6.628 2.159,12.77 5.817,17.77 l -3.814,11.252 11.735,-3.728 a 30.535,30.535 0 0 0 16.8049999,5.01 c 16.839,0 30.542,-13.594 30.542,-30.304 0,-16.709 -13.703,-30.306 -30.542,-30.306 z m 18.343,38.61 c -0.225,-0.37 -0.82,-0.59 -1.706,-1.032 -0.892,-0.442 -5.27,-2.58 -6.087,-2.875 -0.815,-0.294 -1.414,-0.442 -2.004,0.443 -0.594,0.884 -2.3,2.874 -2.822,3.463 -0.517,0.592 -1.037,0.662 -1.926,0.22 -0.892,-0.442 -3.764,-1.378 -7.163,-4.384 -2.645,-2.345 -4.433,-5.235 -4.956,-6.119 -0.517,-0.884 -0.051,-1.36 0.39,-1.801 0.401,-0.398 0.893,-1.032 1.337,-1.546 0.447,-0.517 0.595,-0.89 0.892,-1.479 0.297,-0.59 0.15,-1.104 -0.075,-1.546 -0.22,-0.442 -2.003,-4.79 -2.745,-6.56 -0.737,-1.766 -1.481,-1.701 -2.004,-1.701 -0.522,0 -1.478,0.155 -1.478,0.155 0,0 -1.786,0.22 -2.6,1.104 -0.815,0.884 -3.1159999,3.022 -3.1159999,7.367 0,4.345 3.1879999,8.551 3.6349999,9.138 0.447,0.592 6.157,9.805 15.212,13.34 9.053,3.537 9.053,2.358 10.687,2.208 1.63,-0.144 5.268,-2.135 6.01,-4.2 0.742,-2.063 0.742,-3.834 0.522,-4.2 l -0.003,0.004 z"
+       fill="#ffffff"
+       id="path24" />
+  </g>
+</svg>

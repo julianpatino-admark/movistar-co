@@ -48,6 +48,12 @@ import EnableFields from "admark-landings/src/forms/enable-fields";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 
 /**
+ * Buttons
+ */
+import WppBtn from "./modules/buttons/index";
+WppBtn();
+
+/**
  * Scroll
  */
 import Sticky from "admark-landings/src/scroll/sticky";

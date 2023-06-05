@@ -1,7 +1,7 @@
 <div class="carousel-wrapper ">
 	<div class="container">
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
-		<h3 class="subtitle-section">Planes de Internet Fibra óptica con velocidades que te dan libertad a un precio justo.</h3>
+		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 
 		<div id="offersCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
 

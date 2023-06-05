@@ -7,9 +7,9 @@
                 <p>Compra hoy y paga el otro mes</p>
                 <x-promo-cards
                     discount="20"
-                    price="96.392"
+                    price="66.792"
                     months="por 12 meses"
-                    text="Normal $118.990"
+                    text="Normal $81.990"
                 >
                     350 MB Simétricas
                 </x-promo-cards>
@@ -21,13 +21,13 @@
                         data-target="#modal-c2c"
                         data-test-id= "calcula-banner-btn"
                         data-tag-page="/modal/oferta-main-banner/c2c"
-                        class="btn-flex btn-accent-b"
+                        class="btn-flex btn-accent shadow-lg"
                     >
                         Calcula tu precio
                     </a>
                 </div>
 
-                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta valida del 1 al 31 de Mayo del 2023.</div>
+                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta valida del 1 al 15 de Junio del 2023</div>
             </div>
         </div>
     </div>

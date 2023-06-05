@@ -2,9 +2,14 @@
     background: $btn-accent-bg;
     color: $btn-accent-color;
 
+    border: 2px solid $btn-accent-bg;
+    transition: all 0.2s ease-in-out;
+
     &:hover {
-        color: $btn-accent-color-hover;
-        background: $btn-accent-bg-hover;
+        -webkit-text-stroke: 0.2px white;
+        text-stroke: 0.2px white;
+        color: $btn-accent-bg-hover;
+        background: transparent;
     }
 }
 
