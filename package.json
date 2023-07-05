@@ -15,7 +15,7 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
-        "admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.14"
+        "admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",

@@ -1,16 +1,1 @@
-<div class="top-header">
-	<div class="blue-line"></div>
-	<div class="container">
-		<div class="phone-text row">
-			<div class="col-12 d-flex">
-				<p >Atención al cliente</p>
-				<a href="tel:{{$phone}}"
-				   data-tag-page="/phone/att-cliente/click"
-				   title="Teléfono Atención al Cliente"
-				>
-					018000930930
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
+<div class="top-header"></div>

@@ -26,7 +26,7 @@
 						<p class="header-phone_title">Línea de Ventas</p>
 						<div class="header-phone_link-wrapper d-inline-flex align-items-center">
 							<a href="tel:{{$phone}}" class="header-phone_link goo-phone"
-							   data-tag-page="/phone/cabecera/click"
+							   data-event="phone_cabecera_click"
 							   title="Teléfono Nuevas Contrataciones">{{$phone_formatted}}</a>
 						</div>
 					</div>

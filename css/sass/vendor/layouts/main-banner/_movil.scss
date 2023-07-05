@@ -8,7 +8,7 @@
 }
 
 .main-banner_title {
-    color: white;
+    color: $color-blue-95;
 
     text-align: left;
     font-size: 12px;
@@ -26,29 +26,94 @@
     margin: 0 auto;
 
     &_container{
+        height: 100%;
 
-        h2, > p{
-            padding: 0;
-            margin: 0;
-            color: white;
-            text-align: center;
-            font-size: 16px;
-            line-height: 18px;
+        display: flex;
+        flex-direction: column;
+
+        &_image{
+            flex: 1;
         }
 
         h2{
+            color: $color-blue-95;
             font-size: 20px;
             line-height: 20px;
-            font-weight: bold;
-            margin-bottom: 25px;
+            font-weight: 300;
+
+            padding: 0;
+            margin: 10px 0;
+
+            span{
+                color: $color-blue-95;
+                font-weight: 900;
+            }
         }
 
-        h4{
-            text-align: center;
-            color: white;
-            font-size: 15px;
+        h3{
+            font-size: 14px;
+            font-weight: 300;
+        }
 
-            margin-top: 10px;
+        .special-promo-card{
+            display: flex;
+            margin-bottom: 15px;
+
+            &__condition{
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                background-color: $color-blue-20;
+
+                padding: 15px 10px;
+
+                @include border-start-radius(13px);
+
+                span{
+                    color: $white;
+                    font-weight: bold;
+                }
+            }
+
+                    &__price{
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+
+                    &__month{
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+
+                    &__after{
+                        font-size: 7px;
+                        line-height: 15px;
+                        white-space: nowrap;
+                        font-weight: normal !important;
+                    }
+
+            &__include{
+                text-align: center;
+                white-space: nowrap;
+
+                display: flex;
+                flex-direction: column;
+                background-color: $white;
+
+                color: $color-blue-20;
+                font-size: 14px;
+                line-height: 18px;
+
+                padding: 15px 10px;
+
+                @include border-end-radius(13px);
+
+                span{
+                    color: $color-blue-20;
+                    font-weight: bold;
+                }
+            }
         }
     }
 
@@ -70,7 +135,7 @@
     }
 
     &_tyc{
-        color: white;
+        color: $color-blue-95;
         font-size: 8px;
         font-weight: 300;
         margin-top: 10px;
@@ -126,18 +191,46 @@
             h2 {
                 font-size: 20px;
                 line-height: 20px;
-                margin-bottom: 5px;
             }
 
-            > p{
-                font-size: 15px;
-                line-height: 13px;
-                margin: 5px 0;
+            .special-promo-card{
+
+                &__condition{
+                    padding: 20px 15px;
+                }
+
+                    &__price{
+                        font-size: 36px;
+                        line-height: 36px;
+                    }
+
+                    &__month{
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
+                    &__after{
+                        font-size: 8px;
+                        line-height: 15px;
+                        font-weight: normal !important;
+                    }
+
+                &__include{
+                    font-size: 16px;
+                    line-height: 20px;
+
+                    padding: 20px 15px;
+
+                    span{
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+                }
             }
         }
 
-        &_cta .btn-flex{
-            margin: 0;
+        &_cta{
+            justify-content: flex-start;
         }
     }
 }
@@ -159,13 +252,7 @@
 
             h2 {
                 font-size: 22px;
-                line-height: 22px;
-                margin-bottom: 10px;
-            }
-
-            > p{
-                font-size: 17px;
-                line-height: 17px;
+                line-height: 25px;
             }
         }
     }

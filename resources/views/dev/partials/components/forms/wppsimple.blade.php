@@ -13,7 +13,8 @@
     <input type="hidden" name="id_version" value="{{$id_version}}">
     <input type="hidden" name="tsource" value="{{$tsource}}">
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
-    <input type="hidden" name="lead_type" value="chat">
+    <input type="hidden" name="lead_type" value="whatsapp">
+    <input type="hidden" name="legal" value="on">
 
     @if($showServices)
         <p class="form-simple_title">
@@ -53,7 +54,7 @@
 
     <div class="form-group">
         <label for="inputName" class="visually-hidden">Nombre completo</label>
-        <input type="text" id="inputName" name="dni" class="form-control" placeholder="Nombre">
+        <input type="text" id="inputName" name="nombre" class="form-control" placeholder="Nombre">
     </div>
 
     <div class="form-group">
@@ -70,7 +71,7 @@
         >
     </div>
 
-    <select class="form-control" aria-label="Productos de interes">
+    <select name="productos" class="form-control" aria-label="Productos de interes">
         <option value="" disabled selected hidden>Producto de interés</option>
         <option value="internet">Internet</option>
         <option value="movil">Móvil</option>
@@ -91,4 +92,3 @@
         </button>
     </div>
 </form>
-
