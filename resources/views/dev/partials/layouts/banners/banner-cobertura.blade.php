@@ -3,13 +3,8 @@
 		<p class="text-title">¿Llega la Fibra de Movistar a tu casa?</p>
 		<div class="text-cta">
 			<a
+				href="/cobertura{{request()->getQueryString()}}"
 				class="btn-flex btn-dark font-family-bold"
-				data-c2c="AYUDA ELEGIR"
-				data-toggle="modal"
-				data-target="#modal-cobertura"
-				aria-label="AYUDA ELEGIR"
-				data-show-element="#modal-header-phone"
-				data-tag-page="/modal/cobertura/c2c"
 			>
 				@include('dev.partials.components.icons.signal')
 				<span>Consulta tu cobertura</span>

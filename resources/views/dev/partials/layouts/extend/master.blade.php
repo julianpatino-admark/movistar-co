@@ -1,8 +1,10 @@
 @php
+	$top = isset($top)?$top:true;
 	$nav = isset($nav)?$nav:true;
 	$header_phone = isset($header_phone)?$header_phone:true;
 	$phone = ($header_phone === true)?$phone:"0";
 	$main_c2c = isset($main_c2c)?$main_c2c:true;
+    $modals = isset($modals)?$modals:true;
 @endphp
 
 		<!doctype html>
@@ -37,9 +39,11 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="main">
-	@include("dev.partials.layouts.header.top-header")
-	@include('dev.partials.layouts.header.header')
-	@include('dev.partials.layouts.navbar.mobile-nav')
+	@if($top === true)
+		@include("dev.partials.layouts.header.top-header")
+		@include('dev.partials.layouts.header.header')
+		@include('dev.partials.layouts.navbar.mobile-nav')
+	@endif
 	@if($main_c2c === true)
 		@include('dev.partials.layouts.c2c.main')
 		@include('dev.partials.layouts.cta.desktop-sticky')
@@ -52,18 +56,20 @@
 
 	@include('dev.partials.components.buttons.whatsapp')
 
-	@section('modal')
-		@include('dev.partials.layouts.modal.c2c')
-		@include('dev.partials.layouts.modal.c2c-velocidades')
-		@include('dev.partials.layouts.modal.cobertura')
-		@include('dev.partials.layouts.modal.rgpd-config')
-		@include('dev.partials.layouts.modal.info-basica-privacidad')
-		@include('dev.partials.layouts.modal.privacy')
-		@include('dev.partials.layouts.modal.loaded-content')
-		@include('dev.partials.layouts.modal.legal')
-		@include('dev.partials.layouts.modal.response')
-		@include('dev.partials.layouts.modal.manual')
-	@show
+    @if($modals === true)
+        @section('modal')
+            @include('dev.partials.layouts.modal.c2c')
+            @include('dev.partials.layouts.modal.c2c-velocidades')
+            @include('dev.partials.layouts.modal.cobertura')
+            @include('dev.partials.layouts.modal.rgpd-config')
+            @include('dev.partials.layouts.modal.info-basica-privacidad')
+            @include('dev.partials.layouts.modal.privacy')
+            @include('dev.partials.layouts.modal.loaded-content')
+            @include('dev.partials.layouts.modal.legal')
+            @include('dev.partials.layouts.modal.response')
+            @include('dev.partials.layouts.modal.manual')
+        @show
+    @endif
 
 	<div id="current-phone" class="d-none">{{$phone_formatted}}</div>
 	<div id="current-phone-link" class="d-none">{{$phone}}</div>

@@ -42,7 +42,6 @@ import "admark-landings/src/validation/lang/messages_es";
 import "admark-landings/src/validation/phone";
 
 import LocalForms from "./modules/forms/index";
-import Cobertura from "./modules/forms/cobertura";
 import FormSimple from "admark-landings/src/forms/form-simple";
 import EnableFields from "admark-landings/src/forms/enable-fields";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
@@ -61,6 +60,21 @@ import ScrollSlide from "admark-landings/src/scroll/slide";
 import NavClose from "./modules/nav/nav-close";
 
 /**
+ * Google Map Geolocalizacion
+ */
+
+import InitGeolocalizacion from "./modules/geolocalizacion/index";
+import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
+
+let Mapa = new InitGeolocalizacion({
+  mapId: "3e1f8c1e0e9a9a40",
+  mapContainerId: "gmp-map",
+  position:{lat: 4.648, lng: -74.190},
+  key: "AIzaSyBkRwt18r6rRUEnnAu9zUBMvgIZJoBvfdg"
+});
+Mapa.initMap().then(() => Geolocalizacion(Mapa));
+
+/**
  * INIT
  */
 CallMetrics.init();
@@ -69,8 +83,6 @@ RGPD.init(
   RgpdHTML
 );
 
-
-Cobertura();
 LocalForms.init();
 FormSimple.init();
 EnableFields.init();
