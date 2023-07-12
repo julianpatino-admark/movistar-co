@@ -1,0 +1,48 @@
+@import "bootstrap";
+@import "vendor/mixins/fontface";
+//VARS
+
+@import "vendor/vars/color";
+@import "vendor/vars/font";
+@import "vendor/vars/shadow";
+@import "vendor/vars/vendor";
+@import "vendor/vars/background";
+@import "vendor/vars/border-raidus";
+
+// VARS - BUTTONS
+@import "vendor/vars/components/buttons/btn-carousel";
+@import "vendor/vars/components/buttons/btn-flex";
+@import "vendor/vars/components/buttons/btn-form";
+
+// VARS - LAYOUT
+@import "vendor/vars/layout/text";
+@import "vendor/vars/layout/form";
+@import "vendor/vars/layout/comun";
+@import "vendor/vars/layout/main";
+@import "vendor/vars/layouts/footer";
+@import "vendor/vars/layouts/cta/mobile-fixed";
+
+// VARS - COMPONENTS
+@import "vendor/vars/components/loader";
+
+//VIEWS BLADE BUTTONS
+@import "vendor/components/buttons/btn-float";
+@import "vendor/components/buttons/btn-form";
+
+//VIEWS BLADE COMPONENTS
+@import "vendor/layout/text";
+@import "vendor/layout/form";
+
+@import "vendor/helpers/backgrounds";
+@import "vendor/helpers/highlight";
+@import "vendor/helpers/text";
+
+@import "vendor/components/loaders/loader";
+@import "vendor/components/loaders/loader-themes";
+@import "vendor/components/forms/whatsapp";
+@import "vendor/components/forms/cobertura";
+
+@import "vendor/layouts/header/header-cobertura";
+@import "vendor/layouts/footer/footer";
+@import "vendor/layouts/cta/mobile-fixed";
+@import "vendor/layouts/cobertura/geolocalizacion";

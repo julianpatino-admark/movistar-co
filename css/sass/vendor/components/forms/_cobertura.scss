@@ -1,100 +1,120 @@
-.modal-cobertura {
-    label {
-        color: $color-black;
-        font-size: 16px;
+.form-cobertura{
+
+  .form-custom-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input.form-control, select.form-select{
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border: solid 1px #019df4;
+
+    margin: 10px 0;
+    padding: 15px 10px;
+
+    &.error{
+      border: solid 1px $red;
+    }
+  }
+
+  .geo-link-current{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+    .select-loader{
+      &::before{
+        background: transparent;
+      }
+    }
+  }
+
+  &_dual-input{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &_specialaddr{
+    display: flex;
+    justify-content: center;
+
+    margin: 20px 0;
+
+    input{
+      margin-right: 5px;
     }
 
-    .form-control {
-        height: 42px;
-        border: none;
-        border-radius: 4px;
+    label{
+      width: 80%;
+      text-align: center;
 
-        &.provincia {
-            margin: 0;
-            width: 100%;
-        }
+      color: #626161;
+      font-size: 14px;
+    }
+  }
+
+  &_tyc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 25px 0;
+
+    input{
+      margin-right: 5px;
     }
 
-    .form-control_btn:disabled {
-        background-image: $color-disabled-gradient !important;
-        border: none !important;
+    label{
+      color: #929292;
+      font-size: 12px;
+
+      a{
+        color: #929292;
+      }
+
+      &.error{
+        text-align: center;
+        width: 100%;
+        color: $red;
+      }
+    }
+  }
+
+  &_cta{
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    button{
+        padding: 0 25px;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    input.form-control, select.form-select {
+      &.small-inpt {
+        width: 60%;
+        margin: 0 auto 10px;
+      }
     }
 
-    .form-text-title {
-        font-size: 16px;
-        text-align: left;
+    &_dual-input{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
     }
 
-    .form-group_item-content {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    &_specialaddr label{
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
     }
-
-    .btn-form_content {
-        height: 43px;
-
-        svg:first-child {
-            height: 15px;
-        }
-    }
-    .form-group-item_check{
-        display: flex;
-        margin-top: 10px;
-        input{
-            margin-right: 5px;
-            top: 3px;
-            position: relative;
-        }
-        .c2c-checkbox_text{
-            font-size: 11px;
-        }
-        a{
-            color: #212529;
-            text-decoration: underline;
-        }
-    }
-}
-
-.autocomplete {
-    background: white;
-    z-index: 99999999;
-    overflow: auto;
-    box-sizing: border-box;
-    border: 1px solid rgba(50, 50, 50, 0.6);
-    max-height: 145px !important;
-
-    strong {
-        font-weight: bold;
-    }
-}
-
-.autocomplete * {
-    font: inherit;
-}
-
-.autocomplete > div {
-    padding: 0 4px;
-}
-
-.autocomplete .group {
-    background: #eee;
-}
-
-.autocomplete > div:hover:not(.group),
-.autocomplete > div.selected {
-    background: $form-cobertura-bg-selected;
-    color: $white;
-    cursor: pointer;
-}
-
-@include media-breakpoint-up(md) {
-    label {
-        //font-size: 12px !important;
-    }
-
-    .form-text-title {
-        font-size: 18px !important;
-    }
+  }
 }
 

@@ -15,6 +15,7 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
+        "@googlemaps/js-api-loader": "^1.16.2",
         "admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28"
     },
     "devDependencies": {
