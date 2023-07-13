@@ -29,7 +29,7 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="offer-two"
+					data-c2c="MOVIL 70 Gb"
 					data-toggle="modal"
 					data-modal-title="70 Gb"
 					data-target="#modal-velocidades"
@@ -64,6 +64,4 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>

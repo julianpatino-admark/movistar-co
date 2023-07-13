@@ -45,6 +45,7 @@
                         class="geo-link-current"
                         data-set="current-position"
                         data-target="inptAddress"
+                        data-map-id="gmp-map"
                 >
                     @include("dev.partials.components.icons.market-map")
                     <span class="mx-2">Usar mi ubicación actual</span>
