@@ -61,7 +61,7 @@ var plugins = {
         dest: './css/',
 
         options: {
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
         }
 
     },

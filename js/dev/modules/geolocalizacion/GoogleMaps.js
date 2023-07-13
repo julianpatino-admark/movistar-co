@@ -248,6 +248,10 @@ export default class {
     }
   }
 
+  insertCobaltFields() {
+
+  }
+
   /**
    * Display window alert on error
    */

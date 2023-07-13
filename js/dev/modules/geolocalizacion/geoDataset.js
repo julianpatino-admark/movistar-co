@@ -1,8 +1,6 @@
-import InitGeolocalizacion from "./index";
-
 function InitEvents (MapClass) {
   document.querySelectorAll("[data-set]").forEach((el) => {
-    const { set, target=null, mapId = null } = el.dataset;
+    const { set, target=null, mapId = null, cobaltForm = null } = el.dataset;
 
     if (set === "current-position") {
       const $targetEl = document.getElementById(target);
@@ -12,17 +10,18 @@ function InitEvents (MapClass) {
       });
     }
 
-    if (set === "autocomplete-address") {
-      MapClass.initAutocompleteAddress(el);
-    }
+    /*if (set === "autocomplete-address") {
+      MapClass.initAutocompleteAddress(el, cobaltForm);
+    }*/
   })
 }
 
-function init(ParamsObj) {
-  const Mapa = new InitGeolocalizacion(ParamsObj);
+function init(ClassGeo, ParamsObj) {
+  const Mapa = new ClassGeo(ParamsObj);
   Mapa.load().then(() => InitEvents(Mapa));
 }
 
 export default {
   init,
+  InitEvents
 }
