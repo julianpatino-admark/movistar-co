@@ -50,7 +50,7 @@
 	@include('dev.partials.layouts.footer.footer')
 	@include('dev.partials.layouts.cta.mobile-fixed')
 
-	@include('dev.partials.components.buttons.whatsapp')
+	<!--@include('dev.partials.components.buttons.whatsapp')-->
 
 	@section('modal')
 		@include('dev.partials.layouts.modal.c2c')
@@ -96,3 +96,4 @@
 @show
 </body>
 </html>
+
