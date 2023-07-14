@@ -78,10 +78,8 @@ import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
 */
 
 const Map = new InitGeolocalizacion();
-console.log(Map)
 
-Map.initMap("gmp-map");
-Map.setCurrentAddress()
+Geolocalizacion.InitEvents(Map);
 
 /**
  * INIT
