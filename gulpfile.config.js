@@ -124,7 +124,8 @@ var plugins = {
             'carousel-item-right',
             'carousel-item-left',
             /^cc-/,
-            /^carousel-/
+            /^carousel-/,
+            'autocomplete-results',
         ],
 
     },

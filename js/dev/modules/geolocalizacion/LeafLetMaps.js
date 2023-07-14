@@ -23,8 +23,6 @@ export default class {
   constructor() {}
 
   initMap(containerId) {
-    console.log(_debounce);
-
     const LeafStyle = document.createElement("link");
     LeafStyle.rel = "stylesheet";
     LeafStyle.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
@@ -63,8 +61,9 @@ export default class {
     }
 
     if($target) {
+      let { display_name } = await this.getAddress();
       this.$target = $target;
-      this.$target.value = this.currentAddr.display_name;
+      this.$target.value = display_name;
     }
   }
 
@@ -93,28 +92,43 @@ export default class {
    * @param {HTMLInputElement} $targetEl - The input elemet to enable the autocomplete function
    */
   initAutocompleteAddress($targetEl) {
-    $targetEl.addEventListener("change", _debounce(async () => {
-      if (this.marker) {
-        this.marker.unbindPopup();
-        this.marker.remove();
-      } else {
-        this.addMarker();
-      }
+    const searchBox = _debounce(
+      async () => {
+        if(this.map) {
+          if (this.marker) {
+            this.marker.unbindPopup();
+            this.marker.remove();
+          } else {
+            this.addMarker();
+          }
+        }
 
-      if(!this.currentAddr) this.getAddress();
+        await this.getCurrentBrowserPosition();
+        const { address } = await this.getAddress();
+        console.log(address);
 
-      let queryObj = {
-        q: $targetEl.value,
-        format: "json",
-        addresdetails: "1",
-        limit: 4,
-        country: this.currentAddr.country,
-      };
-      let res = await fetch(
-        "https://nominatim.openstreetmap.org/search?" +
-        new URLSearchParams(queryObj)
-      ).then((res) => res.json());
-    }), 100);
+        let queryObj = {
+          q: $targetEl.value,
+          format: "json",
+          addresdetails: "1",
+          limit: 4,
+          city: address.city,
+          country: address.country,
+        };
+        let res = await fetch(
+          "https://nominatim.openstreetmap.org/search?" +
+            new URLSearchParams(queryObj)
+        ).then((res) => res.json());
+
+        if(res.length > 0) this.createAutocomplete(res, $targetEl);
+      },
+      300,
+      {
+        leading: true,
+        trailing: false,
+      });
+
+    $targetEl.addEventListener("keydown", searchBox);
   }
 
   /**
@@ -156,10 +170,29 @@ export default class {
         this.marker.setLatLng(this.position);
       };
 
-      this.currentAddr = res;
+      return res;
 
     } catch (err) {
       window.alert("Geocoder failed due to: " + err);
     }
+  }
+
+  createAutocomplete(options, sibling) {
+    const PrevNode = sibling.parentNode.querySelector("#autocomplete-results");
+    if(PrevNode) PrevNode.remove();
+
+    const Container = document.createElement("ul");
+    for (const option of options) {
+      const Item = document.createElement("li");
+      Item.innerText = option.display_name;
+      Item.addEventListener("click", () => {
+        sibling.value = option.display_name;
+        Container.remove();
+      });
+      Container.appendChild(Item);
+    }
+    Container.id = "autocomplete-results";
+    Container.classList.add("autocomplete-results");
+    sibling.insertAdjacentElement('afterend', Container);
   }
 }

@@ -97,6 +97,31 @@
     }
   }
 
+  .autocomplete-results{
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    padding: 17px 10px;
+    margin: 0;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border: solid 1px #019df4;
+
+    li{
+      cursor: pointer;
+      color: #a7a7a9;
+      font-size: 16px;
+
+      padding: 10px 0;
+      border-bottom: 2px solid #d8d8d8;
+
+      &:hover{
+        font-weight: 500;
+      }
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     input.form-control, select.form-select {
       &.small-inpt {

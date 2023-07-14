@@ -38,7 +38,9 @@
                     </div>
                 </div>
 
-                <input class="form-control" id="inptAddress" type="text" name="direccion" data-set="autocomplete-address" placeholder="Escribe tu dirección" required/>
+                <div class="position-relative">
+                    <input class="form-control" id="inptAddress" type="text" name="direccion" data-set="autocomplete-address" placeholder="Escribe tu dirección" required/>
+                </div>
 
                 <a
                         href="#"
