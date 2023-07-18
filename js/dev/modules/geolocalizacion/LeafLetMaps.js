@@ -4,16 +4,21 @@ import { debounce as _debounce } from "lodash";
 export default class {
 
   /*
-   * Google map object
-   * {@link https://developers.google.com/maps/documentation/javascript/reference/map}
+   * leaflet map object
+   * {@link https://leafletjs.com/reference.html#map}
    */
   map;
 
   /*
    * The floating marker icon element for maps
-   * {@link https://developers.google.com/maps/documentation/javascript/reference/marker}
+   * {@link https://leafletjs.com/reference.html#marker}
    */
   marker;
+
+  /*
+   * Html element with the map container
+   */
+  $mapContainer;
 
   /*
    * Object with the map positions with lat and lng keys
@@ -22,6 +27,10 @@ export default class {
 
   constructor() {}
 
+  /**
+   * Is used if is needed to create a new map and set his container
+   * @param {string} containerId - The id of map container visualization
+   */
   initMap(containerId) {
     const LeafStyle = document.createElement("link");
     LeafStyle.rel = "stylesheet";
@@ -29,6 +38,7 @@ export default class {
     LeafStyle.integrity = "sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=";
     LeafStyle.crossOrigin = "";
     document.head.appendChild(LeafStyle);
+    this.$mapContainer = document.getElementById(containerId);
 
     this.map = LeafMaps.map(containerId, {
       center: [4.648, -74.190],
@@ -39,25 +49,28 @@ export default class {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    console.log("Antes de return");
     return new Promise((resolve, reject) => this.map.on("load", resolve()));
 
   }
 
   /**
    * - Fill the input with current position based on navigator location
-   * - Add the InfoWindow with the formatted address
+   * - Add the Popup window with the formatted address
    * - Add the Marker on the spot based on the position
    * - Append a loader spinner at the end of anchor
    * @param {HTMLAnchorElement} $el - The anchor element who was clicked
-   * @param {HTMLInputElement|null} [$target=null] - The input elemet to fill with current address
+   * @param {HTMLInputElement|null} [$target=null] - The input element to fill with current address
    */
   async setCurrentAddress($el, $target=null){
+    const loader = document.createElement("div");
+    loader.className = "select-loader";
+    $el.appendChild(loader);
     await this.getCurrentBrowserPosition();
 
     if (this.map){
       this.map.setView(this.position, 17);
       await this.addMarker();
+      this.$mapContainer.classList.add("open");
     }
 
     if($target) {
@@ -65,6 +78,8 @@ export default class {
       this.$target = $target;
       this.$target.value = display_name;
     }
+
+    $el.removeChild(loader);
   }
 
   /**
@@ -88,7 +103,7 @@ export default class {
   }
 
   /**
-   * initialize the [autocomplete]{@link https://developers.google.com/maps/documentation/javascript/reference/places-widget#Autocomplete} function of Google Maps
+   * initialize the [autocomplete]{@link hhttps://nominatim.org/release-docs/develop/api/Search/#search-queries} with Nominatim API
    * @param {HTMLInputElement} $targetEl - The input elemet to enable the autocomplete function
    */
   initAutocompleteAddress($targetEl) {
@@ -105,7 +120,6 @@ export default class {
 
         await this.getCurrentBrowserPosition();
         const { address } = await this.getAddress();
-        console.log(address);
 
         let queryObj = {
           q: $targetEl.value,
@@ -122,7 +136,7 @@ export default class {
 
         if(res.length > 0) this.createAutocomplete(res, $targetEl);
       },
-      300,
+      200,
       {
         leading: true,
         trailing: false,
@@ -132,7 +146,7 @@ export default class {
   }
 
   /**
-   * Add new Google Maps marker with dragging enable and push on current map
+   * Add new marker with dragging enable and push on current map
    * If marker is dragged, the position is updated and filled
    */
   async addMarker() {
@@ -140,7 +154,7 @@ export default class {
     this.marker = LeafMaps.marker(this.position, {
       draggable: true
     }).addTo(this.map);
-    this.marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    this.marker.bindPopup("<b>Soy una ventana informativa</b><br>Aquí verás la ubicación").openPopup();
     this.marker.on("dragend", (event) => {
       this.position = this.marker.getLatLng();
       this.getAddress();
@@ -148,7 +162,7 @@ export default class {
   }
 
   /**
-   * Get the current address based on lat and lang obj with [geocode]{@link https://developers.google.com/maps/documentation/javascript/reference/geocoder#Geocoder} funcion of google maps
+   * Get the current address based on lat and lang obj with [geocode]{@link https://nominatim.org/release-docs/develop/api/Reverse/#reverse-geocoding} Nominatim API
    */
   async getAddress() {
 
@@ -177,6 +191,12 @@ export default class {
     }
   }
 
+  /**
+   * Create an autocomplete list with autocomplete-results class on it
+   * Each item of the list has a display_name
+   * @param {object[]} options - The geocode addresses given by Nominatim
+   * @param {HTMLInputElement|null} sibling - The current input element to append the autocomplete
+   */
   createAutocomplete(options, sibling) {
     const PrevNode = sibling.parentNode.querySelector("#autocomplete-results");
     if(PrevNode) PrevNode.remove();
@@ -193,6 +213,17 @@ export default class {
     }
     Container.id = "autocomplete-results";
     Container.classList.add("autocomplete-results");
-    sibling.insertAdjacentElement('afterend', Container);
+    sibling.insertAdjacentElement("afterend", Container);
+  }
+
+  /**
+   * Display window alert on error
+   */
+  handleLocationError(browserHasGeolocation) {
+    if (browserHasGeolocation) {
+      alert("La ubicación actual no pudo ser obtenida por el navegador.");
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
   }
 }
