@@ -118,23 +118,32 @@ export default class {
           }
         }
 
-        await this.getCurrentBrowserPosition();
-        const { address } = await this.getAddress();
+        if(!this.position) await this.getCurrentBrowserPosition();
 
         let queryObj = {
           q: $targetEl.value,
-          format: "json",
-          addresdetails: "1",
           limit: 4,
-          city: address.city,
-          country: address.country,
+          lat: this.position.lat,
+          lon: this.position.lng
         };
-        let res = await fetch(
-          "https://nominatim.openstreetmap.org/search?" +
+        const { features } = await fetch(
+          "https://photon.komoot.io/api/?" +
             new URLSearchParams(queryObj)
         ).then((res) => res.json());
+        let opts = [];
 
-        if(res.length > 0) this.createAutocomplete(res, $targetEl);
+        if(features.length > 0) {
+          opts = features.map(({ properties, geometry}) => ({
+            display_name: `${properties.name} ${properties.housenumber ? "# " + properties.housenumber : ""}, ${properties.city}, ${properties.state} - ${properties.country}`,
+            properties,
+            geometry
+          }));
+          console.log(opts);
+        } else {
+          opts.push({ display_name: "No se encontrado resultados"});
+        }
+
+        this.createAutocomplete(opts, $targetEl);
       },
       200,
       {
