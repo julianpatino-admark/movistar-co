@@ -1,7 +1,7 @@
 import * as LeafMaps from "leaflet";
 import { debounce as _debounce } from "lodash";
 
-export default class {
+export default class LeafLetMaps {
 
   /*
    * leaflet map object

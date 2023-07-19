@@ -62,7 +62,7 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Google Map Geolocalizacion
  */
-import InitGeolocalizacion from "./modules/geolocalizacion/LeafLetMaps";
+import InitGeolocalizacion from "./modules/geolocalizacion/MapLibreGL";
 import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
 
 /*Geolocalizacion.init(InitGeolocalizacion, {

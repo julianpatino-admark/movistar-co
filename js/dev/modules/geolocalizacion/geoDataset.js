@@ -10,9 +10,11 @@ function InitEvents (MapClass) {
       });
     }
 
+
     if (set === "autocomplete-address") {
       MapClass.initAutocompleteAddress(el, cobaltForm);
     }
+
   })
 }
 
