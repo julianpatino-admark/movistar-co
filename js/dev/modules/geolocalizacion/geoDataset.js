@@ -18,7 +18,7 @@ function InitEvents (MapClass) {
   })
 }
 
-function init(ClassGeo, ParamsObj) {
+function init(ClassGeo, ParamsObj = {}) {
   const Mapa = new ClassGeo(ParamsObj);
   Mapa.load().then(() => InitEvents(Mapa));
 }

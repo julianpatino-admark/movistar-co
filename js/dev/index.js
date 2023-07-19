@@ -78,8 +78,7 @@ import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
 */
 
 const Map = new InitGeolocalizacion();
-
-Geolocalizacion.InitEvents(Map);
+Geolocalizacion.init(Map);
 
 /**
  * INIT

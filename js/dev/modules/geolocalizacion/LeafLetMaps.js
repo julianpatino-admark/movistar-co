@@ -138,7 +138,6 @@ export default class LeafLetMaps {
             properties,
             geometry
           }));
-          console.log(opts);
         } else {
           opts.push({ display_name: "No se encontrado resultados"});
         }
