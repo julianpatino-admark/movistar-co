@@ -50,6 +50,29 @@ export default class {
    */
   position;
 
+  /*
+   * Object with the address elements like city, state, country and more needed info
+   */
+  addrObject = {};
+
+  /*
+   * Object with the map positions with lat and lng keys
+   */
+  cobaltFieldExist = false;
+
+  /*
+   * Object with the map positions with lat and lng keys
+   */
+  cobaltFiledsKeys = {
+    pais: { key: "GeoPais", selector: null },
+    cuidad: { key: "GeoCiudad", selector: null },
+    provincia: { key: "GeoProvincia", selector: null },
+    calle: { key: "GeoCalle", selector: null },
+    numero: { key: "GeoNumero", selector: null },
+    region: { key: "GeoRegion", selector: null },
+    latlng: { key: "GeoLatLng", selector: null },
+  };
+
   /**
    * Initialize libraries and class parameters
    * @param {string} key - Key with configured API
@@ -89,20 +112,20 @@ export default class {
 
   /**
    * Is used if is needed to create a new map and set his container
-   * @param {string} containerId - The id of map container visualization
+   * @param {HTMLDivElement} container - The main div container
    */
-  async initMap(containerId) {
+  async initMap(container) {
 
     if (this.mapObj) {
       const { mapId, position } = this.mapObj;
       this.position = position;
-      this.$mapContainer = document.getElementById(containerId);
+      this.$mapContainer = container;
 
       this.infoWindow = new this.GoogleClasses.InfoWindow();
-      this.map = new this.GoogleClasses.Map(this.$mapContainer, {
+      this.map = new this.GoogleClasses.Map(container, {
         center: this.position,
         zoom: 10,
-        mapId
+        mapId,
       });
     } else {
       console.error("El objeto mapa no ha sido inicializado");
@@ -248,8 +271,45 @@ export default class {
     }
   }
 
-  insertCobaltFields() {
+  fillCobalt(el = null) {
+    if (!this.cobaltFieldExist) {
+      for (const field in this.cobaltFiledsKeys) {
+        let fieldKey = this.cobaltFiledsKeys[field].key;
+        let inptEle = document.createElement("input");
+        inptEle.type = "hidden";
+        inptEle.name = fieldKey;
+        inptEle.id = `${fieldKey}-${el.id}`;
+        el.insertAdjacentElement("afterbegin", inptEle);
+        this.cobaltFiledsKeys[field].selector = inptEle;
+      }
+      this.cobaltFieldExist = true;
+    }
 
+    if (this.addrObject.hasOwnProperty("properties")) {
+      const { geometry, properties } = this.addrObject;
+      const { country, state, city, name, street, housenumber, county } =
+        properties;
+      const { coordinates } = geometry;
+
+      this.cobaltFiledsKeys.pais.selector.value = country;
+      this.cobaltFiledsKeys.provincia.selector.value = state;
+      this.cobaltFiledsKeys.cuidad.selector.value = city;
+      this.cobaltFiledsKeys.calle.selector.value = street || name;
+      this.cobaltFiledsKeys.numero.selector.value = housenumber;
+      this.cobaltFiledsKeys.region.selector.value = county;
+      this.cobaltFiledsKeys.latlng.selector.value = coordinates.toString();
+    } else if (this.addrObject.hasOwnProperty("address")) {
+      const { lat, lon, address } = this.addrObject;
+      const { country, state, town, road, house_number, region } = address;
+
+      this.cobaltFiledsKeys.pais.selector.value = country;
+      this.cobaltFiledsKeys.provincia.selector.value = state;
+      this.cobaltFiledsKeys.cuidad.selector.value = town;
+      this.cobaltFiledsKeys.calle.selector.value = road;
+      this.cobaltFiledsKeys.numero.selector.value = house_number;
+      this.cobaltFiledsKeys.region.selector.value = region;
+      this.cobaltFiledsKeys.latlng.selector.value = `${lon},${lat}`;
+    }
   }
 
   /**

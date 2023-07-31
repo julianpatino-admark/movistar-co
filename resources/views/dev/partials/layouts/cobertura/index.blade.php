@@ -11,6 +11,7 @@
               class="form form-cobertura"
               data-layer-page="/c2c/cobertura/conversion"
               action="{{url('/api/form/send')}}"
+              data-set="fill-cobalt"
         >
             {{csrf_field()}}
             <input type="hidden" name="c2c" value="COBERTURA">
@@ -26,14 +27,18 @@
 
                 <div class="form-cobertura_dual-input">
                     <div class="form-custom-group">
-                        <input class="form-control" type="text" name="escliente" placeholder="* Eres cliente Movistar?" required/>
+                        <select class="form-select" name="escliente" required>
+                            <option hidden selected value="">* Eres cliente Movistar?</option>
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
 
                     <div class="form-custom-group">
                         <select class="form-select" name="servicios">
                             <option hidden selected>¿Qué servicio buscas?</option>
-                            <option value="internet">internet fibra</option>
-                            <option value="movil">movil</option>
+                            <option value="internet">Internet fibra</option>
+                            <option value="movil">Móvil</option>
                         </select>
                     </div>
                 </div>
@@ -43,22 +48,28 @@
                 </div>
 
                 <a
-                        href="#"
-                        class="geo-link-current"
-                        data-set="current-position"
-                        data-target="inptAddress"
-                        data-map-id="gmp-map"
-                        data-cobalt-form="cobertura-form"
+                    href="#"
+                    class="geo-link-current"
+                    data-set="current-position"
+                    data-target="inptAddress"
+                    data-map-id="gmp-map"
                 >
                     @include("dev.partials.components.icons.market-map")
                     <span class="mx-2">Usar mi ubicación actual</span>
                 </a>
             </div>
-            <div class="map" id="gmp-map"></div>
+            <div
+                class="map"
+                id="gmp-map"
+                data-set="init-map"
+                data-set-center="4.6484639,-74.190207"
+                data-set-zoom="10"
+                data-target="inptAddress"
+            ></div>
             <div class="container">
                 <div class="form-cobertura_specialaddr">
                     <input type="checkbox" name="specialaddr" id="checkSpecialAddr" data-toggle="toggle-enabled" data-elements="#inptDireccionAdicional">
-                    <label for="specialaddr" class="text-xxs">
+                    <label for="checkSpecialAddr" class="text-xxs">
                         Mi dirección tiene especificaciones especiales ( Torre, Apto, Int, etc )
                     </label>
                 </div>

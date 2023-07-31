@@ -6,7 +6,7 @@ const init = () => {
   document.querySelectorAll("[data-toggle=form-simple]:not(#whatsapp-c2c-form)").forEach((el) => {
     $(el).on("form-finished", (ev, data) => {
       const { origin, search, hash } = window.location;
-      if(data.status === true) window.location.href = `${origin}/gracias${search}${hash}`;
+      //if(data.status === true) window.location.href = `${origin}/gracias${search}${hash}`;
     });
   });
 

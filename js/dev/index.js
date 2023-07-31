@@ -62,22 +62,25 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Google Map Geolocalizacion
  */
-import InitGeolocalizacion from "./modules/geolocalizacion/MapLibreGL";
+import InitGeolocalizacion from "./modules/geolocalizacion/GoogleMaps";
 import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
 
-/*Geolocalizacion.init(InitGeolocalizacion, {
+const  Map = new InitGeolocalizacion( {
   key: "AIzaSyBkRwt18r6rRUEnnAu9zUBMvgIZJoBvfdg",
-  cobalt: {
-    form: "cobertura-form",
-  },
   map: {
     mapId: "3e1f8c1e0e9a9a40",
     position:{lat: 4.648, lng: -74.190},
   },
 });
-*/
 
-const Map = new InitGeolocalizacion();
+/*const Map = new InitGeolocalizacion({
+  target: "inptAddress",
+  mapa: {
+    container: "gmp-map",
+    center: { lon: -74.190, lat: 4.648 },
+    zoom: 10,
+  },
+});*/
 Geolocalizacion.init(Map);
 
 /**
@@ -99,4 +102,3 @@ Sticky.init();
 ScrollSlide.init();
 
 NavClose.init();
-

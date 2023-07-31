@@ -37,6 +37,7 @@ return [
         'dni',
         'nombre',
         'productos',
+        'servicios',
     ],
 
     /**
