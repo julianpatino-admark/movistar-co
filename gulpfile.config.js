@@ -20,7 +20,7 @@ var constants = {
 
     default: {
 
-        host: 'https://movistarco.local:8890',
+        host: 'https://movistar.test/',
         versionLanding: 'generica'
 
     }

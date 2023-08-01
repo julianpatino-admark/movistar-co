@@ -15,9 +15,9 @@
                 </h3>
                 <div class="special-promo-card">
                     <div class="special-promo-card__condition">
-                        <span class="special-promo-card__price">$52.493</span>
+                        <span class="special-promo-card__price">$55.492</span>
                         <span class="special-promo-card__month">x 11 meses</span>
-                        <span class="special-promo-card__after">Desde el mes 13 paga $69.900 mes</span>
+                        <span class="special-promo-card__after">Desde el mes 13 paga $73.990 mes</span>
                     </div>
                     <div class="special-promo-card__include">
                         Suma
