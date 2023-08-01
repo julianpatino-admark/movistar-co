@@ -15,6 +15,7 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
+        "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28",
         "@googlemaps/js-api-loader": "^1.16.2",
         "admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28",
         "leaflet": "^1.9.4",
@@ -38,7 +39,7 @@
         "eslint-config-prettier": "^8.5.0",
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "gulp-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-gulp-landings.git#3.1.1",
+        "gulp-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-gulp-landings.git#3.1.1",
         "laravel-vite-plugin": "^0.6.0",
         "lodash": "^4.17.19",
         "playwright": "^1.32.0",

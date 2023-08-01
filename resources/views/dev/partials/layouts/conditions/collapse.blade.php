@@ -15,7 +15,7 @@
 				<p><a class="conditions_tyc_link" href="{{ secure_url('public/documents/tyc_online_julio_2_2023.pdf') }}" target="_blank">Términos y Condiciones ofertas Hogar</a></p>
 
 				<p><b>Términos y condiciones oferta pospago online</b><br>
-					Oferta vigente del 17 al 31 de julio 2023, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $37.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual.l.
+					Oferta vigente del 1 al 15 de agosto 2023, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $37.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual.
 				</p>
 
 			</div>
