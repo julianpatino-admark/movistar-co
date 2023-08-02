@@ -95,4 +95,3 @@ Sticky.init();
 ScrollSlide.init();
 
 NavClose.init();
-

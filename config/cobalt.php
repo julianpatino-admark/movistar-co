@@ -38,6 +38,9 @@ return [
         'nombre',
         'productos',
         'servicios',
+        'escliente',
+        'direccion',
+        'direccionAdicional',
     ],
 
     /**
