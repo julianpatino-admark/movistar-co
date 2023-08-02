@@ -17,7 +17,6 @@
     "dependencies": {
         "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28",
         "@googlemaps/js-api-loader": "^1.16.2",
-        "admark-landings": "git+ssh://git@konecta.bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28",
         "leaflet": "^1.9.4",
         "maplibre-gl": "^3.2.0"
     },

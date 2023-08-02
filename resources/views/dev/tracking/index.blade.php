@@ -1,3 +1,8 @@
+@php
+	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
+    $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
+@endphp
+
 @extends('dev.partials.layouts.extend.master')
 
 @section('metadata')
@@ -9,7 +14,12 @@
 
 @section('content')
 	@include('dev.partials.id_version.generica.main-banner')
-	@include('dev.partials.layouts.banners.banner-cobertura')
+
+	@if($keyword == "cobertura")
+		@include('dev.partials.layouts.banners.banner-geosearch')
+	@else
+		@include('dev.partials.layouts.banners.banner-cobertura')
+	@endif
 	@include('dev.partials.id_version.generica.carousel.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.generica.list.list-services')
