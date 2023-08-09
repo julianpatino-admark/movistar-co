@@ -60,23 +60,6 @@ import ScrollSlide from "admark-landings/src/scroll/slide";
 import NavClose from "./modules/nav/nav-close";
 
 /**
- * Google Map Geolocalizacion
- */
-import InitGeolocalizacion from "./modules/geolocalizacion/MapLibreGL";
-import Geolocalizacion from "./modules/geolocalizacion/geoDataset";
-
-/*const  Map = new InitGeolocalizacion( {
-  key: "AIzaSyBkRwt18r6rRUEnnAu9zUBMvgIZJoBvfdg",
-  map: {
-    mapId: "3e1f8c1e0e9a9a40",
-    position:{lat: 4.648, lng: -74.190},
-  },
-});*/
-
- const Map = new InitGeolocalizacion();
-Geolocalizacion.InitEvents(Map);
-
-/**
  * INIT
  */
 CallMetrics.init();

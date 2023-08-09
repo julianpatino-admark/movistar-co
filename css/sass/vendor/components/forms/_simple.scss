@@ -1,45 +1,57 @@
-input.form-control{
-    height: 43px;
+.form-simple{
 
-    border: 0;
-    border-radius: 9px;
+    input.form-control{
+        height: 43px;
 
-    margin-bottom: 15px;
+        border: 0;
+        border-radius: 9px;
 
-    &::placeholder {
-        text-align: center;
-        opacity: 0.5;
-        color: #bdbcbc;
-    }
+        margin-bottom: 10px;
 
-    &.error{
-        margin-bottom: 0;
+        &::placeholder {
+            text-align: center;
+            opacity: 0.5;
+            color: #bdbcbc;
+        }
 
-        & + label{
-            margin-bottom: 15px;
+        &.error{
+            margin-bottom: 0;
+
+            & + label{
+                margin-bottom: 15px;
+            }
         }
     }
-}
 
-.form-check-label {
-    color: $form-font-color;
-
-    a {
+    .form-check-label {
         color: $form-font-color;
 
-        &:hover {
+        a {
+            color: $form-font-color;
 
-            text-decoration: underline;
+            &:hover {
 
+                text-decoration: underline;
+
+            }
         }
     }
-}
 
-.form-simple{
+    select.form-select{
+        border-radius: 9px;
+        color: #bdbcbc;
+
+        &.valid{
+            color: #000;
+        }
+    }
+
     &_title {
         color: white;
         text-align: center;
         font-size: 16px;
+        margin: 0;
+        padding: 5px 0;
     }
 
     &_services{
@@ -97,13 +109,57 @@ input.form-control{
     }
 
     &_description{
-        max-width: 170px;
-        margin: 0 auto 15px;
+        margin: 0 auto 10px;
 
         color: white;
         font-size: 12px;
         line-height: 16px;
         text-align: center;
+    }
+
+    &_addr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0;
+
+        input[type="checkbox"]{
+            display: flex;
+            place-content: center;
+            place-items: center;
+            appearance: none;
+            border: 1px solid $color-brand-highlight;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+
+            margin-right: 5px;
+
+            &::before{
+                display: block;
+                content: "";
+                width: 50%;
+                height: 50%;
+                transform: scale(0);
+                transform-origin: bottom center;
+                transition: 120ms transform ease-in-out;
+                background-color: white;
+                clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+            }
+
+            &:checked {
+                background-color: $color-brand-highlight;
+
+                &::before{
+                    transform: scale(1);
+                }
+            }
+        }
+
+        label{
+            font-size: 12px;
+            color: #fff;
+        }
     }
 
     &_tyc{
@@ -119,8 +175,8 @@ input.form-control{
             place-items: center;
             appearance: none;
             border: 1px solid $color-brand-highlight;
-            width: 17px;
-            height: 17px;
+            width: 14px;
+            height: 14px;
             border-radius: 3px;
 
             margin-right: 5px;
@@ -150,13 +206,36 @@ input.form-control{
             flex: 1;
             width: 200px;
 
-            font-size: 10px;
-            line-height: 10px;
+            font-size: 8px;
+            line-height: 9px;
             color: $color-grey-60;
         }
 
         label.error{
             flex-basis: 100%;
+        }
+    }
+
+    &.black-theme{
+        input.form-control, select.form-select{
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .form-simple_addr{
+            justify-content: flex-start;
+            margin: 15px 0;
+
+            label{
+                color: #626161;
+            }
+        }
+
+        .form-simple_tyc{
+
+            .text-xxs{
+                width: inherit;
+                flex: inherit;
+            }
         }
     }
 }

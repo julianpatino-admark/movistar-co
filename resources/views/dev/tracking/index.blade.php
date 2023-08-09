@@ -14,12 +14,6 @@
 
 @section('content')
 	@include('dev.partials.id_version.generica.main-banner')
-
-	@if($keyword == "cobertura")
-		@include('dev.partials.layouts.banners.banner-geosearch')
-	@else
-		@include('dev.partials.layouts.banners.banner-cobertura')
-	@endif
 	@include('dev.partials.id_version.generica.carousel.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.generica.list.list-services')
