@@ -1,16 +1,26 @@
-export default function (map) {
+function InitEvents (MapClass) {
   document.querySelectorAll("[data-set]").forEach((el) => {
-    const { set, target=null } = el.dataset;
+    const { set } = el.dataset;
 
     if (set === "current-position") {
-      const $targetEl = document.getElementById(target);
       el.addEventListener("click", () =>{
-        map.setCurrentAddress(el, $targetEl);
+        MapClass.setCurrentAddress(el);
       });
     }
 
-    if (set === "autocomplete-address") {
-      map.initAutocompleteAddress(el);
-    }
+    if(set === "autocomplete-address") MapClass.initAutocompleteAddress(el);
+
+    if(set === "fill-cobalt") MapClass.fillCobalt(el);
+
+    if(set === "init-map") MapClass.initMap(el);
   })
+}
+
+function init(MapClass) {
+  MapClass.load().then(() => InitEvents(MapClass));
+}
+
+export default {
+  init,
+  InitEvents
 }

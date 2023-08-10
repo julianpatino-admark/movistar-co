@@ -33,9 +33,14 @@ return [
     |--------------------------------------------------------------------
     */
     'extra_data' => [
+        'c2c',
         'dni',
         'nombre',
         'productos',
+        'servicios',
+        'escliente',
+        'direccion',
+        'direccionAdicional',
     ],
 
     /**

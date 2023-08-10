@@ -27,7 +27,7 @@
                     </a>
                 </div>
 
-                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta válida del 1 al 15 de julio del 2023</div>
+                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta válida del 1 al 15 de agosto del 2023</div>
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title">70 GB</h3>
+			<h3 class="main-title">110 GB</h3>
 		</div>
 
 		<div class="card-offer_body">
@@ -18,10 +18,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$28.995
+					$30.495
 				</p>
 				<p class="card-offer_price-text">
-					Normal $57.990
+					Normal $60.990
 				</p>
 			</div>
 
@@ -29,7 +29,7 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="offer-two"
+					data-c2c="MOVIL 70 Gb"
 					data-toggle="modal"
 					data-modal-title="70 Gb"
 					data-target="#modal-velocidades"
@@ -64,6 +64,4 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>

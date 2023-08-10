@@ -1,5 +1,7 @@
 @php
     $showServices = isset($showServices) ? $showServices : true;
+    $keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
+    $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
 @endphp
 
 <form id="{{ $id }}-form"
@@ -15,41 +17,40 @@
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
 
     @if($showServices)
+        <div>
+            <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+            <select
+                id="{{ $id }}-contratar"
+                name="contratar"
+                class="form-select"
+                required
+            >
+                <option selected value="" hidden>* Contratar servicios</option>
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
         <p class="form-simple_title">
             Escoge tus servicios
         </p>
 
-        <div class="form-simple_services">
-            <div class="form-check">
-                <label class="form-check-label" for="{{ $id }}-checkbox-internet">
-                    @include('dev.partials.components.icons.menu.wifi-icon')
-                    Internet Fibra
-                </label>
-                <input
-                    checked
-                    name="servicios"
-                    type="checkbox"
-                    id="{{ $id }}-checkbox-internet"
-                    value="internet"
-                >
-            </div>
-
-            <div class="form-check">
-                <label class="form-check-label" for="{{ $id }}-checkbox-movil">
-                    @include('dev.partials.components.icons.menu.movil')
-                    Móvil
-                </label>
-                <input
-                    name="servicios"
-                    type="checkbox"
-                    id="{{ $id }}-checkbox-movil"
-                    value="movil"
-                >
-            </div>
+        <div class="mb-2">
+            <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+            <select
+                id="{{ $id }}-selectServicios"
+                name="servicios"
+                class="form-select"
+                required
+            >
+                <option selected value="" hidden>Internet Hogar Fibra</option>
+                <option value="internet">Internet Fibra</option>
+                <option value="movil">Móvil</option>
+            </select>
         </div>
 
         <p class="form-simple_description">
-            !Déjanos tus datos y te ofrecemos el mejor precio!
+            ¡Déjanos tus datos y te ofrecemos el mejor precio!
         </p>
 
     @endif
@@ -65,32 +66,45 @@
         >
     </div>
 
-    <div>
-        <input type="text" name="dni" class="form-control" placeholder="Número de identificación">
-    </div>
+    @if($keyword == "cobertura")
+        <div>
+            <input type="text" name="direccion" class="form-control mb-0" placeholder="Dirección: Cll 103 # 13-30, Bogotá">
+        </div>
+
+        <div class="form-simple_addr">
+            <input type="checkbox" name="specialaddr" id="checkSpecialAddr" data-toggle="toggle-enabled" data-elements="#{{ $id }}-inptDireccionAdicional">
+            <label for="checkSpecialAddr">
+                Mi dirección tiene especificaciones
+            </label>
+        </div>
+
+        <div>
+            <input type="text" class="form-control" id="{{ $id }}-inptDireccionAdicional" name="direccionAdicional" placeholder="Apto 502, torre 1, piso 3, etc" disabled  required>
+        </div>
+    @endif
 
     <div class="form-simple_tyc">
         <input type="checkbox" name="legal" id="legal" required>
         <label for="legal" class="text-xxs">
             Acepto
             <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#modal-text"
-                    data-content="{{url('/privacy')}}"
-                    data-modal-title="Política de Privacidad"
-                    title="Política de privacidad"
+                href="#"
+                data-toggle="modal"
+                data-target="#modal-text"
+                data-content="{{url('/privacy')}}"
+                data-modal-title="Política de Privacidad"
+                title="Política de privacidad"
             >
                 política de privacidad
             </a>
             y tratamiento de
             <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#modal-text"
-                    data-content="{{url('/privacy')}}"
-                    data-modal-title="Política de Privacidad"
-                    title="Política de privacidad"
+                href="#"
+                data-toggle="modal"
+                data-target="#modal-text"
+                data-content="{{url('/privacy')}}"
+                data-modal-title="Política de Privacidad"
+                title="Política de privacidad"
             >
                 datos personales.
             </a>

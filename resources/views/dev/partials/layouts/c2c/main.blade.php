@@ -2,9 +2,9 @@
 	<div class="main-c2c_wrapper">
 		<div class="main-c2c box-shadow-sm">
 			<p class="main-c2c_title">
-				Planes de Internet, telefonía fija y televisión
+				¿Deseas comprar uno de nuestros planes?
 			</p>
-			@include('dev.partials.components.forms.simple', ['id' => 'c2c-main'])
+			@include('dev.partials.components.forms.simple', ['id' => 'c2c-main', 'class' => 'form-simple'])
 		</div>
 	</div>
 </div>

@@ -4,7 +4,7 @@
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title">40 GB</h3>
+			<h3 class="main-title">55 GB</h3>
 		</div>
 
 		<div class="card-offer_body">
@@ -18,23 +18,23 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$18.995
+					$19.995
 				</p>
 				<p class="card-offer_price-text">
-					Normal $37.990
+					Normal $39.990
 				</p>
 			</div>
 
 
 			<div class="card-offer_cta">
 				<a
-						class="btn-flex btn-carousel"
-						data-c2c="offer-one"
-						data-toggle="modal"
-						data-modal-title="40 Gb"
-						data-target="#modal-velocidades"
-						data-tag-page="/modal/offer-1-mobile/c2c"
-						data-show-element="#modal-header-phone"
+					class="btn-flex btn-carousel"
+					data-c2c="offer-one"
+					data-toggle="modal"
+					data-modal-title="40 Gb"
+					data-target="#modal-velocidades"
+					data-tag-page="/modal/offer-1-mobile/c2c"
+					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
 				</a>

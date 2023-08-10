@@ -14,7 +14,7 @@
 					<p>Te llamamos GRATIS</p>
 				</div>
 				<div class="modal-c2c_form">
-					@include('dev.partials.components.forms.simple',['id' => 'modal-c2c', 'class' => 'form-underline'])
+					@include('dev.partials.components.forms.simple',['id' => 'modal-c2c', 'class' => 'form-simple'])
 				</div>
 			</div>
 			<div class="modal-footer">

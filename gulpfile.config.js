@@ -20,7 +20,7 @@ var constants = {
 
     default: {
 
-        host: 'https://movistarco.local:8890',
+        host: 'https://movistar.test',
         versionLanding: 'generica'
 
     }
@@ -61,7 +61,7 @@ var plugins = {
         dest: './css/',
 
         options: {
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
         }
 
     },
@@ -124,7 +124,8 @@ var plugins = {
             'carousel-item-right',
             'carousel-item-left',
             /^cc-/,
-            /^carousel-/
+            /^carousel-/,
+            'autocomplete-results',
         ],
 
     },
