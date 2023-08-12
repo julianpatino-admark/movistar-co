@@ -36,6 +36,7 @@ return [
         'c2c',
         'dni',
         'nombre',
+        'contratar',
         'productos',
         'servicios',
         'escliente',
