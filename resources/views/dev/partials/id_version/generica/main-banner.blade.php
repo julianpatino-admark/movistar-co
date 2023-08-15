@@ -7,11 +7,11 @@
                 <p>Compra hoy y paga el otro mes</p>
                 <x-promo-cards
                     discount="20"
-                    price="66.792"
+                    price="64.392"
                     months="por 12 meses"
-                    text="Normal $81.990"
+                    text="Normal $78.990"
                 >
-                    350 MB Simétricas
+                    Desde <span>$78.990</span>
                 </x-promo-cards>
 
                 <div class="main-banner_cta">

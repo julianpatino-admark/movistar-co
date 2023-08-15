@@ -8,7 +8,7 @@ $card-offer-min-height:(
         xl : 182px
 );
 
-$card-offer-border-color: $color-brand-highlight;
+$card-offer-border-color: $color-blue-20;
 
 //Card Offer Label
 $card-offer-label-height:0 ;
@@ -18,10 +18,10 @@ $card-offer-label-width:85%;
 $card-offer-label-font-size:16px;
 
 //Card Offer Header
-$card-offer-header-bg: rgba(0, 176, 243, 0.6);
+$card-offer-header-bg: transparent;
 $card-offer-header-height: 70px;
-$card-offer-header-font-size: 50px;
+$card-offer-header-font-size: 56px;
 
-$card-offer-header-font-color: white;
+$card-offer-header-font-color: #000;
 $card-offer-header-title-font-size: 16px;
-$card-offer-header-subtitle-font-size: 12px;
+$card-offer-header-subtitle-font-size: 16px;

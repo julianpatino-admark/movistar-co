@@ -1,21 +1,17 @@
 .btn-carousel {
+    width: 100%;
     min-width: $btn-carousel-min-width;
     margin: 0;
     position: relative;
-    background-color: $btn-carousel-bg;
+    background: $btn-carousel-bg;
     color: $btn-carousel-color;
     font-size: map_get($btn-carousel-font-size, xs);
     height: $btn-carousel-height;
     border: $btn-carousel-border;
     font-family: map_get($font-family-brand, regular);
-    border: 1px solid white;
-
-
-    @if ($btn-carousel-rounded) {
-
-        border-radius: $btn-carousel-border-radius;
-
-    }
+    border: 2px solid $btn-carousel-bg;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
     svg {
         display: none;
@@ -24,7 +20,10 @@
         left: calc(50% - 8px);
     }
 
-
+    &:hover {
+        color: $btn-carousel-color-hover;
+        background: $btn-carousel-bg-hover;
+    }
 
     &.active {
 

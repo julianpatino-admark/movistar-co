@@ -1,14 +1,11 @@
 <div class="card-offer">
 
-	<div class="card-offer_label">
-		<p class="label-text">App Smart Wifi</p>
-	</div>
-
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="main-title">900 Mb</h3>
-			<h4 class="subtitle">&af;</h4>
+			<h3 class="main-title">900</h3>
+			<h4 class="subtitle">Megas Simétricas</h4>
+			<div class="label">¡OFERTA GAMER!</div>
 		</div>
 
 		<div class="card-offer_body">
@@ -22,10 +19,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$208.392
+					$166.293
 				</p>
 				<p class="card-offer_price-text">
-					Normal $258.990
+					Normal $234.990
 				</p>
 			</div>
 
@@ -48,18 +45,17 @@
 
 		<div class="card-offer_footer">
 			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.internet")
+				<img width="23" height="23" src="{{ asset('img/common/cuadro-repetidor.webp') }}" alt="repetidor de señal WiFi Movistar">
 				<div>
-					<h4>Larga distancia nacional</h4>
-					<p>Ilimitada</p>
+					<h4>Repetidor Wifi Baseport</h4>
 				</div>
 			</div>
 
 			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.movistar")
+				@include("vendor.partials.components.icons.cards.movistar-wifi")
 				<div>
-					<h4>Movistar TV App</h4>
-					<p>8 canales nacionales en vivo</p>
+					<h4>App Smart Wifi</h4>
+					<p>Controla tu red</p>
 				</div>
 			</div>
 		</div>
