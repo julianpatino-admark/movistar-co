@@ -2,8 +2,8 @@
     .card-offer{
 
         &_wrapper{
-            box-shadow: 5px 5px 10px darkgray;
-            border: 3px solid $color-brand-highlight;
+            box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.4);
+            border: 0;
         }
 
         &_label .label-text{
@@ -13,12 +13,16 @@
         &_header{
             background-color: $color-brand-highlight;
 
+            .title, .main-title, .subtitle{
+                color: $white;
+            }
+
             .main-title {
                 margin: 0;
             }
 
             .title {
-                margin: 15px 0 0;
+                margin: 5px 0 0;
             }
         }
     }
@@ -78,28 +82,32 @@
             color: $card-offer-header-font-color;
             font-size: $card-offer-header-font-size;
             line-height: $card-offer-header-font-size;
-            margin: 40px 0 0;
+            margin: 30px 0 0;
+            font-weight: bold;
         }
 
         .subtitle{
             font-size: $card-offer-header-subtitle-font-size;
             color: $card-offer-header-font-color;
+            font-weight: bold;
         }
 
-        &.header-movil{
-            .title{
-                margin: 20px 0 0;
-            }
-
-            .main-title{
-                margin: 5px 0 12px 0;
-            }
+        .label{
+            text-align: center;
+            width: 90%;
+            color: $white;
+            font-size: 12px;
+            font-family: $font-family-primary;
+            background-color: $black;
+            border-radius: 6px;
+            padding: 5px 0;
+            margin-bottom: 15px;
         }
     }
 
     &_body {
         display: block;
-        padding: 20px 35px 0;
+        padding: 15px 35px 0;
         min-height: map_get($card-offer-min-height, xs);
         text-align: center;
 
@@ -109,14 +117,14 @@
 
             &_container{
                 display: flex;
-                border: 1px solid $color-brand-highlight-secondary;
+                border: 1px solid $black;
 
                 border-radius: 8px;
                 overflow: hidden;
 
                 .discount{
                     color: white;
-                    background-color: $color-brand-highlight-secondary;
+                    background-color: $black;
 
                     padding: 2px 5px;
                 }
@@ -158,9 +166,9 @@
 
         .package-item{
             display: flex;
-            align-items: start;
+            align-items: center;
 
-            svg{
+            svg, img{
                 width: 23px;
                 height: 23px;
                 fill: $color-brand-highlight;

@@ -1,0 +1,27 @@
+$card-offer-rounded: true;
+$card-offer-border-radius: 30px;
+$card-offer-max-width: 265px;
+$card-offer-min-height:(
+        xs : 185px,
+        md : 335px,
+        lg : 195px,
+        xl : 182px
+);
+
+$card-offer-border-color: $color-brand-highlight;
+
+//Card Offer Label
+$card-offer-label-height:0 ;
+$card-offer-label-text-color: #fff;
+$card-offer-label-bg: $color-brand-highlight;
+$card-offer-label-width:85%;
+$card-offer-label-font-size:16px;
+
+//Card Offer Header
+$card-offer-header-bg: rgba(0, 176, 243, 0.6);
+$card-offer-header-height: 70px;
+$card-offer-header-font-size: 50px;
+
+$card-offer-header-font-color: white;
+$card-offer-header-title-font-size: 16px;
+$card-offer-header-subtitle-font-size: 12px;
