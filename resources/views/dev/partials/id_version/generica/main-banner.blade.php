@@ -3,17 +3,9 @@
         <div class="main-banner">
             <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
             <div class="main-banner_container">
-                <h2>¡Vuela hoy con Fibra!</h2>
-                <p>Compra hoy y paga el otro mes</p>
-                <x-promo-cards
-                    discount="20"
-                    price="64.392"
-                    months="por 12 meses"
-                    text="Normal $78.990"
-                >
-                    Desde <span>$78.990</span>
-                </x-promo-cards>
-
+                <h2>para disfrutar</h2>
+                <h2>Disney+ y Star+ incluidos</h2>
+                <p>Primer mes gratis + 10% dto. x 11 meses</p>
                 <div class="main-banner_cta">
                     <a
                         data-c2c="CALCULA TU PRECIO"
