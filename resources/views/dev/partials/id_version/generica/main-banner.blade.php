@@ -7,7 +7,7 @@
                     discount="20"
                     price="64.392"
                     months=""
-                    text="Normal $78.990"
+                    text="por 12 meses"
                 >
                     Desde <span>$78.990</span>
                 </x-promo-cards>

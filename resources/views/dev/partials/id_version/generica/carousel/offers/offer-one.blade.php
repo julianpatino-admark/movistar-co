@@ -1,9 +1,8 @@
-<div class="card-offer destacado">
+<div class="card-offer">
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<p class="title">NUESTRA MEJOR OFERTA</p>
 			<h3 class="main-title">350</h3>
 			<h4 class="subtitle">Megas Simétricas</h4>
 			<div class="label">250 MB si aún no eres cliente Pospago</div>
