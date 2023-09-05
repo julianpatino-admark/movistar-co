@@ -16,17 +16,17 @@
 
 			<div class="body-title">
 				<div class="body-title_container">
-					<div class="discount">50%dcto</div>
+					<div class="discount">10%dcto</div>
 					<div class="months">meses 2 y 3</div>
 				</div>
 			</div>
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$36.995
+					$71.991
 				</p>
 				<p class="card-offer_price-text">
-					Normal $73.990
+					Normal $79.990
 				</p>
 			</div>
 

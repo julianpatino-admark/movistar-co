@@ -20,12 +20,13 @@
     background: $btn-accent-b-color;
     color: $btn-accent-color;
 
-    border: 2px solid $btn-carousel-bg;
+    border: 2px solid $btn-accent-b-color;
     transition: all 0.2s ease-in-out;
 
     &:hover {
         color: $btn-accent-b-color;
         background: transparent;
+        -webkit-text-stroke: 0.2px #fff;
     }
 }
 

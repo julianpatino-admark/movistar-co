@@ -32,88 +32,42 @@
         flex-direction: column;
 
         &_image{
+            display: none;
             flex: 1;
+            margin-bottom: 10px;
+        }
+
+        h2, h3, > p{
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+
+        h2, h3{
+            text-align: center;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 300;
         }
 
         h2{
-            color: $color-blue-95;
-            font-size: 20px;
-            line-height: 20px;
-            font-weight: 300;
-
-            padding: 0;
-            margin: 10px 0;
-
-            span{
-                color: $color-blue-95;
-                font-weight: 900;
-            }
-        }
-
-        h3{
-            font-size: 14px;
-            font-weight: 300;
-        }
-
-        .special-promo-card{
             display: flex;
-            margin-bottom: 15px;
+            flex-direction: column;
+            align-items: center;
 
-            &__condition{
-                text-align: center;
-
-                display: flex;
-                flex-direction: column;
-                background-color: $color-blue-20;
-
-                padding: 15px 10px;
-
-                @include border-start-radius(13px);
-
-                span{
-                    color: $white;
-                    font-weight: bold;
-                }
+            svg{
+                width: 250px;
+                height: 60px;
             }
+        }
 
-                    &__price{
-                        font-size: 28px;
-                        line-height: 28px;
-                    }
-
-                    &__month{
-                        font-size: 16px;
-                        line-height: 16px;
-                    }
-
-                    &__after{
-                        font-size: 7px;
-                        line-height: 15px;
-                        white-space: nowrap;
-                        font-weight: normal !important;
-                    }
-
-            &__include{
-                text-align: center;
-                white-space: nowrap;
-
-                display: flex;
-                flex-direction: column;
-                background-color: $white;
-
-                color: $color-blue-20;
-                font-size: 14px;
-                line-height: 18px;
-
-                padding: 15px 10px;
-
-                @include border-end-radius(13px);
-
-                span{
-                    color: $color-blue-20;
-                    font-weight: bold;
-                }
-            }
+        > p{
+            flex: 1;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+        
+            margin-bottom: 10px;
         }
     }
 
@@ -135,7 +89,7 @@
     }
 
     &_tyc{
-        color: $color-blue-95;
+        color: $white;
         font-size: 8px;
         font-weight: 300;
         margin-top: 10px;
@@ -150,7 +104,7 @@
 
         &_container {
             margin: 0 auto;
-            max-width: 310px;
+            max-width: 395px;
         }
 
         &_tyc{
@@ -186,46 +140,32 @@
 
         &_container{
             margin: 0;
-            max-width: 340px;
+            max-width: 400px;
 
-            h2 {
-                font-size: 20px;
-                line-height: 20px;
+            &_image{
+                display: inline-block;
             }
 
-            .special-promo-card{
+            h2, h3{
+                text-align: left;
+                font-size: 36px;
+                line-height: 40px;
+            }
 
-                &__condition{
-                    padding: 20px 15px;
+            h2 {
+                justify-content: space-between;
+                flex-direction: row;
+
+                svg{
+                    width: 175px;
+                    height: 41px;
                 }
-
-                    &__price{
-                        font-size: 36px;
-                        line-height: 36px;
-                    }
-
-                    &__month{
-                        font-size: 20px;
-                        line-height: 20px;
-                    }
-
-                    &__after{
-                        font-size: 8px;
-                        line-height: 15px;
-                        font-weight: normal !important;
-                    }
-
-                &__include{
-                    font-size: 16px;
-                    line-height: 20px;
-
-                    padding: 20px 15px;
-
-                    span{
-                        font-size: 18px;
-                        line-height: 27px;
-                    }
-                }
+            }
+    
+            > p{
+                text-align: left;
+                font-size: 21px;
+                margin: 18px 0;
             }
         }
 
@@ -246,14 +186,6 @@
 
         &_title{
             margin-bottom: 30px;
-        }
-
-        &_container{
-
-            h2 {
-                font-size: 22px;
-                line-height: 25px;
-            }
         }
     }
 }
