@@ -25,29 +25,10 @@
     padding: map_get($mb-padding, xs);
     margin: 0 auto;
 
-    &_container{
-
-        h2, > p{
-            padding: 0;
-            margin: 0;
-            color: white;
-            text-align: center;
-            font-size: 20px;
-            line-height: 22px;
-        }
-
-        h2{
-            font-weight: bold;
-        }
-
-        > p{
-            margin-bottom: 10px;
-        }
-    }
-
     &_cta{
         display: flex;
         justify-content: center;
+        margin-top: 10px;
 
         .btn-flex{
             font-family: $font-family-primary;
@@ -57,7 +38,6 @@
             height: inherit;
             display: inline-flex;
 
-            margin-top: 10px;
             padding: 10px 45px;
             border-radius: 24px;
         }
@@ -65,8 +45,10 @@
 
     &_tyc{
         color: white;
+        font-family: $font-family-primary;
         font-size: 8px;
-        margin-top: 10px;
+        font-weight: normal;
+        margin-top: 0;
     }
 
 }
@@ -79,7 +61,7 @@
 
         &_container {
             margin: 0 auto;
-            max-width: 280px;
+            max-width: 290px;
         }
     }
 
@@ -111,20 +93,15 @@
 
         &_container{
             margin: 0;
-            max-width: 330px;
-
-            h2 {
-                font-size: 24px;
-                line-height: 24px;
-            }
-
-            > p{
-                margin-bottom: 10px;
-            }
+            max-width: 320px;
         }
 
-        &_cta .btn-flex{
+        &_cta{
             margin: 10px 0 0;
+        }
+
+        &_tyc{
+            margin-top: 10px;
         }
     }
 }
@@ -142,8 +119,8 @@
             margin-bottom: 40px;
         }
 
-        &_cta .btn-flex{
-            margin-top: 15px;
+        &_cta{
+            margin-top: 45px;
         }
     }
 }

@@ -1,12 +1,12 @@
 $mb-height: (
         xs : 605px,
         lg : 320px,
-        xl : 485px
+        xl : 445px
 );
 
 $mb-padding: (
-        xs : 25px 30px,
-        sm : 30px 20px,
+        xs : 25px 15px,
+        sm : 20px,
         lg : 40px 0 40px 0,
         xl : 65px 0 65px 0
 );
@@ -22,7 +22,7 @@ $mb-bg: (
         sm : #fff url('/img/generica/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
         md : #fff url('/img/generica/main-banner/main-banner-md.webp') no-repeat center / 100%,
         lg : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 100%,
-        xl : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 1600px 100%,
+        xl : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 1530px 100%,
 );
 
 $mb-bg-movil: (

@@ -21,7 +21,7 @@
     text-align: center;
     font-weight: bold;
 
-    padding: 15px 10px;
+    padding: 10px;
     border-radius: 13px;
     background-color: transparent;
     border: 3px solid white;
@@ -42,7 +42,7 @@
     line-height: 8px;
     text-align: center;
 
-    padding: 10px 15px 0;
+    padding: 5px 15px;
     border-radius: 13px;
     background-color: white;
 
@@ -80,6 +80,7 @@
     &_offert{
       font-size: 10px;
       line-height: 20px;
+      padding: 10px 15px 0;
 
       &-price{
         font-size: 48px;
