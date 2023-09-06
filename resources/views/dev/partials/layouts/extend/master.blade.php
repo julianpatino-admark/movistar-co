@@ -5,6 +5,7 @@
 	$phone = ($header_phone === true)?$phone:"0";
 	$main_c2c = isset($main_c2c)?$main_c2c:true;
     $modals = isset($modals)?$modals:true;
+	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
 @endphp
 
 		<!doctype html>
@@ -54,7 +55,9 @@
 	@include('dev.partials.layouts.footer.footer')
 	@include('dev.partials.layouts.cta.mobile-fixed')
 
-	@include('dev.partials.components.buttons.whatsapp')
+	@if (str_contains($keyword, 'whatsapp'))
+		@include('dev.partials.components.buttons.whatsapp')
+	@endif
 
     @if($modals === true)
         @section('modal')
