@@ -7,10 +7,6 @@
 
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<!-- card--->
-					@include('dev.partials.id_version.generica.carousel.offers.offer-one')
-				</div>
-				<div class="carousel-item">
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-two')
 				</div>
@@ -30,8 +26,6 @@
 				<button data-target="#offersCarousel" aria-label="offers carousel 1" data-slide-to="1"
 				        class="carousel-indicators_btn"></button>
 				<button data-target="#offersCarousel" aria-label="offers carousel 2" data-slide-to="2"
-				        class="carousel-indicators_btn"></button>
-				<button data-target="#offersCarousel" aria-label="offers carousel 3" data-slide-to="3"
 				        class="carousel-indicators_btn "></button>
 			</div>
 		</div>
