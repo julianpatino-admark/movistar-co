@@ -5,14 +5,10 @@
     height: map_get($mb-height, xs);
     margin:map_get($mb-margin-top, xs);
     background: map_get($mb-bg, xs);
-}
 
-.main-banner_title {
-    color: white;
-
-    text-align: left;
-    font-size: 12px;
-    font-weight: normal;
+    .container {
+        padding: 0;
+    }
 }
 
 .main-banner{
@@ -25,10 +21,33 @@
     padding: map_get($mb-padding, xs);
     margin: 0 auto;
 
+    &_title {
+        color: white;
+    
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    &_container{
+        h2, p{
+            color: $white;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    }
+
     &_cta{
         display: flex;
         justify-content: center;
-        margin-top: 10px;
 
         .btn-flex{
             font-family: $font-family-primary;
@@ -44,6 +63,7 @@
     }
 
     &_tyc{
+        text-align: center;
         color: white;
         font-family: $font-family-primary;
         font-size: 8px;
@@ -93,7 +113,18 @@
 
         &_container{
             margin: 0;
-            max-width: 320px;
+            max-width: 330px;
+
+            h2{
+                font-weight: normal;
+                font-size: 28px;
+                text-align: left;
+            }
+
+            p{
+                font-size: 14px;
+                text-align: left;
+            }
         }
 
         &_cta{
@@ -101,6 +132,7 @@
         }
 
         &_tyc{
+            text-align: left;
             margin-top: 10px;
         }
     }
@@ -120,7 +152,7 @@
         }
 
         &_cta{
-            margin-top: 45px;
+            margin: 20px 0 45px;
         }
     }
 }

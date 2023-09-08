@@ -52,12 +52,13 @@
 				</div>
 			</div>
 
-			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.movistar-wifi")
+			<div class="package-included">
+				<div class="budget">Ahorra $41.900 con:</div>
 				<div>
-					<h4>App Smart Wifi</h4>
-					<p>Controla tu red</p>
+					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
+					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
 				</div>
+				<div>Incluidos en tu plan</div>
 			</div>
 		</div>
 	</div>

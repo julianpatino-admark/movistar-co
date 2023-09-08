@@ -3,14 +3,11 @@
         <div class="main-banner">
             <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
             <div class="main-banner_container">
-                <x-promo-cards
-                    discount="20"
-                    price="64.392"
-                    months=""
-                    text="por 12 meses"
-                >
-                    Desde <span>$78.990</span>
-                </x-promo-cards>
+                <h2>
+                    ¡<b>700 Megas</b> para disfrutar
+                    Disney+ y Star + incluidos!
+                </h2>
+                <p>Compra AHORA con el 20% de dto. x 12 meses</p>
 
                 <div class="main-banner_cta">
                     <a
@@ -25,7 +22,7 @@
                     </a>
                 </div>
 
-                <div class="main-banner_tyc">* Aplican términos y condiciones, Oferta valida del 5 al 15 de Septiembre del 2023</div>
+                <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
             </div>
         </div>
     </div>
