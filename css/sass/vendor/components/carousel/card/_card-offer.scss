@@ -97,6 +97,7 @@
             width: 90%;
             color: $white;
             font-size: 12px;
+            font-weight: bold;
             font-family: $font-family-primary;
             background-color: $black;
             border-radius: 6px;
@@ -108,7 +109,7 @@
     &_body {
         display: block;
         padding: 15px 35px 0;
-        min-height: map_get($card-offer-min-height, xs);
+        // min-height: map_get($card-offer-min-height, xs);
         text-align: center;
 
         .body-title{
@@ -162,7 +163,7 @@
     }
 
     &_footer {
-        padding: 20px 35px 10px 35px;
+        padding: 10px 35px;
 
         .package-item{
             display: flex;
@@ -193,6 +194,30 @@
             }
 
             margin-bottom: 20px;
+
+            &:nth-child(2n){
+                padding: 0 0 15px 0;   
+            }
+        }
+
+        .package-included{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+            font-family: $font-family-primary;
+
+            margin-top: -10px;
+
+            .budget{
+                color: $white;
+                font-size: 14px;
+                font-weight: bold;
+                background-color: $color-blue-20;
+                border-radius: 3px;
+                padding: 0 10px;
+                margin-bottom: 5px;
+            }
         }
     }
 

@@ -33,3 +33,8 @@
                                                                       title="POLÍTICAS DE TRATAMIENTO Y TRANSFERENCIA DE DATOS PERSONALES" aria-label="POLÍTICAS DE TRATAMIENTO">Manual Políticas Tratamiento de Datos</a>.
 
 </p>
+
+<p>
+    <b>Autorización para envío de mensajes vía whatsapp</b><br>
+    El titular autoriza recibir información y mensajes sobre nuestros servicios y ofertas, vía WhatsApp.
+</p>
