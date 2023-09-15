@@ -106,7 +106,7 @@
                 data-modal-title="Política de Privacidad"
                 title="Política de privacidad"
             >
-                datos personales.
+                datos personales y envío de mensajes vía WhatsApp.
             </a>
         </label>
         <label for="legal" class="error d-block"></label>
