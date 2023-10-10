@@ -70,6 +70,7 @@
             @include('dev.partials.layouts.modal.legal')
             @include('dev.partials.layouts.modal.response')
             @include('dev.partials.layouts.modal.manual')
+			@include('dev.partials.layouts.modal.retencion')
         @show
     @endif
 

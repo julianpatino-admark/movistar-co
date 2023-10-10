@@ -11,7 +11,6 @@ window.$ = $;
  * Plugins jQuery
  */
 import "bootstrap/js/dist/util.js";
-import "bootstrap/js/dist/modal.js";
 import "bootstrap/js/dist/collapse.js";
 import "bootstrap/js/dist/carousel.js";
 
