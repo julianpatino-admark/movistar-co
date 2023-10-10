@@ -1,0 +1,3 @@
+<svg width="33" height="37" viewBox="0 0 33 37" xmlns="http://www.w3.org/2000/svg">
+    <path d="m7.241 34.935 17.623-15.724a1 1 0 0 0 0-1.492L7.24 1.994" stroke="#00B0F3" stroke-width="3" fill="none" fill-rule="evenodd"/>
+</svg>
