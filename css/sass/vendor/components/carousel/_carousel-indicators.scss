@@ -1,10 +1,20 @@
-.carousel-indicators {
-    position: relative;
-    margin: 40px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
+.carousel-content{
+    .carousel-control{
+        display: none;       
+    }
+
+    .carousel-indicators {
+        position: relative;
+        margin: 40px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+}
+
+.carousel-banner .carousel-indicators {
+    margin: 0 0 15px 0;
 }
 
 .carousel-indicators_btn {
@@ -22,11 +32,44 @@
         background: $color-grey-80;
         outline: none;
     }
+
+    &.theme-light{
+        background-color: $color-blue-80;
+
+        &:hover,
+        &:focus,
+        &.active {
+            background: $white;
+        }
+    }
 }
 
 @include media-breakpoint-up(lg) {
-    .carousel-indicators {
-        display: none;
+    .carousel-content{
+        .carousel-control{
+            display: flex;
+            background: none;
+            border: none;
+            width: inherit;
+            opacity: 1;
+            background: linear-gradient(to left, white, transparent);
+
+            &:hover {
+                opacity: 0.5;
+            }
+        
+            &-prev {
+                transform: rotate(180deg);
+            }
+        }
+
+        .carousel-indicators {
+            display: none;
+        }
+    }
+
+    .carousel-banner .carousel-indicators {
+        display: flex;
     }
 }
 

@@ -1,19 +1,34 @@
+.carousel-banner{
+    flex: 1;
+    flex-basis: 100%;
+    margin: 10px 0 15px 0;
+
+    .carousel-inner, .carousel-item{
+        height: 100%;
+    }
+}
+
 @include media-breakpoint-up(lg){
 
-    .carousel-inner {
-        overflow: visible;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+    .carousel-content {
+        overflow: hidden;
 
-        .carousel-item {
-            display: block;
-            position: relative;
-            float: none;
-            width: 25%;
-            margin: 0;
-            padding: 6px 10px;
+        .carousel-inner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            transition: transform 0.5s ease;
+
+            &.always-carousel{
+                grid-template-columns: repeat(5, 26%);
+            }
+    
+            .carousel-item {
+                display: block;
+                position: relative;
+                float: none;
+                margin: 0;
+                padding: 6px 10px;
+            }
         }
     }
 

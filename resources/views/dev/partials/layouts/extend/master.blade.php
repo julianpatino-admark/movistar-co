@@ -47,7 +47,6 @@
 	@endif
 	@if($main_c2c === true)
 		@include('dev.partials.layouts.c2c.main')
-		@include('dev.partials.layouts.cta.desktop-sticky')
 	@endif
 
 	@yield('content')

@@ -1,158 +1,76 @@
-.main-banner_wrapper {
-    display: block;
-    position: relative;
-    width: 90%;
-    height: map_get($mb-height, xs);
-    margin:map_get($mb-margin-top, xs);
-    background: map_get($mb-bg, xs);
-
-    .container {
-        padding: 0;
-    }
-}
+@import "./content/banner-hogar";
+@import "./content/banner-movil";
 
 .main-banner{
-    width: 300px;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: map_get($mb-padding, xs);
-    margin: 0 auto;
-
-    &_title {
-        color: white;
-    
-        text-align: left;
-        font-size: 12px;
-        font-weight: normal;
-    }
-
-    &_container{
-        h2, p{
-            color: $white;
-            margin: 0;
-            text-align: center;
-        }
-
-        h2{
-            font-size: 24px;
-        }
-
-        p{
-            font-size: 12px;
-        }
-    }
-
-    &_cta{
+    .container{
+        height: map_get($mb-height, xs);
         display: flex;
-        justify-content: center;
-
-        .btn-flex{
-            font-family: $font-family-primary;
-            font-weight: bold;
-            text-decoration: none;
-
-            height: inherit;
-            display: inline-flex;
-
-            padding: 10px 45px;
-            border-radius: 24px;
-        }
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: map_get($mb-padding, xs);
+        margin-top: map_get($mb-margin-top, xs);
     }
 
-    &_tyc{
-        text-align: center;
-        color: white;
-        font-family: $font-family-primary;
-        font-size: 8px;
-        font-weight: normal;
-        margin-top: 0;
+    &.sld-1{
+        background: map_get($mb-bg, xs);
+
+        @include hogar-content;
     }
 
-}
+    &.sld-2{
+        background: map_get($mb-bg-movil, xs);
 
-@include media-breakpoint-up(sm) {
-    .main-banner{
-        width: 450px;
-
-        padding: map_get($mb-padding, sm);
-
-        &_container {
-            margin: 0 auto;
-            max-width: 290px;
-        }
+        @include movil-content;
     }
 
-    .main-banner_wrapper {
-        margin:map_get($mb-margin-top, sm);
-        background: map_get($mb-bg, sm);
+    @include media-breakpoint-up(sm) {      
+        .container{
+            height: map_get($mb-height, sm);
+            padding: map_get($mb-padding, sm);
+            margin-top: map_get($mb-margin-top, sm);
+        }
+    
+        &.sld-1{
+            background: map_get($mb-bg, sm);
+        }
+    
+        &.sld-2{
+            background: map_get($mb-bg-movil, sm);
+        }
     }
-}
-
-@include media-breakpoint-up(lg) {
-
-    .main-banner_wrapper {
-        width: 95%;
-
-        margin-top: map_get($mb-margin-top, lg);
-        height: map_get($mb-height, lg);
-        background: map_get($mb-bg, lg);
-
+    
+    @include media-breakpoint-up(lg) {
+        .container{
+            height: map_get($mb-height, lg);
+            align-items: flex-start;
+    
+            padding: map_get($mb-padding, lg);
+            margin-top: map_get($mb-margin-top, lg);
+        }
+    
+        &.sld-1{
+            background: map_get($mb-bg, lg);
+        }
+    
+        &.sld-2{
+            background: map_get($mb-bg-movil, lg);
+        }
     }
-
-    .main-banner{
-        width: 100%;
-        padding: map_get($mb-padding, lg);
-
-        &_title{
-            font-size: 16px;
-            margin-bottom: 15px;
+    
+    @include media-breakpoint-up(xl) {
+        .container{
+            height: map_get($mb-height, xl);
+            padding: map_get($mb-padding, xl);
         }
-
-        &_container{
-            margin: 0;
-            max-width: 330px;
-
-            h2{
-                font-weight: normal;
-                font-size: 28px;
-                text-align: left;
-            }
-
-            p{
-                font-size: 14px;
-                text-align: left;
-            }
+    
+        &.sld-1{
+            background: map_get($mb-bg, xl);
         }
-
-        &_cta{
-            margin: 10px 0 0;
-        }
-
-        &_tyc{
-            text-align: left;
-            margin-top: 10px;
+    
+        &.sld-2{
+            background: map_get($mb-bg-movil, xl);
         }
     }
 }
 
-@include media-breakpoint-up(xl) {
-    .main-banner_wrapper {
-        background: map_get($mb-bg, xl);
-        height: map_get($mb-height, xl);
-    }
-
-    .main-banner{
-        padding: map_get($mb-padding, xl);
-
-        &_title{
-            margin-bottom: 40px;
-        }
-
-        &_cta{
-            margin: 20px 0 45px;
-        }
-    }
-}

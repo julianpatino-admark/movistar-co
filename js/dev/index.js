@@ -49,8 +49,9 @@ import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 /**
  * Buttons
  */
-import WppBtn from "./modules/buttons/index";
+import { WppBtn, SlideOfferCarousel } from "./modules/buttons/index";
 WppBtn();
+SlideOfferCarousel();
 
 /**
  * Scroll

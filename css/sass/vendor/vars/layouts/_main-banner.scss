@@ -1,24 +1,25 @@
 $mb-height: (
-        xs : 605px,
-        lg : 320px,
+        xs : 630px,
+        sm : 630px,
+        lg : 345px,
         xl : 445px
 );
 
 $mb-padding: (
-        xs : 25px 5px,
-        sm : 20px,
-        lg : 40px 0 40px 0,
+        xs : 25px 5px 35px,
+        sm : 20px 20px 35px,
+        lg : 30px 0 40px 0,
         xl : 65px 0 65px 0
 );
 
 $mb-margin-top: (
-        xs : 110px auto 0,
-        sm : 140px auto 0,
+        xs : 110px,
+        sm : 140px,
         lg : 180px
 );
 
 $mb-bg: (
-        xs : #fff url('/img/generica/main-banner/main-banner-xs.webp') no-repeat center / 325px 100%,
+        xs : #fff url('/img/generica/main-banner/main-banner-xs.webp') no-repeat center / 350px 100%,
         sm : #fff url('/img/generica/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
         md : #fff url('/img/generica/main-banner/main-banner-md.webp') no-repeat center / 100%,
         lg : #fff url('/img/generica/main-banner/main-banner-lg.webp') no-repeat center / 100%,
@@ -26,7 +27,7 @@ $mb-bg: (
 );
 
 $mb-bg-movil: (
-        xs : #fff url('/img/movil/main-banner/main-banner-xs.webp') no-repeat center / 325px 100%,
+        xs : #fff url('/img/movil/main-banner/main-banner-xs.webp') no-repeat center / 350px 100%,
         sm : #fff url('/img/movil/main-banner/main-banner-sm.webp') no-repeat center / 450px 100%,
         md : #fff url('/img/movil/main-banner/main-banner-md.webp') no-repeat center / 100%,
         lg : #fff url('/img/movil/main-banner/main-banner-lg.webp') no-repeat center / 100%,

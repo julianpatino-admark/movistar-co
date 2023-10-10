@@ -3,7 +3,7 @@
 
         &_wrapper{
             box-shadow: 5px 5px 10px darkgray;
-            border: 3px solid $color-brand-highlight;
+            border: 3px solid $color-blue-20;
         }
 
         &_label .label-text{
@@ -11,7 +11,7 @@
         }
 
         &_header{
-            background-color: $color-brand-highlight;
+            background-color: $color-blue-20;
 
             .main-title {
                 margin: 0;
@@ -92,7 +92,7 @@
             }
 
             .main-title{
-                margin: 5px 0 12px 0;
+                margin: 5px 0 23px 0;
             }
         }
     }
@@ -185,6 +185,26 @@
             }
 
             margin-bottom: 20px;
+        }
+
+        .package-included{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 500;
+            font-family: $font-family-primary;
+
+            margin-top: -10px;
+
+            .budget{
+                color: $white;
+                font-size: 14px;
+                font-weight: bold;
+                background-color: $color-blue-20;
+                border-radius: 3px;
+                padding: 0 10px;
+                margin-bottom: 5px;
+            }
         }
     }
 
