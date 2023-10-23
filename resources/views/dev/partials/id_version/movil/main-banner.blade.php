@@ -1,31 +1,81 @@
-<div class="main-banner_wrapper">
-    <div class="container h-100">
-        <div class="main-banner">
-            <h1 class="main-banner_title">Planes Pospago de telefonía móvil</h1>
-            <div class="main-banner_container">
-                <div class="main-banner_container_image">
-                    <img width="182" height="52" src="{{ asset('img/movil/exclusiva-online.png') }}" alt="Oferta exclusiva online">
+<div id="carouselBanner" class="carousel-banner carousel slide" data-ride="carousel">
+    <div class="carousel-indicators">
+        <button
+            class="carousel-indicators_btn theme-light"
+            data-target="#carouselBanner"
+            data-slide-to="0"
+            aria-label="Banner slide hogar"
+        >
+            <span class="visually-hidden">Slide 1</span>
+        </button>
+        <button
+            class="carousel-indicators_btn theme-light active"
+            data-target="#carouselBanner"
+            data-slide-to="1"
+            aria-label="Banner slide movil"
+        >
+            <span class="visually-hidden">Slide 2</span>
+        </button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <div class="main-banner sld-1">
+                <div class="container">
+                    <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
+                    <div class="main-banner_container">
+                        <h2>
+                            ¡<b>700 Megas</b> para disfrutar
+                            Disney+ y Star + incluidos!
+                        </h2>
+                        <p>Compra AHORA con el 20% de dto. x 12 meses</p>
+        
+                        <div class="main-banner_cta">
+                            <a
+                                data-c2c="CALCULA TU PRECIO"
+                                data-toggle="modal"
+                                data-target="#modal-c2c"
+                                data-test-id= "calcula-banner-btn"
+                                data-tag-page="/modal/oferta-main-banner/c2c"
+                                class="btn-flex btn-accent-b shadow-lg"
+                            >
+                                Calcula tu precio
+                            </a>
+                        </div>
+        
+                        <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
+                    </div>
                 </div>
-                <h2>
-                    @include("dev.partials.components.icons.ilimidatos") para disfrutar
-                </h2>
-                <h3>Disney+ y Star+ incluidos</h3>
-                <p>Primer mes gratis + 10% dto. x 11 meses</p>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="main-banner sld-2">
+                <div class="container">
+                    <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
+                    <div class="main-banner_container">
+                        <div class="main-banner_container_image">
+                            <img width="182" height="52" src="{{ asset('img/movil/exclusiva-online.png') }}" alt="Oferta exclusiva online">
+                        </div>
+                        <h2>
+                            @include("dev.partials.components.icons.ilimidatos") para disfrutar
+                        </h2>
+                        <h3>Disney+ y Star+ incluidos</h3>
+                        <p>Primer mes gratis + 10% dto. x 11 meses</p>
 
-                <div class="main-banner_cta">
-                    <a
-                        data-toggle="modal"
-                        data-target="#modal-c2c"
-                        data-tag-page="/modal/oferta-main-banner/c2c"
-                        class="btn-flex btn-accent-b shadow"
-                    >
-                        Calcula tu precio
-                    </a>
+                        <div class="main-banner_cta">
+                            <a
+                                data-toggle="modal"
+                                data-target="#modal-c2c"
+                                data-tag-page="/modal/oferta-main-banner/c2c"
+                                class="btn-flex btn-accent-b shadow"
+                            >
+                                Calcula tu precio
+                            </a>
+                        </div>
+
+                        <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
+                    </div>
                 </div>
-
-                <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
             </div>
         </div>
     </div>
 </div>
-

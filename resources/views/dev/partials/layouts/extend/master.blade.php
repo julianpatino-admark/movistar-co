@@ -47,7 +47,6 @@
 	@endif
 	@if($main_c2c === true)
 		@include('dev.partials.layouts.c2c.main')
-		@include('dev.partials.layouts.cta.desktop-sticky')
 	@endif
 
 	@yield('content')
@@ -71,6 +70,7 @@
             @include('dev.partials.layouts.modal.legal')
             @include('dev.partials.layouts.modal.response')
             @include('dev.partials.layouts.modal.manual')
+			@include('dev.partials.layouts.modal.retencion')
         @show
     @endif
 

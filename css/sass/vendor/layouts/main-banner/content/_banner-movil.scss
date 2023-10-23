@@ -1,0 +1,140 @@
+@mixin movil-content {
+    .main-banner {
+        &_title {
+            color: $color-blue-95;
+        
+            text-align: left;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        &_container{
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            &_image{
+                display: none;
+                flex: 1;
+                margin-bottom: 10px;
+            }
+
+            h2, h3, > p{
+                padding: 0;
+                margin: 0;
+                color: white;
+            }
+
+            h2, h3{
+                text-align: center;
+                font-size: 25px;
+                line-height: 30px;
+                font-weight: 300;
+            }
+
+            h2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                svg{
+                    width: 250px;
+                    height: 60px;
+                }
+            }
+
+            > p{
+                flex: 1;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+            
+                margin-bottom: 10px;
+            }
+        }
+
+        &_cta{
+            display: flex;
+            justify-content: center;
+
+            .btn-flex{
+                font-family: $font-family-primary;
+                font-weight: bold;
+                text-decoration: none;
+
+                height: inherit;
+                display: inline-flex;
+
+                padding: 10px 35px;
+                border-radius: 24px;
+            }
+        }
+
+        &_tyc{
+            color: $white;
+            font-size: 8px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        @include media-breakpoint-up(sm){
+            &_container {
+                margin: 0 auto;
+                max-width: 395px;
+            }
+
+            &_tyc{
+                margin-right: -30px;
+            }
+        }
+
+        @include media-breakpoint-up(lg){
+            &_title{
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        
+            &_container{
+                margin: 0;
+                max-width: 400px;
+        
+                &_image{
+                    display: inline-block;
+                }
+        
+                h2, h3{
+                    text-align: left;
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+        
+                h2 {
+                    justify-content: space-between;
+                    flex-direction: row;
+        
+                    svg{
+                        width: 175px;
+                        height: 41px;
+                    }
+                }
+        
+                > p{
+                    text-align: left;
+                    font-size: 21px;
+                    margin: 18px 0;
+                }
+            }
+        
+            &_cta{
+                justify-content: flex-start;
+            }
+        }
+
+        @include media-breakpoint-up(xl){
+            &_title{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

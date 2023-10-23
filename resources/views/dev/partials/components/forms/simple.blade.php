@@ -1,5 +1,6 @@
 @php
     $showServices = isset($showServices) ? $showServices : true;
+    $showContratacion = isset($showContratacion) ? $showContratacion : true;
     $keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
     $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
 @endphp
@@ -17,19 +18,21 @@
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
 
     @if($showServices)
-        <div>
-            <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
-            <select
-                id="{{ $id }}-contratar"
-                name="contratar"
-                class="form-select"
-                required
-            >
-                <option selected value="" hidden>* Contratar servicios</option>
-                <option value="si">Si</option>
-                <option value="no">No</option>
-            </select>
-        </div>
+        @if ($showContratacion)
+            <div>
+                <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+                <select
+                    id="{{ $id }}-contratar"
+                    name="contratar"
+                    class="form-select"
+                    required
+                >
+                    <option selected value="" hidden>* Contratar servicios</option>
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        @endif
 
         <p class="form-simple_title">
             Escoge tus servicios

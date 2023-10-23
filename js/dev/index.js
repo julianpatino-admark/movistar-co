@@ -11,7 +11,6 @@ window.$ = $;
  * Plugins jQuery
  */
 import "bootstrap/js/dist/util.js";
-import "bootstrap/js/dist/modal.js";
 import "bootstrap/js/dist/collapse.js";
 import "bootstrap/js/dist/carousel.js";
 
@@ -49,8 +48,9 @@ import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 /**
  * Buttons
  */
-import WppBtn from "./modules/buttons/index";
+import { WppBtn, SlideOfferCarousel } from "./modules/buttons/index";
 WppBtn();
+SlideOfferCarousel();
 
 /**
  * Scroll

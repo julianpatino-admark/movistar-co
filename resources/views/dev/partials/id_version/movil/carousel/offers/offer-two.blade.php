@@ -29,9 +29,9 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="MOVIL 60 Gb"
+					data-c2c="MOVIL 80 Gb"
 					data-toggle="modal"
-					data-modal-title="60 Gb"
+					data-modal-title="80 Gb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-2-mobile/c2c"
 					data-show-element="#modal-header-phone"

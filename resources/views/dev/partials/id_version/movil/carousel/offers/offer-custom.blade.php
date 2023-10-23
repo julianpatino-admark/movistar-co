@@ -1,14 +1,10 @@
 <div class="card-offer destacado">
 
-	<div class="card-offer_label">
-		<p class="label-text">MEJOR OFERTA</p>
-	</div>
-
 	<div class="card-offer_wrapper">
 
-		<div class="card-offer_header">
+		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title" style="font-size: 40px">ILIMIDATOS</h3>
+			<h3 class="main-title" style="font-size: 40px; margin: 5px 0 0px 0;">ILIMIDATOS</h3>
 			<h6 class="subtitle">DATOS ILIMITADOS</h6>
 		</div>
 
@@ -58,12 +54,13 @@
 				</div>
 			</div>
 
-			<div class="package-item" style="margin-bottom: 43px">
-				@include("vendor.partials.components.icons.menu.wifi-icon")
+			<div class="package-included">
+				<div class="budget">Ahorra $41.900 con:</div>
 				<div>
-					<h4>10 GB para compartir</h4>
-					<p>Pasa Gigas</p>
+					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
+					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
 				</div>
+				<div>Incluidos en tu plan</div>
 			</div>
 		</div>
 	</div>

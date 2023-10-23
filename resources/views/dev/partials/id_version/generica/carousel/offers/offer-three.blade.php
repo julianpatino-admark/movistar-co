@@ -31,9 +31,9 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 650 MB"
+					data-c2c="TRIO 800 MB"
 					data-toggle="modal"
-					data-modal-title="650 Mb"
+					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-3-trio/c2c"
 					data-show-element="#modal-header-phone"
