@@ -31,7 +31,7 @@
 					class="btn-flex btn-carousel"
 					data-c2c="offer-one"
 					data-toggle="modal"
-					data-modal-title="40 Gb"
+					data-modal-title="55 Gb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-1-mobile/c2c"
 					data-show-element="#modal-header-phone"
