@@ -12,7 +12,14 @@ class PromoCards extends Component
      *
      * @var string
      */
-    public $discount;
+    public $speed;
+
+    /**
+     * The alert type.
+     *
+     * @var string
+     */
+    public $promo;
 
     /**
      * The alert type.
@@ -20,13 +27,6 @@ class PromoCards extends Component
      * @var string
      */
     public $price;
-
-    /**
-     * The alert type.
-     *
-     * @var string
-     */
-    public $months;
 
     /**
      * The alert type.
@@ -41,11 +41,11 @@ class PromoCards extends Component
      *
      * @return void
      */
-    public function __construct($discount, $text, $price, $months='')
+    public function __construct($speed, $promo, $price, $text)
     {
-        $this->discount = $discount;
+        $this->speed = $speed;
         $this->price = $price;
-        $this->months = $months;
+        $this->promo = $promo;
         $this->text = $text;
     }
 

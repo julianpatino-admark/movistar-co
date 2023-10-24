@@ -1,14 +1,9 @@
 <div class="promo-cards poker">
     <div class="promo-cards_discount">
-        <div class="promo-cards_discount-number">{{ $discount }}%</div>
-        de dto
-        <span class="promo-cards_discount-text">{{ $months }}</span>
+        <div class="promo-cards_speed">{{ $speed }}</div>
+        <span class="promo-cards_undertext">{{ $promo }}</span>
     </div>
-    <div class="promo-cards_offert">
-        <div class="promo-cards_offert-speed">
-            {{ $slot }}
-        </div>
-        <div class="promo-cards_offert-price">${{ $price }}</div>
-        {{ $text }}
-    </div>
+    <div class="separador"></div>
+    <div class="promo-cards_price">${{ $price }}</div>
+    <div class="promo-cards_offert">{{ $text }}</div>
 </div>

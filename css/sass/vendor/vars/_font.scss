@@ -1,18 +1,25 @@
 //FUENTES
 // Si se usan fuentes personaliazadas o no
-$font-custom: false;
+$font-custom: true;
 
 $fonts: (
-
-        Inter-Thin : "Inter_thin",
-        Inter-Regular : "Inter_regular",
-        Inter-Bold : "Inter_bold",
-        Inter-Medium: "Inter_medium",
-
+    ("Telefonica" "/fonts/telefonica/telefonica-bold" 700 normal),
+    ("Telefonica" "/fonts/telefonica/telefonica-light" 300 normal),
+    ("Telefonica" "/fonts/telefonica/telefonica-hand" 500 normal),
+    ("Telefonica" "/fonts/telefonica/telefonica-regular" 400 normal),
 );
 
+@each $map in $fonts {
+        $fontname: nth($map,1);
+        $file: nth($map,2);
+        $fontWeight: nth($map,3);
+        $fontStyle: nth($map,4);
+
+        @include fontfacemix($fontname, $file, $fontWeight, $fontStyle);
+}
+
 $font-family-primary: "Roboto", "Arial", sans-serif;
-$font-family-secondary: "Roboto", "Arial", sans-serif;
+$font-family-secondary: "Telefonica", "Roboto", sans-serif;
 
 $font-regular: "Inter_regular", sans-serif;
 $font-bold: "Inter_bold", sans-serif;

@@ -1,19 +1,17 @@
-@mixin fontfacemix($fontname,$filename,$folder:'/fonts/') {
-
-	@debug #{$fontname};
-	@debug #{$filename};
+@mixin fontfacemix($fontname,$filename, $fontWeight, $fontStyle) {
 
 	@font-face {
 		font-family: '#{$fontname}';
-		src:    url($folder+$filename+'.eot');
-		src:    url($folder+$filename+'.eot?#iefix') format('embedded-opentype'),
-	url($folder+$filename+'.woff2') format('woff2'),
-	url($folder+$filename+'.woff') format('woff'),
-	url($folder+$filename+'.ttf')  format('truetype'),
-	url($folder+$filename+'.svg#'+$fontname) format('svg');
+		src:    url($filename +'.eot');
+		src: 	local($filename),
+			    url($filename +'.eot?#iefix') format('embedded-opentype'),
+				url($filename +'.woff2') format('woff2'),
+				url($filename +'.woff') format('woff'),
+				url($filename +'.ttf')  format('truetype'),
+				url($filename +'.svg#'+ $fontname) format('svg');
 
-		font-weight: normal;
-		font-style: normal;
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
 		font-display: swap;
 	}
 }

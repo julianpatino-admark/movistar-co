@@ -1,5 +1,6 @@
 @import "./content/banner-hogar";
 @import "./content/banner-movil";
+@import "./content/banner-movil_prepago";
 
 .main-banner{
     .container{
@@ -24,6 +25,12 @@
         @include movil-content;
     }
 
+    &.sld-3{
+        background: map_get($mb-bg-movil-sld-2, xs);
+
+        @include movil-content-prepago;
+    }
+
     @include media-breakpoint-up(sm) {      
         .container{
             height: map_get($mb-height, sm);
@@ -37,6 +44,10 @@
     
         &.sld-2{
             background: map_get($mb-bg-movil, sm);
+        }
+
+        &.sld-3{
+            background: map_get($mb-bg-movil-sld-2, sm);
         }
     }
     
@@ -56,6 +67,10 @@
         &.sld-2{
             background: map_get($mb-bg-movil, lg);
         }
+
+        &.sld-3{
+            background: map_get($mb-bg-movil-sld-2, lg);
+        }
     }
     
     @include media-breakpoint-up(xl) {
@@ -70,6 +85,10 @@
     
         &.sld-2{
             background: map_get($mb-bg-movil, xl);
+        }
+
+        &.sld-3{
+            background: map_get($mb-bg-movil-sld-2, xl);
         }
     }
 }

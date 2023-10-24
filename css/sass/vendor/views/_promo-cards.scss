@@ -2,90 +2,80 @@
   font-family: $font-family-primary;
 
   &.poker{
-    display: grid;
+    height: 75px;
+    width: 230px;
 
-    grid-gap: 10px;
-    grid-template-rows: 1fr;
-    grid-template-columns: minmax(85px, 105px) minmax(170px, 210px);
+    display: grid;
+    grid-template-columns: 75px 15px 1fr;
+    grid-template-rows: 2fr 1fr;
+
+    background-color: $white;
+    border-radius: 13px;
+
+    padding: 8px 10px;
   }
 
   &_discount{
     display: flex;
     flex-direction: column;
+
+    color: $color-blue-20;
+
     justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
 
-    color: white;
-
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: bold;
-
-    padding: 10px;
-    border-radius: 13px;
-    background-color: transparent;
-    border: 3px solid white;
-
-    &-number{
+    &_speed{
       font-size: 32px;
+      line-height: 32px;
     }
 
-    &-text{
-      color: white;
-      font-size: 10px;
-      line-height: 12px;
+    &_undertext{
+      color: $color-blue-20;
+      font-size: 8px;
+    }
+
+  .separador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after{
+      width: 2px;
+      height: 30px;
+      content: " ";
+      background-color: $color-grey-70;
     }
   }
 
+  &_price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $color-blue-20;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
   &_offert{
-    font-size: 8px;
-    line-height: 8px;
-    text-align: center;
+    font-size: 10px;
+    color: $color-grey-20;
+    grid-column: span 3;
 
-    padding: 5px 15px;
-    border-radius: 13px;
-    background-color: white;
-
-    &-speed{
-      color: $color-brand-highlight;
-
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 18px;
-
-      span{
-        font-weight: bold;
-        color: $color-brand-highlight;
-        text-decoration: line-through;
-      }
-    }
-
-    &-price{
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 35px;
-    }
+    display: flex;
+    justify-content: center;
   }
 
   @include media-breakpoint-up(xl) {
     &_discount{
-      padding: 10px 5px;
 
-      &-number{
-        font-size: 48px;
-        line-height: 45px;
-      }
     }
 
     &_offert{
-      font-size: 10px;
-      line-height: 20px;
-      padding: 10px 15px 0;
-
-      &-price{
-        font-size: 48px;
-        line-height: 48px;
-      }
+      
     }
   }
 }
