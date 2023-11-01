@@ -11,8 +11,8 @@
 
 			<div class="body-title">
 				<div class="body-title_container">
-					<div class="discount">10%dcto</div>
-					<div class="months">meses 2 y 3</div>
+					<div class="discount">1er mes</div>
+					<div class="months">Gratis</div>
 				</div>
 			</div>
 
@@ -63,6 +63,4 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>

@@ -64,7 +64,7 @@
         @include media-breakpoint-up(sm){
             &_container {
                 margin: 0 auto;
-                360px
+                width: 360px;
             }
 
             &_tyc{

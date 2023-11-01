@@ -12,7 +12,7 @@
 			<div class="body-title">
 				<div class="body-title_container">
 					<div class="discount">50%dcto</div>
-					<div class="months">meses 2 y 3</div>
+					<div class="months">meses 2, 3 y 4</div>
 				</div>
 			</div>
 

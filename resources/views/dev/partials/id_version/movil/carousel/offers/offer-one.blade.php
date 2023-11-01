@@ -4,7 +4,8 @@
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title">55 GB</h3>
+			<h3 class="main-title mb-0">55 GB</h3>
+			<h6 class="subtitle">+ 10 GB POR  6 MESES</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -12,7 +13,7 @@
 			<div class="body-title">
 				<div class="body-title_container">
 					<div class="discount">50%dcto</div>
-					<div class="months">meses 2 y 3</div>
+					<div class="months">meses 2, 3 y 4</div>
 				</div>
 			</div>
 
@@ -64,6 +65,4 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>
