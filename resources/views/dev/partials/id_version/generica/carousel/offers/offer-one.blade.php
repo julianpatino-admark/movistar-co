@@ -1,11 +1,13 @@
+<div class="card-offer-info">INTERNET FIBRA</div>
+
 <div class="card-offer">
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="main-title">350</h3>
-			<h4 class="subtitle">Megas Simétricas</h4>
-			<div class="label">250 MB si aún no eres cliente Pospago</div>
+			<h3 class="main-title">800MB</h3>
+			<h4 class="subtitle">Simétricas</h4>
+			<div class="label">700 MB si aún no eres cliente Pospago</div>
 		</div>
 
 		<div class="card-offer_body">
@@ -19,10 +21,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$64.392
+					$87.592
 				</p>
 				<p class="card-offer_price-text">
-					Normal $78.990
+					Normal $107.990
 				</p>
 			</div>
 
@@ -30,9 +32,9 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 350 MB"
+					data-c2c="TRIO 800 MB"
 					data-toggle="modal"
-					data-modal-title="350 Mb"
+					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-1-trio/c2c"
 					data-show-element="#modal-header-phone"
@@ -44,19 +46,13 @@
 		</div>
 
 		<div class="card-offer_footer">
-			<div class="package-item">
-				<img width="23" height="23" src="{{ asset('img/common/cuadro-repetidor.webp') }}" alt="repetidor de señal WiFi Movistar">
+			<div class="package-included">
+				<div class="budget">Ahorra $41.900 con:</div>
 				<div>
-					<h4>Repetidor Wifi Baseport</h4>
+					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
+					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
 				</div>
-			</div>
-
-			<div class="package-item">
-				@include("vendor.partials.components.icons.cards.movistar-wifi")
-				<div>
-					<h4>App Smart Wifi</h4>
-					<p>Controla tu red</p>
-				</div>
+				<div>Incluidos en tu plan</div>
 			</div>
 		</div>
 	</div>

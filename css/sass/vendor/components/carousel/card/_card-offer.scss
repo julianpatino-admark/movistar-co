@@ -1,31 +1,44 @@
 @mixin card-destacado {
     .card-offer{
+        &_title{
+            position: relative;
+            background-color: $card-offer-border-color;
+            font-family: $font-family-primary;
+            font-weight: 900;
+            text-align: center;
+            color: #fff;
+            padding: 10px 0;
+            margin: -45px 0 0;
+
+            border-radius: 15px 15px 0 0;
+            z-index: 1;
+        }
 
         &_wrapper{
             box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.4);
-            border: 0;
+            border: 3px solid $card-offer-border-color;
+            border-radius: 0 0 15px 15px;
+            
         }
 
         &_label .label-text{
             background-color: $color-brand-highlight-secondary;
         }
-
-        &_header{
-            background-color: $color-brand-highlight;
-
-            .title, .main-title, .subtitle{
-                color: $white;
-            }
-
-            .main-title {
-                margin: 0;
-            }
-
-            .title {
-                margin: 5px 0 0;
-            }
-        }
     }
+}
+
+.card-offer-info{
+    width: 100%;
+    max-width: $card-offer-max-width;
+    text-align: center;
+    border-radius: 23px;
+    border: solid 4px $color-blue-20;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-family: $font-family-primary;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
 }
 
 .card-offer {
@@ -36,10 +49,12 @@
     margin: $card-offer-label-height auto;
     background-color: $color-white;
 
+    margin-top: 60px;
+
     &_wrapper {
         overflow: hidden;
         border-radius: 15px;
-        border: 3px solid $card-offer-border-color;
+        box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.3);
     }
 
     &_label {
@@ -72,6 +87,7 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        background-color: #000;
 
         .title {
             color: $card-offer-header-font-color;
@@ -99,7 +115,7 @@
             font-size: 12px;
             font-weight: bold;
             font-family: $font-family-primary;
-            background-color: $black;
+            background-color: $color-orange-10;
             border-radius: 6px;
             padding: 5px 0;
             margin-bottom: 15px;
@@ -118,14 +134,14 @@
 
             &_container{
                 display: flex;
-                border: 1px solid $black;
+                border: 1px solid $color-blue-20;
 
                 border-radius: 8px;
                 overflow: hidden;
 
                 .discount{
                     color: white;
-                    background-color: $black;
+                    background-color: $color-blue-20;
 
                     padding: 2px 5px;
                 }
@@ -213,10 +229,10 @@
                 color: $white;
                 font-size: 14px;
                 font-weight: bold;
-                background-color: $color-blue-20;
+                background-color: $color-grey-20;
                 border-radius: 3px;
                 padding: 0 10px;
-                margin-bottom: 5px;
+                margin: 10px 0;
             }
         }
     }

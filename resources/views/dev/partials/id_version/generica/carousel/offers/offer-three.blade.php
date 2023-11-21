@@ -1,11 +1,12 @@
-<div class="card-offer destacado">
+<div class="card-offer-info">INTERNET FIBRA + FIJO + TV</div>
+
+<div class="card-offer">
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<p class="title">NUESTRA MEJOR OFERTA</p>
-			<h3 class="main-title">800</h3>
-			<h4 class="subtitle">Megas Simétricas</h4>
+			<h3 class="main-title">800MB</h3>
+			<h4 class="subtitle">Simétricas</h4>
 			<div class="label">700 MB si aún no eres cliente Pospago</div>
 		</div>
 
@@ -20,10 +21,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$87.592
+					$129.192
 				</p>
 				<p class="card-offer_price-text">
-					Normal $107.990
+					Normal $159.990
 				</p>
 			</div>
 
@@ -45,13 +46,6 @@
 		</div>
 
 		<div class="card-offer_footer">
-			<div class="package-item">
-				<img width="23" height="23" src="{{ asset('img/common/cuadro-repetidor.webp') }}" alt="repetidor de señal WiFi Movistar">
-				<div>
-					<h4>Repetidor Wifi Baseport</h4>
-				</div>
-			</div>
-
 			<div class="package-included">
 				<div class="budget">Ahorra $41.900 con:</div>
 				<div>

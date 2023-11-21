@@ -8,15 +8,15 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<!-- card --->
+					@include('dev.partials.id_version.generica.carousel.offers.offer-one')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-two')
 				</div>
 				<div class="carousel-item">
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.offers.offer-three')
-				</div>
-				<div class="carousel-item">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.offers.offer-custom')
 				</div>
 			</div>
 

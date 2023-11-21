@@ -3,32 +3,24 @@
 @import "./content/banner-movil_prepago";
 
 .main-banner{
+    $self-selector: &;
+
     .container{
         height: map_get($mb-height, xs);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         padding: map_get($mb-padding, xs);
         margin-top: map_get($mb-margin-top, xs);
     }
 
     &.sld-1{
-        background: map_get($mb-bg, xs);
-
-        @include hogar-content;
+        @include hogar-content($self-selector);
     }
 
     &.sld-2{
-        background: map_get($mb-bg-movil, xs);
-
-        @include movil-content;
+        @include movil-content($self-selector);
     }
 
     &.sld-3{
-        background: map_get($mb-bg-movil-sld-2, xs);
-
-        @include movil-content-prepago;
+        @include movil-content-prepago($self-selector);
     }
 
     @include media-breakpoint-up(sm) {      
@@ -37,39 +29,13 @@
             padding: map_get($mb-padding, sm);
             margin-top: map_get($mb-margin-top, sm);
         }
-    
-        &.sld-1{
-            background: map_get($mb-bg, sm);
-        }
-    
-        &.sld-2{
-            background: map_get($mb-bg-movil, sm);
-        }
-
-        &.sld-3{
-            background: map_get($mb-bg-movil-sld-2, sm);
-        }
     }
     
     @include media-breakpoint-up(lg) {
         .container{
-            height: map_get($mb-height, lg);
-            align-items: flex-start;
-    
+            height: map_get($mb-height, lg);    
             padding: map_get($mb-padding, lg);
             margin-top: map_get($mb-margin-top, lg);
-        }
-    
-        &.sld-1{
-            background: map_get($mb-bg, lg);
-        }
-    
-        &.sld-2{
-            background: map_get($mb-bg-movil, lg);
-        }
-
-        &.sld-3{
-            background: map_get($mb-bg-movil-sld-2, lg);
         }
     }
     
@@ -77,18 +43,6 @@
         .container{
             height: map_get($mb-height, xl);
             padding: map_get($mb-padding, xl);
-        }
-    
-        &.sld-1{
-            background: map_get($mb-bg, xl);
-        }
-    
-        &.sld-2{
-            background: map_get($mb-bg-movil, xl);
-        }
-
-        &.sld-3{
-            background: map_get($mb-bg-movil-sld-2, xl);
         }
     }
 }

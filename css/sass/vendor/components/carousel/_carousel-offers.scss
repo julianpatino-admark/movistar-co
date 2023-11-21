@@ -23,7 +23,8 @@
             }
     
             .carousel-item {
-                display: block;
+                display: flex;
+                flex-direction: column;
                 position: relative;
                 float: none;
                 margin: 0;

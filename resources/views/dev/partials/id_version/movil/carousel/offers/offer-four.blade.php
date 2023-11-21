@@ -1,37 +1,37 @@
-<div class="card-offer destacado">
+<div class="card-offer">
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title" style="font-size: 40px; margin: 5px 0 0px 0;">ILIMIDATOS</h3>
-			<h6 class="subtitle">DATOS ILIMITADOS</h6>
+			<h3 class="main-title mb-0">55 GB</h3>
+			<h6 class="subtitle">85 GB si tienes internet hogar movistar</h6>
 		</div>
 
 		<div class="card-offer_body">
 
 			<div class="body-title">
 				<div class="body-title_container">
-					<div class="discount">1er mes</div>
-					<div class="months">Gratis</div>
+					<div class="discount">50%dcto</div>
+					<div class="months">meses 2 y 3</div>
 				</div>
 			</div>
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$100.791
+					$19.995
 				</p>
 				<p class="card-offer_price-text">
-					Normal $111.990
+					Normal $39.990
 				</p>
 			</div>
 
 
 			<div class="card-offer_cta">
 				<a
-						class="btn-flex btn-carousel"
-						data-c2c="offer-two"
+						class="btn-flex btn-accent"
+						data-c2c="MOVIL 55 Gb"
 						data-toggle="modal"
-						data-modal-title="ILIMITADOS"
+						data-modal-title="55 Gb"
 						data-target="#modal-velocidades"
 						data-tag-page="/modal/offer-4-mobile/c2c"
 						data-show-element="#modal-header-phone"
@@ -53,13 +53,14 @@
 				</div>
 			</div>
 
-			<div class="package-included">
-				<div class="budget">Ahorra $41.900 con:</div>
+			<div class="package-item">
 				<div>
-					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
-					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
+					@include("vendor.partials.components.icons.cards.movistar")
 				</div>
-				<div>Incluidos en tu plan</div>
+				<div>
+					<h4>Elige hasta 9 apps</h4>
+					<p>de Redes Sociales + Productividad + Música + Video</p>
+				</div>
 			</div>
 		</div>
 	</div>

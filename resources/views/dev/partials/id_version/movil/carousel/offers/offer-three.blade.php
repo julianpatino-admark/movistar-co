@@ -4,7 +4,8 @@
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title">110 GB</h3>
+			<h3 class="main-title mb-0">80 GB</h3>
+			<h6 class="subtitle">120 GB si tienes internet hogar movistar</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -12,26 +13,26 @@
 			<div class="body-title">
 				<div class="body-title_container">
 					<div class="discount">50%dcto</div>
-					<div class="months">meses 2, 3 y 4</div>
+					<div class="months">meses 2 y 3</div>
 				</div>
 			</div>
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$30.495
+					$25.495
 				</p>
 				<p class="card-offer_price-text">
-					Normal $60.990
+					Normal $50.990
 				</p>
 			</div>
 
 
 			<div class="card-offer_cta">
 				<a
-					class="btn-flex btn-carousel"
-					data-c2c="MOVIL 110 Gb"
+					class="btn-flex btn-accent"
+					data-c2c="MOVIL 80 Gb"
 					data-toggle="modal"
-					data-modal-title="110 Gb"
+					data-modal-title="80 Gb"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-3-mobile/c2c"
 					data-show-element="#modal-header-phone"

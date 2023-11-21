@@ -1,38 +1,38 @@
-<div class="card-offer">
+<div class="card-offer destacado">
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title mb-0">55 GB</h3>
-			<h6 class="subtitle">+ 10 GB POR  6 MESES</h6>
+			<h3 class="main-title" style="font-size: 40px; margin: 5px 0 0px 0;">ILIMIDATOS</h3>
+			<h6 class="subtitle">DATOS ILIMITADOS</h6>
 		</div>
 
 		<div class="card-offer_body">
 
 			<div class="body-title">
 				<div class="body-title_container">
-					<div class="discount">50%dcto</div>
-					<div class="months">meses 2, 3 y 4</div>
+					<div class="discount">10%dcto</div>
+					<div class="months">11 meses</div>
 				</div>
 			</div>
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$19.995
+					$100.791
 				</p>
 				<p class="card-offer_price-text">
-					Normal $39.990
+					Luego $111.990
 				</p>
 			</div>
 
 
 			<div class="card-offer_cta">
 				<a
-					class="btn-flex btn-carousel"
+					class="btn-flex btn-accent-b"
 					data-c2c="offer-one"
 					data-toggle="modal"
-					data-modal-title="55 Gb"
+					data-modal-title="ILIMIDATOS"
 					data-target="#modal-velocidades"
 					data-tag-page="/modal/offer-1-mobile/c2c"
 					data-show-element="#modal-header-phone"
@@ -54,14 +54,13 @@
 				</div>
 			</div>
 
-			<div class="package-item" style="margin-bottom: 38px">
+			<div class="package-included">
+				<div class="budget">Ahorra $41.900 con:</div>
 				<div>
-					@include("vendor.partials.components.icons.cards.movistar")
+					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
+					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
 				</div>
-				<div>
-					<h4>Elige hasta 4 apps</h4>
-					<p>de Redes Sociales</p>
-				</div>
+				<div>Incluidos en tu plan</div>
 			</div>
 		</div>
 	</div>

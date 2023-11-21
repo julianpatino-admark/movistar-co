@@ -7,14 +7,6 @@
 
 			<div class="carousel-inner always-carousel">
 				<div class="carousel-item">
-					<!-- card --->
-					@include('dev.partials.id_version.movil.carousel.offers.offer-custom')
-				</div>
-				<div class="carousel-item">
-					<!-- card --->
-					@include('dev.partials.id_version.movil.carousel.offers.offer-four')
-				</div>
-				<div class="carousel-item">
 					<!-- card--->
 					@include('dev.partials.id_version.movil.carousel.offers.offer-one')
 				</div>
@@ -25,6 +17,14 @@
 				<div class="carousel-item active">
 					<!-- card --->
 					@include('dev.partials.id_version.movil.carousel.offers.offer-three')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers.offer-four')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers.offer-custom')
 				</div>
 			</div>
 
