@@ -15,7 +15,6 @@
         }
 
         &_wrapper{
-            box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.4);
             border: 3px solid $card-offer-border-color;
             border-radius: 0 0 15px 15px;
             
@@ -50,6 +49,16 @@
     background-color: $color-white;
 
     margin-top: 60px;
+
+    &:hover{
+        height: 100%;
+        margin-top: 45px;
+        max-width: calc($card-offer-max-width + 20px);
+
+        .card-offer_wrapper {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+        }
+    }
 
     &_wrapper {
         overflow: hidden;

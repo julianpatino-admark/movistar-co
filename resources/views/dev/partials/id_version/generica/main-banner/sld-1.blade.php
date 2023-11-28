@@ -19,7 +19,7 @@
                     data-tag-page="/modal/oferta-main-banner/c2c"
                     class="btn-flex btn-accent-c shadow-lg"
                 >
-                    Calcula tu precio
+                    Contratar Fibra
                 </a>
             </div>
         </div>

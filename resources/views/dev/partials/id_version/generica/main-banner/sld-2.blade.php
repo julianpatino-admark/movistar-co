@@ -14,7 +14,7 @@
                     data-tag-page="/modal/oferta-main-banner/c2c"
                     class="btn-flex btn-accent-b shadow"
                 >
-                    Calcula tu precio
+                    Contratar Móvil
                 </a>
             </div>
         </div>

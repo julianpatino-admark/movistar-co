@@ -18,6 +18,11 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             transition: transform 0.5s ease;
 
+            &.two-columns{
+                justify-content: center;
+                grid-template-columns: repeat(2, 360px);
+            }  
+
             &.always-carousel{
                 grid-template-columns: repeat(5, 26%);
             }
@@ -32,5 +37,4 @@
             }
         }
     }
-
 }
