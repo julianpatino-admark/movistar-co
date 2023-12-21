@@ -9,7 +9,8 @@ var constants = {
     versions : [
         'generica',
         'movil',
-        'cobertura'
+        'duo-fibra',
+        'trio-fibra'
     ],
 
     versionIndex : function(){
@@ -85,7 +86,8 @@ var plugins = {
          * ej: "./css/{versionLanding}.css"
          */
         src: [
-            "./css/{versionLanding}.css"
+            "./css/generica.css",
+            "./css/movil.css",
         ],
 
         dest: "./css/purged/",
@@ -140,7 +142,8 @@ var plugins = {
             folders : [
                 'tracking',
                 'tracking/movil',
-                'tracking/cobertura',
+                'tracking/duo-fibra',
+                'tracking/trio-fibra',
                 'tracking/aviso-legal',
                 'tracking/privacy',
                 'tracking/privacidad-basica',

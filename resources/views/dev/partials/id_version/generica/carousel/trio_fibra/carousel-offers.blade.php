@@ -3,20 +3,22 @@
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 
+		@include('dev.partials.id_version.generica.carousel.carousel-navbar')
+
 		<div id="offersCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
 
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.offers.offer-one')
+					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-one')
 				</div>
 				<div class="carousel-item">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.offers.offer-two')
+					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-two')
 				</div>
 				<div class="carousel-item">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.offers.offer-three')
+					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-three')
 				</div>
 			</div>
 

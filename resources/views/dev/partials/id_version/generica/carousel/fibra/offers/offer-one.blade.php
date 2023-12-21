@@ -1,14 +1,11 @@
-<div class="card-offer-info">INTERNET FIBRA + FIJO</div>
-
-<div class="card-offer destacado">
-	<p class="card-offer_title">NUESTRA MEJOR OFERTA</p>
+<div class="card-offer">
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="main-title">800MB</h3>
+			<h3 class="main-title">600MB</h3>
 			<h4 class="subtitle">Simétricas</h4>
-			<div class="label">700 MB si aún no eres cliente Pospago</div>
+			<div class="label">500 MB si aún no eres cliente Pospago</div>
 		</div>
 
 		<div class="card-offer_body">
@@ -22,10 +19,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$89.992
+					$73.792
 				</p>
 				<p class="card-offer_price-text">
-					Normal $110.990
+					Normal $91.990
 				</p>
 			</div>
 
@@ -33,16 +30,17 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 800 MB"
+					data-c2c="TRIO 600 MB"
 					data-toggle="modal"
-					data-modal-title="800 Mb"
+					data-modal-title="600 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-2-trio/c2c"
+					data-tag-page="/modal/offer-1-trio/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
 				</a>
 			</div>
+
 		</div>
 
 		<div class="card-offer_footer">

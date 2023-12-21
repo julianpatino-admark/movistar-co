@@ -1,6 +1,5 @@
-<div class="card-offer-info">INTERNET FIBRA + FIJO + TV</div>
-
-<div class="card-offer">
+<div class="card-offer destacado">
+	<p class="card-offer_title">NUESTRA MEJOR OFERTA</p>
 
 	<div class="card-offer_wrapper">
 
@@ -21,10 +20,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$129.192
+					$87.592
 				</p>
 				<p class="card-offer_price-text">
-					Normal $159.990
+					Normal $107.990
 				</p>
 			</div>
 
@@ -36,13 +35,12 @@
 					data-toggle="modal"
 					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-3-trio/c2c"
+					data-tag-page="/modal/offer-2-trio/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
 				</a>
 			</div>
-
 		</div>
 
 		<div class="card-offer_footer">
@@ -56,6 +54,5 @@
 			</div>
 		</div>
 	</div>
-
-
 </div>
+
