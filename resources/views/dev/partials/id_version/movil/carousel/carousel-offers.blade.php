@@ -5,7 +5,7 @@
 
 		<div id="offersCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
 
-			<div class="carousel-inner always-carousel">
+			<div class="carousel-inner five-colums">
 				<div class="carousel-item">
 					<!-- card--->
 					@include('dev.partials.id_version.movil.carousel.offers.offer-one')

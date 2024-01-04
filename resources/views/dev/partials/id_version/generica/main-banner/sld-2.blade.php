@@ -2,10 +2,11 @@
     <div class="container">
         <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
         <div class="main-banner_container">
+            <img class="plan-online" width="98" height="30" src="{{ asset('img/movil/plan-online.webp') }}">
             <h2>
-                Solo en navidad Postpago con @include("dev.partials.components.icons.ilimidatos") incluye
+                Disney+ y Star+ incluidos en Pospago con @include("dev.partials.components.icons.ilimidatos")
             </h2>
-            <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
+            <img class="plan-gratis" width="176" height="127" src="{{ asset('img/movil/mes-gratis.webp') }}">
 
             <div class="main-banner_cta">
                 <a

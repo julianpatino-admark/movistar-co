@@ -3,12 +3,11 @@
         <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
         <div class="main-banner_container">
             <h2>
-                Solo en Navidad Fibra
-                de 500 Megas te da
+                Fibra Movistar te da <b>500 megas</b> para trabajar en casa
             </h2>
-            <img class="d-none d-lg-block" width="258" height="65" src="{{ asset('img/generica/combo-plus-logos.webp') }}">
-            <img class="d-block d-lg-none" width="290" height="243" src="{{ asset('img/generica/greicy-fibra-mobile.webp') }}">
-            <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
+            <img class="combo-plus" width="291" height="92" src="{{ asset('img/generica/combo-plus-logos.webp') }}">
+            <div class="spacer-between"></div>
+            <img class="movistar-total" width="396" height="84" src="{{ asset('img/generica/movistar-total.webp') }}">
 
             <div class="main-banner_cta">
                 <a
@@ -22,6 +21,7 @@
                     Contratar Fibra
                 </a>
             </div>
+            <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
         </div>
     </div>
 </div>

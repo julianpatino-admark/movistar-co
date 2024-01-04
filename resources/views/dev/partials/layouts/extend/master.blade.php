@@ -8,7 +8,7 @@
 	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
 @endphp
 
-		<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
 	<!-- Google Tag Manager -->

@@ -15,10 +15,7 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
-        "@googlemaps/js-api-loader": "^1.16.2",
-        "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.5.28",
-        "leaflet": "^1.9.4",
-        "maplibre-gl": "^3.2.0"
+        "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.6.8"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",
