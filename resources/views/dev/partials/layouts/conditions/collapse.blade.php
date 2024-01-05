@@ -17,7 +17,7 @@
 				<p><b>Términos y condiciones oferta pospago online</b><br>
 					Terminos y Condiciones ofertas Hogar
 
-					Oferta vigente del 15 al 30 de Noviembre 2023, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $39.990 mes hasta $60.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual. En caso de cambio de plan, el cliente pierde el beneficio del descuento.
+					Oferta vigente del 1 al 15 de enero de 2024, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $39.990 mes hasta $60.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual. En caso de cambio de plan, el cliente pierde el beneficio del descuento.
 				</p>
 			</div>
 		</div>
