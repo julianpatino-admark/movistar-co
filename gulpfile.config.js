@@ -5,7 +5,7 @@ var versionIndex = versionLanding === "generica" ? "index" : versionLanding;
 var constants = {
   versionLanding: "generica",
 
-  versions: ["generica", "movil", "duo-fibra", "trio-fibra"],
+  versions: ["generica", "movil"],
 
   versionIndex: function () {
     return this.versionLanding === "generica" ? "index" : this.versionLanding;
@@ -70,8 +70,7 @@ var plugins = {
         "./resources/views/dev/partials/id_version/{versionLanding}/**/*.php",
         "./resources/views/dev/partials/components/**/*.php",
         "./resources/views/dev/partials/layouts/**/*.php",
-        "./resources/views/dev/repository/**/*.php",
-        "./js/dest/{versionLanding}.js",
+        "./js/dist/{versionLanding}.js",
       ],
     },
 

@@ -6,6 +6,7 @@
     $self-selector: &;
 
     .container{
+        width: map_get($mb-width, xs);
         height: map_get($mb-height, xs);
         padding: map_get($mb-padding, xs);
         margin-top: map_get($mb-margin-top, xs);
@@ -25,6 +26,7 @@
 
     @include media-breakpoint-up(sm) {      
         .container{
+            width: map_get($mb-width, sm);
             height: map_get($mb-height, sm);
             padding: map_get($mb-padding, sm);
             margin-top: map_get($mb-margin-top, sm);
@@ -45,5 +47,6 @@
             padding: map_get($mb-padding, xl);
         }
     }
+    
 }
 

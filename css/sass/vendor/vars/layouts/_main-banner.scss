@@ -1,14 +1,19 @@
+$mb-width : (
+        xs: 350px,
+        sm: 448px
+);
+
 $mb-height: (
         xs : 630px,
         sm : 630px,
-        lg : 345px,
+        lg : 286px,
         xl : 445px
 );
 
 $mb-padding: (
-        xs : 25px 5px 35px,
-        sm : 20px 20px 35px,
-        lg : 30px 0 40px 0,
+        xs : 0,
+        sm : 0,
+        lg : 0,
         xl : 30px 0
 );
 
