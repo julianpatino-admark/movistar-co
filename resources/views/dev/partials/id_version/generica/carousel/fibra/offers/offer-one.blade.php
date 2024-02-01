@@ -30,11 +30,11 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 600 MB"
+					data-c2c="INTERNET 600 MB"
 					data-toggle="modal"
 					data-modal-title="600 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-1-trio/c2c"
+					data-tag-page="/modal/offer-1-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO

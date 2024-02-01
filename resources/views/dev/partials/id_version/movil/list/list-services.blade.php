@@ -34,10 +34,10 @@
 							<div class="list-services_cta">
 								<a
 									class="btn-flex btn-accent font-family-bold"
-									data-c2c="INFORMACION Movil"
+									data-c2c="INFORMACION Empresa"
 									data-toggle="modal"
 									data-target="#modal-c2c"
-									aria-label="INFORMACIÓN Movil"
+									aria-label="INFORMACION Empresa"
 									data-show-element="#modal-header-phone"
 									data-tag-page="/modal/movil/c2c"
 								>

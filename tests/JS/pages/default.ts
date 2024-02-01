@@ -1,5 +1,4 @@
 const { I } = inject();
-import { clienteNoClienteEnum } from "../utilities/main"
 
 interface FormFields {
     cellphoneInput: string,
@@ -13,11 +12,13 @@ interface InitialState {
 
 class Default {
 
-    root:string;
-    submitButton:string;
-    fields:FormFields;
+    protected fields:FormFields;
 
-    initialState: InitialState;
+    private submitButton:string;
+    
+    protected root:string;
+
+    private initialState: InitialState;
 
     constructor(
         fields:FormFields = {
@@ -43,7 +44,7 @@ class Default {
     /**
      * Intercepts the request to the server and simulates a response with a custom data in the message
      */
-    mock() {
+    public mock() {
         I.mockRoute('**/api/form/send', route => {
             route.fulfill({
                 status: 200,
@@ -61,7 +62,7 @@ class Default {
      * Function that validates if the form has any error and if it is shown or not depending on the boolean parameter.
      * @param {String} root - The string with the id key to format the locators with that.
      */
-    initFields(root:string) {
+    public initFields(root:string) {
         I.say("Initialize fields with value: "+root)
 
         for (const property in this.fields){
@@ -73,7 +74,7 @@ class Default {
     /**
      * Fill the default fields with dummy data.
      */
-    fillForm() {
+    public fillForm(showFields:boolean=false, payload:Object) {
 
         I.fillField(this.fields.cellphoneInput, 3000000001);
 
@@ -86,7 +87,7 @@ class Default {
      * @param {Boolean} [withErrors=false] - If true, then check if error messages are displayed.
      * @param {Object} [validators={phone:"#phone-error", privacy: "#privacy-error"}] - Object with keys and locators to see error labels on forms.
      */
-    validForm(withErrors:boolean=false, validators={} ):void{
+    public validForm(withErrors:boolean=false, validators={} ):void{
         let labelListSelector = {
             phone: "#phone-error",
             privacy : locate("label.error.d-block").inside('div.form-simple_tyc'),
@@ -103,11 +104,11 @@ class Default {
      * Function to click default button and send data.
      * @param {Boolean} [withMock=true] - If false, then the mock function is not triggered.
      */
-    sendFormMock(withMock:boolean=true) {
+    public sendFormMock(withMock:boolean=true) {
         if(withMock) this.mock();
 
         I.click(this.submitButton);
     }
 }
 
-export { clienteNoClienteEnum, FormFields, Default }
+export { FormFields, Default }

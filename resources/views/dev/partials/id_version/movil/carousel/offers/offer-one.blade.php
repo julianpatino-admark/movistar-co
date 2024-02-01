@@ -19,10 +19,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$100.791
+					111.990
 				</p>
 				<p class="card-offer_price-text">
-					Luego $111.990
+					&nbsp;
 				</p>
 			</div>
 
@@ -55,7 +55,8 @@
 			</div>
 
 			<div class="package-included">
-				<div class="budget">Ahorra $41.900 con:</div>
+				<p></p>
+				<p></p>
 				<div>
 					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
 					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">

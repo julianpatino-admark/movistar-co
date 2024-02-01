@@ -29,19 +29,29 @@ return [
 
     /*
     |--------------------------------------------------------------------
-    | Extra data  que se debe enviar a Cobalt en params
+    | Extra data  que se debe enviar a Cobalt
     |--------------------------------------------------------------------
+    | type      => El tipo de campoo que se desea settear ['parametros', 'observaciones', 'ambos'] si no se quiere configurar se deja 'null'
+    | encode    => El formato de la data extra sea tipo 'json' o como in 'string' con imploide de datos
+    | separator => Separador que se quiere utilizar cualquier tipo de string (defecto '|') ej de salida => C2C|DIRECCION|SERVICIOS
+    | keys      => Array de strings con las llaves que se desean capturar en los formularios
     */
+
     'extra_data' => [
-        'c2c',
-        'dni',
-        'nombre',
-        'contratar',
-        'productos',
-        'servicios',
-        'escliente',
-        'direccion',
-        'direccionAdicional',
+        'type' => null,
+        'encode' => 'json',
+        'separator' => '|',
+        'keys' => [
+            'c2c',
+            'dni',
+            'nombre',
+            'contratar',
+            'productos',
+            'servicios',
+            'escliente',
+            'direccion',
+            'direccionAdicional'
+        ]
     ],
 
     /**
@@ -57,9 +67,7 @@ return [
         'priority' => '4',
         'lead_type' => 'C2C',
         'provider' => 'b12-admark',
-        'origin' => '1',
-        'extra_observaciones' => true,
-
+        'origin' => '1'
     ],
 
 ];

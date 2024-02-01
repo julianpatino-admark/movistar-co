@@ -31,11 +31,11 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 800 MB"
+					data-c2c="INTERNET 800 MB"
 					data-toggle="modal"
 					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-2-trio/c2c"
+					data-tag-page="/modal/offer-2-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO

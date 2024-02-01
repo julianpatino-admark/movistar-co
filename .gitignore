@@ -18,3 +18,4 @@ yarn-error.log
 auth.json
 maintenance.php
 .DS_Store
+/tests/JS/output

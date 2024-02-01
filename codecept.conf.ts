@@ -7,13 +7,13 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/JS/*_test.js',
-  output: './tests/JS/output',
+  tests: 'tests/JS/*_test.ts',
+  output: 'tests/JS/output',
   helpers: {
     Playwright: {
-      url: 'https://movistarco.local:8890',
-      show: true,
-      browser: 'chromium'
+      browser: 'chromium',
+      url: 'https://movistar.test',
+      show: true
     }
   },
   plugins: {
@@ -22,7 +22,8 @@ export const config: CodeceptJS.MainConfig = {
     }
   },
   include: {
-    "formC2CPage": "./tests/JS/pages/form_c2c.ts",
+    I: './steps_file',
+    SimpleFormPage: './tests/JS/pages/SimpleForm',
   },
   name: 'movistar'
 }

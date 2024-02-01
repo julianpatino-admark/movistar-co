@@ -30,11 +30,11 @@
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="TRIO 900 MB"
+					data-c2c="INTERNET 900 MB"
 					data-toggle="modal"
 					data-modal-title="900 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-3-trio/c2c"
+					data-tag-page="/modal/offer-3-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO

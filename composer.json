@@ -16,7 +16,7 @@
     "admark/tracking": "9.*",
     "admark/inconcert": "9.*",
     "admark/anubis": "9.*",
-    "admark/cobalt": "0.14"
+    "admark/cobalt": "0.16"
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",

@@ -54,6 +54,7 @@
 	@include('dev.partials.layouts.footer.footer')
 	@include('dev.partials.layouts.cta.mobile-fixed')
 
+
 	@if (str_contains($keyword, 'whatsapp'))
 		@include('dev.partials.components.buttons.whatsapp')
 	@endif
