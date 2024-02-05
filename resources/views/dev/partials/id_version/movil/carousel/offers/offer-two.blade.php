@@ -19,10 +19,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$71.991
+					$78.291
 				</p>
 				<p class="card-offer_price-text">
-					Luego $79.990
+					Luego $86.990
 				</p>
 			</div>
 

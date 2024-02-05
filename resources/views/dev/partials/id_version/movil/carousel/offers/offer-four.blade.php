@@ -3,7 +3,7 @@
 
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
-			<h3 class="main-title mb-0">55 GB</h3>
+			<h3 class="main-title mb-0">65 GB</h3>
 			<h6 class="subtitle">85 GB si tienes internet hogar movistar</h6>
 		</div>
 
@@ -18,10 +18,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$19.995
+					$22.495
 				</p>
 				<p class="card-offer_price-text">
-					Normal $39.990
+					Normal $44.990
 				</p>
 			</div>
 
