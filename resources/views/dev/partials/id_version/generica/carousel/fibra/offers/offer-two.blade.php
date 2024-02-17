@@ -1,5 +1,4 @@
 <div class="card-offer destacado">
-	<p class="card-offer_title">NUESTRA MEJOR OFERTA</p>
 
 	<div class="card-offer_wrapper">
 
@@ -20,10 +19,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$86.392
+					$94.392
 				</p>
 				<p class="card-offer_price-text">
-					Normal $107.990
+					Normal: $117.990
 				</p>
 			</div>
 

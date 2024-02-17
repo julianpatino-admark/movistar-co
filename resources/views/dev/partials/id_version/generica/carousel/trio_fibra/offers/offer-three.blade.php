@@ -3,9 +3,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="main-title">900MB</h3>
+			<h3 class="main-title">1000MB</h3>
 			<h4 class="subtitle">Simétricas</h4>
-			<div class="label empty">&nbsp;</div>
+			<div class="label">900MB si aún no eres cliente Pospago</div>
 		</div>
 
 		<div class="card-offer_body">
@@ -22,7 +22,7 @@
 					$308.792
 				</p>
 				<p class="card-offer_price-text">
-					Normal $385.990
+					Normal: $308.990
 				</p>
 			</div>
 
