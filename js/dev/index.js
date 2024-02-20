@@ -12,7 +12,6 @@ window.$ = $;
  */
 import "bootstrap/js/dist/util.js";
 import "bootstrap/js/dist/collapse.js";
-import "bootstrap/js/dist/carousel.js";
 
 import "jquery-validation";
 import "jquery-validation/dist/localization/messages_es";
@@ -28,9 +27,6 @@ import ModalShow from "admark-landings/src/modal/events/show.bs.modal";
  * Analítica
  */
 import CallMetrics from "admark-landings/src/analytics/callmetrics";
-import RGPD from "admark-landings/src/analytics/cookies-rgpd-gtm";
-import RgpdHTML from 'admark-landings/src/analytics/cookies-rgpd-gtm-html'
-import CookiesList from "./modules/cookies/cookies-list";
 
 /**
  * Formularios
@@ -42,39 +38,26 @@ import "admark-landings/src/validation/phone";
 
 import LocalForms from "./modules/forms/index";
 import FormSimple from "admark-landings/src/forms/form-simple";
-import EnableFields from "admark-landings/src/forms/enable-fields";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 
 /**
  * Buttons
  */
-import { WppBtn, SlideOfferCarousel } from "./modules/buttons/index";
+import { WppBtn } from "./modules/buttons/index";
 WppBtn();
-SlideOfferCarousel();
 
 /**
  * Scroll
  */
-import Sticky from "admark-landings/src/scroll/sticky";
-import ScrollSlide from "admark-landings/src/scroll/slide";
 import NavClose from "./modules/nav/nav-close";
 
 /**
  * INIT
  */
 CallMetrics.init();
-RGPD.init(
-  CookiesList,
-  RgpdHTML
-);
-
 LocalForms.init();
 FormSimple.init();
-EnableFields.init();
 ToggleEnabled.init();
 ModalShow.init();
-
-Sticky.init();
-ScrollSlide.init();
 
 NavClose.init();
