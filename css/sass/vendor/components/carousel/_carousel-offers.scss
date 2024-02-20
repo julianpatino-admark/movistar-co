@@ -15,7 +15,9 @@
 
         .carousel-inner {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-column-gap: 40px;
+
             transition: transform 0.5s ease;
 
             &.two-columns{
@@ -25,6 +27,7 @@
 
             &.five-colums{
                 grid-template-columns: repeat(5, 26%);
+                padding: 30px 10px 10px 10px;
             }
     
             .carousel-item {
@@ -33,7 +36,7 @@
                 position: relative;
                 float: none;
                 margin: 0;
-                padding: 6px 10px;
+                padding: 0;
             }
         }
     }

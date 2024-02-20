@@ -7,7 +7,7 @@
 
 		<div id="offersCarousel" class="carousel-content carousel slide" data-ride="carousel" data-touch="true">
 
-			<div class="carousel-inner">
+			<div class="carousel-inner five-colums">
 				<div class="carousel-item active">
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-one')
@@ -20,6 +20,14 @@
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-three')
 				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-four')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-five')
+				</div>
 			</div>
 
 			<div class="carousel-indicators">
@@ -29,7 +37,22 @@
 				        class="carousel-indicators_btn"></button>
 				<button data-target="#offersCarousel" aria-label="offers carousel 2" data-slide-to="2"
 				        class="carousel-indicators_btn "></button>
+				<button data-target="#offersCarousel" aria-label="offers carousel 3" data-slide-to="3"
+				        class="carousel-indicators_btn "></button>
+				<button data-target="#offersCarousel" aria-label="offers carousel 4" data-slide-to="4"
+				        class="carousel-indicators_btn "></button>
 			</div>
+
+			<button class="carousel-control carousel-control-prev" type="button" data-scroll-x="#offersCarousel" data-slide="prev">
+				@include('dev.partials.components.icons.triangle-right')
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control carousel-control-next" type="button" data-scroll-x="#offersCarousel" data-slide="next">
+				@include('dev.partials.components.icons.triangle-right')
+				<span class="visually-hidden">Next</span>
+			</button>
+
+			<div class="shadow-container"></div>
 		</div>
 
 		<p class="terminos-condiciones">

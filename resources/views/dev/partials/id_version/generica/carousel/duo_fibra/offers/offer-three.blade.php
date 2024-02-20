@@ -1,58 +1,47 @@
-<div class="card-offer">
+<div class="card-offer destacado">
+
+	<div class="card-offer_title">
+		NUESTRA MEJOR OFERTA
+	</div>
 
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h3 class="main-title">1000MB</h3>
-			<h4 class="subtitle">Simétricas</h4>
-			<div class="label">900MB si aún no eres cliente Pospago</div>
+			<div class="label">700MB si aún no eres cliente Pospago</div>
+			<h3 class="main-title">800 Megas</h3>
+		</div>
+		<div class="card-offer_body-discount">
+			@include('dev.partials.components.icons.cards.discount')
+			<p class="months">20% dto x 12 meses</p>
+		</div>
+		<div class="card-offer_body">
+			<p class="card-offer_price-number">
+				$96.792
+			</p>
+			<p class="card-offer_price-text">
+				Normal: $120.990
+			</p>
 		</div>
 
-		<div class="card-offer_body">
-
-			<div class="body-title">
-				<div class="body-title_container">
-					<div class="discount">20%dcto</div>
-					<div class="months">x12 meses</div>
-				</div>
-			</div>
-
-			<div class="card-offer_price">
-				<p class="card-offer_price-number">
-					$207.192
-				</p>
-				<p class="card-offer_price-text">
-					Normal: $258.990
-				</p>
-			</div>
-
-
+		<div class="card-offer_footer">
 			<div class="card-offer_cta">
 				<a
 					class="btn-flex btn-carousel"
-					data-c2c="DUO 900 MB"
+					data-c2c="INTERNET 800 MB COMBO PLUS"
 					data-toggle="modal"
-					data-modal-title="900 Mb"
+					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-3-duo/c2c"
+					data-tag-page="/modal/offer-3-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
 				</a>
 			</div>
-
-		</div>
-
-		<div class="card-offer_footer">
 			<div class="package-included">
-				<div>
-					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
-					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
-				</div>
-				<div>Incluidos en tu plan</div>
+				<p>Incluidos en tu plan</p>
+				<img width="107" height="44" src="{{ asset('img/common/logo-combo-plus.webp') }}" alt="Logo de Disney+ y Star+">
 			</div>
 		</div>
 	</div>
-
-
 </div>
+

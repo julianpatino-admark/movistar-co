@@ -3,87 +3,70 @@
     .card-offer{
         &_title{
             position: absolute;
-            top: -40px;
+            top: -30px;
 
             width: 100%;
-            background-color: $card-offer-border-color;
+
+            font-size: 14px;
+            line-height: 14px;
             font-family: $font-family-primary;
-            font-weight: 900;
+            font-weight: 800;
             text-align: center;
             color: #fff;
-            padding: 10px 0;
 
-            border-radius: 15px 15px 0 0;
+            background-color: $color-magenta-10;
+            
+            padding: 8px 0;
+
+            border-radius: 12px 12px 0 0;
             z-index: 1;
         }
 
         &_wrapper{
-            border: 3px solid $card-offer-border-color;
             border-radius: 0 0 15px 15px;
-        }
-
-        &_label .label-text{
-            background-color: $color-brand-highlight-secondary;
         }
     }
 }
 
 @mixin services-included {
-    .package-included{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    background-color: #F5F5F5;
+
+    padding: 10px 0;
+    margin-top: 25px;
+
+    p{
+        font-size: 11px;
+        font-weight: 700;
         font-family: $font-family-primary;
+
+        margin: 0;
+        padding: 0;
     }
 }
 
 .card-offer {
     display: block;
     width: 100%;
-    max-width: $card-offer-max-width;
+    height: 100%;
     position: relative;
-    margin: $card-offer-label-height auto;
+
     background-color: $color-white;
 
-    &:hover{
-        height: 100%;
-        margin-top: -15px;
-        max-width: calc($card-offer-max-width + 20px);
-
-        .card-offer_wrapper {
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
-        }
-    }
-
     &_wrapper {
+        display: flex;
+        flex-direction: column;
+        
+        height: 100%;
         overflow: hidden;
         border-radius: 15px;
         box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.3);
-    }
-
-    &_label {
-        display: flex;
-        justify-content: center;
-        top: - $card-offer-label-height;
-        left: calc((100% - $card-offer-label-width) / 2);
-
-        margin: -15px 0 -10px 0;
-        text-align: center;
-
-        .label-text{
-            font-weight: bold;
-            color: $card-offer-label-text-color;
-            line-height: $card-offer-label-font-size;
-            font-size: $card-offer-label-font-size;
-
-            background-color: $color-brand-highlight;
-
-            padding: 5px 20px;
-            margin: 0;
-
-            border-radius: 6px;
-        }
     }
 
     &_header {
@@ -92,103 +75,91 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        background-color: #000;
+        background-color: #0B2739;
 
-        .title {
-            color: $card-offer-header-font-color;
-            font-size: $card-offer-header-title-font-size;
+        padding: 24px 28px;
+
+        .label{
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-size: 10px;
+            font-weight: bold;
+            font-family: $font-family-primary;
+            background-color: $color-green-10;
+            border-radius: 6px;
+
+            padding: 5px 0;
+            margin: 0 0 8px 0;
+
+            &.empty{
+                background-color: transparent;
+            }
         }
 
         .main-title {
             color: $card-offer-header-font-color;
             font-size: $card-offer-header-font-size;
             line-height: $card-offer-header-font-size;
-            margin: 30px 0 0;
             font-weight: bold;
-        }
 
-        .subtitle{
-            font-size: $card-offer-header-subtitle-font-size;
-            color: $card-offer-header-font-color;
-            font-weight: bold;
-        }
-
-        .label{
-            text-align: center;
-            width: 90%;
-            color: $white;
-            font-size: 12px;
-            font-weight: bold;
-            font-family: $font-family-primary;
-            background-color: $color-orange-10;
-            border-radius: 6px;
-            padding: 5px 0;
-            margin-bottom: 15px;
-
-            &.empty{
-                background-color: transparent;
-            }
+            margin: 0;
         }
     }
 
     &_body {
-        display: block;
-        padding: 15px 35px 0;
-        // min-height: map_get($card-offer-min-height, xs);
-        text-align: center;
+        flex: 1;
 
-        .body-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-discount{
             display: flex;
+            align-items: center;
             justify-content: center;
 
-            &_container{
-                display: flex;
-                border: 1px solid $color-blue-20;
+            background-color: $color-orange-10;
 
-                border-radius: 8px;
-                overflow: hidden;
+            padding: 4px 0;
 
-                .discount{
-                    color: white;
-                    background-color: $color-blue-20;
+            svg{
+                margin-right: 5px;
+            }
 
-                    padding: 2px 5px;
-                }
+            p{
+                color: $white;
+                font-size: 12px;
+                font-family: $font-family-secondary;
 
-                .months{
-                    padding: 2px 5px;
-                }
+                padding: 0;
+                margin: 0;
             }
         }
     }
 
         &_price{
-            padding: 15px 0;
-
             &-number{
-                margin: 0;
-
                 line-height: 40px;
                 font-size: 40px;
                 font-weight: bold;
+
+                margin: 0;
+                padding-top: 24px;
             }
 
             &-text{
-                margin: 0;
-
                 color: $color-grey-60;
                 font-size: 14px;
+
+                margin: 0;
+                padding-bottom: 24px;
             }
         }
 
-    &_cta {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     &_footer {
-        padding: 10px 35px;
+        padding: 0 35px 32px 35px;
 
         .package-item{
             display: flex;
@@ -225,8 +196,16 @@
             }
         }
 
-        @include services-included;
+        .package-included{
+            @include services-included;
+        }
     }
+
+        &_cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
     &.destacado{
         @include card-destacado;
