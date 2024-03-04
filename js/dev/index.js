@@ -52,6 +52,11 @@ WppBtn();
 import NavClose from "./modules/nav/nav-close";
 
 /**
+ * Slide
+ */
+import "./modules/carousel/index";
+
+/**
  * INIT
  */
 CallMetrics.init();

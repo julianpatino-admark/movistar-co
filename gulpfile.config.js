@@ -96,6 +96,8 @@ var plugins = {
       /^cc-/,
       /^carousel-/,
       "autocomplete-results",
+      "splide__pagination__page",
+      "is-active"
     ],
   },
 

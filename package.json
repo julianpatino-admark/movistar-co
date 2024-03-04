@@ -15,7 +15,8 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
-        "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.6.8"
+        "@splidejs/splide": "^4.1.4",
+        "admark-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-js-landings.git#1.6.21"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",
@@ -24,13 +25,8 @@
         "@babel/plugin-transform-arrow-functions": "^7.16.0",
         "@babel/plugin-transform-runtime": "^7.16.4",
         "@babel/preset-env": "^7.16.4",
-        "@codeceptjs/configure": "^0.10.0",
-        "@codeceptjs/examples": "^1.2.1",
-        "@codeceptjs/ui": "^0.5.1",
         "@types/node": "^18.19.11",
-        "axios": "^1.1.2",
         "babel-loader": "^8.2.3",
-        "codeceptjs": "^3.5.12",
         "eslint": "^8.25.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-config-standard": "^17.0.0",
@@ -44,9 +40,7 @@
         "prettier": "^2.7.1",
         "purgecss-webpack-plugin": "^5.0.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.3.3",
-        "vite": "^3.0.0",
-        "whatwg-fetch": "^3.6.2"
+        "typescript": "^5.3.3"
     },
     "author": "Admark B12",
     "license": "ISC"

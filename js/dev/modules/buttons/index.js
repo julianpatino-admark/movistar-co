@@ -1,11 +1,17 @@
 function WppBtn (){
   const MAIN_CONTAINER = document.getElementById("mainChatFloatContainer");
   const WPP_BTN = document.getElementById("wppFloatButton");
-  const CLOSE_BTN = document.querySelector(".btn-close");
 
   if(WPP_BTN) {
-    WPP_BTN.addEventListener("click", e => MAIN_CONTAINER.classList.toggle("active"));
-    CLOSE_BTN.addEventListener("click", e => MAIN_CONTAINER.classList.toggle("active"));
+    const CLOSE_BTN = MAIN_CONTAINER.querySelector(".btn-close");
+    const WPP_TITLE = MAIN_CONTAINER.querySelector(".float-whatsapp_title");
+
+    WPP_TITLE.querySelector("span").addEventListener("click", () => MAIN_CONTAINER.classList.toggle("active"));
+    WPP_BTN.addEventListener("click", () => MAIN_CONTAINER.classList.toggle("active"));
+    CLOSE_BTN.addEventListener("click", e => {
+      console.log(e.currentTarget);
+      MAIN_CONTAINER.classList.remove("active")
+    });
   }
 }
 

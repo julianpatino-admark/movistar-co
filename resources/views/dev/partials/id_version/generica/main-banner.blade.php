@@ -1,28 +1,14 @@
-<div id="carouselBanner" class="carousel-banner carousel slide" data-ride="carousel">
-    <div class="carousel-indicators">
-        <button
-            class="carousel-indicators_btn theme-light active"
-            data-target="#carouselBanner"
-            data-slide-to="0"
-            aria-label="Banner slide hogar"
-        >
-            <span class="visually-hidden">Slide 1</span>
-        </button>
-        <button
-            class="carousel-indicators_btn theme-light"
-            data-target="#carouselBanner"
-            data-slide-to="1"
-            aria-label="Banner slide movil"
-        >
-            <span class="visually-hidden">Slide 2</span>
-        </button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            @include('dev.partials.id_version.generica.main-banner.sld-1')
-        </div>
-        <div class="carousel-item">
-            @include('dev.partials.id_version.generica.main-banner.sld-2')
+<div id="carouselBanner" class="splide">
+    <div class="splide__track">
+        <div class="splide__list">
+            <div class="splide__slide">
+                @include('dev.partials.id_version.generica.main-banner.sld-1')
+            </div>
+            <div class="splide__slide">
+                @include('dev.partials.id_version.generica.main-banner.sld-2')
+            </div>
         </div>
     </div>
+
+    <ul class="splide__pagination"></ul>
 </div>

@@ -19,3 +19,5 @@ auth.json
 maintenance.php
 .DS_Store
 /tests/JS/output
+**/*.db
+local.db
