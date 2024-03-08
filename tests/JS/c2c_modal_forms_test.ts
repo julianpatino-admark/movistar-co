@@ -36,7 +36,7 @@ Scenario("Modal - Validate that the value of the data and the title of each the 
     })
   }
 
-})
+}).tag("@slow")
 
 Scenario("Modal - Visualization and valid initial errors on form", async ({ I, SimpleFormPage }) => {
 
@@ -49,7 +49,7 @@ Scenario("Modal - Visualization and valid initial errors on form", async ({ I, S
     SimpleFormPage.validForm(true);
   })
 
-})
+}).tag("@slow")
 
 Scenario("Modal 'Choose promos and plans'", async ({ I, SimpleFormPage }) => {
   /* "FIBRA + TELEFONÍA 300 MB" */

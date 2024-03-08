@@ -21,3 +21,4 @@ maintenance.php
 /tests/JS/output
 **/*.db
 local.db
+**/*.sqlite
