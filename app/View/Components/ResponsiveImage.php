@@ -64,7 +64,9 @@ class ResponsiveImage extends Component
         $counter = 0;
         foreach ($this->breakpoints as $size) {
             if($size !== 'xs') {
-                $setStr .= '<source srcset="' . asset("{$this->rootPath}/{$this->name}/{$this->name}-{$size}.webp") . '" media="(min-width: ' . $this->bootstrapBp[$size] . 'px)" width="'. $this->sizes[$counter] .'"></source>';
+                $wnhSizes = explode(";", $this->sizes[$counter]);
+
+                $setStr .= '<source srcset="' . asset("{$this->rootPath}/{$this->name}/{$this->name}-{$size}.webp") . '" media="(min-width: ' . $this->bootstrapBp[$size] . 'px)" width="'. $wnhSizes[0] .'" height="'. $wnhSizes[1] .'"></source>';
             }
             $counter++;
         }

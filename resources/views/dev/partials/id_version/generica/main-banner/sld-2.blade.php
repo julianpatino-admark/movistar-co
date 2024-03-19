@@ -7,7 +7,7 @@
             alt="Planes de ilimidatos con combo plus incluido"
             name="oferta"
             breakpoints="lg,md,sm"
-            sizes="304,200,200"
+            sizes="304;173,200;113,200;113"
             path="img/movil/main-banner"
         ></x-responsive-image>
         <x-responsive-image
@@ -16,7 +16,7 @@
             alt="si activas un plan tienes: 100 megas extra; 50% mas de datos; beneficios exclusivos"
             name="beneficios"
             breakpoints="lg,md,sm"
-            sizes="426,280,280"
+            sizes="426;67,280;44,280;44"
             path="img/movil/main-banner"
         ></x-responsive-image>
 

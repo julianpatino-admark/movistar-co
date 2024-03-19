@@ -1,58 +1,58 @@
+###INI HTDINA###
+
+###INICIO REWRITE RULES###
+RewriteEngine on
+
+######INICIO NAVEGACION HTTPS######
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+######FIN DE NAVEGACION HTTPS######
+
+###FIN DE REWRITE RULES###
+
+###FIN HTDINA###
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
-
     RewriteEngine On
-    RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^(.*)$ /public/$1 [L,QSA]
-
     #Force https
     #RewriteCond %{HTTPS} off [OR]
     #RewriteCond %{HTTP_HOST} ^www\. [NC]
     #RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
     #RewriteRule ^ https://wom-admark.com%{REQUEST_URI} [L,NE,R=301]
-
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
-
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
     <IfModule mod_expires.c>
-
             #Cuando expira la la caché de las fuentes
-            <FilesMatch "\.(woff|ttf|woff2|svg|eot)$">
+            <FilesMatch "\.(woff|ttf|woff2|svg|eot|webp)$">
             ExpiresActive on
             ExpiresDefault "access plus 1 year"
             </FilesMatch>
-
             #Cuando expira la la caché de las imagenes
             <FilesMatch "\.(jpg|png|gif|ico)$">
             ExpiresActive on
             ExpiresDefault "modification plus 1 year"
             </FilesMatch>
-
             #Cuando expira la la caché de los archivos js (bundle.js)
             <FilesMatch "\.(bundle\.js)$">
             ExpiresActive on
             ExpiresDefault "modification plus 1 year"
             </FilesMatch>
-
             #Cuando expira la la caché de los css
             <FilesMatch "\.(css)$">
             ExpiresActive on
             ExpiresDefault "access plus 1 year"
             </FilesMatch>
-
     </IfModule>
-
 </IfModule>

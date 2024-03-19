@@ -47,6 +47,10 @@
         #{$parent-selector}_title{
             margin: 15px 0 0;
         }
+
+        #{$parent-selector}_cta{
+            margin-bottom: 25px;
+        }
     }
 
     @include media-breakpoint-up(xl) {

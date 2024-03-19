@@ -7,7 +7,7 @@
             alt="Texto de fibra"
             name="fibra"
             breakpoints="lg,md,sm"
-            sizes="75,49,49"
+            sizes="75;27,49;17,49;17"
             path="img/generica/main-banner"
         ></x-responsive-image>
         <x-responsive-image
@@ -16,7 +16,7 @@
             alt="lleva 600 megas o 500 si no eres postpago y lleva combo plus incluido en tu plan"
             name="oferta"
             breakpoints="lg,md,sm"
-            sizes="426,276,276"
+            sizes="426;131,276;84,276;84"
             path="img/generica/main-banner"
         ></x-responsive-image>
         <x-responsive-image
@@ -25,7 +25,7 @@
             alt="si activas un plan tienes: 100 megas extra; 50% mas de datos; beneficios exclusivos"
             name="beneficios"
             breakpoints="lg,md,sm"
-            sizes="426,276,276"
+            sizes="426;67,276;43,276;43"
             path="img/generica/main-banner"
         ></x-responsive-image>
 

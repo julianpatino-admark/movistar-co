@@ -5,7 +5,7 @@
 				<div class="splide__list">
 					<div class="splide__slide list-services_item">
 						<div class="list-services_info">
-							<h3 class="info_title font-weight-bold">Internet + Elegiapps TV</h3>
+							<h4 class="info_title font-weight-bold">Internet + Elegiapps TV</h4>
 							<p class="info_subtitle">Descubre cómo activar tus elegiapps TV</p>
 						</div>
 						<div class="list-services_cta">
@@ -24,7 +24,7 @@
 					</div>
 					<div class="splide__slide list-services_item">
 						<div class="list-services_info">
-							<h3 class="info_title font-weight-bold">Pásate a Móvil</h3>
+							<h4 class="info_title font-weight-bold">Pásate a Móvil</h4>
 							<p class="info_subtitle">Movistar Pospago</p>
 						</div>
 						<div class="list-services_cta">
