@@ -20,11 +20,13 @@
     @if($showServices)
         @if ($showContratacion)
             <div>
-                <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+                <label class="input-group-text statusLoader d-none"> <i class="select-loader"></i></label>
+                <span id="selector-contratar-description" style="display: none;">Selector de servicios a contratar</span>
                 <select
                     id="{{ $id }}-contratar"
                     name="contratar"
                     class="form-select"
+                    aria-labelledby="selector-contratar-description"
                     required
                 >
                     <option selected value="" hidden>* Contratar servicios</option>
@@ -34,12 +36,15 @@
             </div>
         @endif
 
-        <p class="form-simple_title">
+        <label
+            class="form-simple_title"
+            for="{{ $id }}-selectServicios"
+        >
             Escoge tus servicios
-        </p>
+        </label>
 
         <div class="mb-2">
-            <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+            <label class="input-group-text statusLoader d-none"> <i class="select-loader"></i></label>
             <select
                 id="{{ $id }}-selectServicios"
                 name="servicios"

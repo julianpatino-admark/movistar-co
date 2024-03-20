@@ -1,9 +1,9 @@
 <div class="cta-mobile_wrapper">
 
-	<a class="cta-mobile_btn cta-mobile_btn-calcula" data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/calcula-mobile-fijo/c2c">
+	<button class="cta-mobile_btn cta-mobile_btn-calcula" data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/calcula-mobile-fijo/c2c">
 		@include('dev.partials.components.icons.buttons.toggle')
 		Calcula tu precio
-	</a>
+	</button>
 
 	@if(strlen($phone) >= 9)
 		<a class="cta-mobile_btn cta-mobile_btn-phone goo-phone" href="tel:{{$phone}}"
@@ -13,10 +13,10 @@
 		</a>
 	@endif
 
-	<a data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/cta-mobile-fijo/c2c"
+	<button data-toggle="modal" data-target="#modal-c2c" data-tag-page="/modal/cta-mobile-fijo/c2c"
 	   class="cta-mobile_btn cta-mobile_btn-c2c" data-hiden-element="#modal-header-phone">
 		@include('dev.partials.components.icons.cards.phone')
 		Te llamamos GRATIS
-	</a>
+	</button>
 
 </div>

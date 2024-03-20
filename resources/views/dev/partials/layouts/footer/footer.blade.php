@@ -13,7 +13,7 @@
 					   data-modal-title="Política de privacidad"
 					   data-tag-page="/modal/privacy"
 					   title="Política de privacidad"
-					   aria-label="politica privacidad">Política de privacidad</a>
+					   aria-label="Política de privacidad">Política de privacidad</a>
 				</li>
 				<li class="separator">|</li>
 				<li class="footer-text-cookies">
@@ -24,7 +24,7 @@
 					   data-modal-title="Política de Cookies"
 					   data-tag-page="/modal/cookies"
 					   title="Política de cookies"
-					   aria-label="politica de cookies">Política de cookies</a>
+					   aria-label="Política de cookies">Política de cookies</a>
 				</li>
 			</ul>
 			<div class="customer-service">

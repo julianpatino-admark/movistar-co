@@ -11,7 +11,7 @@
 			<h3 class="main-title">800 Megas</h3>
 		</div>
 		<div class="card-offer_body-discount">
-			@include('dev.partials.components.icons.cards.discount')
+			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
 			<p class="months">20% dto x 12 meses</p>
 		</div>
 		<div class="card-offer_body">
@@ -25,7 +25,7 @@
 
 		<div class="card-offer_footer">
 			<div class="card-offer_cta">
-				<a
+				<button
 					class="btn-flex btn-carousel"
 					data-c2c="INTERNET 800 MB COMBO PLUS"
 					data-toggle="modal"
@@ -35,7 +35,7 @@
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
-				</a>
+				</button>
 			</div>
 			<div class="package-included">
 				<p>Incluidos en tu plan</p>

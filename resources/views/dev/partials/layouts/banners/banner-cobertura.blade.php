@@ -2,7 +2,7 @@
 	<div class="banner-cobertura_container container">
 		<p class="text-title">¿Llega la Fibra de Movistar a tu casa?</p>
 		<div class="text-cta">
-			<a
+			<button
 					class="btn-flex btn-dark font-family-bold"
 					data-c2c="AYUDA ELEGIR"
 					data-toggle="modal"
@@ -14,7 +14,7 @@
 				@include('dev.partials.components.icons.signal')
 				<span>Consulta tu cobertura</span>
 				@include('dev.partials.components.icons.buttons.arrow-right')
-			</a>
+			</button>
 		</div>
 	</div>
 </section>

@@ -8,15 +8,11 @@
 <header id="header" class="header">
 	<div class="header-container container">
 		<div class="header_logo-wrapper">
-			<a href="{{URL('/').$query}}" aria-describedby="desc">
-                <span class="header_logo d-none d-lg-block">
+			<a href="{{URL('/').$query}}">
+                <span class="header_logo">
 	                @include('dev.partials.components.icons.logo.brand-logo')
 	            </span>
-				<span class="header_logo d-lg-none">
-                    @include('dev.partials.components.icons.logo.brand-logo')
-                </span>
 			</a>
-			<div id="desc" style="display:none">Logo de telemark con link de acceso al inicio</div>
 		</div>
 		@include('dev.partials.layouts.navbar.nav')
 		<div class="header-right">
