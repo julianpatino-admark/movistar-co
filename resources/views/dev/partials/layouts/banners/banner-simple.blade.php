@@ -8,7 +8,15 @@
 		<div class="row">
 			<div class="banner-simple_info">
 				<div class="banner-simple_info-image">
-					<img width="380" height="342" src="{{ asset('img/banners/services.webp') }}" alt="Asesora de servicio al cliente sonriendo" />
+					<x-responsive-image
+						width="265"
+						height="250"
+						alt="Asesora de servicio al cliente sonriendo"
+						name="services"
+						breakpoints="lg"
+						sizes="380;342"
+						path="img/banners"
+					></x-responsive-image>
 				</div>
 				<div class="banner-simple_info-text">
 					<p class="text-title">¿No decides que plan contratar?</p>

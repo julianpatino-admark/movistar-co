@@ -4,6 +4,7 @@
         <x-responsive-image
             class="fibra"
             width="49"
+            height="17"
             alt="Texto de fibra"
             name="fibra"
             breakpoints="lg,md,sm"
@@ -13,6 +14,7 @@
         <x-responsive-image
             class="oferta"
             width="276"
+            height="84"
             alt="lleva 600 megas o 500 si no eres postpago y lleva combo plus incluido en tu plan"
             name="oferta"
             breakpoints="lg,md,sm"
@@ -22,6 +24,7 @@
         <x-responsive-image
             class="beneficios"
             width="276"
+            height="43"
             alt="si activas un plan tienes: 100 megas extra; 50% mas de datos; beneficios exclusivos"
             name="beneficios"
             breakpoints="lg,md,sm"

@@ -16,7 +16,7 @@
             border: 0;
             border-radius: 50%;
     
-            margin: 0 5px;
+            margin: 0 10px;
     
             &.is-active{
                 background-color: #1C4A62;
@@ -84,9 +84,17 @@
         &__page{
             background-color: #1C4A62;
 
+            margin: 0 20px;
+
             &.is-active{
                 background-color: #FFF;
             }
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        .splide__pagination__page{
+            margin: 0 10px;
         }
     }
 }

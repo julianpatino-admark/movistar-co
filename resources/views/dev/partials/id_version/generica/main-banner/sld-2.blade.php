@@ -4,6 +4,7 @@
         <x-responsive-image
             class="oferta"
             width="200"
+            height="113"
             alt="Planes de ilimidatos con combo plus incluido"
             name="oferta"
             breakpoints="lg,md,sm"
@@ -13,6 +14,7 @@
         <x-responsive-image
             class="beneficios"
             width="280"
+            height="44"
             alt="si activas un plan tienes: 100 megas extra; 50% mas de datos; beneficios exclusivos"
             name="beneficios"
             breakpoints="lg,md,sm"
