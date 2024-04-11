@@ -1,6 +1,7 @@
 @mixin card-destacado {
     
     .card-offer{
+        
         &_title{
             position: absolute;
             top: -30px;
@@ -53,7 +54,7 @@
 
 .card-offer {
     display: block;
-    width: 270px;
+    width: 265px;
     height: 100%;
     position: relative;
 

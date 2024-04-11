@@ -10,10 +10,6 @@
 			<div class="splide__list">
 				<div class="splide__slide">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-six')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-one')
 				</div>
 				<div class="splide__slide">
@@ -26,11 +22,11 @@
 				</div>
 				<div class="splide__slide">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-four')
+					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-five')
 				</div>
 				<div class="splide__slide">
 					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-five')
+					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-four')
 				</div>
 			</div>
 		</div>
@@ -43,6 +39,7 @@
 				@include('dev.partials.components.icons.buttons.arrow-right')
 			</button>
 	  	</div>
+
 		<ul class="splide__pagination"></ul>
 
 		<p class="terminos-condiciones">

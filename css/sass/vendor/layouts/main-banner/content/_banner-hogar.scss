@@ -19,37 +19,32 @@
         margin: 35px 0 0;
     }
 
-    .fibra{
-        align-self: flex-end;
-        margin-right: 80px;
-    }
-
     .beneficios{
-        margin: 15px 0 32px 0;
+        margin: 20px 0 30px 0;
     }
 
     #{$parent-selector}_cta{
         margin-bottom: 90px;
     }
 
+    #{$parent-selector}_tyc{
+        color: $white;
+        text-align: center;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
     @include media-breakpoint-up(sm) {
         background: map_get($mb-bg, sm);
-
-        .fibra{
-            align-self: inherit;
-            margin-right: 0;
-        }
     }
 
     @include media-breakpoint-up(lg) {
         background: map_get($mb-bg, lg);
 
         #{$parent-selector}_title{
-            margin: 15px 0 0;
-        }
+            flex: auto;
 
-        #{$parent-selector}_cta{
-            margin-bottom: 25px;
+            margin: 20px 0 10px 0;
         }
     }
 

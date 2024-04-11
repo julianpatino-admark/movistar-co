@@ -12,10 +12,10 @@
 		</div>
 		<div class="card-offer_body">
 			<p class="card-offer_price-number">
-				$101.592
+				$122.392
 			</p>
 			<p class="card-offer_price-text">
-				Normal: $126.990
+				Normal: $152.990
 			</p>
 		</div>
 
@@ -32,6 +32,10 @@
 				>
 					LO QUIERO
 				</button>
+			</div>
+			<div class="package-included">
+				<p>Incluidos en tu plan</p>
+				<img width="107" height="44" src="{{ asset('img/common/logo-netflix.webp') }}" alt="Logo de Disney+ y Star+">
 			</div>
 		</div>
 	</div>

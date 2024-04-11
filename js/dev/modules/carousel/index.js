@@ -13,22 +13,25 @@ if ($BannerCarrousel) {
 
 const $OfferCarrousel = document.getElementById("offert-carrousel");
 if ($OfferCarrousel) {
-  const OfferSplide = new Splide($OfferCarrousel, {
-    type: "loop",
+  new Splide($OfferCarrousel, {
+    perPage: 1,
     autoWidth: true,
-    arrows: true,
+    arrows: false,
+    rewind: true,
+    mediaQuery: "min",
     breakpoints: {
-      480: {
-        perPage: 1,
-      },
-      992: {
-        autoWidth: false,
-        arrows: false,
+      768: {
         perPage: 2,
+        arrows: true,
+      },
+      1201: {
+        perPage: 3,
+      },
+      1401: {
+        perPage: 4,
       },
     },
-  });
-  OfferSplide.mount();
+  }).mount();
 }
 
 const $ServicesCarrousel = document.getElementById("servicesCarousel");

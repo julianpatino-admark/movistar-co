@@ -1,77 +1,28 @@
-.carousel-content{
-    .carousel-control{
-        display: none;       
-    }
+.splide__pagination{
+    position: relative;
+    margin: 40px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
 
-    .carousel-indicators {
-        position: relative;
-        margin: 40px 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 0;
-    }
-}
-
-.carousel-banner .carousel-indicators {
-    margin: 0 0 15px 0;
-}
-
-.carousel-indicators_btn {
-    display: inline-flex;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px 0;
-    border-radius: 50%;
-    border: 0;
-    background-color: $color-grey-40;
-
-    &:hover,
-    &:focus,
-    &.active {
-        background: $color-grey-80;
-        outline: none;
-    }
-
-    &.theme-light{
-        background-color: $color-blue-80;
-
+    &__page {
+        display: inline-flex;
+        width: 15px;
+        height: 15px;
+        margin: 0 10px 0;
+        border-radius: 50%;
+        border: 0;
+        background-color: $color-grey-40;
+    
         &:hover,
         &:focus,
         &.active {
-            background: $white;
+            background: $color-blue-80;
+            outline: none;
         }
     }
 }
 
-@include media-breakpoint-up(lg) {
-    .carousel-content{
-        .carousel-control{
-            display: flex;
-            background: none;
-            border: none;
-            width: inherit;
-            opacity: 1;
-            background: linear-gradient(to left, white, transparent);
 
-            &:hover {
-                opacity: 0.5;
-            }
-        
-            &-prev {
-                transform: rotate(180deg);
-            }
-        }
-
-        .carousel-indicators {
-            display: none;
-        }
-    }
-
-    .carousel-banner .carousel-indicators {
-        display: flex;
-    }
-}
-
-
-
+@include media-breakpoint-up(md) {}

@@ -1,0 +1,70 @@
+.splide__arrows .splide__arrow{
+    display: none;
+    position: absolute;
+    top: calc(50% + 25px);
+    bottom: inherit;
+
+    width: 50px;
+    
+    border: 0;
+
+    padding: 30px 0;
+    background: none;
+
+    opacity: 1;
+
+    path{
+        fill: $color-green-10;
+    }
+
+    &:disabled path{
+        fill: #B6B7B7;
+    }
+
+    @include media-breakpoint-up(sm) {
+        &--prev{
+            left: -20px;
+        }
+
+        &--next{
+            right: -20px;
+        }
+
+    }
+
+    @include media-breakpoint-up(md) {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        &--prev{
+            left: 40px;
+        }
+
+        &--next{
+            right: 40px;
+        }
+
+    }
+
+    @include media-breakpoint-up(xl) {
+        &--prev{
+            left: -10px;
+        }
+
+        &--next{
+            right: -10px;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        &--prev{
+            left: -35px;
+        }
+
+        &--next{
+            right: -35px;
+        }
+    }
+}

@@ -4,7 +4,7 @@
 
 		<div class="card-offer_header">
 			<div class="label">900MB si aún no eres cliente Pospago</div>
-			<h3 class="main-title">1000 Megas</h3>
+			<h3 class="main-title">900 Megas</h3>
 		</div>
 		<div class="card-offer_body-discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
