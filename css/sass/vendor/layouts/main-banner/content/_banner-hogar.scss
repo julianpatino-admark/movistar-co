@@ -42,9 +42,14 @@
         background: map_get($mb-bg, lg);
 
         #{$parent-selector}_title{
-            flex: auto;
+            flex: none;
 
             margin: 20px 0 10px 0;
+        }
+
+
+        #{$parent-selector}_cta{
+            margin-bottom: 0;
         }
     }
 

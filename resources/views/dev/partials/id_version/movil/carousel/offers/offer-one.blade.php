@@ -11,7 +11,10 @@
 		<div class="card-offer_body">
 
 			<div class="body-title">
-				&nbsp;
+				<div class="body-title_container">
+					<div class="discount">10%dcto</div>
+					<div class="months">11 meses</div>
+				</div>
 			</div>
 
 			<div class="card-offer_price">

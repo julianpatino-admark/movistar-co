@@ -1,7 +1,7 @@
 .splide__arrows .splide__arrow{
     display: none;
     position: absolute;
-    top: calc(50% + 25px);
+    top: calc(50% - 25px);
     bottom: inherit;
 
     width: 50px;
@@ -23,11 +23,11 @@
 
     @include media-breakpoint-up(sm) {
         &--prev{
-            left: -20px;
+            left: 0;
         }
 
         &--next{
-            right: -20px;
+            right: 0;
         }
 
     }

@@ -17,7 +17,7 @@
     
         &:hover,
         &:focus,
-        &.active {
+        &.is-active {
             background: $color-blue-80;
             outline: none;
         }
@@ -26,3 +26,12 @@
 
 
 @include media-breakpoint-up(md) {}
+
+#carouselBanner {
+
+    .splide__pagination{
+        margin: 0;
+        bottom: 30px;
+    }
+    
+}

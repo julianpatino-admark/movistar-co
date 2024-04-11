@@ -24,6 +24,10 @@
 				</div>
 				<div class="splide__slide">
 					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers.offer-five')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
 					@include('dev.partials.id_version.movil.carousel.offers.offer-custom')
 				</div>
 			</div>
