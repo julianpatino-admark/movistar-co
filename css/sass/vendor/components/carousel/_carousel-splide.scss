@@ -27,12 +27,7 @@
     }
 }
 
-#carouselBanner {
-    
-}
-
-
-#servicesCarousel {
+#servicesCarousel, #elegiApps {
 
     @include media-breakpoint-up(lg){
         .splide__list{
@@ -41,4 +36,3 @@
     }
 
 }
-

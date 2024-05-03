@@ -12,7 +12,7 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://movistar.test',
+      url: 'https://movistarco.test',
       show: true
     }
   },

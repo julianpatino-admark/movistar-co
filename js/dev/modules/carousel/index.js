@@ -34,6 +34,25 @@ if ($OfferCarrousel) {
   }).mount();
 }
 
+const $ElegiApps = document.getElementById("elegiApps");
+if ($ElegiApps) {
+  const ElegiApps = new Splide($ElegiApps, {
+    type: "slide",
+    arrows: false,
+    pagination: true,
+    perPage: 1,
+    mediaQuery: "min",
+    breakpoints: {
+      768: {
+        autoWidth: true,
+        pagination: false,
+        perPage: 3,
+      },
+    },
+  });
+  ElegiApps.mount();
+}
+
 const $ServicesCarrousel = document.getElementById("servicesCarousel");
 if ($ServicesCarrousel) {
   const ServiceSplide = new Splide($ServicesCarrousel, {
