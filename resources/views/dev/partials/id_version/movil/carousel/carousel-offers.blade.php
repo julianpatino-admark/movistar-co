@@ -22,18 +22,6 @@
 					<!-- card --->
 					@include('dev.partials.id_version.movil.carousel.offers.offer-six')
 				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.movil.carousel.offers.offer-four')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.movil.carousel.offers.offer-five')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.movil.carousel.offers.offer-custom')
-				</div>
 			</div>
 		</div>
 

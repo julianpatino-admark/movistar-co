@@ -33,6 +33,10 @@
     margin: $card-offer-label-height auto;
     background-color: $color-white;
 
+    *{
+        font-family: $font-family-primary;
+    }
+
     &_wrapper {
         height: 100%;
 
@@ -81,12 +85,14 @@
             color: $card-offer-header-font-color;
             font-size: $card-offer-header-font-size;
             line-height: $card-offer-header-font-size;
+            font-weight: 700;
             margin: 40px 0 0;
         }
 
         .subtitle{
-            font-size: $card-offer-header-subtitle-font-size;
             color: $card-offer-header-font-color;
+            font-size: $card-offer-header-subtitle-font-size;
+            font-weight: 700;
         }
 
         &.header-movil{
@@ -195,7 +201,6 @@
             flex-direction: column;
             align-items: center;
             font-weight: 500;
-            font-family: $font-family-primary;
 
             margin-top: -10px;
 
@@ -207,24 +212,6 @@
                 border-radius: 3px;
                 padding: 0 10px;
                 margin-bottom: 5px;
-            }
-        }
-
-        .services-included{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            border-radius: 10px;
-            background-color: #F5F5F5;
-
-            padding: 9px 0;
-
-            h2{
-                font-size: 12px;
-                font-weight: 700;
-                color: #0B2739;
-                font-family: $font-family-primary;
             }
         }
     }

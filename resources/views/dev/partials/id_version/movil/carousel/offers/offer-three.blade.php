@@ -5,7 +5,7 @@
 		<div class="card-offer_header header-movil">
 			<p class="title">PRIMER MES GRATIS</p>
 			<h3 class="main-title mb-0">90 GB</h3>
-			<h6 class="subtitle">&nbsp;</h6>
+			<h6 class="subtitle">120 GB si tienes internet hogar movistar</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -19,7 +19,7 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$25.495
+					$27.495
 				</p>
 				<p class="card-offer_price-text">
 					Normal $54.990
@@ -50,7 +50,7 @@
 				</div>
 				<div>
 					<h4>Minutos ilimitados</h4>
-					<p>USA, CANADA, PUERTO RICO Y COLOMBIA</p>
+					<p>USA, CANADA, PUERTO RICO</p>
 				</div>
 			</div>
 
@@ -60,7 +60,7 @@
 				</div>
 				<div>
 					<h4>Elige hasta 7 apps</h4>
-					<p>de Redes Sociales + Productividad + Música + Video</p>
+					<p>de Redes Sociales +</p>
 				</div>
 			</div>
 		</div>

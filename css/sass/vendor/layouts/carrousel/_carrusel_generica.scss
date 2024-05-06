@@ -2,11 +2,13 @@
   margin-top: 45px;
 
   .title-section, .subtitle-section{
+    font-family: $font-family-primary;
     text-align: center;
   }
 
   .title-section{
     font-size: 20px;
+    font-weight: 700;
     color: $color-blue-80;
   }
 

@@ -3,7 +3,7 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
-			<p class="title">PRIMER MES GRATIS</p>
+			<p class="title">&nbsp;</p>
 			<h3 class="main-title" style="font-size: 40px; margin: 5px 0 0px 0;">ILIMIDATOS</h3>
 			<h6 class="subtitle">DATOS ILIMITADOS</h6>
 		</div>
@@ -11,10 +11,7 @@
 		<div class="card-offer_body">
 
 			<div class="body-title">
-				<div class="body-title_container">
-					<div class="discount">10%dcto</div>
-					<div class="months">11 meses</div>
-				</div>
+				&nbsp;
 			</div>
 
 			<div class="card-offer_price">
@@ -50,13 +47,12 @@
 				</div>
 				<div>
 					<h4>Minutos ilimitados</h4>
-					<p>USA, CANADA, PUERTO RICO Y COLOMBIA</p>
+					<p>USA, CANADA, PUERTO RICO</p>
 				</div>
 			</div>
 
 			<div class="package-included">
-				<p></p>
-				<p></p>
+				<p class="budget">Ahorra $41.900 con:</p>
 				<div>
 					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
 					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">

@@ -1,4 +1,8 @@
-<div class="card-offer">
+<div class="card-offer destacado">
+
+	<div class="card-offer_title">
+		NUESTRA MEJOR OFERTA
+	</div>
 
 	<div class="card-offer_wrapper">
 
