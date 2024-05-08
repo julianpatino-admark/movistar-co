@@ -11,6 +11,27 @@ if ($BannerCarrousel) {
   BannerSplide.mount();
 }
 
+const $OfferCarrouselFibra = document.getElementById("offert-carrousel-fibra");
+if ($OfferCarrouselFibra) {
+  new Splide($OfferCarrouselFibra, {
+    perPage: 1,
+    autoWidth: true,
+    arrows: false,
+    rewind: true,
+    mediaQuery: "min",
+    breakpoints: {
+      768: {
+        perPage: 2,
+        arrows: true,
+      },
+      1200: {
+        perPage: 3,
+        arrows: false,
+      }
+    },
+  }).mount();
+}
+
 const $OfferCarrousel = document.getElementById("offert-carrousel");
 if ($OfferCarrousel) {
   new Splide($OfferCarrousel, {
