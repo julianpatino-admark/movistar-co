@@ -3,8 +3,8 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<div class="label">900MB si aún no eres cliente Pospago</div>
-			<h3 class="main-title">1000 Megas</h3>
+			<div class="label">800MB si aún no eres cliente Pospago</div>
+			<h3 class="main-title">900 Megas</h3>
 		</div>
 		<div class="card-offer_body-discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
@@ -15,7 +15,7 @@
 				$308.792
 			</p>
 			<p class="card-offer_price-text">
-				Normal: $308.990
+				Normal: $385.990
 			</p>
 		</div>
 
@@ -40,4 +40,3 @@
 		</div>
 	</div>
 </div>
-

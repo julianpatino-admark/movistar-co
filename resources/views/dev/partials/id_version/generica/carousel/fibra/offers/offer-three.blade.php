@@ -14,7 +14,7 @@
 				$94.392
 			</p>
 			<p class="card-offer_price-text">
-				Normal: $99.990
+				Normal: $117.990
 			</p>
 		</div>
 
@@ -39,4 +39,3 @@
 		</div>
 	</div>
 </div>
-
