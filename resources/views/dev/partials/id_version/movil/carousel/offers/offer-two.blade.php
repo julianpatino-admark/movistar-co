@@ -52,12 +52,7 @@
 			</div>
 
 			<div class="package-included">
-				<p class="budget">Ahorra $41.900 con:</p>
-				<div>
-					<img width="29" height="29" src="{{ asset('img/common/logo-disney+.webp') }}" alt="Logo de App para Disney+">
-					<img width="29" height="29" src="{{ asset('img/common/logo-star+.webp') }}" alt="Logo de App para Star+">
-				</div>
-				<div>Incluidos en tu plan</div>
+				
 			</div>
 		</div>
 	</div>
