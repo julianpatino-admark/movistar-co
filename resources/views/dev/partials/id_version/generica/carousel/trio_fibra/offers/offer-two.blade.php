@@ -8,14 +8,14 @@
 		</div>
 		<div class="card-offer_body-discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">20% dto x 12 meses</p>
+			<p class="months">30% dto x 6 meses</p>
 		</div>
 		<div class="card-offer_body">
 			<p class="card-offer_price-number">
 				$108.792
 			</p>
 			<p class="card-offer_price-text">
-				Normal: $135.990
+				Normal: $95.193
 			</p>
 		</div>
 
