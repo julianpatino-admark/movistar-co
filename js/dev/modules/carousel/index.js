@@ -2,10 +2,12 @@ import Splide from "@splidejs/splide";
 
 const $BannerCarrousel = document.getElementById("carouselBanner");
 if ($BannerCarrousel) {
+  const { startOn=0 } = $BannerCarrousel.dataset;
   const BannerSplide = new Splide($BannerCarrousel, {
     type: "loop",
     perPage: 1,
     arrows: false,
+    start: startOn
   });
 
   BannerSplide.mount();

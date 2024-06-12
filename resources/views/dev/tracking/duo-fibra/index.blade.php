@@ -14,7 +14,7 @@
 @stop
 
 @section('content')
-	@include('dev.partials.id_version.generica.main-banner')
+	@include('dev.partials.id_version.generica.main-banner', [ 'startFrom' => 2 ])
 	@include('dev.partials.id_version.generica.carousel.duo_fibra.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.generica.list.list-services')

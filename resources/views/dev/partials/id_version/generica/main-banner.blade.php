@@ -1,4 +1,8 @@
-<div id="carouselBanner" class="splide">
+@php
+    $startFrom = $startFrom ?? 0;
+@endphp
+
+<div id="carouselBanner" class="splide" data-start-on="{{ $startFrom }}">
     <div class="splide__track">
         <div class="splide__list">
             <div class="splide__slide">
@@ -6,6 +10,12 @@
             </div>
             <div class="splide__slide">
                 @include('dev.partials.id_version.generica.main-banner.sld-2')
+            </div>
+            <div class="splide__slide">
+                @include('dev.partials.id_version.generica.main-banner.sld-3')
+            </div>
+            <div class="splide__slide">
+                @include('dev.partials.id_version.generica.main-banner.sld-4')
             </div>
         </div>
     </div>

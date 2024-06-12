@@ -1,6 +1,7 @@
 @import "./content/banner-hogar";
 @import "./content/banner-movil";
-@import "./content/banner-movil_prepago";
+@import "./content/banner-fibra";
+@import "./content/banner-movil_seleccion";
 
 .main-banner{
     $self-selector: &;
@@ -13,15 +14,19 @@
     }
 
     &.sld-1{
-        @include hogar-content($self-selector);
+        @include promo-fibra($self-selector)   
     }
 
     &.sld-2{
-        @include movil-content($self-selector);
+        @include hogar-content($self-selector);
     }
 
     &.sld-3{
-        @include movil-content-prepago($self-selector);
+        @include movil-content($self-selector);
+    }
+
+    &.sld-4{
+        @include movil-seleccion($self-selector);
     }
 
     @include media-breakpoint-up(sm) {      

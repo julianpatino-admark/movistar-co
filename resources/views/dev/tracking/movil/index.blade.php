@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-	@include('dev.partials.id_version.movil.main-banner')
+	@include('dev.partials.id_version.generica.main-banner', [ 'startFrom' => 3 ])
 	@include('dev.partials.id_version.movil.carousel.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.movil.list.list-apps')

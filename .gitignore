@@ -22,3 +22,4 @@ maintenance.php
 **/*.db
 local.db
 **/*.sqlite
+*.zip
