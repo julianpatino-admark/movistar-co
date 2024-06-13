@@ -24,10 +24,6 @@
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-four')
 				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-five')
-				</div>
 			</div>
 		</div>
 

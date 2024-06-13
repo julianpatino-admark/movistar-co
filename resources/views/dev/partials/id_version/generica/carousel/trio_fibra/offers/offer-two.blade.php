@@ -8,14 +8,14 @@
 		</div>
 		<div class="card-offer_body-discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">30% dto x 6 meses</p>
+			<p class="months">20% dto x 12 meses</p>
 		</div>
 		<div class="card-offer_body">
 			<p class="card-offer_price-number">
-				$95.193
+				$122.392
 			</p>
 			<p class="card-offer_price-text">
-				Normal: $95.193
+				Normal: $152.990
 			</p>
 		</div>
 
@@ -23,11 +23,11 @@
 			<div class="card-offer_cta">
 				<button
 					class="btn-flex btn-carousel"
-					data-c2c="INTERNET 600 MB COMBO PLUS"
+					data-c2c="INTERNET 600 MB"
 					data-toggle="modal"
 					data-modal-title="600 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-2-fibra/c2c"
+					data-tag-page="/modal/offer-1-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
@@ -35,9 +35,8 @@
 			</div>
 			<div class="package-included">
 				<p>Incluidos en tu plan</p>
-				<img width="107" height="44" src="{{ asset('img/common/logo-combo-plus.webp') }}" alt="Logo de Disney+ y Star+">
+				<img width="107" height="44" src="{{ asset('img/common/logo-netflix.webp') }}" alt="Logo de Disney+ y Star+">
 			</div>
 		</div>
 	</div>
 </div>
-

@@ -1,4 +1,8 @@
-<div class="card-offer">
+<div class="card-offer destacado">
+
+	<div class="card-offer_title">
+		NUESTRA MEJOR OFERTA
+	</div>
 
 	<div class="card-offer_wrapper">
 
@@ -27,7 +31,7 @@
 					data-toggle="modal"
 					data-modal-title="800 Mb"
 					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-4-fibra/c2c"
+					data-tag-page="/modal/offer-3-fibra/c2c"
 					data-show-element="#modal-header-phone"
 				>
 					LO QUIERO
@@ -35,7 +39,7 @@
 			</div>
 			<div class="package-included">
 				<p>Incluidos en tu plan</p>
-				<img width="107" height="44" src="{{ asset('img/common/logo-win-sport.webp') }}" alt="Logo de winsport online">
+				<img width="107" height="44" src="{{ asset('img/common/logo-combo-plus.webp') }}" alt="Logo de Disney+ y Star+">
 			</div>
 		</div>
 	</div>
