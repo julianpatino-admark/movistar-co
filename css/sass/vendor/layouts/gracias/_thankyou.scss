@@ -29,21 +29,32 @@
     }
 
     h4{
-      font-size: 20px;
-      margin: 24px 0;
+      font-size: 18px;
+      margin: 10px 0;
     }
 
     p{
       font-family: $font-family-secondary;
       color: $white;
       font-size: 14px;
+
+      margin: 0;
+
+      &.horario{
+        font-size: 12px;
+        line-height: 10px;
+        white-space: pre;
+        text-align: center;
+
+        b{
+          font-weight: 900;
+        }
+      }
     }
 
   }
-}
-
-@include media-breakpoint-up(sm) {
-  .thankyou {
+  
+  @include media-breakpoint-up(sm) {
     height: 85vh;
     background-position: center 100px;
 
@@ -63,10 +74,8 @@
       }
     }
   }
-}
-
-@include media-breakpoint-up(md) {
-  .thankyou {
+  
+  @include media-breakpoint-up(md) {
     background-position: center 135px;
     background-size: 1375px;
 
@@ -75,13 +84,27 @@
       align-items: center;
       padding-bottom: 0;
     }
-  }
-}
 
-@include media-breakpoint-up(xl) {
-  .thankyou {
+    &_content{
+      h4{
+        font-size: 20px;
+        margin: 24px 0;
+      }
+
+      p{
+        margin-bottom: 10px;
+
+        &.horario{
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  
+  @include media-breakpoint-up(xl) {
     background-position: center 135px;
     background-size: 1700px;
   }
-}
 
+}  
