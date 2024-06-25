@@ -144,9 +144,11 @@
 
         &_price{
             &-number{
+                font-family: $font-family-primary;
+                color: $color-blue-90;
                 line-height: 40px;
                 font-size: 40px;
-                font-weight: bold;
+                font-weight: 800;
 
                 margin: 0;
                 padding-top: 24px;
@@ -154,7 +156,9 @@
 
             &-text{
                 color: $color-grey-60;
+                font-family: $font-family-primary;
                 font-size: 14px;
+                font-weight: 500;
 
                 margin: 0;
                 padding-bottom: 24px;
