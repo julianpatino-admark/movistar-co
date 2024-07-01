@@ -10,10 +10,15 @@
 			<h4>HEMOS RECIBIDO TU <br>REGISTRO CORRECTAMENTE</h4>
 			<p>En breve te contactaremos para brindarte toda la información</p>
 			<p class="horario">
-Nuestro horarios de atención
-es de <b>Lunes a Viernes</b> de
-8:00 a.m. a 9:00 p.m. 
-<b>Sábados</b> 9:00 a.m. a 4:00 p.m.
+				Nuestro horarios de atención <br>
+				es de <b>Lunes a Viernes</b> de <br>
+				8:00 a.m. a 9:00 p.m. <br>
+				<b>Sábados</b> 9:00 a.m. a 4:00 p.m.
+			</p>
+			<p class="telefonos">
+				Pronto te llamaremos desde los siguientes números
+				<span>3102734969 / 3142698434</span>
+				Estate atento
 			</p>
 			<div>
 				<a

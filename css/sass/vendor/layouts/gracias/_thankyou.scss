@@ -14,7 +14,7 @@
   }
 
   &_content{
-    max-width: 485px;
+    max-width: 495px;
     text-align: center;
 
     h1, h4{
@@ -24,6 +24,8 @@
     }
 
     h1{
+      color: $color-blue-80;
+
       font-size: 40px;
       margin-bottom: 25px;
     }
@@ -34,20 +36,37 @@
     }
 
     p{
-      font-family: $font-family-secondary;
+      font-family: $font-family-primary;
       color: $white;
       font-size: 14px;
 
       margin: 0;
 
       &.horario{
-        font-size: 12px;
-        line-height: 10px;
-        white-space: pre;
+        font-size: 14px;
+        line-height: 14px;
         text-align: center;
 
         b{
           font-weight: 900;
+        }
+      }
+
+      &.telefonos{
+        display: flex;
+        flex-direction: column;
+
+        font-size: 14px;
+        line-height: normal;
+
+        margin: 25px 0 15px 0;
+
+        span{
+          color: white;
+
+          font-family: $font-family-primary;
+          font-size: 16px;
+          font-weight: 500;
         }
       }
     }
@@ -87,7 +106,7 @@
 
     &_content{
       h4{
-        font-size: 20px;
+        font-size: 32px;
         margin: 24px 0;
       }
 
@@ -97,6 +116,16 @@
         &.horario{
           font-size: 20px;
           line-height: 22px;
+        }
+
+        &.telefonos{
+          font-size: 20px;
+
+          margin: 45px 0 35px 0;
+
+          span{
+            font-size: 24px;
+          }
         }
       }
     }
