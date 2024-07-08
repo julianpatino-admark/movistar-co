@@ -34,8 +34,7 @@
 				</button>
 			</div>
 			<div class="package-included">
-				<p>Incluidos en tu plan</p>
-				<img width="107" height="44" src="{{ asset('img/common/logo-combo-plus.webp') }}"  alt="Logo de Disney+ y Star+">
+				<img width="182" height="48" src="{{ asset('img/common/logo-disney.webp') }}" alt="Logo de Disney+ y Premium">
 			</div>
 		</div>
 	</div>
