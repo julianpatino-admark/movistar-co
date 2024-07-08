@@ -4,6 +4,9 @@
 	if($tsource !== 0){
 		$query = "?tsource=$tsource";
 	}
+
+    $keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
+
 @endphp
 <header id="header" class="header">
 	<div class="header-container container">
@@ -16,7 +19,7 @@
 		</div>
 		@include('dev.partials.layouts.navbar.nav')
 		<div class="header-right">
-			@if(strlen($phone) >= 9)
+			@if(strlen($phone) >= 9 && $keyword !== 'nonum')
 				<div class="header-phone_wrapper">
 					<div class="header-phone">
 						<p class="header-phone_title">Línea de Ventas</p>
