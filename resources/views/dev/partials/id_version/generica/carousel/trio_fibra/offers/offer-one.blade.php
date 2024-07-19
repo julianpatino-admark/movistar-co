@@ -3,40 +3,44 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<div class="label">500MB si aún no eres cliente Pospago</div>
-			<h3 class="main-title">600 Megas</h3>
+			<span class="normal-speed">500 MBPS</span>
+			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
+			<h3 class="main-speed">
+				<b>600</b> Mbps
+			</h3>
 		</div>
-		<div class="card-offer_body-discount">
+		<div class="card-offer_discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">20% dto x 12 meses</p>
+			<p class="months">20% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
-			<p class="card-offer_price-number">
-				$111.992
-			</p>
-			<p class="card-offer_price-text">
-				Normal: $139.990
-			</p>
+			<div class="card-offer_price">
+				<p class="card-offer_price-number">
+					<span>$</span>111.992
+				</p>
+				<p class="card-offer_price-text">
+					<b>x 12 Meses.</b> Normal $139.990
+				</p>
+			</div>
+
+			<div class="card-offer_services">
+				<img width="56" height="22" src="{{ asset('img/common/logo-win-sport.webp') }}" alt="Logo de winsport online">
+				<p><b>incluido en tu plan!</b></p>
+			</div>
 		</div>
 
 		<div class="card-offer_footer">
-			<div class="card-offer_cta">
-				<button
-					class="btn-flex btn-carousel"
-					data-c2c="INTERNET 800 MB COMBO PLUS"
-					data-toggle="modal"
-					data-modal-title="800 Mb"
-					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-4-fibra/c2c"
-					data-show-element="#modal-header-phone"
-				>
-					LO QUIERO
-				</button>
-			</div>
-			<div class="package-included">
-				<p>Incluidos en tu plan</p>
-				<img width="107" height="44" src="{{ asset('img/common/logo-win-sport.webp') }}" alt="Logo de winsport online">
-			</div>
+			<button
+				class="btn-flex btn-carousel"
+				data-c2c="FIBRA + FIJO + TV 600 MB WinSports"
+				data-toggle="modal"
+				data-modal-title="600 Mb"
+				data-target="#modal-velocidades"
+				data-tag-page="/modal/offer-1-trio/c2c"
+				data-show-element="#modal-header-phone"
+			>
+				LO QUIERO
+			</button>
 		</div>
 	</div>
 </div>

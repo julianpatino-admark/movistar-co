@@ -3,40 +3,44 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<div class="label">500MB si aún no eres cliente Pospago</div>
-			<h3 class="main-title">600 Megas</h3>
+			<span class="normal-speed">700 MBPS</span>
+			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
+			<h3 class="main-speed">
+				<b>800</b> Mbps
+			</h3>
 		</div>
-		<div class="card-offer_body-discount">
+		<div class="card-offer_discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">20% dto x 12 meses</p>
+			<p class="months">20% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
-			<p class="card-offer_price-number">
-				$76.792
-			</p>
-			<p class="card-offer_price-text">
-				Normal: $95.990
-			</p>
+			<div class="card-offer_price">
+				<p class="card-offer_price-number">
+					<span>$</span>$94.392
+				</p>
+				<p class="card-offer_price-text">
+					<b>x 12 Meses.</b> Normal $117.990
+				</p>
+			</div>
+
+			<div class="card-offer_services">
+				<img width="26" height="26" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo del nuevo Disney+">
+				<p><b>¡Disney+</b> incluido en tu plan!</p>
+			</div>
 		</div>
 
 		<div class="card-offer_footer">
-			<div class="card-offer_cta">
-				<button
-					class="btn-flex btn-carousel"
-					data-c2c="INTERNET 600 MB COMBO PLUS"
-					data-toggle="modal"
-					data-modal-title="600 Mb"
-					data-target="#modal-velocidades"
-					data-tag-page="/modal/offer-2-fibra/c2c"
-					data-show-element="#modal-header-phone"
-				>
-					LO QUIERO
-				</button>
-			</div>
-			<div class="package-included">
-				<p>Incluidos en tu plan</p>
-				<img width="107" height="44" src="{{ asset('img/common/logo-combo-plus.webp') }}" alt="Logo de Disney+ y Star+">
-			</div>
+			<button
+				class="btn-flex btn-carousel"
+				data-c2c="FIBRA 800 MB COMBO PLUS"
+				data-toggle="modal"
+				data-modal-title="800 Mb"
+				data-target="#modal-velocidades"
+				data-tag-page="/modal/offer-2-fibra/c2c"
+				data-show-element="#modal-header-phone"
+			>
+				LO QUIERO
+			</button>
 		</div>
 	</div>
 </div>

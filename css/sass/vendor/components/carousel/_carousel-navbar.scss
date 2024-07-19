@@ -13,6 +13,7 @@
             a{
                 width: 100%;
 
+                color: $black;
                 text-align: center;
                 text-decoration: none;
                 font-family: $font-family-primary;
@@ -20,7 +21,7 @@
                 line-height: 18px;
                 font-weight: 500;
 
-                border: solid 2px $color-blue-20;
+                border: solid 4px $color-blue-20;
                 padding: 10px 0;
             }
 
@@ -60,8 +61,8 @@
 
                 &:nth-child(2n) a{
                     border: 0;
-                    border-top: solid 2px $color-blue-20;
-                    border-bottom: solid 2px $color-blue-20;
+                    border-top: solid 4px $color-blue-20;
+                    border-bottom: solid 4px $color-blue-20;
                 }
 
                 &:last-child{
@@ -82,7 +83,7 @@
                 }
 
                 &:nth-child(2n) a{
-                    border: solid 2px $color-blue-20;
+                    border: solid 4px $color-blue-20;
                 }
             }
     

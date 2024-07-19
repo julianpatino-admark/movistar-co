@@ -19,10 +19,8 @@ $card-offer-label-width:85%;
 $card-offer-label-font-size:16px;
 
 //Card Offer Header
-$card-offer-header-bg: transparent;
-$card-offer-header-height: 70px;
-$card-offer-header-font-size: 40px;
-
+$card-offer-header-bg: $color-blue-20;
 $card-offer-header-font-color: #fff;
-$card-offer-header-title-font-size: 16px;
-$card-offer-header-subtitle-font-size: 16px;
+
+//Card Offer Discount
+$card-offer-discount-bg: $color-blue-90;

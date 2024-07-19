@@ -1,111 +1,99 @@
-@mixin card-destacado {
-    
-    .card-offer{
-        
-        &_title{
-            position: absolute;
-            top: -30px;
-
-            width: 100%;
-
-            font-size: 14px;
-            line-height: 14px;
-            font-family: $font-family-primary;
-            font-weight: 700;
-            text-align: center;
-            color: #fff;
-
-            background-color: $color-magenta-10;
-            
-            padding: 8px 0;
-
-            border-radius: 12px 12px 0 0;
-            z-index: 1;
-        }
-
-        &_wrapper{
-            border-radius: 0 0 15px 15px;
-        }
-    }
-}
-
-@mixin services-included {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 500;
-
-    border-radius: 10px;
-
-    background-color: #F5F5F5;
-
-    padding: 10px 0;
-    margin-top: 25px;
-
-    p{
-        font-size: 11px;
-        font-weight: 700;
-        font-family: $font-family-primary;
-
-        margin: 0;
-        padding: 0;
-    }
-}
-
 .card-offer {
-    display: block;
     width: 265px;
     height: 100%;
     position: relative;
 
-    background-color: $color-white;
-
     margin: 0 auto;
 
-    &_wrapper {
-        display: flex;
-        flex-direction: column;
-        
+    *{
+        font-family: $font-family-primary;
+        line-height: normal;
+    }
+
+    &_title{
+        position: absolute;
+        top: -13px;
+        left: calc(20%);
+
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+
+        border-radius: 8px;
+        background-color: $color-green-10;
+
+        padding: 5px 12px;
+    }
+
+    &_wrapper {        
         height: 100%;
         overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 0 7px 0 rgba(45, 45, 45, 0.3);
+        border-radius: 20px;
+        box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.10);
     }
 
     &_header {
-        background-color: $card-offer-header-bg;
         display: flex;
-        align-items: center;
         flex-direction: column;
-        justify-content: center;
-        background-color: #0B2739;
+        align-items: center;
 
-        padding: 24px 20px;
+        background-color: $card-offer-header-bg;
 
-        .label{
-            width: 100%;
-            text-align: center;
-            color: $white;
-            font-size: 10px;
-            font-weight: bold;
-            font-family: $font-family-primary;
-            background-color: $color-green-10;
-            border-radius: 6px;
+        padding: 25px 0 5px 0;
 
-            padding: 5px 0;
-            margin: 0 0 8px 0;
+        .normal-speed{
+            font-size: 15px;
+            font-weight: 300;
+            text-decoration: line-through;
+            color: $card-offer-header-font-color;
+            //text-decoration-line: strikethrough;
+        }
 
-            &.empty{
-                background-color: transparent;
+        .main-title{
+            font-size: 14px;
+            font-weight: 500;
+            color: $card-offer-header-font-color;
+
+            padding: 0;
+            margin: 0;
+
+            > b{
+                font-weight: 700;
             }
         }
 
-        .main-title {
+        .main-speed{
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 400;
             color: $card-offer-header-font-color;
-            font-size: $card-offer-header-font-size;
-            line-height: $card-offer-header-font-size;
-            font-weight: bold;
 
+            & > b{
+                font-size: 48px;
+                font-weight: 800;
+            }
+        }
+    }
+
+    &_discount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $card-offer-discount-bg;
+
+        padding: 4px 0;
+
+        img{
+            margin-right: 2px;
+        }
+
+        p{
+            color: $white;
+            font-size: 12px;
+            font-weight: 700;
+
+            padding: 0;
             margin: 0;
         }
     }
@@ -113,108 +101,57 @@
     &_body {
         flex: 1;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        &-discount{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background-color: $color-orange-10;
-
-            padding: 4px 0;
-
-            img{
-                margin-right: 2px;
-            }
-
-            p{
-                color: $white;
-                font-size: 12px;
-                font-family: $font-family-secondary;
-
-                padding: 0;
-                margin: 0;
-            }
-        }
+        padding: 16px 16px 0 16px;
     }
 
         &_price{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             &-number{
-                font-family: $font-family-primary;
                 color: $color-blue-90;
-                line-height: 40px;
                 font-size: 40px;
                 font-weight: 800;
 
                 margin: 0;
-                padding-top: 24px;
+
+                span{
+                    font-size: 18px;
+                    color: $color-blue-90;
+                }
             }
 
             &-text{
-                color: $color-grey-60;
-                font-family: $font-family-primary;
+                color: $color-grey-50;
                 font-size: 14px;
                 font-weight: 500;
 
                 margin: 0;
-                padding-bottom: 24px;
+            }
+        }
+
+        &_services{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 8px;
+            background: $color-grey-5;
+
+            padding: 10px 0;
+            margin: 18px 0;
+            
+            p{
+                max-width: 105px;
+
+                color: $color-grey-65;
+                font-size: 12px;
+                margin: 0 0 0 32px;
             }
         }
 
     &_footer {
-        padding: 0 35px 32px 35px;
-
-        .package-item{
-            display: flex;
-            align-items: center;
-
-            svg, img{
-                width: 23px;
-                height: 23px;
-                fill: $color-brand-highlight;
-                margin-right: 3px;
-            }
-
-            h4,p{
-                margin: 0;
-                padding: 0;
-            }
-
-            h4{
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 14px;
-            }
-
-            p{
-                color: $color-grey-20;
-                font-size: 12px;
-                line-height: 12px;
-            }
-
-            margin-bottom: 20px;
-
-            &:nth-child(2n){
-                padding: 0 0 15px 0;   
-            }
-        }
-
-        .package-included{
-            @include services-included;
-        }
-    }
-
-        &_cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-    &.destacado{
-        @include card-destacado;
+        padding: 0 16px 24px 16px;
     }
 }

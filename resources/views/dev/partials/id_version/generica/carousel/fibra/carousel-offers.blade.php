@@ -10,15 +10,15 @@
 			<div class="splide__list">
 				<div class="splide__slide">
 					<!-- card --->
+					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-one')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-two')
 				</div>
 				<div class="splide__slide">
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-three')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.fibra.offers.offer-five')
 				</div>
 			</div>
 		</div>
