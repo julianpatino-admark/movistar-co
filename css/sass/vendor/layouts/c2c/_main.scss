@@ -13,8 +13,8 @@
     .main-c2c_wrapper{
         width: $main-c2c-width;
         position: absolute;
-        top: 150px;
-        right: 15px;
+        top: $main-c2c-top;
+        right: $main-c2c-right;
         z-index: $main-c2c-z-index;
     }
 

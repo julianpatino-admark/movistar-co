@@ -8,7 +8,7 @@
                         <h4>Tenemos asesores especializados que resolverán tus dudas <b>Te llamamos GRATIS</b></h4>
                     </div>
                     <div class="modal-retencion_form">
-                        @include('dev.partials.components.forms.simple',['id' => 'modal-retencion', 'class' => 'form-underline', 'btnClass' => 'btn-flex btn-accent', 'showContratacion' => false])
+                        @include('dev.partials.components.forms.simple',['id' => 'modal-retencion', 'class' => 'form-underline', 'btnClass' => 'btn-flex btn-accent'])
                     </div>
                 </div>
             </div>

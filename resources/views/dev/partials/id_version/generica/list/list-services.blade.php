@@ -5,24 +5,6 @@
 				<div class="splide__list">
 					<div class="splide__slide list-services_item">
 						<div class="list-services_info">
-							<div class="info_title font-weight-bold">Internet + Elegiapps TV</div>
-							<p class="info_subtitle">Descubre cómo activar tus elegiapps TV</p>
-						</div>
-						<div class="list-services_cta">
-							<button
-								class="btn-flex btn-accent font-family-bold"
-								data-c2c="INFORMACION Internet + Elegiapps"
-								data-toggle="modal"
-								data-target="#modal-c2c"
-								data-show-element="#modal-header-phone"
-								data-tag-page="/modal/internet-elegiapps/c2c"
-							>
-								Quiero información
-							</button>
-						</div>
-					</div>
-					<div class="splide__slide list-services_item">
-						<div class="list-services_info">
 							<div class="info_title font-weight-bold">Pásate a Móvil</div>
 							<p class="info_subtitle">Movistar Pospago</p>
 						</div>

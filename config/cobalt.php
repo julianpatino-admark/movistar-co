@@ -38,19 +38,12 @@ return [
     */
 
     'extra_data' => [
-        'type' => null,
+        'type' => 'ambos',
         'encode' => 'json',
         'separator' => '|',
         'keys' => [
             'c2c',
-            'dni',
-            'nombre',
-            'contratar',
-            'productos',
-            'servicios',
-            'escliente',
-            'direccion',
-            'direccionAdicional'
+            'servicios'
         ]
     ],
 
