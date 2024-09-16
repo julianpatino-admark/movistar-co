@@ -11,7 +11,10 @@
 		<div class="card-offer_body">
 
 			<div class="body-title">
-				&nbsp;
+				<div class="body-title_container">
+					<div class="discount">50%dcto</div>
+					<div class="months">meses 2 y 3</div>
+				</div>
 			</div>
 
 			<div class="card-offer_price">
@@ -52,7 +55,7 @@
 			</div>
 
 			<div class="package-included">
-				
+				<p class="budget theme-pink">24 GB para compartir</p>
 			</div>
 		</div>
 	</div>

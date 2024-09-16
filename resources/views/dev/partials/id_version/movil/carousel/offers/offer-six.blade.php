@@ -58,8 +58,7 @@
 					@include("vendor.partials.components.icons.cards.movistar")
 				</div>
 				<div>
-					<h4>Elige hasta 4 apps</h4>
-					<p>de Redes Sociales +</p>
+					<h4>Después navegas <br> Sin Fin a 2 mbps</h4>
 				</div>
 			</div>
 		</div>

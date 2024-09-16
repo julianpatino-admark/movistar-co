@@ -1,5 +1,9 @@
 <div class="card-offer">
 
+	<div class="card-offer_title">
+		Plan Recomendado
+	</div>
+
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">

@@ -82,7 +82,7 @@
 @section('footer-scripts')
 	<script type="text/javascript">
 
-      var jsToLoad = ['js/dist/generica.bundle.js'];
+      var jsToLoad = ['/js/dist/generica.bundle.js'];
 
       function attachJsOnLoad() {
         for (var i = 0; i < jsToLoad.length; i++) {

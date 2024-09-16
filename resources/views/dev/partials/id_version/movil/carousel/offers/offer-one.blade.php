@@ -16,7 +16,7 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					121.990
+					$104.990
 				</p>
 				<p class="card-offer_price-text">
 					&nbsp;
@@ -52,11 +52,7 @@
 			</div>
 
 			<div class="package-included">
-				<p class="budget">Ahorra $41.900 con:</p>
-				<div>
-					<img width="29" height="29" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo de App para Star+">
-				</div>
-				<div>Incluidos en tu plan</div>
+				<p class="budget">Incluye roaming internacional</p>
 			</div>
 		</div>
 	</div>

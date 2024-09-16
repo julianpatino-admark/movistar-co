@@ -1,0 +1,42 @@
+<div class="carousel-wrapper ">
+	<div class="splide container" id="offert-carrousel-bogota-fibra">
+		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
+		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
+
+		@include('dev.partials.id_version.bogota-cundinamarca.carousel.carousel-navbar')
+
+		<div class="splide__track">
+
+			<div class="splide__list">
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.bogota-cundinamarca.carousel.trio_fibra.offers.offer-one')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.bogota-cundinamarca.carousel.trio_fibra.offers.offer-three')
+				</div>
+			</div>
+		</div>
+
+		<div class="splide__arrows">
+			<button class="splide__arrow splide__arrow--prev">
+				@include('dev.partials.components.icons.buttons.arrow-left')
+			</button>
+			<button class="splide__arrow splide__arrow--next">
+				@include('dev.partials.components.icons.buttons.arrow-right')
+			</button>
+	  	</div>
+		<ul class="splide__pagination"></ul>
+
+		<p class="terminos-condiciones">
+			*Aplican términos y condiciones. Basado en el análisis realizado por Ookla de los datos de SpeedTest Intelligence® para el segundo y tercer trimestre de 2022. Las marcas registradas de Ookla se usan bajo licencia y se reimprimen con permiso.
+		</p>
+	</div>
+</div>
+
+
+
+
+
+

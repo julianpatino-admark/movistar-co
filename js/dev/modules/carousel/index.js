@@ -94,3 +94,22 @@ if ($ServicesCarrousel) {
   });
   ServiceSplide.mount();
 }
+
+const $OfferCarrouselBogota = document.getElementById("offert-carrousel-bogota-fibra");
+if ($OfferCarrouselBogota) {
+  const CarrouselBogotaSplide = new Splide($OfferCarrouselBogota, {
+    type: "slide",
+    arrows: false,
+    pagination: true,
+    perPage: 1,
+    mediaQuery: "min",
+    breakpoints: {
+      768: {
+        autoWidth: true,
+        pagination: false,
+        perPage: 2,
+      },
+    },
+  });
+  CarrouselBogotaSplide.mount();
+}
