@@ -2,11 +2,11 @@
     <div class="container">
         <h1 class="main-banner_title">Planes Pospago de telefonía móvil</h1>
         <x-responsive-image
-            class="promo_netflix"
+            class="movistar_total"
             width="229"
             height="228"
             alt="Planes desde 60Gb por $42990 y con Netflix incluido por $59890 con el primer mes gratis"
-            name="promo_netflix"
+            name="movistar_total"
             breakpoints="lg,md,sm"
             sizes="359;137,229;228,229;228"
             path="img/generica/sld-4"

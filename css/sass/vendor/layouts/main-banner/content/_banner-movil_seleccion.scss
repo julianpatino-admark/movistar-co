@@ -38,7 +38,7 @@
     }
 
     @include media-breakpoint-up(lg){
-        .promo_netflix, #{$parent-selector}_title, #{$parent-selector}_tyc{
+        .movistar_total, #{$parent-selector}_title, #{$parent-selector}_tyc{
             display: none;
         }
 

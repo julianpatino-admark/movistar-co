@@ -3,10 +3,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<span class="normal-speed">500 MBPS</span>
 			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
 			<h3 class="main-speed">
-				<b>600</b> Mbps
+				<b>700</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">
@@ -16,27 +15,26 @@
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>122.392
+					<span>$</span>105.592
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $152.990
+					<b>x 12 Meses.</b> Normal $131.990
 				</p>
 			</div>
 
-			<div class="card-offer_services">
-				<img width="55" height="22" src="{{ asset('img/common/logo-netflix.webp') }}" alt="Logo de Netflix">
-				<p><b>incluido en tu plan!</b></p>
-			</div>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
 		</div>
 
 		<div class="card-offer_footer">
 			<button
 				class="btn-flex btn-carousel"
-				data-c2c="FIBRA + FIJO + TV 600 MB Netflix"
+				data-c2c="FIBRA + FIJO + TV 600 MB WinSports"
 				data-toggle="modal"
 				data-modal-title="600 Mb"
 				data-target="#modal-velocidades"
-				data-tag-page="/modal/offer-2-trio/c2c"
+				data-tag-page="/modal/offer-1-trio/c2c"
 				data-show-element="#modal-header-phone"
 			>
 				LO QUIERO

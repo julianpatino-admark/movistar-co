@@ -14,7 +14,15 @@
 				</div>
 				<div class="splide__slide">
 					<!-- card --->
+					@include('dev.partials.id_version.bogota-cundinamarca.carousel.trio_fibra.offers.offer-two')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
 					@include('dev.partials.id_version.bogota-cundinamarca.carousel.trio_fibra.offers.offer-three')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.bogota-cundinamarca.carousel.trio_fibra.offers.offer-four')
 				</div>
 			</div>
 		</div>

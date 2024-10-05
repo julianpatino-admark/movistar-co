@@ -1,32 +1,30 @@
 <div class="card-offer">
 
-	<div class="card-offer_title">
-		Recomendado Gamer
-	</div>
-
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
 			<h4 class="main-title">Internet + Fijo</h4>
 			<h3 class="main-speed">
-				<b>900</b> Mbps
+				<b>700</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">50% Dto. Exclusivo Online</p>
+			<p class="months">30% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
 			<div class="badge-condition">
 				Contrata hoy y paga el otro mes
 			</div>
 			<div class="card-offer_price">
-				<p class="card-offer_price-text">&nbsp;</p>
+				<p class="card-offer_price-text">
+					* Desde
+				</p>
 				<p class="card-offer_price-number">
-					<span>$</span>129.495
+					<span>$</span>72.793
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $258.990
+					Normal $103.990
 				</p>
 			</div>
 
@@ -39,11 +37,11 @@
 		<div class="card-offer_footer">
 			<button
 				class="btn-flex btn-carousel"
-				data-c2c="FIBRA + FIJO 800 MB COMBO PLUS"
+				data-c2c="FIBRA + FIJO 600 MB COMBO PLUS"
 				data-toggle="modal"
-				data-modal-title="800 Mb"
+				data-modal-title="600 Mb"
 				data-target="#modal-velocidades"
-				data-tag-page="/modal/offer-2-fibrafijo/c2c"
+				data-tag-page="/modal/offer-1-fibrafijo/c2c"
 				data-show-element="#modal-header-phone"
 			>
 				LO QUIERO

@@ -17,6 +17,9 @@
 			<p class="months">50% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
+			<div class="badge-condition">
+				Contrata hoy y paga el otro mes
+			</div>
 			<div class="card-offer_price">
 				<p class="card-offer_price-text">&nbsp;</p>
 				<p class="card-offer_price-number">

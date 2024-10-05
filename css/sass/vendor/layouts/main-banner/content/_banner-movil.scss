@@ -19,6 +19,31 @@
         margin: 35px 0 0;
     }
 
+    #{$parent-selector}_subtitle{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        color: $color-blue-90;
+        font-size: 58px;
+        line-height: 48px;
+        font-style: italic;
+        font-family: $font-family-primary;
+
+        margin: 0;
+
+        small{
+            color: $color-blue-90;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+            font-style: normal;
+
+            margin: 0 35px 0 0;
+        }
+    }
+
     .fibra{
         align-self: flex-end;
         margin-right: 80px;
@@ -57,5 +82,17 @@
 
     @include media-breakpoint-up(xl) {
         background: map_get($mb-bg-movil, xl);
+
+        #{$parent-selector}_subtitle{
+            font-size: 80px;
+            line-height: 70px;
+    
+            small{
+                font-size: 20px;
+                line-height: 20px;
+    
+                margin: 0 50px 0 0;
+            }
+        }
     }
 }

@@ -3,10 +3,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<span class="normal-speed">500 MBPS</span>
 			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
 			<h3 class="main-speed">
-				<b>600</b> Mbps
+				<b>700</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">
@@ -16,17 +15,16 @@
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>79.192
+					<span>$</span>74.392
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $98.990
+					<b>x 12 Meses.</b> Normal $92.990
 				</p>
 			</div>
 
-			<div class="card-offer_services">
-				<img width="26" height="26" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo del nuevo Disney+">
-				<p><b>¡Disney+</b> incluido en tu plan!</p>
-			</div>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
 		</div>
 
 		<div class="card-offer_footer">

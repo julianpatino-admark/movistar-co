@@ -3,10 +3,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<span class="normal-speed">500 MBPS</span>
 			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
 			<h3 class="main-speed">
-				<b>600</b> Mbps
+				<b>700</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">
@@ -16,13 +15,14 @@
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>111.992
+					<span>$</span>117.592
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $139.990
+					<b>x 12 Meses.</b> Normal $146.990
 				</p>
 			</div>
 
+			<p>&nbsp;</p>
 			<div class="card-offer_services">
 				<img width="56" height="22" src="{{ asset('img/common/logo-win-sport.webp') }}" alt="Logo de winsport online">
 				<p><b>incluido en tu plan!</b></p>

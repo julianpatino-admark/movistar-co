@@ -13,22 +13,23 @@
 			<p class="months">30% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
+			<div class="badge-condition">
+				Contrata hoy y paga el otro mes
+			</div>
 			<div class="card-offer_price">
 				<p class="card-offer_price-text">
 					* Desde
 				</p>
 				<p class="card-offer_price-number">
-					<span>$</span>67.193
+					<span>$</span>62.993
 				</p>
 				<p class="card-offer_price-text">
-					Normal $117.990
+					Normal $$89.990
 				</p>
 			</div>
 
-			<div class="card-offer_services">
-				<img width="26" height="26" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo del nuevo Disney+">
-				<p><b>¡Disney+</b> incluido en tu plan!</p>
-			</div>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
 		</div>
 
 		<div class="card-offer_footer">
