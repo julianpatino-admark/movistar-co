@@ -44,19 +44,19 @@
         align-items: center;
         margin: 2px;
     }
-}
 
-@include media-breakpoint-up(md) {
-    .header {
+    @include media-breakpoint-up(md) {
         top: 50px;
     }
-}
+    
+    @include media-breakpoint-up(lg) {
+        &-right{
+            flex: none;
 
-@include media-breakpoint-up(lg) {
-    .header{
-        &-right .digital-partner-image{
-            width: 126px;
-            height: 70px;
+            .digital-partner-image{
+                width: 126px;
+                height: 70px;
+            }
         }
 
         &_logo {
@@ -66,7 +66,4 @@
         }
     }
 }
-
-
-
 

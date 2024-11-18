@@ -1,7 +1,12 @@
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offert-carrousel">
+	<div class="splide container position-relative" id="offer-carrousel">
+
 		<h2 class="title-section text-center mb-2">Conoce más de los Planes Movistar Pospago</h2>
 		<h3 class="subtitle-section text-center mb-3">Escoge un plan para tus necesidades</h3>
+
+		<div class="navbar-container">
+			@include("dev.partials.layouts.navbar.secondary-nav")
+		</div>
 
 		<div class="splide__track">
 

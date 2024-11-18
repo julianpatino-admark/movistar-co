@@ -5,7 +5,7 @@ var versionIndex = versionLanding === "generica" ? "index" : versionLanding;
 var constants = {
   versionLanding: "generica",
 
-  versions: ["generica", "movil"],
+  versions: ["generica", "movil", "internet-movil"],
 
   versionIndex: function () {
     return this.versionLanding === "generica" ? "index" : this.versionLanding;
@@ -59,7 +59,7 @@ var plugins = {
      * Añadir la cadena {versionLanding} para que se se sustituya por el css correspondiente definido en la constante versions.
      * ej: "./css/{versionLanding}.css"
      */
-    src: ["./css/generica.css", "./css/movil.css"],
+    src: ["./css/generica.css", "./css/movil.css", "./css/internet-movil.css"],
 
     dest: "./css/purged/",
 
@@ -95,8 +95,8 @@ var plugins = {
       "carousel-item-left",
       /^cc-/,
       /^carousel-/,
+      /^splide/,
       "autocomplete-results",
-      "splide__pagination__page",
       "is-active"
     ],
   },
@@ -111,6 +111,9 @@ var plugins = {
         "tracking/duo-fibra",
         "tracking/trio-fibra",
         "tracking/aviso-legal",
+        "tracking/internet-movil",
+        "tracking/internet-movil/duo",
+        "tracking/internet-movil/trio",
         "tracking/bogota-cundinamarca",
         "tracking/bogota-cundinamarca/duo",
         "tracking/bogota-cundinamarca/trio",

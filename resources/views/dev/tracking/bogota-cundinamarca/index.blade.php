@@ -20,4 +20,3 @@
 	@include('dev.partials.id_version.generica.list.list-services')
 	@include('dev.partials.layouts.conditions.collapse')
 @stop
-

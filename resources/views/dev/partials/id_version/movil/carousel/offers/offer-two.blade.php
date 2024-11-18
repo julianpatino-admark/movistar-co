@@ -3,9 +3,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
-			<p class="title">&nbsp;</p>
+			<p class="title">Contrata hoy y paga el próximo mes</p>
 			<h3 class="main-title" style="font-size: 40px; margin: 5px 0 0px 0;">ILIMIDATOS</h3>
-			<h6 class="subtitle">DATOS ILIMITADOS</h6>
+			<h6 class="subtitle">Sin fin a máxima velocidad</h6>
 		</div>
 
 		<div class="card-offer_body">

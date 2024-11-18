@@ -1,7 +1,12 @@
 <div class="carousel-wrapper">
 	<div class="splide container position-relative" id="offert-carrousel-fibra">
+
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
+
+		<div class="navbar-container">
+			@include("dev.partials.layouts.navbar.secondary-nav")
+		</div>
 
 		@include('dev.partials.id_version.generica.carousel.carousel-navbar')
 
@@ -38,7 +43,6 @@
 		</p>
 	</div>
 </div>
-
 
 
 

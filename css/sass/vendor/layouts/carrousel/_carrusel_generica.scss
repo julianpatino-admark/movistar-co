@@ -1,6 +1,13 @@
 .carousel-wrapper{
   margin-top: 45px;
 
+  .navbar-container{
+    display: flex;
+    justify-content: center;
+
+    margin: 40px 0;
+  }
+
   .title-section, .subtitle-section{
     font-family: $font-family-primary;
     text-align: center;
@@ -16,8 +23,6 @@
     font-size: 18px;
     font-weight: normal;
     color: $color-grey-20;
-
-    margin-bottom: 40px;
   }
 
   .terminos-condiciones{
@@ -31,17 +36,42 @@
   }
 
   @include media-breakpoint-up(lg){
+    margin-top: 0;
+    
+    .navbar-container{
+      order: 0;
+    }
+
     .title-section{
+      order: 1;
       font-size: 32px;
     }
 
     .subtitle-section{
+      order: 2;
       font-size: 28px;
 
       margin-bottom: 30px;
     }
 
+    .carousel-ciudades{
+      order: 3;
+    }
+
+    .carousel-navbar{
+      order: 4;
+    }
+
+    .splide__track{
+      order: 5;
+    }
+
+    .splide__pagination{
+      order: 6;
+    }
+
     .terminos-condiciones{
+      order: 7;
       margin: 75px 0;
     }
   }

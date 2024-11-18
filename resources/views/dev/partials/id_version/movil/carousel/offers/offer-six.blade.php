@@ -2,7 +2,7 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
-			<p class="title">PRIMER MES GRATIS</p>
+			<p class="title">Contrata hoy y paga el próximo mes</p>
 			<h3 class="main-title mb-0">60 GB</h3>
 			<h6 class="subtitle">100 GB si tienes internet hogar movistar</h6>
 		</div>

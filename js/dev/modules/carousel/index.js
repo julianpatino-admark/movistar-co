@@ -34,18 +34,17 @@ if ($OfferCarrouselFibra) {
   }).mount();
 }
 
-const $OfferCarrousel = document.getElementById("offert-carrousel");
+const $OfferCarrousel = document.getElementById("offer-carrousel");
 if ($OfferCarrousel) {
   new Splide($OfferCarrousel, {
     perPage: 1,
-    autoWidth: true,
+    autoWidth: false,
     arrows: false,
     rewind: true,
     mediaQuery: "min",
     breakpoints: {
       768: {
         perPage: 2,
-        arrows: true,
       },
       1201: {
         perPage: 3,

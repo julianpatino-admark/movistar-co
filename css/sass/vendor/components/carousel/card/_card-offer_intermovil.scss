@@ -1,0 +1,173 @@
+.card-offer {
+    width: 265px;
+    height: 100%;
+    position: relative;
+
+    margin: 0 auto;
+
+    *{
+        font-family: $font-family-primary;
+        line-height: normal;
+    }
+
+    &_title{
+        position: absolute;
+        top: -13px;
+        left: calc(20%);
+
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+
+        border-radius: 8px;
+        background-color: $color-green-10;
+
+        padding: 5px 12px;
+    }
+
+    &_wrapper {        
+        height: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    &_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: $card-offer-header-bg;
+
+        padding: 25px 0 5px 0;
+
+        .normal-speed{
+            font-size: 15px;
+            font-weight: 300;
+            text-decoration: line-through;
+            color: $card-offer-header-font-color;
+            //text-decoration-line: strikethrough;
+        }
+
+        .main-title{
+            font-size: 14px;
+            font-weight: 500;
+            color: $card-offer-header-font-color;
+
+            padding: 0;
+            margin: 0;
+
+            > b{
+                font-weight: 700;
+            }
+        }
+
+        .main-speed{
+            text-align: center;
+            font-size: 38px;
+            line-height: 38px;
+            font-weight: 400;
+            color: $card-offer-header-font-color;
+
+            & > b{
+                font-size: 30px;
+                font-weight: 800;
+            }
+
+            & > i{
+                font-size: 30px;
+            }
+        }
+    }
+
+    &_discount{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $card-offer-discount-bg;
+
+        padding: 4px 0;
+
+        img{
+            margin-right: 2px;
+        }
+
+        .months{
+            color: $white;
+            font-size: 12px;
+
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &_body {
+        flex: 1;
+
+        padding: 16px 16px 0 16px;
+    }
+
+        .badge-condition{            
+            text-align: center;
+            color: $color-blue-20;
+            font-size: 12px;
+            font-weight: 800;
+            
+            background: rgba(1, 157, 244, 0.20);
+            border-radius: 8px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+        }
+
+        &_price{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-number{
+                color: $color-blue-90;
+                font-size: 40px;
+                font-weight: 800;
+
+                margin: 0;
+
+                span{
+                    font-size: 18px;
+                    color: $color-blue-90;
+                }
+            }
+
+            &-text{
+                color: $color-grey-50;
+                font-size: 14px;
+                font-weight: 500;
+
+                margin: 0;
+            }
+        }
+
+        &_services{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 8px;
+            background: $color-grey-5;
+
+            padding: 10px 0;
+            margin: 18px 0;
+            
+            p{
+                max-width: 172px;
+
+                color: $color-grey-65;
+                font-size: 12px;
+                margin: 0 0 0 12px;
+            }
+        }
+
+    &_footer {
+        padding: 0 16px 24px 16px;
+    }
+}

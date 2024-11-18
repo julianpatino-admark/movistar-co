@@ -7,10 +7,9 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<span class="normal-speed">700 MBPS</span>
 			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
 			<h3 class="main-speed">
-				<b>800</b> Mbps
+				<b>700</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">

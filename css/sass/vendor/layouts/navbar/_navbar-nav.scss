@@ -14,19 +14,33 @@
             .nav-link{
                 display: flex;
                 color: white;
+                font-family: $font-family-primary;
 
                 align-items: center;
 
                 padding: 0 15px;
 
-                img{
-                    width: 23px;
-                    height: 23px;
+                div.icono-default{
+                    background-size: cover;
 
-                    margin-right: 5px;
+                    margin-right: 3px;
+                    
+                    &.movistar{
+                        width: 17.5px;
+                        height: 13px;
+                        background-image: url("img/menu/sprite-iconos-movistar.webp");
+                    }
 
-                    &.icono-active{
-                        display: none;
+                    &.wifi{
+                        width: 17px;
+                        height: 13.3px;
+                        background-image: url("img/menu/sprite-iconos-wifi.webp");
+                    }
+
+                    &.movil{
+                        width: 15px;
+                        height: 22.3px;
+                        background-image: url("img/menu/sprite-iconos-movil.webp");
                     }
                 }
             }
@@ -42,32 +56,90 @@
                     font-weight: bold;
                     color: $color-brand-highlight;
 
-                    img{
-                        &.icono-active{
-                            display: inline-block;
+                    div.icono-default{
+                        
+                        &.movistar{
+                            background-position-x: -18.5px;
                         }
 
-                        &.icono-default{
-                            display: none;
+                        &.wifi{
+                            background-position-x: -19px;
+                        }
+    
+                        &.movil{
+                            background-position-x: -15.5px;
                         }
                     }
                 }
             }
         }
     }
-}
 
-@include media-breakpoint-up(lg) {
-    .navbar-nav {
+    @include media-breakpoint-up(lg) {
         flex: 1;
         display: inline-block;
-
+    
         ul{
             .nav-item {
                 font-size: map_get($navbar-font-size, md);
             }
         }
+    }
+}
 
+.nav-carousel{
+    display: block;
+    flex: none;
+
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+    ul{
+        display: grid;
+        grid-template-columns: 265px;
+        grid-gap: 10px;
+
+        padding: 10px;
+
+        .nav-item {
+            background-color: $color-grey-15;
+            
+            &:first-child{
+                .nav-link{
+                    padding: 10px;
+                }
+            }
+
+            .nav-link{
+                justify-content: center;
+
+                font-size: 20px;
+                font-weight: 700;
+                color: $color-grey-30;
+
+                padding: 10px;
+
+                div.icono-default{
+                        
+                    &.movistar{
+                        background-position-x: calc((18.5px * 2) * -1);
+                    }
+
+                    &.wifi{
+                        background-position-x: calc((19px * 2) * -1);
+                    }
+
+                    &.movil{
+                        background-position-x: calc((15.5px * 2) * -1);
+                    }
+                }
+            }
+        }
     }
 
+    @include media-breakpoint-up(lg) {
+        ul{
+            grid-template-columns: repeat(3, 265px);
+        }
+    }
 }
