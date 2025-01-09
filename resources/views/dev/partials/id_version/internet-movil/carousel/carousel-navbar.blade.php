@@ -1,6 +1,6 @@
 <nav class="carousel-navbar">
     <ul>
-        <li class="@if(request()->path() == 'internet-movil') active @endif">
+        <li class="@if(request()->path() == 'internet-movil' || request()->path() == '/') active @endif">
             <a href="/internet-movil?{{request()->getQueryString()}}">
                 <b>Solo Internet + Pospago</b>
             </a>

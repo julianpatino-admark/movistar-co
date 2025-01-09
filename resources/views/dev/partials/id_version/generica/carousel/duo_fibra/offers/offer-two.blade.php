@@ -10,12 +10,12 @@
 		</div>
 		<div class="card-offer_discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">20% Dto. Exclusivo Online</p>
+			<p class="months">30% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>83.192
+					<span>$</span>72.793
 				</p>
 				<p class="card-offer_price-text">
 					<b>x 12 Meses.</b> Normal $103.990

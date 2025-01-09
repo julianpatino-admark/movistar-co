@@ -12,7 +12,7 @@ var constants = {
   },
 
   default: {
-    host: "https://movistarco.test",
+    host: 'http://landing-madre.local/',
     versionLanding: "generica",
   },
 };
@@ -111,6 +111,7 @@ var plugins = {
         "tracking/duo-fibra",
         "tracking/trio-fibra",
         "tracking/aviso-legal",
+        "tracking/internet-hogar",
         "tracking/internet-movil",
         "tracking/internet-movil/duo",
         "tracking/internet-movil/trio",

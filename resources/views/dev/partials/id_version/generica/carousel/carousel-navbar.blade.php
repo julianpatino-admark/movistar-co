@@ -11,8 +11,8 @@
 
 <nav class="carousel-navbar">
     <ul>
-        <li class="@if(request()->path() == '/') active @endif">
-            <a href="/?{{request()->getQueryString()}}">
+        <li class="@if(request()->path() == 'internet-hogar') active @endif">
+            <a href="/internet-hogar?{{request()->getQueryString()}}">
                 <b>INTERNET</b>
                 FIBRA
             </a>
