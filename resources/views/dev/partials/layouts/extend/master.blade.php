@@ -4,6 +4,7 @@
 	$header_phone = isset($header_phone)?$header_phone:true;
 	$phone = ($header_phone === true)?$phone:"0";
 	$main_c2c = isset($main_c2c)?$main_c2c:true;
+	$main_c2c_class = $main_c2c_class ?? "";
     $modals = isset($modals)?$modals:true;
 	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
 @endphp
@@ -48,7 +49,7 @@
 		@include('dev.partials.layouts.navbar.mobile-nav')
 	@endif
 	@if($main_c2c === true)
-		@include('dev.partials.layouts.c2c.main')
+		@include('dev.partials.layouts.c2c.main', [ "c2c_class" => $main_c2c_class ])
 	@endif
 
 	@yield('content')

@@ -12,7 +12,7 @@
             path="img/generica/sld-1"
         ></x-responsive-image>
         <div class="promo_disney-card">
-            <h1>700 <small>megas</small></h1>
+            <h1>900 <small>megas</small></h1>
             <div class="disney_incluido">
                 <img src="{{ asset('/img/common/logo-disney-plus.webp') }}" alt="Logo de disney plus" />
                 <p><b>Incluidos</b> en tu plan</p>

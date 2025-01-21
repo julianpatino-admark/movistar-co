@@ -9,7 +9,7 @@
             name="oferta"
             breakpoints="lg,md,sm"
             sizes="359;137,272;103,272;103"
-            path="img/generica/main-banner"
+            path="img/generica/sld-2"
         ></x-responsive-image>
         <x-responsive-image
             class="beneficios"
@@ -19,7 +19,7 @@
             name="beneficios"
             breakpoints="lg,md,sm"
             sizes="352;105,267;80,267;80"
-            path="img/generica/main-banner"
+            path="img/generica/sld-2"
         ></x-responsive-image>
 
         <div class="main-banner_cta">
@@ -37,4 +37,3 @@
         </div>
     </div>
 </div>
-

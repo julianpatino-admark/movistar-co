@@ -5,7 +5,7 @@
 		<div class="card-offer_header">
 			<h4 class="main-title">Internet + Pospago</h4>
 			<h3 class="main-speed">
-				<b>700 Megas +</b>
+				<b>900 Megas +</b>
 				<i>Ilimitado</i>
 			</h3>
 		</div>

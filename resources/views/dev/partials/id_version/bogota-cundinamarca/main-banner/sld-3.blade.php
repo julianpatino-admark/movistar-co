@@ -1,14 +1,19 @@
 <div class="main-banner sld-3">
     <div class="container">
         <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
+
+        <h2 class="main-banner_subtitle">
+            <small>Planes</small>
+            Sin Fin
+        </h2>
         <x-responsive-image
             class="oferta"
             width="200"
-            height="113"
+            height="63"
             alt="Planes de ilimidatos con combo plus incluido"
             name="oferta"
             breakpoints="lg,md,sm"
-            sizes="304;173,200;113,200;113"
+            sizes="304;98,200;63,200;63"
             path="img/generica/sld-3"
         ></x-responsive-image>
         <x-responsive-image

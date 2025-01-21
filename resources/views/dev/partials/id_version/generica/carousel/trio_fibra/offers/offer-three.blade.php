@@ -7,28 +7,37 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
+			<h4 class="main-title">Internet + Fijo + TV</h4>
 			<h3 class="main-speed">
-				<b>700</b> Mbps
+				<b>900</b> Mbps
 			</h3>
 		</div>
 		<div class="card-offer_discount">
 			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months">50% Dto. Exclusivo Online</p>
+			<p class="months">20% Dto. Exclusivo Online</p>
 		</div>
 		<div class="card-offer_body">
+			<div class="badge-condition">
+				Contrata hoy y paga el otro mes
+			</div>
+
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>114.392
+					<span>$</span>117.592
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $142.990
+					<b>x 12 Meses.</b> Normal $146.990
 				</p>
 			</div>
 
 			<div class="card-offer_services">
-				<img width="26" height="26" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo del nuevo Disney+">
-				<p><b>¡Disney+</b> incluido en tu plan!</p>
+				<img width="29" height="22" src="{{ asset('img/common/icono-television.webp') }}" alt="Logo de un televisor en modo de vector plano">
+				<p><b>Movistar TV</b> Desde 90 canales HD</p>
+			</div>
+
+			<div class="card-offer_services">
+				<img width="55" height="26" src="{{ asset('img/common/logo-win-sport.webp') }}" alt="Logo del nuevo Disney+">
+				<p><b>Movistar TV</b> Desde 90 canales HD</p>
 			</div>
 		</div>
 

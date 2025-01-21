@@ -3,7 +3,7 @@
     $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
 @endphp
 
-@extends('dev.partials.layouts.extend.master')
+@extends('dev.partials.layouts.extend.master', [ 'main_c2c_class' => "no-carousel"])
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Internet Hogar"/>
@@ -14,9 +14,10 @@
 @stop
 
 @section('content')
-	@include('dev.partials.id_version.generica.main-banner', [ 'startFrom' => 1 ])
+	@include('dev.partials.id_version.generica.main-banner.sld-1')
 	@include('dev.partials.id_version.internet-movil.carousel.fibra.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.generica.list.list-services')
 	@include('dev.partials.layouts.conditions.collapse')
 @stop
+

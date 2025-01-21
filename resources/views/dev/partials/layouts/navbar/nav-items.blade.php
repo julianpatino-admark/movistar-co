@@ -6,13 +6,13 @@
 @endphp
 
 <ul>
-    <li class="nav-item @if(str_contains($path, '/') || str_contains($path, 'internet-movil')) active font-weight-bold @endif">
+    <li class="nav-item @if(str_contains($path, 'internet-movil')) active font-weight-bold @endif">
         <a class="nav-link" href="/internet-movil?{{request()->getQueryString()}}">
             <div class="icono-default movistar"></div>
             Internet Hogar + Móvil
         </a>
     </li>
-    <li class="nav-item @if($isValid) active font-weight-bold @endif">
+    <li class="nav-item @if(str_contains($path, 'antioquia-eje-cafetero') || $isValid) active font-weight-bold @endif">
         <a class="nav-link" href="/internet-hogar?{{request()->getQueryString()}}">
             <div class="icono-default wifi"></div>
             Internet Hogar

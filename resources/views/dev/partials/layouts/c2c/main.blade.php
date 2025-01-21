@@ -1,4 +1,8 @@
-<div class="container main-c2c_container">
+@php
+	$c2c_class = $c2c_class ?? "";
+@endphp
+
+<div class="container main-c2c_container {{ $c2c_class }}">
 	<div class="main-c2c_wrapper">
 		<div class="main-c2c box-shadow-sm">
 			<p class="main-c2c_title">

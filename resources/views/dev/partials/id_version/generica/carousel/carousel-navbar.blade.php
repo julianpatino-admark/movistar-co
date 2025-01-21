@@ -1,10 +1,10 @@
 <nav class="carousel-ciudades">
     <ul>
-        <li class="@if(!str_contains(request()->path(), 'bogota-cundinamarca')) active @endif">
+        <li class="@if(!str_contains(request()->path(), 'antioquia-eje-cafetero')) active @endif">
             <a href="/?{{request()->getQueryString()}}">Nacional</a>
         </li>
-        <li class="@if(request()->path() == 'bogota-cundinamarca') active @endif">
-            <a href="/bogota-cundinamarca?{{request()->getQueryString()}}">Bogotá y Cundinamarca</a>
+        <li class="@if(request()->path() == 'antioquia-eje-cafetero') active @endif">
+            <a href="/antioquia-eje-cafetero?{{request()->getQueryString()}}">Antioquia y Eje Cafetero</a>
         </li>
     </ul>
 </nav>
@@ -13,20 +13,20 @@
     <ul>
         <li class="@if(request()->path() == 'internet-hogar') active @endif">
             <a href="/internet-hogar?{{request()->getQueryString()}}">
-                <b>INTERNET</b>
-                FIBRA
+                <b>Internet</b>
+                Fibra
             </a>
         </li>
         <li class="@if(request()->path() == 'duo-fibra') active @endif">
             <a href="/duo-fibra?{{request()->getQueryString()}}">
-                <b>DUO</b>
-                FIBRA + FIJO
+                <b>Pack Digital</b>
+                Fibra + Movistar TV App
             </a>
         </li>
         <li class="@if(request()->path() == 'trio-fibra') active @endif">
             <a href="/trio-fibra?{{request()->getQueryString()}}">
-                <b>TRIO</b>
-                FIBRA + FIJO + TV
+                <b>Trio</b>
+                Fibra + Telefonía + TV
             </a>
         </li>
     </ul>

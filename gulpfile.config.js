@@ -5,14 +5,14 @@ var versionIndex = versionLanding === "generica" ? "index" : versionLanding;
 var constants = {
   versionLanding: "generica",
 
-  versions: ["generica", "movil", "internet-movil"],
+  versions: ["generica", "movil", "internet-movil", "geolocaliza"],
 
   versionIndex: function () {
     return this.versionLanding === "generica" ? "index" : this.versionLanding;
   },
 
   default: {
-    host: 'http://landing-madre.local/',
+    host: 'https://movistarco.test/',
     versionLanding: "generica",
   },
 };
@@ -59,7 +59,7 @@ var plugins = {
      * Añadir la cadena {versionLanding} para que se se sustituya por el css correspondiente definido en la constante versions.
      * ej: "./css/{versionLanding}.css"
      */
-    src: ["./css/generica.css", "./css/movil.css", "./css/internet-movil.css"],
+    src: ["./css/generica.css", "./css/movil.css", "./css/internet-movil.css", "./css/geolocaliza.css"],
 
     dest: "./css/purged/",
 
@@ -115,9 +115,9 @@ var plugins = {
         "tracking/internet-movil",
         "tracking/internet-movil/duo",
         "tracking/internet-movil/trio",
-        "tracking/bogota-cundinamarca",
-        "tracking/bogota-cundinamarca/duo",
-        "tracking/bogota-cundinamarca/trio",
+        "tracking/antioquia-eje-cafetero",
+        "tracking/antioquia-eje-cafetero/duo",
+        "tracking/antioquia-eje-cafetero/trio",
         "tracking/privacy",
         "tracking/privacidad-basica",
         "tracking/cookies",

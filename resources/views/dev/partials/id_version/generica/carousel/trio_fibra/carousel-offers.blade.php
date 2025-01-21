@@ -1,5 +1,5 @@
 <div class="carousel-wrapper ">
-	<div class="splide container position-relative" id="offert-carrousel-fibra">
+	<div class="splide container position-relative" id="offer-carrousel">
 
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
@@ -25,6 +25,10 @@
 					<!-- card --->
 					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-three')
 				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-four')
+				</div>
 			</div>
 		</div>
 
@@ -43,7 +47,6 @@
 		</p>
 	</div>
 </div>
-
 
 
 
