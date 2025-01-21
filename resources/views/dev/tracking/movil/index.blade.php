@@ -1,4 +1,4 @@
-@extends('dev.partials.layouts.extend.master')
+@extends('dev.partials.layouts.extend.master', [ 'main_c2c_class' => "no-carousel"])
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Móvil"/>
@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-	@include('dev.partials.id_version.generica.main-banner', [ 'startFrom' => 3 ])
+	@include('dev.partials.id_version.generica.main-banner.sld-4')
 	@include('dev.partials.id_version.movil.carousel.carousel-offers')
 	@include('dev.partials.layouts.banners.banner-simple')
 	@include('dev.partials.id_version.movil.list.list-apps')

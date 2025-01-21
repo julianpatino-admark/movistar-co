@@ -11,23 +11,15 @@
             sizes="359;137,313;177,313;177"
             path="img/generica/sld-1"
         ></x-responsive-image>
-        <div class="promo_disney-card">
-            <h1>900 <small>megas</small></h1>
-            <div class="disney_incluido">
-                <img src="{{ asset('/img/common/logo-disney-plus.webp') }}" alt="Logo de disney plus" />
-                <p><b>Incluidos</b> en tu plan</p>
+        <div class="promo_disney">
+            <div class="promo_disney-card">
+                <h1>900 <small>Megas</small></h1>
+                <div class="disney_incluido">
+                    <img src="{{ asset('/img/common/logo-disney-plus.webp') }}" alt="Logo de disney plus" />
+                    <p><b>Incluidos</b> en tu plan</p>
+                </div>
             </div>
         </div>
-        <x-responsive-image
-            class="promo_disney"
-            width="184"
-            height="228"
-            alt="lleva 600 megas o 500 si no eres postpago y lleva combo plus incluido en tu plan"
-            name="promo_disney"
-            breakpoints="lg,md,sm"
-            sizes="359;137,184;228,184;228"
-            path="img/generica/sld-1"
-        ></x-responsive-image>
         <div class="main-banner_cta">
             <button
                 data-c2c="OFERTA HOGAR"
