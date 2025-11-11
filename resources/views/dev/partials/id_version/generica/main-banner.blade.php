@@ -11,9 +11,6 @@
             <div class="splide__slide">
                 @include('dev.partials.id_version.generica.main-banner.sld-2')
             </div>
-            <div class="splide__slide">
-                @include('dev.partials.id_version.generica.main-banner.sld-3')
-            </div>
         </div>
     </div>
 

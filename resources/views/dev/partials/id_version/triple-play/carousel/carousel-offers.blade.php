@@ -1,0 +1,61 @@
+<section class="carousel-wrapper ">
+	<div id="offersPlayTrioCarousel" class="splide position-relative container" aria-labelledby="carousel-heading">
+		<div class="carousel_title-movil">
+			<div class="icons">
+				@include('dev.partials.components.icons.signal-circle')
+				+
+				@include('dev.partials.components.icons.tv-play')
+				+
+				@include('dev.partials.components.icons.phone-circle')
+			</div>
+            <div>
+                <h2 class="title-section">El mejor paquete para tu hogar</h2>
+                <h3 class="subtitle-section">Disfruta de nuestros planes de Internet + ClaroTV + Telefonía Fija.</h3>
+            </div>
+        </div>
+
+
+		<div class="splide__track">
+			<div class="splide__list">
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-one')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-two')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-three')
+				</div>
+                <div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-four')
+				</div>
+                <div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-five')
+				</div>
+                <div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.triple-play.carousel.offers.offer-six')
+				</div>
+			</div>
+		</div>
+
+		<ul class="splide__pagination"></ul>
+
+		<div class="splide__arrows">
+			<button class="splide__arrow splide__arrow--prev carousel-control-btn">
+				@include("dev.partials.components.icons.cards.arrow-carousel-left")
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="splide__arrow splide__arrow--next carousel-control-btn">
+				@include("dev.partials.components.icons.cards.arrow-carousel-right")
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+</section>
+

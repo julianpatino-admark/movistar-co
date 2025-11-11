@@ -1,0 +1,30 @@
+<div class="main-banner">
+    <div class="container">
+        <x-offer-banner-card>
+            <x-slot:top>
+                COMUNÍCATE CON TODO EL PERÚ
+            </x-slot>
+            <x-slot:bottomleft>
+                <h1>
+                    <small>S/</small>66
+                </h1>
+                <p>al mes</p>
+            </x-slot>
+            <x-slot:bottomright>
+                <h1>
+                    150
+                    <small>
+                        <span>Mbps</span>
+                        de velocidad
+                    </small>
+                </h1>
+            </x-slot>
+        </x-offer-banner-card>
+        @include('dev.partials.layouts.c2c.main', [
+            "c2c_text" => array(
+                "title" => "2 Play - Internet + Telefonía",
+                "description" => "¡Internet de 150 Mbps + Telefonía por s/66!"
+            )
+        ])
+    </div>
+</div>

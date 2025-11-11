@@ -69,6 +69,10 @@
     @include media-breakpoint-up(lg) {
         background: map_get($mb-bg-movil, lg);
 
+        .container{
+            justify-content: space-between;
+        }
+
         #{$parent-selector}_title{
             flex: none;
 

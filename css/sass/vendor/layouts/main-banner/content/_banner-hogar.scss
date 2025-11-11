@@ -41,16 +41,16 @@
     @include media-breakpoint-up(lg) {
         background: map_get($mb-bg, lg);
 
+        .container{
+            justify-content: space-between;
+        }
+
         #{$parent-selector}_title{
             flex: none;
 
             margin: 20px 0 10px 0;
         }
 
-
-        #{$parent-selector}_cta{
-            margin-bottom: 0;
-        }
     }
 
     @include media-breakpoint-up(xl) {
@@ -102,15 +102,14 @@
     @include media-breakpoint-up(lg) {
         background: map_get($mb-bg-nacional, lg);
 
+        .container{
+            justify-content: space-between;
+        }
+
         #{$parent-selector}_title{
             flex: 1;
 
             margin: 20px 0 10px 0;
-        }
-
-
-        #{$parent-selector}_cta{
-            margin-bottom: 45px;
         }
     }
 

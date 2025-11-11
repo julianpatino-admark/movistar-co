@@ -7,7 +7,7 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h4 class="main-title">con <b>Movistar Total</b> recibe</h4>
+			<h4 class="main-title">Internet + Fijo + TV</h4>
 			<h3 class="main-speed">
 				<b>900</b> Mbps
 			</h3>
@@ -19,23 +19,28 @@
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>192.995
+					<span>$</span>79.495
 				</p>
 				<p class="card-offer_price-text">
-					<b>x 12 Meses.</b> Normal $385.990
+					<b>Meses 2 y 3.</b> Luego $158.990
 				</p>
 			</div>
 
 			<div class="card-offer_services">
-				<img width="26" height="26" src="{{ asset('img/common/logo-disney-plus.webp') }}" alt="Logo del nuevo Disney+">
-				<p><b>¡Disney+</b> incluido en tu plan!</p>
+				<img width="29" height="22" src="{{ asset('img/common/icono-television.webp') }}" alt="Logo de un televisor en modo de vector plano">
+				<p><b>Movistar TV</b> Desde 90 canales HD</p>
+			</div>
+
+			<div class="card-offer_services">
+				<img width="56" height="22" src="{{ asset('img/common/logo-netflix.webp') }}" alt="Logo Netflixs">
+				<p><b>¡incluido en tu plan!</b></p>
 			</div>
 		</div>
 
 		<div class="card-offer_footer">
 			<button
 				class="btn-flex btn-carousel"
-				data-c2c="FIBRA + FIJO + TV 900 MB COMBO PLUS"
+				data-c2c="FIBRA + FIJO + TV 900 MB NETFLIX"
 				data-toggle="modal"
 				data-modal-title="900 Mb"
 				data-target="#modal-velocidades"

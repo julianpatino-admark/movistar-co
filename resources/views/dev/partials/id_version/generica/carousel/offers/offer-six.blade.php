@@ -1,0 +1,61 @@
+<div class="card-offer">
+    
+    <div class="card-offer_label">
+        1 PLAY
+    </div>
+
+    <div class="card-offer_wrapper">
+
+        <div class="card-offer_header">
+            <p>INTERNET / FIBRA ÓPTICA</p>
+            <h2 class="title">
+                1500 Mbps
+            </h2>
+
+            <h3 class="price-number"><b>s/</b><span>200</span>/mes</h3>
+        </div>
+
+        <div class="card-offer_body">
+
+            <div class="card-offer_body-speed">
+                <span class="speed-text">VELOCIDAD + ESTABILIDAD</span>
+            </div>
+
+            <ul class="card-offer_body-list">
+                <li>
+                    <h4>Velocidad de<br> Descarga Ilimitada</h4>
+                    <p>1500 Mbps</p>
+                </li>
+                <li>
+                    <h4>Velocidad máxima<br>
+                        de subida
+                    </h4>
+                    <p>50 Mbps</p>
+                </li>
+                <li>
+                    <h4>Paramount+</h4>
+                    <p>
+                        <b><span>en</span> <span class="text-red">Claro</span>Video</b>
+                        <span>x24 meses</span>
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="card-offer_footer">
+            <a
+                class="btn-flex btn-accent"
+                data-c2c="offer-two-1-play"
+                data-show-element="#modal-header-phone"
+                data-conversion-event="c2c_offer_two_1_play"
+                data-toggle="modal"
+                data-target="#modal-c2c"
+            >
+                LO QUIERO
+            </a>
+        </div>
+    </div>
+    
+
+</div>

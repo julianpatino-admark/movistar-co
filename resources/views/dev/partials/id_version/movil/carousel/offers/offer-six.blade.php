@@ -1,10 +1,18 @@
+@php
+	$price = 49990;
+	$discount = 50;
+	$distountPrice = ($price * (1 - $discount / 100));
+	$pFormatted = number_format($price, 0, ',', '.');
+	$dpFormatted = number_format($distountPrice, 0, ',', '.');
+@endphp
+
 <div class="card-offer">
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header header-movil">
 			<p class="title">Contrata hoy y paga el próximo mes</p>
 			<h3 class="main-title mb-0">60 GB</h3>
-			<h6 class="subtitle">100 GB si tienes internet hogar movistar</h6>
+			<h6 class="subtitle">85 GB si tienes internet hogar movistar</h6>
 		</div>
 
 		<div class="card-offer_body">
@@ -18,10 +26,10 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					$21.495
+					${{ $dpFormatted }}
 				</p>
 				<p class="card-offer_price-text">
-					Normal $42.990
+					Normal ${{ $pFormatted }}
 				</p>
 			</div>
 

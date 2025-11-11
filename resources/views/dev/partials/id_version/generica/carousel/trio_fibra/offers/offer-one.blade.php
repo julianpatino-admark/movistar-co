@@ -19,7 +19,7 @@
 
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>105.192
+					<span>$</span>105.592
 				</p>
 				<p class="card-offer_price-text">
 					<b>x 12 Meses.</b> Normal $131.990

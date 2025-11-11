@@ -1,0 +1,25 @@
+@php
+    $path = request()->path();
+@endphp
+
+<div class="header-navbar">
+    <div class="container">
+        <nav class="navbar-nav main">
+            <ul>
+                <li class="nav-item {{ $path == 'max' || $path == '/' ? 'active' : ''}}">
+                    <a class="nav-link" href="/?{{request()->getQueryString()}}">
+                        Móvil
+                    </a>
+                </li>
+                <li class="nav-item {{ str_contains($path, 'hogar') ? 'active' : ''}}">
+                    <a class="nav-link" href="/hogar?{{request()->getQueryString()}}">
+                        Hogar
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-label">
+                CANAL EXCLUSIVO DE VENTAS
+            </div>
+        </nav>
+    </div>
+</div>

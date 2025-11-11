@@ -20,7 +20,7 @@
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
-					<span>$</span>137.990
+					<span>$</span>133.990
 				</p>
 			</div>
 

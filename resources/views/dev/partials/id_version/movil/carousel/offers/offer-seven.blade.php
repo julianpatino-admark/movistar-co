@@ -1,0 +1,77 @@
+<div class="card-offer_ilimitado">
+    
+    <div class="card-offer_label">
+        @include('dev.partials.components.icons.cards.max-ilimitado-text')
+    </div>
+
+    <div class="card-offer_wrapper">
+
+        <div class="card-offer_header">
+            <p>INTERNET</p>
+            <h2 class="title">
+                190 GB
+                <small>EN ALTA VELOCIDAD</small>
+            </h2>
+
+            <h3 class="price-number"><b>s/</b><span>289.90</span>/mes</h3>
+        </div>
+
+        <div class="card-offer_body">
+
+            <div class="card-offer_body-speed">
+                <span class="speed-text">TODO ILIMITADO</span>
+                Redes Sociales, Llamadas y Mensajes
+            </div>
+
+            <ul class="card-offer_body-list">
+                <li>
+                    <h4>
+                        Internet con <b>Full<span class="text-red">Claro</span></b>
+                    </h4>
+                    <p>285GB</p>
+                </li>
+                <li>
+                    <h4>Paramount+</h4>
+                    <p>
+                        <b><span>en</span> <span class="text-red">Claro</span>Video</b>
+                        <span>x24 meses</span>
+                    </p>
+                </li>
+                <li>
+                    <h4>Cobertura<br> Descarga Ilimitada</h4>
+                    <p>
+                        <span>
+                            Latinoamérica y <br>
+                            Zona Andina
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <h4>
+                        Redes Sociales<br>
+                        Ilimitadas
+                    </h4>
+                    <p>
+                        @include('dev.partials.components.icons.cards.rrss')
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="card-offer_footer">
+            <button
+                class="btn-flex btn-accent"
+                data-c2c="offer-two-1-play"
+                data-show-element="#modal-header-phone"
+                data-conversion-event="c2c_offer_two_1_play"
+                data-toggle="modal"
+                data-target="#modal-c2c"
+            >
+                LO QUIERO
+            </button>
+        </div>
+    </div>
+    
+
+</div>

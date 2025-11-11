@@ -1,0 +1,61 @@
+@php
+    $path = request()->path();
+@endphp
+
+<div class="carousel-wrapper">
+	<div id="offersMovilMaxCarousel" class="splide movil position-relative container" aria-labelledby="carousel-heading">
+		<div class="carousel_title-movil">
+            @include('dev.partials.components.icons.phone-check')
+            <div>
+                <h2 class="title-section">¡Todo ilimitado es un buen plan!</h2>
+                <h3 class="subtitle-section">Adquiere nuestros planes Max y Max Ilimitado para disfrutar del mejor internet en tu celular.</h3>
+            </div>
+        </div>
+
+		<nav class="carrousel-nav">
+			<ul>
+				<li class="nav-item @if($path == '/')active @endif">
+					<a class="nav-link" href="/?{{request()->getQueryString()}}">
+						Max Ilimitado
+					</a>
+				</li>
+				<li class="nav-item @if($path == 'max')active @endif">
+					<a class="nav-link" href="{{secure_url('max').'?'.request()->getQueryString()}}">
+						Max
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="splide__track">
+			<div class="splide__list">
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers-max.offer-one')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers-max.offer-two')
+				</div>
+				<div class="splide__slide">
+					<!-- card --->
+					@include('dev.partials.id_version.movil.carousel.offers-max.offer-three')
+				</div>
+			</div>
+		</div>
+
+		<ul class="splide__pagination"></ul>
+
+		<div class="splide__arrows">
+			<button class="splide__arrow splide__arrow--prev carousel-control-btn">
+				@include("dev.partials.components.icons.cards.arrow-carousel-left")
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="splide__arrow splide__arrow--next carousel-control-btn">
+				@include("dev.partials.components.icons.cards.arrow-carousel-right")
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+</div>
+

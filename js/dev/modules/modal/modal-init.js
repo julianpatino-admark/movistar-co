@@ -1,5 +1,6 @@
 import "bootstrap/js/dist/modal.js";
 
+/*
 let idleTime = 0;
 let idleInterval;
 const $retencionModal = document.getElementById("modal-retencion");
@@ -11,12 +12,14 @@ function timerIncrement() {
     clearInterval(idleInterval);
   }
 }
+  */
 
 (function () {
   $(".modal").each(function () {
     $(this).modal();
   });
 
+  /*
   document.querySelectorAll(".modal").forEach((el) => {
     if (el.id !== "modal-retencion") $(el).modal();
   });
@@ -37,4 +40,5 @@ function timerIncrement() {
       $retencionForm.dataset.layerPage = "/c2c/retencion/conversion";
     });
   }
+    */
 })(jQuery);

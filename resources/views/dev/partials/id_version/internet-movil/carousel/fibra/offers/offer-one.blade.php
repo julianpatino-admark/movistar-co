@@ -9,10 +9,6 @@
 				<i>Ilimitado</i>
 			</h3>
 		</div>
-		<div class="card-offer_discount">
-			<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
-			<p class="months"><b>Sin Fin</b> a máxima velocidad</p>
-		</div>
 		<div class="card-offer_body">
 			<div class="card-offer_price">
 				<p class="card-offer_price-number">
