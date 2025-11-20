@@ -1,3 +1,94 @@
+@php
+    // 1. Importamos la clase (es necesario el namespace completo)
+    use App\DTOs\OfferData;
+	use App\DTOs\ServiceData;
+
+    // 2. Creamos la colección de objetos DIRECTAMENTE aquí
+    $offers = collect([
+        new OfferData(
+			speed: 900,
+			price: 131990,
+			discount: 20,
+			title: 'Internet + Fijo + TV',
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'img/common/icono-television.webp',
+					text: '<b>Movistar TV</b> Desde 90 canales HD',
+					width: 29,
+					height: 22
+				)
+			]
+		),
+        new OfferData(
+			speed: 900,
+			price: 142990,
+			discount: 20,
+			title: 'Internet + Fijo + TV',
+			isRecommended: true,
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'img/common/icono-television.webp',
+					text: '<b>Movistar TV</b> Desde 90 canales HD',
+					width: 29,
+					height: 22
+				),
+                // Servicio 2: Disney+
+                new ServiceData(
+                    icon: 'img/common/logo-disney-plus.webp',
+                    text: '<b>¡Disney+</b> incluido en tu plan!',
+                    width: 26,
+                    height: 26
+                ),
+			]
+		),
+		new OfferData(
+			speed: 900,
+			price: 146990,
+			discount: 20,
+			title: 'Internet + Fijo + TV',
+			isRecommended: true,
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'img/common/icono-television.webp',
+					text: '<b>Movistar TV</b> Desde 90 canales HD',
+					width: 29,
+					height: 22
+				),
+                new ServiceData(
+					icon: 'img/common/logo-win-sport.webp',
+					text: '<b>¡incluido en tu plan!</b>',
+					width: 56,
+					height: 22
+				)
+			]
+		),
+		new OfferData(
+			speed: 900,
+			price: 158990,
+			discount: 20,
+			title: 'Internet + Fijo + TV',
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'img/common/icono-television.webp',
+					text: '<b>Movistar TV</b> Desde 90 canales HD',
+					width: 29,
+					height: 22
+				),
+                new ServiceData(
+					icon: 'img/common/logo-netflix.webp',
+					text: '<b>¡incluido en tu plan!</b>',
+					width: 56,
+					height: 22
+				)
+			]
+		),
+    ]);
+@endphp
+
 <div class="carousel-wrapper ">
 	<div class="splide container position-relative" id="offer-carrousel">
 
@@ -13,22 +104,15 @@
 		<div class="splide__track">
 
 			<div class="splide__list">
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-one')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-two')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-three')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.generica.carousel.trio_fibra.offers.offer-four')
-				</div>
+				@foreach ($offers as $offer)
+					<div class="splide__slide">
+						<!-- card --->
+						<x-offer-card
+							:offer="$offer"
+							:offer-number="$loop->iteration"
+						/>
+					</div>
+				@endforeach
 			</div>
 		</div>
 

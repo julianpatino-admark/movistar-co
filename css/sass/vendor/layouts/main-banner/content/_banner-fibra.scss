@@ -17,82 +17,6 @@
         margin: 35px 0 0;
     }
 
-    .promo_disney{
-        flex: 1;
-
-        display: flex;
-        align-items: center;
-
-        &-card{
-            border: 2px solid #fff;
-    
-            border-radius: 25px;
-    
-            overflow: hidden;
-    
-            *{
-                font-family: $font-family-secondary;
-            }
-    
-            h1{
-                display: flex;
-                flex-direction: column;
-    
-                justify-content: center;
-                align-items: center;
-    
-                color: #fff;
-                font-size: 80px;
-                line-height: 70px;
-                font-weight: 700;
-    
-                margin: {
-                    top: 15px;
-                    bottom: 35px
-                };
-    
-                small{
-                    color: #fff;
-                    font-size: 30px;
-                    line-height: 30px;
-                    font-weight: 700;
-                }
-            }
-    
-            .disney_incluido{
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-    
-                background-color: rgba($color: #000000, $alpha: 0.3);
-    
-                padding: 10px 40px 30px 40px;
-    
-                img{
-                    width: 45px;
-                    height: 45px;
-    
-                    margin-right: 10px;
-                }
-    
-                p{
-                    display: flex;
-                    flex-direction: column;
-    
-                    color: #fff;
-                    font-size: 15px;
-                    line-height: 20px;
-    
-                    margin: 0;
-    
-                    b{
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
-
     #{$parent-selector}_cta{
         margin-top: 23px;
     }
@@ -111,9 +35,6 @@
     }
 
     @include media-breakpoint-up(lg){
-        .equipo_greicy, #{$parent-selector}_title, #{$parent-selector}_tyc{
-            display: none;
-        }
 
         .container{
             justify-content: flex-end;

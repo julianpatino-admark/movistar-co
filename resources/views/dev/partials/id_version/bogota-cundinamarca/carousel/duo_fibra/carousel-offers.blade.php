@@ -1,3 +1,50 @@
+@php
+    // 1. Importamos la clase (es necesario el namespace completo)
+    use App\DTOs\OfferData;
+	use App\DTOs\ServiceData;
+
+    // 2. Creamos la colección de objetos DIRECTAMENTE aquí
+    $offers = collect([
+        new OfferData(
+			speed: 900,
+			price: 102990,
+			discount: 20,
+			title: 'Internet + Movistar Tv App',
+			services: [
+				new ServiceData(
+					icon: 'img/common/logo-movistar-play.webp',
+					text: '<b>Movistar Tv App</b><br> 74 canales en vivo',
+					width: 28,
+					height: 28
+				)
+			]
+		),
+        new OfferData(
+			speed: 900,
+			price: 113990,
+			discount: 20,
+			title: 'Internet + Movistar Tv App',
+			isRecommended: true,
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'img/common/logo-movistar-play.webp',
+					text: '<b>Movistar Tv App</b><br> 74 canales en vivo',
+					width: 28,
+					height: 28
+				),
+                // Servicio 2: Disney+
+                new ServiceData(
+                    icon: 'img/common/logo-disney-plus.webp',
+                    text: '<b>¡Disney+</b> incluido en tu plan!',
+                    width: 26,
+                    height: 26
+                ),
+			]
+		),
+    ]);
+@endphp
+
 <div class="carousel-wrapper">
 	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 
@@ -13,14 +60,15 @@
 		<div class="splide__track">
 
 			<div class="splide__list">
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.bogota-cundinamarca.carousel.duo_fibra.offers.offer-one')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.bogota-cundinamarca.carousel.duo_fibra.offers.offer-three')
-				</div>
+				@foreach ($offers as $offer)
+					<div class="splide__slide">
+						<!-- card --->
+						<x-offer-card
+							:offer="$offer"
+							:offer-number="$loop->iteration"
+						/>
+					</div>
+				@endforeach
 			</div>
 		</div>
 

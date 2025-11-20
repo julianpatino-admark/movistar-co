@@ -5,7 +5,7 @@
       flex-direction: column;
 
       .modal-body{
-        padding: 20px 35px;
+        padding: 40px 35px;
   
         .modal-retencion{
           &_title{
@@ -73,7 +73,7 @@
         justify-content: center;
         border-radius: 0;
         background: url('/img/modales/retencion/modal-retencion-lg.webp') no-repeat center, #009cf3;
-        background-size: 360px;
+        background-size: contain;
   
         .close{
           color: white;
@@ -92,13 +92,12 @@
 
       .modal-content .modal-footer{
         height: 330px;
-        background-size: 470px;
       }
     }
   
     @include media-breakpoint-up(md){
       .modal-dialog{
-        max-width: 845px;
+        max-width: 775px;
       }
   
       .modal-content{
@@ -112,7 +111,7 @@
   
         .modal-footer{
           height: inherit;
-          width: 470px;
+          width: 410px;
 
           align-content: flex-end;
           border-radius: 15px 0 0 15px;

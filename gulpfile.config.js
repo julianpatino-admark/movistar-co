@@ -12,7 +12,7 @@ var constants = {
   },
 
   default: {
-    host: 'https://movistarco.test/',
+    host: 'https://movistar.localhost/',
     versionLanding: "generica",
   },
 };

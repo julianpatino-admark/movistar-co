@@ -14,7 +14,11 @@
     }
 
     &.sld-1{
-        @include promo-fibra($self-selector)   
+        @include promo-fibra($self-selector);
+        
+        .container{
+            height: 444px;
+        }
     }
 
     &.sld-2{
