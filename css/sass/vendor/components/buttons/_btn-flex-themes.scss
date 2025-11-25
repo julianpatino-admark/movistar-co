@@ -7,8 +7,6 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        -webkit-text-stroke: 0.2px white;
-        text-stroke: 0.2px white;
         color: $btn-accent-bg-hover;
         background: transparent;
     }
@@ -27,9 +25,8 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        color: $btn-accent-b-color;
+        color: $btn-accent-b-active-color;
         background: transparent;
-        -webkit-text-stroke: 0.2px #fff;
     }
 }
 
@@ -44,9 +41,8 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-        color: $btn-accent-c-active-color;
+        color: $btn-accent-c-hover;
         background: $btn-accent-c-active-bg;
-        -webkit-text-stroke: 0.2px #fff;
     }
 }
 

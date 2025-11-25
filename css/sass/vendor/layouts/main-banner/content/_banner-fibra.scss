@@ -1,32 +1,4 @@
 @mixin promo-fibra($parent-selector) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #{$parent-selector}_title{
-        flex: 1;
-
-        color: $white;
-        font-size: 12px;
-        font-weight: 400;
-        font-family: $font-family-primary;
-
-        padding: 0;
-        margin: 35px 0 0;
-    }
-
-    #{$parent-selector}_cta{
-        margin-top: 23px;
-    }
-
-    #{$parent-selector}_tyc{
-        color: $white;
-        text-align: center;
-        font-size: 10px;
-        margin: 40px 0 40px 0;
-    }
 
     background: map_get($mb-fibra-sld-1, xs);
 
@@ -35,14 +7,6 @@
     }
 
     @include media-breakpoint-up(lg){
-
-        .container{
-            justify-content: flex-end;
-        }
-
-        #{$parent-selector}_cta{            
-            margin: 0 15px 50px 0;
-        }
 
         background: map_get($mb-fibra-sld-1, lg);
     }

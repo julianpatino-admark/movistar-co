@@ -9,12 +9,11 @@ $btn-accent-b-bg:$color-blue-90;
 $btn-accent-b-hover:$color-brand-alt-dark;
 $btn-accent-b-color: $white;
 $btn-accent-b-active-bg: $color-brand-highlight;
-$btn-accent-b-active-color: #fff;
+$btn-accent-b-active-color: $color-brand-alt-dark;
 
 //btn-accent-c
-$btn-accent-c-bg:$color-green-27b825;
-$btn-accent-c-hover:$color-brand-alt-dark;
-$btn-accent-c-color: $color-blue-80;
-$btn-accent-c-active-color: $color-green-27b825;
-$btn-accent-c-active-bg: #fff;
-$btn-accent-c-active-color: $color-green-27b825;
+$btn-accent-c-bg:$color-orange-10;
+$btn-accent-c-hover: #fff;
+$btn-accent-c-color: #fff;
+$btn-accent-c-active-bg: lighten($color-orange-10, 15%);
+$btn-accent-c-active-color: $color-brand-alt-dark;

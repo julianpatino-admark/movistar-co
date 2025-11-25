@@ -1,19 +1,16 @@
 <div class="main-banner sld-2">
     <div class="container">
-        <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
-
         <div class="main-banner_cta">
             <button
-                data-c2c="OFERTA HOGAR"
+                data-c2c="OFERTA MOVISTAR TOTAL WIN"
                 data-toggle="modal"
                 data-target="#modal-c2c"
                 data-test-id= "calcula-banner-btn"
                 data-tag-page="/modal/oferta-main-banner/c2c"
-                class="btn-flex btn-accent-b shadow-lg"
+                class="btn-flex btn-accent-c shadow-lg"
             >
                 LO QUIERO
             </button>
-            <div class="main-banner_tyc d-block d-lg-none">* Aplican términos y condiciones.</div>
         </div>
     </div>
 </div>

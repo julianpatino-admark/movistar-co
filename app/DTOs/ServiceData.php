@@ -2,7 +2,7 @@
 
 namespace App\DTOs;
 
-readonly class ServiceData
+class ServiceData
 {
     public function __construct(
         public string $icon,

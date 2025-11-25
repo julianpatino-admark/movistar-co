@@ -1,7 +1,5 @@
 <div class="main-banner sld-3">
     <div class="container">
-        <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
-
         <div class="main-banner_cta">
             <button
                 data-c2c="OFERTA MOVIL"
@@ -9,11 +7,10 @@
                 data-target="#modal-c2c"
                 data-test-id= "calcula-banner-btn"
                 data-tag-page="/modal/oferta-main-banner/c2c"
-                class="btn-flex btn-accent-b shadow-lg"
+                class="btn-flex btn-accent-c shadow-lg"
             >
                 LO QUIERO
             </button>
         </div>
-        <div class="main-banner_tyc d-none d-flex-lg">* Aplican términos y condiciones.</div>
     </div>
 </div>

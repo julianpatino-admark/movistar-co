@@ -1,102 +1,15 @@
 @mixin movil-content($parent-selector) {
     background: map_get($mb-bg-movil, xs);
 
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #{$parent-selector}_title{
-        flex: 1;
-
-        color: $color-blue-90;
-        font-size: 12px;
-        font-weight: 400;
-        font-family: $font-family-primary;
-
-        padding: 0;
-        margin: 35px 0 0;
-    }
-
-    #{$parent-selector}_subtitle{
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        color: $color-blue-90;
-        font-size: 58px;
-        line-height: 48px;
-        font-style: italic;
-        font-family: $font-family-primary;
-
-        margin: 0;
-
-        small{
-            color: $color-blue-90;
-            font-size: 15px;
-            line-height: 15px;
-            font-weight: 400;
-            font-style: normal;
-
-            margin: 0 35px 0 0;
-        }
-    }
-
-    .fibra{
-        align-self: flex-end;
-        margin-right: 80px;
-    }
-
-    .beneficios{
-        margin: 15px 0 32px 0;
-    }
-
-    #{$parent-selector}_cta{
-        margin-bottom: 90px;
-    }
-
     @include media-breakpoint-up(sm) {
         background: map_get($mb-bg-movil, sm);
-
-        .fibra{
-            align-self: inherit;
-            margin-right: 0;
-        }
     }
 
     @include media-breakpoint-up(lg) {
         background: map_get($mb-bg-movil, lg);
-
-        .container{
-            justify-content: space-between;
-        }
-
-        #{$parent-selector}_title{
-            flex: none;
-
-            margin: 15px 0 10px 0;
-        }
-
-        #{$parent-selector}_cta{
-            margin: 0;
-        }
     }
 
     @include media-breakpoint-up(xl) {
         background: map_get($mb-bg-movil, xl);
-
-        #{$parent-selector}_subtitle{
-            font-size: 80px;
-            line-height: 70px;
-    
-            small{
-                font-size: 20px;
-                line-height: 20px;
-    
-                margin: 0 50px 0 0;
-            }
-        }
     }
 }

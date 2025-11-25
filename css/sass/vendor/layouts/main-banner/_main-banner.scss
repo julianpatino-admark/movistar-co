@@ -7,18 +7,22 @@
     $self-selector: &;
 
     .container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
         width: map_get($mb-width, xs);
         height: map_get($mb-height, xs);
         padding: map_get($mb-padding, xs);
         margin-top: map_get($mb-margin-top, xs);
+
+        #{$self-selector}_cta{
+            margin-bottom: 50px;
+        }
     }
 
     &.sld-1{
         @include promo-fibra($self-selector);
-
-        .container{
-            height: 444px;
-        }
     }
 
     &.sld-2{

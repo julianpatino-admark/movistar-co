@@ -34,7 +34,7 @@
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> través de Movistar Tv App',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
 					width: 42,
 					height: 23
 				)

@@ -1,3 +1,129 @@
+@php
+    // 1. Importamos la clase (es necesario el namespace completo)
+    use App\DTOs\OfferData;
+	use App\DTOs\ServiceData;
+
+    // 2. Creamos la colección de objetos DIRECTAMENTE aquí
+    $offers = collect([
+        new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 129990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+                    icon: 'img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30, 
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23, 
+                    height: 20
+				)
+			]
+		),
+        new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 137990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+                    icon: 'img/common/logo-disney-plus.webp',
+                    text: '<b>¡Disney+</b> incluido en tu plan!',
+                    width: 26,
+                    height: 26
+                ),
+				new ServiceData(
+                    icon: 'img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30, 
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23, 
+                    height: 20
+				)
+			]
+		),
+        new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 133990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+					icon: 'img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
+				),
+				new ServiceData(
+                    icon: 'img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30, 
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23, 
+                    height: 20
+				)
+			]
+		),
+        new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 145990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+                    icon: 'img/common/logo-disney-plus.webp',
+                    text: '<b>¡Disney+</b> incluido en tu plan!',
+                    width: 26,
+                    height: 26
+                ),
+				new ServiceData(
+					icon: 'img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
+				),
+				new ServiceData(
+                    icon: 'img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30, 
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23, 
+                    height: 20
+				)
+			]
+		),
+    ]);
+@endphp
+
 <div class="carousel-wrapper ">
 	<div class="splide container position-relative" id="offer-carrousel">
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
@@ -12,22 +138,15 @@
 		<div class="splide__track">
 
 			<div class="splide__list">
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.internet-movil.carousel.trio_fibra.offers.offer-one')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.internet-movil.carousel.trio_fibra.offers.offer-two')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.internet-movil.carousel.trio_fibra.offers.offer-three')
-				</div>
-				<div class="splide__slide">
-					<!-- card --->
-					@include('dev.partials.id_version.internet-movil.carousel.trio_fibra.offers.offer-four')
-				</div>
+				@foreach ($offers as $offer)
+					<div class="splide__slide">
+						<!-- card --->
+						<x-offer-card
+							:offer="$offer"
+							:offer-number="$loop->iteration"
+						/>
+					</div>
+				@endforeach
 			</div>
 		</div>
 
