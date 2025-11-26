@@ -1,10 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
-
 use Illuminate\Support\Facades\Storage;
+
+use App\Http\Controllers\ApiInsercionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +29,8 @@ Route::get('/pdf/{filename}', function ($filename) {
 
     return response()->file($file);
 
+});
+
+Route::prefix('local')->group(function () {
+    Route::post('/idlead-cobalt', [ApiInsercionController::class, 'obtenerDatosApi'])->middleware('auth:api');
 });

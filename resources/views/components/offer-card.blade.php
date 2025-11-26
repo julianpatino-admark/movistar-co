@@ -97,7 +97,7 @@
 			<div class="card-offer_footer">
 				<button
 					class="btn-flex btn-carousel"
-					data-c2c="FIBRA {{ $offer->speed }} MB COMBO PLUS"
+					data-c2c="FIBRA {{ $offer->speed }} MB COMBO PLUS : {{ $offer->getFormattedDiscountPrice() }}"
 					data-toggle="modal"
 					data-modal-title="{{ $offer->speed }} Mb"
 					data-target="#modal-velocidades"

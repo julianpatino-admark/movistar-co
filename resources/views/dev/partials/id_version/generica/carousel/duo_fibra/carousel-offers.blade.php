@@ -8,9 +8,9 @@
         new OfferData(
 			speed: 900,
 			price: 102990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Movistar Tv App',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-movistar-play.webp',
@@ -23,10 +23,10 @@
         new OfferData(
 			speed: 900,
 			price: 113990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Movistar Tv App',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-movistar-play.webp',

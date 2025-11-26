@@ -8,16 +8,16 @@
         new OfferData(
 			speed: 900,
 			price: 89990,
-			discount: 30,
+			discount: 40,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 		),
         new OfferData(
 			speed: 900,
 			price: 100990,
-			discount: 30,
+			discount: 40,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-disney-plus.webp',
@@ -28,9 +28,9 @@
         new OfferData(
 			speed: 900,
 			price: 102990,
-			discount: 30,
+			discount: 40,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-win-play.webp',

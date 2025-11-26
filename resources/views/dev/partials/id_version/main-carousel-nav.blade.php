@@ -1,3 +1,4 @@
+<!-- 
 <nav class="carousel-ciudades">
     <ul>
         <li class="@if(!str_contains(request()->path(), 'antioquia-eje-cafetero')) active @endif">
@@ -8,6 +9,7 @@
         </li>
     </ul>
 </nav>
+-->
 
 <nav class="carousel-navbar">
     <ul>

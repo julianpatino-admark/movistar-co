@@ -10,7 +10,7 @@
 			price: 131990,
 			discount: 50,
 			title: 'Internet + Fijo + TV',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 2 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -26,7 +26,7 @@
 			discount: 50,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 2 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -49,7 +49,7 @@
 			discount: 50,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 2 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -71,7 +71,7 @@
 			discount: 50,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 2 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',

@@ -1,6 +1,5 @@
 <div class="main-banner sld-1">
     <div class="container">
-        <h1 class="main-banner_title">Planes de internet, telefonía fija y televisión</h1>
         <div class="main-banner_cta">
             <button
                 data-c2c="OFERTA HOGAR"
@@ -13,7 +12,6 @@
                 LO QUIERO
             </button>
         </div>
-        <div class="main-banner_tyc">* Aplican términos y condiciones.</div>
     </div>
 </div>
 

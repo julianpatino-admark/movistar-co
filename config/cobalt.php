@@ -44,7 +44,6 @@ return [
         'keys' => [
             'c2c',
             'servicios',
-            'precio'
         ]
     ],
 
