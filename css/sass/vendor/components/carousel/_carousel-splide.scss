@@ -1,6 +1,10 @@
 .splide{
     display: flex;
     flex-direction: column;
+
+    .splide__list{
+        outline: 2px dashed blue;
+    }
 }
 
 #offer-carrousel, #offert-carrousel-fibra{
@@ -46,6 +50,8 @@
     @include media-breakpoint-up(lg){
         .splide__list{
             justify-content: center;
+
+            outline: 2px dashed blue;
         }
     }
 

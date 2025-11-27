@@ -17,13 +17,13 @@
 			</p>
 			<p class="telefonos">
 				Pronto te llamaremos desde los siguientes números
-				<span>3102734969 / 3142698434</span>
+				<span>3009162234 / 3009176610</span>
 				Estate atento
 			</p>
 			<div>
 				<a
-						href="/?{{request()->getQueryString()}}"
-						class="btn-flex btn-accent-b"
+					href="/?{{request()->getQueryString()}}"
+					class="btn-flex btn-accent-b"
 				>
 					Volver al home
 				</a>

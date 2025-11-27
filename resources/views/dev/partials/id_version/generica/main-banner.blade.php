@@ -12,7 +12,7 @@
                 @include('dev.partials.id_version.generica.main-banner.sld-2')
             </div>
         </div>
-    </div>
 
-    <ul class="splide__pagination"></ul>
+        <ul class="splide__pagination"></ul>
+    </div>
 </div>

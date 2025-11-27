@@ -36,10 +36,14 @@
 }
 
 #carouselBanner {
+    position: relative;
 
     .splide__pagination{
+        position: absolute;
+
+        width: 100%;
+
         margin: 0;
-        bottom: 30px;
+        bottom: 15px;
     }
-    
 }

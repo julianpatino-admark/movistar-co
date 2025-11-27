@@ -6,6 +6,8 @@
 .main-banner{
     $self-selector: &;
 
+    margin: 10px 0 0 0;
+
     .container{
         display: flex;
         justify-content: center;
@@ -14,7 +16,6 @@
         width: map_get($mb-width, xs);
         height: map_get($mb-height, xs);
         padding: map_get($mb-padding, xs);
-        margin-top: map_get($mb-margin-top, xs);
 
         #{$self-selector}_cta{
             margin-bottom: 50px;
@@ -42,15 +43,15 @@
             width: map_get($mb-width, sm);
             height: map_get($mb-height, sm);
             padding: map_get($mb-padding, sm);
-            margin-top: map_get($mb-margin-top, sm);
         }
     }
     
     @include media-breakpoint-up(lg) {
+        margin: 60px 0 0 0;
+
         .container{
             height: map_get($mb-height, lg);    
             padding: map_get($mb-padding, lg);
-            margin-top: map_get($mb-margin-top, lg);
         }
     }
     
@@ -60,5 +61,4 @@
             padding: map_get($mb-padding, xl);
         }
     }
-    
 }

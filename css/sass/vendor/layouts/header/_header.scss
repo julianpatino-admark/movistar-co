@@ -1,7 +1,8 @@
 .header {
     display: block;
-    position: fixed;
+    position: sticky;
     top: 30px;
+
     width: 100%;
     background: $header-bg-color;
     z-index: 3;
@@ -44,12 +45,10 @@
         align-items: center;
         margin: 2px;
     }
-
-    @include media-breakpoint-up(md) {
-        top: 50px;
-    }
     
     @include media-breakpoint-up(lg) {
+        top: 55px;
+
         &-right{
             flex: none;
 
@@ -66,4 +65,3 @@
         }
     }
 }
-
