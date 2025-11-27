@@ -8,9 +8,9 @@
         new OfferData(
 			speed: 900,
 			price: 131990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Fijo + TV',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -23,10 +23,10 @@
         new OfferData(
 			speed: 900,
 			price: 142990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -46,10 +46,10 @@
 		new OfferData(
 			speed: 900,
 			price: 146990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -68,9 +68,9 @@
 		new OfferData(
 			speed: 900,
 			price: 158990,
-			discount: 20,
+			discount: 40,
 			title: 'Internet + Fijo + TV',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
