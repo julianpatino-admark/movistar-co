@@ -192,7 +192,9 @@
 		<h3 class="subtitle-section text-center mb-3">Escoge un plan para tus necesidades</h3>
 
 		<div class="navbar-container">
-			@include("dev.partials.layouts.navbar.secondary-nav")
+			<nav class="navbar-nav nav-carousel">
+				@include("dev.partials.layouts.navbar.nav-items")
+			</nav>
 		</div>
 
 		<div class="splide__track">

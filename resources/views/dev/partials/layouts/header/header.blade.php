@@ -17,7 +17,9 @@
 	            </span>
 			</a>
 		</div>
-		@include('dev.partials.layouts.navbar.nav')
+		<nav class="navbar-nav">
+			@include("dev.partials.layouts.navbar.nav-items")
+		</nav>
 		<div class="header-right">
 			@if(strlen($phone) >= 9 && $keyword !== 'nonum')
 				<div class="header-phone_wrapper">

@@ -45,7 +45,9 @@
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 
 		<div class="navbar-container">
-			@include("dev.partials.layouts.navbar.secondary-nav")
+			<nav class="navbar-nav nav-carousel">
+				@include("dev.partials.layouts.navbar.nav-items")
+			</nav>
 		</div>
 
 		@include('dev.partials.id_version.bogota-cundinamarca.carousel.carousel-navbar')

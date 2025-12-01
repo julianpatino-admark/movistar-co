@@ -8,16 +8,16 @@
         new OfferData(
 			speed: 900,
 			price: 89990,
-			discount: 40,
+			discount: 30,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 		),
         new OfferData(
 			speed: 900,
 			price: 100990,
-			discount: 40,
+			discount: 30,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-disney-plus.webp',
@@ -28,9 +28,9 @@
         new OfferData(
 			speed: 900,
 			price: 102990,
-			discount: 40,
+			discount: 30,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/logo-win-play.webp',
@@ -50,7 +50,9 @@
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 
 		<div class="navbar-container">
-			@include("dev.partials.layouts.navbar.secondary-nav")
+			<nav class="navbar-nav nav-carousel">
+				@include("dev.partials.layouts.navbar.nav-items")
+			</nav>
 		</div>
 
 		@include('dev.partials.id_version.generica.carousel.carousel-navbar')

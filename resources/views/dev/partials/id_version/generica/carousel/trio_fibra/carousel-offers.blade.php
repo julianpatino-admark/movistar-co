@@ -8,9 +8,9 @@
         new OfferData(
 			speed: 900,
 			price: 131990,
-			discount: 40,
+			discount: 20,
 			title: 'Internet + Fijo + TV',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -23,10 +23,10 @@
         new OfferData(
 			speed: 900,
 			price: 142990,
-			discount: 40,
+			discount: 20,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -46,10 +46,10 @@
 		new OfferData(
 			speed: 900,
 			price: 146990,
-			discount: 40,
+			discount: 20,
 			title: 'Internet + Fijo + TV',
 			isRecommended: true,
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -68,9 +68,9 @@
 		new OfferData(
 			speed: 900,
 			price: 158990,
-			discount: 40,
+			discount: 20,
 			title: 'Internet + Fijo + TV',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'img/common/icono-television.webp',
@@ -96,7 +96,9 @@
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 
 		<div class="navbar-container">
-			@include("dev.partials.layouts.navbar.secondary-nav")
+			<nav class="navbar-nav nav-carousel">
+				@include("dev.partials.layouts.navbar.nav-items")
+			</nav>
 		</div>
 
 		@include('dev.partials.id_version.generica.carousel.carousel-navbar')

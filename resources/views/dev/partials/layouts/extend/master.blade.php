@@ -46,7 +46,10 @@
 	@if($top === true)
 		@include("dev.partials.layouts.header.top-header")
 		@include('dev.partials.layouts.header.header')
-		@include('dev.partials.layouts.navbar.mobile-nav')
+		<nav class="navbar-collapse collapse" id="navbarMobileCollapse">
+			@include("dev.partials.layouts.navbar.nav-items")
+		</nav>
+
 	@endif
 	@if($main_c2c === true)
 		@include('dev.partials.layouts.c2c.main', [ "c2c_class" => $main_c2c_class ])
