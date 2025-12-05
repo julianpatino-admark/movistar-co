@@ -1,3 +1,0 @@
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In  --> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.32px" height="18.56px" viewBox="0 0 22.32 18.56" style="enable-background:new 0 0 22.32 18.56;" xml:space="preserve"><style type="text/css">.television-icon_path{fill:#EF3340;}</style><defs></defs><path class="television-icon_path" d="M20.45,0H1.88C0.84,0,0,0.83,0,1.85v12.01c0,1.02,0.84,1.85,1.88,1.85h8.49v1.46H6.5v1.38h9.36v-1.38h-4.11
-	v-1.46h8.7c1.03,0,1.88-0.83,1.88-1.85V1.85C22.32,0.83,21.48,0,20.45,0z M20.94,13.86c0,0.26-0.22,0.47-0.5,0.47H1.88
-	c-0.27,0-0.5-0.21-0.5-0.47V1.85c0-0.26,0.22-0.47,0.5-0.47h18.57c0.27,0,0.5,0.21,0.5,0.47V13.86z"/></svg>

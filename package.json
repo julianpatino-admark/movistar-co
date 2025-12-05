@@ -1,12 +1,13 @@
 {
-    "name": "gulp-landings",
+    "name": "movistar-col",
     "version": "1.0.0",
     "description": "Dependencias gulp landing",
-    "main": "index.js",
+    "main": "generica.js",
+    "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "vite",
         "build": "vite build",
+        "test": "echo \"Error: no test specified\" && exit 1",
         "codeceptjs": "codeceptjs run --steps",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app",
@@ -29,6 +30,7 @@
         "@codeceptjs/examples": "^1.2.3",
         "@codeceptjs/ui": "^1.2.0",
         "@types/node": "^18.19.11",
+        "@vitejs/plugin-basic-ssl": "^2.1.0",
         "babel-loader": "^8.2.3",
         "codeceptjs": "^3.5.11",
         "eslint": "^8.25.0",
@@ -36,15 +38,15 @@
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-prettier": "^4.2.1",
         "gulp-landings": "git+ssh://git@bitbucket.org:grupokonecta/web-npm-gulp-landings.git#3.1.1",
-        "laravel-vite-plugin": "^0.6.0",
+        "laravel-vite-plugin": "^2.0.1",
         "lodash": "^4.17.19",
         "mini-css-extract-plugin": "^2.7.7",
         "playwright": "^1.42.1",
-        "postcss": "^8.1.14",
         "prettier": "^2.7.1",
         "purgecss-webpack-plugin": "^5.0.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.3.3"
+        "typescript": "^5.3.3",
+        "vite": "^7.2.6"
     },
     "author": "Admark B12",
     "license": "ISC"

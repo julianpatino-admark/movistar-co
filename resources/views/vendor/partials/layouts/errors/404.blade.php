@@ -1,1 +1,0 @@
-<div class="main_wrapper text-center error-404"><div class="error-404_wrapper"><img width="453" height="281" src="{{ asset('/img/common/error-404.webp') }}"><div><a href="{{url('/')}}" class="btn-flex btn-accent">Llévame a la home</a></div></div></div>
