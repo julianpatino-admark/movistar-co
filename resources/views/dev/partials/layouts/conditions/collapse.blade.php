@@ -12,13 +12,10 @@
 
 		<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#conditions">
 			<div class="condition-collapse_body">
-				<p><a class="conditions_tyc_link" href="{{ secure_url('public/documents/tyc_online_febrero_1_2024.pdf') }}" target="_blank">Términos y Condiciones ofertas Hogar</a></p>
+				<p>
+					<b>Terminos y Condiciones ofertas Fibra Óptica</b><br>
 
-				<p><b>Términos y condiciones oferta pospago online</b><br>
-					
-					Terminos y Condiciones ofertas Hogar
-
-					Oferta vigente del 1 al 15 de febrero 2024, válida exclusivamente para líneas portadas del segmento individual en el canal Online, no aplica en otros canales comerciales. El primer mes gratis + 50% de descuento en el mes 2 y 3 en el cargo básico aplica únicamente en planes pospago desde $44.990 mes hasta $65.990 mes. El descuento no aplica sobre contratación de servicios adicionales. El beneficio no podrá ser canjeable en dinero ni otros. Si el cliente entra en mora o es suspendido pierde los beneficios de descuento en el cargo fijo mensual. En caso de cambio de plan, el cliente pierde el beneficio del descuento.
+					A los clientes Movistar Total se les obsequiará por un año una licencia gratuita del software de Inteligencia Artificial, en adelante IA, Perplexity Pro. “Perplexity Pro” es un buscador conversacional basado en Inteligencia artificial, es decir, un motor de búsqueda que proporciona respuestas precisas a preguntas más o menos complejas valiéndose de modelos de lenguaje extensos, tomando las fuentes que considera más relevantes y construyendo un discurso con sentido y precisión. Este buscador es prestado por la entidad Perplexity AI, INC. La descripción de todas las funcionalidades que ofrece el servicio Perplexity PRO se encuentran en la página web de Perplexity AI, INC: https://www.perplexity.ai/. El Cliente que desee beneficiarse de esta oferta deberá tener suscrito un contrato de prestación de servicios activo con Movistar para alguno de los siguientes productos: Movistar Total, Movistar Móvil Prepago, Movistar móvil Pospago y/o la adquisición de un producto a través de venta de terminales.
 				</p>
 			</div>
 		</div>

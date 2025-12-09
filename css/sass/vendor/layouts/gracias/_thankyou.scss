@@ -1,8 +1,16 @@
+@mixin bg-thankyou($bp: md) {
+  $bg: map-get($mb-bg-gracias, $bp);
+
+  background-color: map-get($bg, color);
+  background-image: map-get($bg, image);
+  background-position: map-get($bg, position);
+  background-size: map-get($bg, size);
+  background-repeat: map-get($bg, repeat);
+}
+
 .thankyou{
   height: 85vh;
-
-  background: url("img/common/thankyou/gracias@2x.webp") no-repeat center 100px, linear-gradient(270deg, #54cbe3 30%, #22bcd9 70%);
-  background-size: contain;
+  @include bg-thankyou(xs);
 
   .container{
     height: 100%;
@@ -14,18 +22,16 @@
   }
 
   &_content{
-    max-width: 495px;
+    max-width: 520px;
     text-align: center;
 
     h1, h4{
       color: $white;
       font-family: $font-family-primary;
-      font-weight: bold;
+      font-weight: 900;
     }
 
     h1{
-      color: $color-blue-80;
-
       font-size: 40px;
       margin-bottom: 25px;
     }
@@ -33,6 +39,8 @@
     h4{
       font-size: 18px;
       margin: 10px 0;
+
+      font-weight: 700;
     }
 
     p{
@@ -46,6 +54,11 @@
         font-size: 14px;
         line-height: 14px;
         text-align: center;
+
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.50);
+
+        padding: 15px 20px;
 
         b{
           font-weight: 900;
@@ -75,7 +88,7 @@
   
   @include media-breakpoint-up(sm) {
     height: 85vh;
-    background-position: center 100px;
+    @include bg-thankyou(sm);
 
     &_content {
       padding: 0 15px;
@@ -95,8 +108,7 @@
   }
   
   @include media-breakpoint-up(md) {
-    background-position: center 135px;
-    background-size: 1375px;
+    @include bg-thankyou(md);
 
     .container{
       justify-content: flex-end;
@@ -105,26 +117,29 @@
     }
 
     &_content{
+      padding: 0;
+
       h4{
-        font-size: 32px;
-        margin: 24px 0;
+        font-size: 22px;
+        margin:  0;
       }
 
       p{
         margin-bottom: 10px;
+        font-size: 20px;
 
         &.horario{
-          font-size: 20px;
-          line-height: 22px;
+          font-size: 18px;
+          line-height: 20px;
         }
 
         &.telefonos{
-          font-size: 20px;
+          font-size: 18px;
 
           margin: 45px 0 35px 0;
 
           span{
-            font-size: 24px;
+            font-size: 20px;
           }
         }
       }
@@ -132,8 +147,5 @@
   }
   
   @include media-breakpoint-up(xl) {
-    background-position: center 135px;
-    background-size: 1700px;
   }
-
-}  
+}
