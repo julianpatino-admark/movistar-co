@@ -45,12 +45,22 @@
     @endif
     <div>
         <input
-            type="text"
+            type="number"
             name="phone"
             class="form-control"
             placeholder="* Número de Celular"
             data-rule-phone="col"
             data-test-id="input-c2c-phone"
+            required
+        >
+    </div>
+    <div>
+        <input
+            type="text" 
+            name="name"
+            class="form-control"
+            placeholder="* Nombres y Apellidos"
+            data-test-id="input-c2c-name"
             required
         >
     </div>
