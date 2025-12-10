@@ -7,6 +7,7 @@
 @section('metadata')
 	<title>{{config('app.name')}} - Error 404. Página no encontrada</title>
 	<!-- inject-style src="../../css/purged/generica.css" -->
+    @vite(['resources/sass/internet-movil.scss'])
 @stop
 
 @section('content')

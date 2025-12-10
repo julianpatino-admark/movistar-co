@@ -11,6 +11,7 @@
 	<title>Movistar Co | Planes de internet y telefonía para el hogar</title>
 	<!-- inject-style src="../../css/splide-core.min.css" -->
 	<!-- inject-style src="../../css/purged/generica.css" -->
+	@vite(['resources/sass/generica.scss', 'resources/js/generica.js'])
 @stop
 
 @section('content')

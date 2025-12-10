@@ -6,6 +6,7 @@
 	<title>Movistar Co | Planes pospago móvil con llamadas ilimitadas</title>
 	<!-- inject-style src="../../css/splide-core.min.css" -->
 	<!-- inject-style src="../../css/movil.css" -->
+	@vite(['resources/sass/movil.scss', 'resources/js/generica.js'])
 @stop
 
 @section('content')

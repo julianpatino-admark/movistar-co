@@ -10,6 +10,7 @@
 @section('metadata')
 	<title>Movistar Co | Gracias por tu registro</title>
 	<!-- inject-style src="../../css/purged/generica.css" -->
+    @vite(['resources/sass/generica.scss'])
 
 	<link rel="shortcut icon" type="image/svg" href="{{ asset('/img/common/favicon.svg') }}">
 @stop

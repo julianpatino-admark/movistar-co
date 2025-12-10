@@ -33,8 +33,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="canonical" href="<?php echo e(url()->current()); ?>/" />
-	
-	<?php echo app('Illuminate\Foundation\Vite')(['resources/sass/generica.scss', 'resources/js/generica.js']); ?>
 <?php $__env->startSection('metadata'); ?>
 	<?php echo $__env->yieldSection(); ?>
 </head>

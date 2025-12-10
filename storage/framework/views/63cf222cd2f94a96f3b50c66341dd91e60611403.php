@@ -1,8 +1,8 @@
-<div class="main-banner sld-1">
+<div class="main-banner sld-3">
     <div class="container">
         <div class="main-banner_cta">
             <button
-                data-c2c="OFERTA HOGAR DISNEY"
+                data-c2c="OFERTA MOVIL"
                 data-toggle="modal"
                 data-target="#modal-c2c"
                 data-test-id= "calcula-banner-btn"
@@ -13,6 +13,4 @@
             </button>
         </div>
     </div>
-</div>
-
-<?php /**PATH /home/konecta/htdocs/movistar/resources/views/dev/partials/id_version/generica/main-banner/sld-1.blade.php ENDPATH**/ ?>
+</div><?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/id_version/generica/main-banner/sld-3.blade.php ENDPATH**/ ?>

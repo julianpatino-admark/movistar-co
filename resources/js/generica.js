@@ -40,7 +40,7 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Slide
  */
-import "./modules/carousel/index";
+import { initCarousels } from "./modules/carousel/index";
 
 /**
  * INIT
@@ -52,3 +52,8 @@ ToggleEnabled.init();
 ModalShow.init();
 
 NavClose.init();
+initCarousels();
+
+import.meta.glob([
+  '../img/**', 
+]);

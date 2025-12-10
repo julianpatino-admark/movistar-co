@@ -17,7 +17,7 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
@@ -45,7 +45,7 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
@@ -71,7 +71,7 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
@@ -97,13 +97,13 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
 				),
                 new ServiceData(
-                    icon: 'img/movil/movistar-icon.webp',
+                    icon: 'resources/img/movil/movistar-icon.webp',
                     text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
                     width: 23, 
                     height: 25
@@ -130,13 +130,13 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
 				),
                 new ServiceData(
-                    icon: 'img/movil/movistar-icon.webp',
+                    icon: 'resources/img/movil/movistar-icon.webp',
                     text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
                     width: 23, 
                     height: 25
@@ -162,13 +162,13 @@
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'img/movil/movil-icon.webp',
+                    icon: 'resources/img/movil/movil-icon.webp',
                     text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
                     width: 12, 
                     height: 23
 				),
                 new ServiceData(
-                    icon: 'img/movil/movistar-icon.webp',
+                    icon: 'resources/img/movil/movistar-icon.webp',
                     text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
                     width: 23, 
                     height: 25

@@ -33,8 +33,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="canonical" href="{{url()->current()}}/" />
-	
-	@vite(['resources/sass/generica.scss', 'resources/js/generica.js'])
 @section('metadata')
 	@show
 </head>

@@ -11,10 +11,11 @@
 	<title>Movistar Co | Planes de internet y telefonía para el hogar</title>
 	<!-- inject-style src="../../css/splide-core.min.css" -->
 	<!-- inject-style src="../../css/internet-movil.css" -->
+	@vite(['resources/sass/internet-movil.scss', 'resources/js/generica.js'])
 @stop
 
 @section('content')
-	@include('partials.id_version.generica.main-banner.sld-1')
+	@include('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 1 ])
 	@include('partials.id_version.internet-movil.carousel.trio_fibra.carousel-offers')
 	@include('partials.layouts.banners.banner-simple')
 	@include('partials.id_version.generica.list.list-services')

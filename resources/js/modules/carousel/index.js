@@ -1,114 +1,115 @@
 import Splide from "@splidejs/splide";
 
-const $BannerCarrousel = document.getElementById("carouselBanner");
-if ($BannerCarrousel) {
-  const { startOn=0 } = $BannerCarrousel.dataset;
-  const BannerSplide = new Splide($BannerCarrousel, {
-    type: "loop",
-    perPage: 1,
-    arrows: false,
-    start: parseInt(startOn)
-  });
-
-  BannerSplide.mount();
-}
-
-const $OfferCarrouselFibra = document.getElementById("offert-carrousel-fibra");
-if ($OfferCarrouselFibra) {
-  new Splide($OfferCarrouselFibra, {
-    perPage: 1,
-    autoWidth: true,
-    arrows: false,
-    rewind: true,
-    mediaQuery: "min",
-    breakpoints: {
-      768: {
-        perPage: 2,
-        arrows: true,
+export const initCarousels = () => {
+  const $BannerCarrousel = document.getElementById("carouselBanner");
+  if ($BannerCarrousel) {
+    const { startOn=0 } = $BannerCarrousel.dataset;
+    const BannerSplide = new Splide($BannerCarrousel, {
+      type: "loop",
+      perPage: 1,
+      arrows: false,
+      start: parseInt(startOn)
+    });
+    BannerSplide.mount();
+  }
+  
+  const $OfferCarrouselFibra = document.getElementById("offert-carrousel-fibra");
+  if ($OfferCarrouselFibra) {
+    new Splide($OfferCarrouselFibra, {
+      perPage: 1,
+      autoWidth: true,
+      arrows: false,
+      rewind: true,
+      mediaQuery: "min",
+      breakpoints: {
+        768: {
+          perPage: 2,
+          arrows: true,
+        },
+        1200: {
+          perPage: 3,
+          arrows: false,
+        }
       },
-      1200: {
-        perPage: 3,
-        arrows: false,
-      }
-    },
-  }).mount();
-}
-
-const $OfferCarrousel = document.getElementById("offer-carrousel");
-if ($OfferCarrousel) {
-  new Splide($OfferCarrousel, {
-    perPage: 1,
-    autoWidth: false,
-    arrows: false,
-    rewind: true,
-    mediaQuery: "min",
-    breakpoints: {
-      768: {
-        perPage: 2,
+    }).mount();
+  }
+  
+  const $OfferCarrousel = document.getElementById("offer-carrousel");
+  if ($OfferCarrousel) {
+    new Splide($OfferCarrousel, {
+      perPage: 1,
+      autoWidth: false,
+      arrows: false,
+      rewind: true,
+      mediaQuery: "min",
+      breakpoints: {
+        768: {
+          perPage: 2,
+        },
+        1201: {
+          perPage: 3,
+        },
+        1401: {
+          perPage: 4,
+        },
       },
-      1201: {
-        perPage: 3,
+    }).mount();
+  }
+  
+  const $ElegiApps = document.getElementById("elegiApps");
+  if ($ElegiApps) {
+    const ElegiApps = new Splide($ElegiApps, {
+      type: "slide",
+      arrows: false,
+      pagination: true,
+      perPage: 1,
+      mediaQuery: "min",
+      breakpoints: {
+        768: {
+          autoWidth: true,
+          pagination: false,
+          perPage: 3,
+        },
       },
-      1401: {
-        perPage: 4,
+    });
+    ElegiApps.mount();
+  }
+  
+  const $ServicesCarrousel = document.getElementById("servicesCarousel");
+  if ($ServicesCarrousel) {
+    const ServiceSplide = new Splide($ServicesCarrousel, {
+      type: "slide",
+      arrows: false,
+      pagination: true,
+      perPage: 1,
+      mediaQuery: "min",
+      breakpoints: {
+        768: {
+          autoWidth: true,
+          pagination: false,
+          perPage: 2,
+        },
       },
-    },
-  }).mount();
-}
-
-const $ElegiApps = document.getElementById("elegiApps");
-if ($ElegiApps) {
-  const ElegiApps = new Splide($ElegiApps, {
-    type: "slide",
-    arrows: false,
-    pagination: true,
-    perPage: 1,
-    mediaQuery: "min",
-    breakpoints: {
-      768: {
-        autoWidth: true,
-        pagination: false,
-        perPage: 3,
+    });
+    ServiceSplide.mount();
+  }
+  
+  const $OfferCarrouselBogota = document.getElementById("offert-carrousel-bogota-fibra");
+  if ($OfferCarrouselBogota) {
+    const CarrouselBogotaSplide = new Splide($OfferCarrouselBogota, {
+      type: "slide",
+      arrows: false,
+      pagination: true,
+      perPage: 1,
+      mediaQuery: "min",
+      breakpoints: {
+        768: {
+          autoWidth: true,
+          pagination: false,
+          perPage: 2,
+        },
       },
-    },
-  });
-  ElegiApps.mount();
-}
-
-const $ServicesCarrousel = document.getElementById("servicesCarousel");
-if ($ServicesCarrousel) {
-  const ServiceSplide = new Splide($ServicesCarrousel, {
-    type: "slide",
-    arrows: false,
-    pagination: true,
-    perPage: 1,
-    mediaQuery: "min",
-    breakpoints: {
-      768: {
-        autoWidth: true,
-        pagination: false,
-        perPage: 2,
-      },
-    },
-  });
-  ServiceSplide.mount();
-}
-
-const $OfferCarrouselBogota = document.getElementById("offert-carrousel-bogota-fibra");
-if ($OfferCarrouselBogota) {
-  const CarrouselBogotaSplide = new Splide($OfferCarrouselBogota, {
-    type: "slide",
-    arrows: false,
-    pagination: true,
-    perPage: 1,
-    mediaQuery: "min",
-    breakpoints: {
-      768: {
-        autoWidth: true,
-        pagination: false,
-        perPage: 2,
-      },
-    },
-  });
-  CarrouselBogotaSplide.mount();
+    });
+    CarrouselBogotaSplide.mount();
+  }
 }
