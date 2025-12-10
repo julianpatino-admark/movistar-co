@@ -1,0 +1,1 @@
+<div class="top-header"></div><?php /**PATH /home/konecta/htdocs/movistar/resources/views/dev/partials/layouts/header/top-header.blade.php ENDPATH**/ ?>

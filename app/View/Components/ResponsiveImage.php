@@ -5,6 +5,7 @@ namespace App\View\Components;
 use DOMDocument;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Vite;
 
 class ResponsiveImage extends Component
 {
@@ -52,7 +53,7 @@ class ResponsiveImage extends Component
      */
     public function routeImage() : string
     {
-        return asset("{$this->rootPath}/{$this->name}/{$this->name}-xs.webp");
+        return Vite::asset("{$this->rootPath}/{$this->name}/{$this->name}-xs.webp");
     }
 
     /**
@@ -66,7 +67,7 @@ class ResponsiveImage extends Component
             if($size !== 'xs') {
                 $wnhSizes = explode(";", $this->sizes[$counter]);
 
-                $setStr .= '<source srcset="' . asset("{$this->rootPath}/{$this->name}/{$this->name}-{$size}.webp") . '" media="(min-width: ' . $this->bootstrapBp[$size] . 'px)" width="'. $wnhSizes[0] .'" height="'. $wnhSizes[1] .'"></source>';
+                $setStr .= '<source srcset="' . Vite::asset("{$this->rootPath}/{$this->name}/{$this->name}-{$size}.webp") . '" media="(min-width: ' . $this->bootstrapBp[$size] . 'px)" width="'. $wnhSizes[0] .'" height="'. $wnhSizes[1] .'"></source>';
             }
             $counter++;
         }

@@ -7,7 +7,7 @@ if ($BannerCarrousel) {
     type: "loop",
     perPage: 1,
     arrows: false,
-    start: startOn
+    start: parseInt(startOn)
   });
 
   BannerSplide.mount();

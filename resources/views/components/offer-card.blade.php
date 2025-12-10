@@ -27,7 +27,7 @@
 
 		@if($offer->getBadgeLabel())
 			<div class="card-offer_discount">
-				<img width="13" height="13" src="{{ asset('img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
+				<img width="13" height="13" src="{{ Vite::asset('resources/img/common/icon-descuento.webp') }}" alt="Icono de descuento" />
 				<p class="months">{!! $offer->getBadgeLabel() !!}</p>
 			</div>
 		@endif
@@ -80,7 +80,7 @@
                     <img
 						width="{{ $service->width }}"
 						height="{{ $service->height }}"
-						src="{{ asset($service->icon) }}"
+						src="{{ Vite::asset($service->icon) }}"
 						alt="Logo servicio"
 					>
                     <p>{!! $service->text !!}</p>

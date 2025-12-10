@@ -1,20 +1,6 @@
 "use strict"
 
-/**
- * jQuery Global
- */
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-
-/**
- * Plugins jQuery
- */
-import "bootstrap/js/dist/util.js";
-import "bootstrap/js/dist/collapse.js";
-
-import "jquery-validation";
-import "jquery-validation/dist/localization/messages_es";
+import "./setup";
 
 /**
  * Modales

@@ -1,0 +1,16 @@
+<section class="banner-cobertura">
+	<div class="banner-cobertura_container container">
+		<p class="text-title">¿Llega la Fibra de Movistar a tu casa?</p>
+		<div class="text-cta">
+			<a
+				href="/cobertura?{{request()->getQueryString()}}"
+				class="btn-flex btn-dark font-family-bold"
+			>
+				@include('partials.components.icons.signal')
+				<span>Consulta tu cobertura</span>
+				@include('partials.components.icons.buttons.arrow-right')
+			</a>
+		</div>
+	</div>
+</section>
+

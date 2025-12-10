@@ -1,0 +1,64 @@
+<div class="carousel-wrapper ">
+	<div class="container">
+		<h2 class="title-section text-center mb-2">title</h2>
+		<h3 class="subtitle-section text-center mb-3">subtitle</h3>
+
+		<div id="offersCarousel" class="carousel slide" data-ride="carousel" data-touch="true">
+			<div class="carousel-indicators ">
+				<button data-target="#offersCarousel" aria-label="offer one" data-slide-to="0" class="btn-carousel">
+					OFFER ONE
+					@include('partials.components.icons.triangle-down')
+				</button>
+				<button data-target="#offersCarousel" aria-label="offer two" data-slide-to="1" class="btn-carousel ">
+					OFFER TWO
+					@include('partials.components.icons.triangle-down')
+				</button>
+				<button data-target="#offersCarousel" aria-label="offer three" data-slide-to="2"
+				        class="btn-carousel active">
+					OFFER THREE
+					@include('partials.components.icons.triangle-down')
+				</button>
+				<button data-target="#offersCarousel" aria-label="offer custom" data-slide-to="3" class="btn-carousel">
+					OFFER CUSTOM
+					@include('partials.components.icons.triangle-down')
+				</button>
+			</div>
+
+			<div class="carousel-inner">
+				<div class="carousel-item">
+					<!-- card--->
+					@include('partials.id_version.generica.carousel.offers.offer-one')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('partials.id_version.generica.carousel.offers.offer-two')
+				</div>
+				<div class="carousel-item active">
+					<!-- card --->
+					@include('partials.id_version.generica.carousel.offers.offer-three')
+				</div>
+				<div class="carousel-item">
+					<!-- card --->
+					@include('partials.id_version.generica.carousel.offers.offer-custom')
+				</div>
+			</div>
+
+			<div class="carousel-indicators">
+				<button data-target="#offersCarousel" aria-label="offers carousel 0" data-slide-to="0"
+				        class="carousel-indicators_btn"></button>
+				<button data-target="#offersCarousel" aria-label="offers carousel 1" data-slide-to="1"
+				        class="carousel-indicators_btn"></button>
+				<button data-target="#offersCarousel" aria-label="offers carousel 2" data-slide-to="2"
+				        class="carousel-indicators_btn"></button>
+				<button data-target="#offersCarousel" aria-label="offers carousel 3" data-slide-to="3"
+				        class="carousel-indicators_btn "></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,116 @@
+<form id="{{ $id }}-form"
+      method="post"
+      data-toggle="form-simple"
+      class="form @if(isset($class)){{$class}}@endif"
+      data-layer-page="/c2c/principal/conversion"
+      action="{{url('/api/form/send')}}">
+    {{csrf_field()}}
+    <input type="hidden" name="c2c" value="LLÁMAME GRATIS">
+    <input type="hidden" name="id_version" value="{{$id_version}}">
+    <input type="hidden" name="tsource" value="{{$tsource}}">
+    <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
+
+    <div class="input-group mb-3">
+        <label class="input-group-text statusLoader d-none" for="selectProvince"> <i class="select-loader"></i></label>
+        <select
+                id="selectProvince"
+                name="departamento"
+                class="custom-select form-select"
+                data-toggle="mix-value"
+                data-group="group-cobertura"
+                data-target="#group-cobertura-values"
+                data-parent="#{{ $id }}"
+                data-separator="|"
+                required
+        >
+            <option selected value="" hidden>Departamento</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label class="input-group-text statusLoader d-none" for="selectCity"> <i class="select-loader"></i></label>
+        <select
+                id="selectCity"
+                name="ciudad"
+                class="custom-select form-select"
+                data-toggle="mix-value"
+                data-group="group-cobertura"
+                data-target="#group-cobertura-values"
+                data-parent="#{{ $id }}"
+                data-separator="|"
+                required
+                disabled
+        >
+            <option selected value="" hidden> Ciudad / Municipio </option>
+        </select>
+    </div>
+
+    <div class="form-cobertura_noFound">
+        <input type="checkbox" name="noFound" id="noFound">
+        <label for="noFound">
+            No encuentro mi Ciudad / Municipio
+        </label>
+    </div>
+
+    <p class="form-cobertura_description">
+        <b>Sólo quedan tus datos</b> para confirmar si tienes cobertura
+    </p>
+
+    <div>
+        <input
+            id="userCoberturaCellPhone"
+            type="text"
+            name="phone"
+            class="form-control"
+            placeholder="* Número de Celular"
+            data-rule-phone="col"
+            data-test-id="input-c2c-phone"
+            required
+        >
+    </div>
+
+    <div class="form-simple_tyc">
+        <input type="checkbox" name="legal" id="legal" required>
+        <label for="legal" class="text-xxs">
+            Acepto
+            <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+            >
+                política de privacidad
+            </a>
+            y tratamiento de
+            <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+            >
+                datos personales.
+            </a>
+        </label>
+        <label for="legal" class="error d-block"></label>
+    </div>
+
+    <div class="form-simple_cta">
+        <button
+            id="btn-submit-{{ $id }}-form"
+            class="form-control btn-form bg-degraded"
+            data-c2c="TE LLAMAMOS"
+        >
+            <div class="btn-form_content font-family-bold">
+                @include('partials.components.icons.signal')
+                Comprobar mi cobertura
+            </div>
+            <span class="btn-form_loader">
+                <span class="loader"></span>
+            </span>
+        </button>
+    </div>
+</form>

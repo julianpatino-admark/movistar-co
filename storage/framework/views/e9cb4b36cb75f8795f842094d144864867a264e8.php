@@ -1,0 +1,3 @@
+<p>Para saber más consulta nuestra <a href="#" data-toggle="modal" data-target="#modal-text"
+                                      data-content="<?php echo e(url('/privacy')); ?>" data-modal-title="Política de Privacidad"
+                                      title="Política de privacidad">política de privacidad</a></p><?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/layouts/texts/info-basica-privacidad.blade.php ENDPATH**/ ?>

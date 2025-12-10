@@ -1,1 +1,0 @@
-@extends("dev.partials.id_version.main-carousel-nav")

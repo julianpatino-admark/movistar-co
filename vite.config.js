@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import basicSsl from '@vitejs/plugin-basic-ssl';
+import path from 'path';
 
 const versions = ["generica", "movil", "internet-movil"]
 
@@ -24,7 +25,8 @@ export default defineConfig({
   resolve: {
       alias: {
         '$': 'jQuery',
-        '@': '/resources/js'
+        '@': '/resources/js',
+        '@img': path.resolve(__dirname, 'resources/img'),
       },
   },
   build: {

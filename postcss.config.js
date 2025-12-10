@@ -1,13 +1,15 @@
+import purgecss from '@fullhuman/postcss-purgecss';
+
 export default {
-    plugins: {
-        '@fullhuman/postcss-purgecss': {
+    plugins: [
+        (purgecss.default || purgecss)({
             content: [
                 './resources/views/**/*.blade.php',
                 './resources/js/**/*.js',
             ],
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
             safelist: {
             },
-            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-        }
-    }
+        })
+    ]
 }

@@ -1,0 +1,46 @@
+<?php
+    $keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
+?>
+<div id="footer" class="footer">
+    <div class="footer-content container">
+        <div class="footer_content-logo">
+            <?php echo $__env->make('dev.partials.components.icons.logo.brand-logo', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        </div>
+        <div class="footer_link-container">
+            <ul class="footer_list">
+                <li class="footer-text-privacy">
+                    <a href="#"
+                       data-toggle="modal"
+                       data-target="#modal-content"
+                       data-content="<?php echo e(url('privacy')); ?>"
+                       data-modal-title="Política de privacidad"
+                       data-tag-page="/modal/privacy"
+                       title="Política de privacidad"
+                       aria-label="Política de privacidad">Política de privacidad</a>
+                </li>
+                <li class="separator">|</li>
+                <li class="footer-text-cookies">
+                    <a href="#"
+                       data-toggle="modal"
+                       data-target="#modal-content"
+                       data-content="<?php echo e(url('cookies')); ?>"
+                       data-modal-title="Política de Cookies"
+                       data-tag-page="/modal/cookies"
+                       title="Política de cookies"
+                       aria-label="Política de cookies">Política de cookies</a>
+                </li>
+            </ul>
+            <?php if($keyword !== 'nonum'): ?>
+                <div class="customer-service">
+                    Llámanos al
+                    <a href="tel:<?php echo e($phone); ?>" class="big-number" data-event="phone_footer_click">
+                        <?php echo e($phone_formatted); ?>
+
+                    </a>
+                </div>
+            <?php endif; ?>
+
+        </div>
+    </div>
+</div>
+<?php /**PATH /home/konecta/htdocs/movistar/resources/views/dev/partials/layouts/footer/footer.blade.php ENDPATH**/ ?>

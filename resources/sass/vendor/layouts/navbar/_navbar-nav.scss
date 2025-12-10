@@ -28,19 +28,22 @@
                     &.movistar{
                         width: 17.5px;
                         height: 13px;
-                        background-image: url("img/menu/sprite-iconos-movistar.webp");
+                        // CAMBIO AQUÍ: Usamos el alias @img y quitamos la barra inicial /
+                        background-image: url("@img/menu/sprite-iconos-movistar.webp");
                     }
 
                     &.wifi{
                         width: 17px;
                         height: 13.3px;
-                        background-image: url("img/menu/sprite-iconos-wifi.webp");
+                        // CAMBIO AQUÍ
+                        background-image: url("@img/menu/sprite-iconos-wifi.webp");
                     }
 
                     &.movil{
                         width: 15px;
                         height: 22.3px;
-                        background-image: url("img/menu/sprite-iconos-movil.webp");
+                        // CAMBIO AQUÍ
+                        background-image: url("@img/menu/sprite-iconos-movil.webp");
                     }
                 }
             }
