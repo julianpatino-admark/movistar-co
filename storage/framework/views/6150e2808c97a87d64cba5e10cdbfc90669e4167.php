@@ -33,6 +33,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="canonical" href="<?php echo e(url()->current()); ?>/" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <?php $__env->startSection('metadata'); ?>
 	<?php echo $__env->yieldSection(); ?>
 </head>

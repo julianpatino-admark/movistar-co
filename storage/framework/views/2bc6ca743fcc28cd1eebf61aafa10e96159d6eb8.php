@@ -1,0 +1,2 @@
+
+<?php echo $__env->make("partials.id_version.main-carousel-nav", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/id_version/generica/carousel/carousel-navbar.blade.php ENDPATH**/ ?>

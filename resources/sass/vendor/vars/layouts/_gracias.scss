@@ -1,21 +1,21 @@
 $mb-bg-gracias: (
     xs : (
         color: $color-blue-10,
-        image: url('resources/img/common/thankyou/gracias.webp'),
+        image: url('@img/common/thankyou/gracias.webp'),
         position: -320px top,
         size: 1400px auto,
         repeat: no-repeat,
     ),
     sm : (
         color: $color-blue-10,
-        image: url('resources/img/common/thankyou/gracias@2x.webp'),
+        image: url('@img/common/thankyou/gracias@2x.webp'),
         position: -320px top,
         size: 1400px auto,
         repeat: no-repeat,
     ),
     md : (
         color: $color-blue-10,
-        image: url('resources/img/common/thankyou/gracias@3x.webp'),
+        image: url('@img/common/thankyou/gracias@3x.webp'),
         position: center,
         size: 1400px auto,
         repeat: no-repeat,
