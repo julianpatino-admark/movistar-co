@@ -63,7 +63,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 133990,
+			price: 135990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -92,7 +92,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 145990,
+			price: 147990,
 			isRecommended: true,
 			services: [
 				new ServiceData(

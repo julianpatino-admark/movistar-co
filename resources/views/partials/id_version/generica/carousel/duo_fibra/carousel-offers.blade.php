@@ -7,7 +7,7 @@
     $offers = collect([
         new OfferData(
 			speed: 900,
-			price: 102990,
+			price: 107990,
 			discount: 20,
 			title: 'Internet + Movistar Tv App',
 			priceNote: 'x 12 Meses.',
@@ -22,7 +22,7 @@
 		),
         new OfferData(
 			speed: 900,
-			price: 113990,
+			price: 119990,
 			discount: 20,
 			title: 'Internet + Movistar Tv App',
 			isRecommended: true,

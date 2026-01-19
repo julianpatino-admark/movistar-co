@@ -11,30 +11,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 102990,
-			isRecommended: true,
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
-                    height: 9
-				),
-                new ServiceData(
-                    icon: 'resources/img/common/comparte.webp',
-                    text: '<b>15 GB</b> para compartir',
-                    width: 23, 
-                    height: 20
-				)
-			]
-		),
-        new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
-			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 110990,
+			price: 117990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -63,7 +40,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 110990,
+			price: 117990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -92,7 +69,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 118990,
+			price: 125990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -125,7 +102,7 @@
 @endphp
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offer-carrousel">
+	<div class="splide container position-relative" id="offert-carrousel-fibra">
 
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>

@@ -7,17 +7,10 @@
     $offers = collect([
         new OfferData(
 			speed: 900,
-			price: 89990,
-			discount: 50,
+			price: 107990,
+			discount: 30,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
-		),
-        new OfferData(
-			speed: 900,
-			price: 100990,
-			discount: 50,
-			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-disney-plus.webp',
@@ -27,10 +20,10 @@
 		),
         new OfferData(
 			speed: 900,
-			price: 102990,
-			discount: 50,
+			price: 105990,
+			discount: 30,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
+			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -44,7 +37,7 @@
 ?>
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offert-carrousel-fibra">
+	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>

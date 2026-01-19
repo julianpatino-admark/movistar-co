@@ -117,10 +117,12 @@
             id="btn-submit-<?php echo e($id); ?>-form"
             class="form-control btn-form bg-degraded"
             data-c2c="TE LLAMAMOS"
-            type="submit"
         >
-            <span class="btn-form_content font-family-bold">
+            <div class="btn-form_content font-family-bold">
                 Llámame
+            </div>
+            <span class="btn-form_loader">
+                <span class="loader"></span>
             </span>
         </button>
     </div>

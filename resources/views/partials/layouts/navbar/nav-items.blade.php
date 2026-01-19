@@ -34,10 +34,12 @@
     @foreach ($menuItems as $item)
         @php
             $isActive = request()->is($item['patterns']);
+            $queryParams = request()->query();
+            $queryString = !empty($queryParams) ? '?' . http_build_query($queryParams) : '';
         @endphp
 
         <li class="nav-item {{ $isActive ? 'active font-weight-bold' : '' }}">
-            <a class="nav-link" href="{{ url($item['url'], request()->query()) }}">
+            <a class="nav-link" href="{{ $item['url'] . $queryString }}">
                 <div class="icono-default {{ $item['icon'] }}"></div>
                 {{ $item['label'] }}
             </a>

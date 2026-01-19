@@ -34,10 +34,12 @@
     <?php $__currentLoopData = $menuItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php
             $isActive = request()->is($item['patterns']);
+            $queryParams = request()->query();
+            $queryString = !empty($queryParams) ? '?' . http_build_query($queryParams) : '';
         ?>
 
         <li class="nav-item <?php echo e($isActive ? 'active font-weight-bold' : ''); ?>">
-            <a class="nav-link" href="<?php echo e(url($item['url'], request()->query())); ?>">
+            <a class="nav-link" href="<?php echo e($item['url'] . $queryString); ?>">
                 <div class="icono-default <?php echo e($item['icon']); ?>"></div>
                 <?php echo e($item['label']); ?>
 

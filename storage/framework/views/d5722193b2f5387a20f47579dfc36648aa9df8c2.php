@@ -11,8 +11,14 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 99990,
+			price: 114990,
 			services: [
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
+				),
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
@@ -33,7 +39,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 107990,
+			price: 114990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -62,7 +68,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 115990,
+			price: 122990,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
