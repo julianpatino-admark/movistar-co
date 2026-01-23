@@ -3,6 +3,7 @@
 
     ul{
         display: flex;
+        grid-gap: 50px;
 
         list-style: none;
         margin: 0;
@@ -18,7 +19,7 @@
 
                 align-items: center;
 
-                padding: 0 15px;
+                padding: 0;
 
                 div.icono-default{
                     background-size: cover;
@@ -45,12 +46,6 @@
                         // CAMBIO AQUÍ
                         background-image: url("@img/menu/sprite-iconos-movil.webp");
                     }
-                }
-            }
-
-            &:first-child{
-                .nav-link{
-                    padding-left: 30px;
                 }
             }
 
@@ -88,7 +83,20 @@
             }
         }
     }
+
+    @include media-breakpoint-up(xl) {
+        ul{
+            grid-gap: 74px;
+        }
+    }
 }
+
+
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
 
 .nav-carousel{
     display: block;

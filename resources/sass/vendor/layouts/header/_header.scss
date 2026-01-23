@@ -31,13 +31,6 @@
         }
     }
 
-    &_logo{
-        svg{
-            width: map_get($header-logo-width, xs);
-            height: auto;
-        }
-    }
-
     &_hamburguer {
         display: flex;
         flex-direction: column;
@@ -55,12 +48,6 @@
             .digital-partner-image{
                 width: 126px;
                 height: 70px;
-            }
-        }
-
-        &_logo {
-            svg {
-                width: map_get($header-logo-width, lg)
             }
         }
     }

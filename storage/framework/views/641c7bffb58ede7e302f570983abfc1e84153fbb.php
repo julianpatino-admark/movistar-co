@@ -10,13 +10,6 @@
 ?>
 <header id="header" class="header">
 	<div class="header-container container">
-		<div class="header_logo-wrapper">
-			<a href="<?php echo e(URL('/').$query); ?>">
-                <span class="header_logo">
-	                <?php echo $__env->make('partials.components.icons.logo.brand-logo', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-	            </span>
-			</a>
-		</div>
 		<nav class="navbar-nav">
 			<?php echo $__env->make("partials.layouts.navbar.nav-items", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 		</nav>

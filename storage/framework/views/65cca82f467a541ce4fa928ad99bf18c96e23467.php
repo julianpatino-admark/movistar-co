@@ -7,39 +7,47 @@
     $offers = collect([
         new OfferData(
 			speed: 900,
-			price: 107990,
-			discount: 20,
-			title: 'Internet + Movistar Tv App',
+			price: 97990,
+			discount: 30,
+			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
+			isRecommended: true,
 			services: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-movistar-play.webp',
-					text: '<b>Movistar Tv App</b><br> 74 canales en vivo',
-					width: 28,
-					height: 28
-				)
+                    icon: 'resources/img/common/logo-win-lite.webp',
+                    text: '<b>¡WIN Lite</b> incluido en tu plan!',
+                    width: 38,
+                    height: 38
+                ),
 			]
 		),
         new OfferData(
 			speed: 900,
-			price: 119990,
-			discount: 20,
-			title: 'Internet + Movistar Tv App',
-			isRecommended: true,
+			price: 110990,
+			discount: 30,
+			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
 			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-movistar-play.webp',
-					text: '<b>Movistar Tv App</b><br> 74 canales en vivo',
-					width: 28,
-					height: 28
-				),
-                // Servicio 2: Disney+
+                new ServiceData(
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
+				)
+			]
+		),
+		new OfferData(
+			speed: 900,
+			price: 108990,
+			discount: 30,
+			title: 'Internet + Telefonía fija',
+			priceNote: 'x 12 Meses.',
+			services: [
                 new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
                     text: '<b>¡Disney+</b> incluido en tu plan!',
-                    width: 26,
-                    height: 26
+                    width: 38,
+                    height: 38
                 ),
 			]
 		),
@@ -101,8 +109,6 @@
 		</p>
 	</div>
 </div>
-
-
 
 
 

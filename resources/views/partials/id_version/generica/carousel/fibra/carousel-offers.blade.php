@@ -5,6 +5,21 @@
 
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
+		new OfferData(
+			speed: 900,
+			price: 94990,
+			discount: 30,
+			title: 'con Movistar Total recibe',
+			priceNote: 'x 12 Meses.',
+			services: [
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-lite.webp',
+					text: '<b>¡WIN Lite</b> incluido en tu plan!',
+					width: 38,
+					height: 38
+				)
+			]
+		),
         new OfferData(
 			speed: 900,
 			price: 107990,
@@ -13,8 +28,10 @@
 			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-disney-plus.webp',
-					text: '<b>¡Disney+</b> incluido en tu plan!'
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
 				)
 			]
 		),
@@ -26,10 +43,8 @@
 			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
-					width: 42,
-					height: 23
+					icon: 'resources/img/common/logo-disney-plus.webp',
+					text: '<b>¡Disney+</b> incluido en tu plan!'
 				)
 			]
 		),

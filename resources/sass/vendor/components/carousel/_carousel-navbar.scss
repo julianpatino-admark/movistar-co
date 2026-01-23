@@ -49,7 +49,7 @@
 
     ul{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
 
         list-style: none;
@@ -58,7 +58,6 @@
         padding: 10px;
 
         border-radius: 100px;
-        box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.08);
 
         li{
 
@@ -95,17 +94,23 @@
                 background-color: $color-blue-90;
             }
         }
+    }
 
-        @include media-breakpoint-up(sm) { }
+    @include media-breakpoint-up(sm) { }
 
-        @include media-breakpoint-up(md) { }
+    @include media-breakpoint-up(md) { }
 
-        @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
+        ul{
+            grid-template-columns: repeat(var(--cols, 3), 1fr);
+
+            box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.08);
+
             li a {
                 padding: 2px 30px;
             }
         }
-    
-        @include media-breakpoint-up(xl) { }
     }
+
+    @include media-breakpoint-up(xl) { }
 }

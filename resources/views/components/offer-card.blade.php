@@ -33,16 +33,9 @@
 		@endif
 
 		<div class="card-offer_body">
-			@if($offer->hasPromo && $offer->layout === 'standard')
+			@if($offer->hasPromo)
 				<div class="badge-condition">
 					Contrata hoy y paga el otro mes
-				</div>
-			@elseif ($offer->hasPromo && $offer->layout !== 'standard')
-				<div class="body-title">
-					<div class="body-title_container">
-						<div class="discount">50%dcto</div>
-						<div class="months">meses 2 y 3</div>
-					</div>
 				</div>
 			@endif
 			<div class="card-offer_price">

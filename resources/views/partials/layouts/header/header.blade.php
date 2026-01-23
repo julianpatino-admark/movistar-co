@@ -10,13 +10,6 @@
 @endphp
 <header id="header" class="header">
 	<div class="header-container container">
-		<div class="header_logo-wrapper">
-			<a href="{{URL('/').$query}}">
-                <span class="header_logo">
-	                @include('partials.components.icons.logo.brand-logo')
-	            </span>
-			</a>
-		</div>
 		<nav class="navbar-nav">
 			@include("partials.layouts.navbar.nav-items")
 		</nav>

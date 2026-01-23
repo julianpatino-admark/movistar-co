@@ -36,6 +36,10 @@
 
     &.sld-4{
         @include movil-seleccion($self-selector);
+
+        #{$self-selector}_cta{
+            margin-bottom: 40px;
+        }
     }
 
     @include media-breakpoint-up(sm) {      

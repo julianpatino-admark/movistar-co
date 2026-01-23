@@ -5,182 +5,79 @@
 
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
-        new OfferData(
-			title: '',
-			speed: 'ILIMIDATOS',
-			speedUnit: 'DATOS ILIMITADOS',
-			speedSubtitle: '',
-			customBadgeLabel: '',
-			price: 104990,
-			isRecommended: true,
-			hasPromo: false,
-			layout: 'mobile',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
-				)
-			],
-			packages: [
-				(object) [
-					'text' => 'Incluye roaming internacional'
-				],
-				(object) [
-					'text' => '36 GB para compartir',
-					'theme' => 'theme-pink'
-				]
-			]
-		),
 		new OfferData(
-			title: '',
-			speed: 'ILIMIDATOS',
-			speedUnit: 'DATOS ILIMITADOS',
-			speedSubtitle: '',
-			customBadgeLabel: '',
-			price: 79990,
-			isRecommended: true,
-			hasPromo: false,
-			layout: 'mobile',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
-				)
-			],
-			packages: [
-				(object) [
-					'text' => '24 GB para compartir',
-					'theme' => 'theme-pink'
-				]
-			]
-		),
-        new OfferData(
-			title: 'Contrata hoy y paga el próximo mes',
-			speed: 'ILIMIDATOS',
-			speedUnit: 'DATOS ILIMITADOS',
-			speedSubtitle: '',
-			customBadgeLabel: '',
-			discount: 50,
-			price: 72990,
-			isRecommended: true,
-			hasPromo: true,
-			layout: 'mobile',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
-				)
-			],
-			packages: [
-				(object) [
-					'text' => '22 GB para compartir',
-					'theme' => 'theme-pink'
-				]
-			]
-		),
-		new OfferData(
-			title: 'Contrata hoy y paga el próximo mes',
-			speed: '100 GB',
-			speedUnit: '125 GB si tienes internet hogar movistar',
-			speedSubtitle: '',
-			customBadgeLabel: '',
-			discount: 50,
-			price: 57990,
-			isRecommended: false,
-			hasPromo: true,
-			layout: 'mobile',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
-				),
-                new ServiceData(
-                    icon: 'resources/img/movil/movistar-icon.webp',
-                    text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
-                    width: 23, 
-                    height: 25
-				)
-			]
-			,
-			packages: [
-				(object) [
-					'text' => '18 GB para compartir',
-					'theme' => 'theme-pink'
-				]
-			]
-		),
-        new OfferData(
-			title: 'Contrata hoy y paga el próximo mes',
-			speed: '75 GB',
-			speedUnit: '100 GB si tienes internet hogar movistar',
-			speedSubtitle: '',
-			customBadgeLabel: '',
-			discount: 50,
-			price: 51990,
-			isRecommended: false,
-			hasPromo: true,
-			layout: 'mobile',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
-				),
-                new ServiceData(
-                    icon: 'resources/img/movil/movistar-icon.webp',
-                    text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
-                    width: 23, 
-                    height: 25
-				)
-			],
-			packages: [
-				(object) [
-					'text' => '75 GB para compartir',
-					'theme' => 'theme-pink'
-				]
-			]
-		),
-		new OfferData(
-			title: 'Contrata hoy y paga el próximo mes',
+			title: 'Pospago',
 			speed: '60 GB',
-			speedUnit: '85 GB si tienes internet hogar movistar',
-			speedSubtitle: '',
-			customBadgeLabel: '',
+			speedUnit: '',
+			speedSubtitle: '85% de dto. exclusivo online',
 			discount: 50,
 			price: 49990,
 			isRecommended: false,
-			hasPromo: true,
+			hasPromo: false,
 			layout: 'mobile',
 			services: [
 				new ServiceData(
-                    icon: 'resources/img/movil/movil-icon.webp',
-                    text: '<b>Minutos ilimitados</b> USA, CANADA, PUERTO RICO',
-                    width: 12, 
-                    height: 23
+                    icon: 'resources/img/common/icono-regalo.webp',
+                    text: '<b>Duplicamos tus Gigas</b>Aplican Términos y Condiciones',
+                    width: 27, 
+                    height: 31
 				),
                 new ServiceData(
-                    icon: 'resources/img/movil/movistar-icon.webp',
-                    text: '<b>Después navegas<br>Sin Fin a 2 mbps</b>',
-                    width: 23, 
-                    height: 25
+                    icon: 'resources/img/common/logo-perplexity.webp',
+                    text: '<b>Perplexity Pro</b>incluido en tu plan',
+                    width: 37, 
+                    height: 37
 				)
-			],
-			packages: [
-				(object) [
-					'text' => '60 GB para compartir',
-					'theme' => 'theme-pink'
-				]
 			]
 		),
+        new OfferData(
+			title: 'Pospago',
+			speed: 'ILIMIDATOS',
+			speedUnit: '',
+			speedSubtitle: 'Exclusivo clientes WOM',
+			price: 30990,
+			isRecommended: false,
+			hasPromo: false,
+			layout: 'mobile',
+			services: [
+				new ServiceData(
+                    icon: 'resources/img/common/logo-perplexity.webp',
+                    text: '<b>Perplexity Pro</b>incluido en tu plan',
+                    width: 37, 
+                    height: 37
+				)
+			]
+		),
+		new OfferData(
+			title: 'Pospago',
+			speed: 'ILIMIDATOS',
+			speedUnit: '',
+			speedSubtitle: 'Con Roaming Internacional',
+			price: 104990,
+			isRecommended: false,
+			hasPromo: false,
+			layout: 'mobile',
+			services: [
+				new ServiceData(
+                    icon: 'resources/img/common/logo-perplexity.webp',
+                    text: '<b>Perplexity Pro</b>incluido en tu plan',
+                    width: 37, 
+                    height: 37
+				),
+				new ServiceData(
+                    icon: 'resources/img/common/icono-celular-roaming.webp',
+                    text: '<b>36 Gigas para Roaming</b>de datos y para compartir',
+                    width: 22, 
+                    height: 32
+				),
+				new ServiceData(
+                    icon: 'resources/img/common/logo-movistar-arena.webp',
+                    text: '<b>Movistar Arena Music</b>incluido en tu plan',
+                    width: 37, 
+                    height: 37
+				)
+			]
+		)
     ]);
 ?>
 

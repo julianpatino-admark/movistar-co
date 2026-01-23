@@ -15,7 +15,7 @@
 @stop
 
 @section('content')
-	@include('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 1 ])
+	@include('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 0 ])
 	@include('partials.id_version.internet-movil.carousel.trio_fibra.carousel-offers')
 	@include('partials.layouts.banners.banner-simple')
 	@include('partials.id_version.generica.list.list-services')
