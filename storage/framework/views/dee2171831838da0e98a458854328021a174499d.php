@@ -5,6 +5,23 @@
 
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
+		new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 109990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-lite.webp',
+					text: '<b>¡WIN Lite</b> incluido en tu plan!',
+					width: 38,
+					height: 38
+				)
+			]
+		),
         new OfferData(
 			title: 'Internet + Pospago',
 			speed: '900 Megas +',
@@ -12,7 +29,6 @@
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 117990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
@@ -41,7 +57,6 @@
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 117990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -67,10 +82,10 @@
 			title: 'Internet + Pospago',
 			speed: '900 Megas +',
 			speedUnit: '',
+			isRecommended: true, 
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 125990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
@@ -102,7 +117,7 @@
 ?>
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offert-carrousel-fibra">
+	<div class="splide container position-relative" id="offer-carrousel">
 
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>

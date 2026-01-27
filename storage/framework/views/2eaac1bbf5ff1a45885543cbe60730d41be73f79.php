@@ -12,7 +12,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<div class="card-offer <?php echo e($offer->isRecommended && $offer->layout !== 'standard' ? 'destacado' : ''); ?>">
+<div class="card-offer <?php echo e($offer->layout ? $offer->layout : ''); ?>">
 
 	<?php if($offer->isRecommended): ?>
 		<div class="card-offer_title">
@@ -70,7 +70,7 @@
 			<?php if($offer->layout !== 'standard'): ?>
 				<div class="card-offer_cta">
 					<a
-						class="btn-flex btn-accent<?php echo e($offer->isRecommended && $offer->layout !== 'standard' ? '-b' : ''); ?>"
+						class="btn-flex btn-accent"
 						data-c2c="MOVIL DE <?php echo e($offer->speed); ?>"
 						data-toggle="modal"
 						data-modal-title="<?php echo e($offer->speed); ?>"

@@ -1,20 +1,8 @@
-@mixin card-destacado {
-    .card-offer{
-        &_wrapper{
-            box-shadow: 5px 5px 10px darkgray;
-            border: 3px solid $color-blue-20;
-        }
-
-        &_label .label-text{
-            background-color: $color-brand-highlight-secondary;
-        }
-
-        &_header{
-            background-color: $color-blue-20;
-
-            .main-speed b {
-                font-size: 40px;
-            }
+@mixin ilimitado ($selector) {
+    #{$selector}_header {
+        .main-speed b{
+            font-size: 40px;
+            font-weight: 700;
         }
     }
 }
@@ -23,7 +11,37 @@
     color: $card-offer-header-font-color;
     font-size: $size;
     line-height: $size;
-    font-weight: 700;
+    font-weight: 900;
+}
+
+@mixin theme-green($selector){
+    #{$selector}_discount {
+       background: $color-green-27b825; 
+    }
+
+    #{$selector}_cta .btn-flex{
+        background: $color-green-27b825;
+        border: $color-green-27b825;
+
+        &:hover{
+            background: transparent;
+        }
+    }
+}
+
+@mixin theme-purple($selector){
+    #{$selector}_discount {
+       background: $color-purple-10; 
+    }
+
+    #{$selector}_cta .btn-flex{
+        background:  $color-purple-10;
+        border:  $color-purple-10;
+
+        &:hover{
+            background: transparent;
+        }
+    }
 }
 
 .card-offer {
@@ -35,12 +53,10 @@
     margin: $card-offer-label-height auto;
     background-color: $color-white;
 
+    $self: &;
+
     *{
         font-family: $font-family-primary;
-    }
-
-    &_title, &_discount{
-        display: none;
     }
 
     &_wrapper {
@@ -83,7 +99,7 @@
         flex-direction: column;
         justify-content: center;
 
-        background-color: $card-offer-header-bg;
+        background-color: $color-blue-20;
 
         .main-title {
             color: $card-offer-header-font-color;
@@ -92,6 +108,8 @@
         }
 
         .main-speed{
+            width: 100%;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -105,9 +123,29 @@
         }
     }
 
+    &_discount{
+       padding: 5px 0;
+
+       background: $color-blue-80;
+
+        img {
+            display: none;
+        }
+
+        p{
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 900;
+
+            padding: 0;
+            margin: 0;
+        }
+    }
+
     &_body {
         display: block;
-        padding: 20px 25px 0;
+        padding: 0 20px;
         min-height: map_get($card-offer-min-height, xs);
         text-align: center;
 
@@ -183,6 +221,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            .btn-flex{
+                background: $color-blue-80;
+            }
         }
 
         &_services{
@@ -190,10 +232,18 @@
             align-items: center;
             justify-content: space-between;
 
+            background: $color-grey-5;
+            border-radius: 8px;
+
+            padding: 8px 32px;
             margin: 20px 0;
 
+            *{
+                text-align: left;
+            }
+
             img{
-                margin: 0 auto;
+                margin: 0 10px 0 0;
             }
             
             p{
@@ -204,15 +254,15 @@
                 align-items: flex-start;
 
                 color: $color-grey-20;
-                font-size: 12px;
+                font-size: 10px;
 
                 margin: 0;
 
                 b{
                     color: #000;
                     font-weight: 500;
-                    font-size: 14px;
-                    line-height: 14px;
+                    font-size: 12px;
+                    line-height: 12px;
                 }
             }
         }
@@ -275,7 +325,15 @@
         }
     }
 
-    &.destacado{
-        @include card-destacado;
+    &.ilimitado{
+        @include ilimitado($self);
+    }
+
+    &.theme-green{
+        @include theme-green($self);
+    }
+
+    &.theme-purple{
+        @include theme-purple($self);
     }
 }

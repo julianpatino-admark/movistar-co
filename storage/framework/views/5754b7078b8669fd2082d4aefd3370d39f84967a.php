@@ -12,7 +12,6 @@
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 129990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
@@ -29,6 +28,34 @@
 			]
 		),
         new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 135990,
+			services: [
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					width: 42,
+					height: 23
+				),
+				new ServiceData(
+                    icon: 'resources/img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30, 
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'resources/img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23, 
+                    height: 20
+				)
+			]
+		),
+		new OfferData(
 			title: 'Internet + Pospago',
 			speed: '900 Megas +',
 			speedUnit: '',
@@ -63,37 +90,8 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 135990,
 			isRecommended: true,
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
-					width: 42,
-					height: 23
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
-                    height: 9
-				),
-                new ServiceData(
-                    icon: 'resources/img/common/comparte.webp',
-                    text: '<b>15 GB</b> para compartir',
-                    width: 23, 
-                    height: 20
-				)
-			]
-		),
-        new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
-			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 147990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',

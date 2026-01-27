@@ -9,6 +9,7 @@
 			speed: 900,
 			price: 94990,
 			discount: 30,
+			isRecommended: true, 
 			title: 'con Movistar Total recibe',
 			priceNote: 'x 12 Meses.',
 			services: [

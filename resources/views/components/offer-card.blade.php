@@ -1,6 +1,6 @@
 @props(['offer', 'offerNumber'])
 
-<div class="card-offer {{ $offer->isRecommended && $offer->layout !== 'standard' ? 'destacado' : '' }}">
+<div class="card-offer {{ $offer->layout ? $offer->layout : '' }}">
 
 	@if($offer->isRecommended)
 		<div class="card-offer_title">
@@ -55,7 +55,7 @@
 			@if ($offer->layout !== 'standard')
 				<div class="card-offer_cta">
 					<a
-						class="btn-flex btn-accent{{ $offer->isRecommended && $offer->layout !== 'standard' ? '-b' : '' }}"
+						class="btn-flex btn-accent"
 						data-c2c="MOVIL DE {{ $offer->speed }}"
 						data-toggle="modal"
 						data-modal-title="{{ $offer->speed }}"

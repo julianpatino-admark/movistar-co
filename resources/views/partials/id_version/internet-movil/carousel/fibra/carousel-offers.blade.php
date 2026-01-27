@@ -5,6 +5,35 @@
 
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
+		new OfferData(
+			title: 'Internet + Pospago',
+			speed: '900 Megas +',
+			speedUnit: '',
+			speedSubtitle: 'Ilimitado',
+			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			price: 106990,
+			isRecommended: true,
+			services: [
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-lite.webp',
+					text: '<b>¡WIN Lite</b> incluido en tu plan!',
+					width: 38,
+					height: 38
+				),
+				new ServiceData(
+                    icon: 'resources/img/common/velocidad-simetrica.webp',
+                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    width: 30,
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'resources/img/common/comparte.webp',
+                    text: '<b>15 GB</b> para compartir',
+                    width: 23,
+                    height: 20
+				)
+			]
+		),
         new OfferData(
 			title: 'Internet + Pospago',
 			speed: '900 Megas +',
@@ -22,13 +51,13 @@
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -40,7 +69,6 @@
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 114990,
-			isRecommended: true,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
@@ -51,13 +79,13 @@
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -67,6 +95,7 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
+			isRecommended: true,
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			price: 122990,
 			services: [
@@ -85,13 +114,13 @@
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -100,7 +129,7 @@
 @endphp
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offert-carrousel-fibra">
+	<div class="splide container position-relative" id="offer-carrousel">
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 

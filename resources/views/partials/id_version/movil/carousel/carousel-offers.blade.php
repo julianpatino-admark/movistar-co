@@ -9,23 +9,18 @@
 			title: 'Pospago',
 			speed: '60 GB',
 			speedUnit: '',
-			speedSubtitle: '85% de dto. exclusivo online',
+			priceNote: 'x2 Meses.',
+			customBadgeLabel: '50% de dto. exclusivo online',
 			discount: 50,
 			price: 49990,
 			isRecommended: false,
 			hasPromo: false,
-			layout: 'mobile',
+			layout: 'mobile theme-green',
 			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/icono-regalo.webp',
-                    text: '<b>Duplicamos tus Gigas</b>Aplican Términos y Condiciones',
-                    width: 27, 
-                    height: 31
-				),
                 new ServiceData(
                     icon: 'resources/img/common/logo-perplexity.webp',
                     text: '<b>Perplexity Pro</b>incluido en tu plan',
-                    width: 37, 
+                    width: 37,
                     height: 37
 				)
 			]
@@ -34,16 +29,16 @@
 			title: 'Pospago',
 			speed: 'ILIMIDATOS',
 			speedUnit: '',
-			speedSubtitle: 'Exclusivo clientes WOM',
+			customBadgeLabel: 'Exclusivo clientes WOM',
 			price: 30990,
 			isRecommended: false,
 			hasPromo: false,
-			layout: 'mobile',
+			layout: 'mobile theme-purple ilimitado',
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-perplexity.webp',
                     text: '<b>Perplexity Pro</b>incluido en tu plan',
-                    width: 37, 
+                    width: 37,
                     height: 37
 				)
 			]
@@ -52,28 +47,28 @@
 			title: 'Pospago',
 			speed: 'ILIMIDATOS',
 			speedUnit: '',
-			speedSubtitle: 'Con Roaming Internacional',
+			customBadgeLabel: 'Con Roaming Internacional',
 			price: 104990,
 			isRecommended: false,
 			hasPromo: false,
-			layout: 'mobile',
+			layout: 'mobile ilimitado',
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-perplexity.webp',
                     text: '<b>Perplexity Pro</b>incluido en tu plan',
-                    width: 37, 
+                    width: 37,
                     height: 37
 				),
 				new ServiceData(
                     icon: 'resources/img/common/icono-celular-roaming.webp',
                     text: '<b>36 Gigas para Roaming</b>de datos y para compartir',
-                    width: 22, 
+                    width: 22,
                     height: 32
 				),
 				new ServiceData(
                     icon: 'resources/img/common/logo-movistar-arena.webp',
                     text: '<b>Movistar Arena Music</b>incluido en tu plan',
-                    width: 37, 
+                    width: 37,
                     height: 37
 				)
 			]
@@ -83,7 +78,7 @@
 
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offer-carrousel">
+	<div class="splide container position-relative" id="offert-carrousel-fibra">
 
 		<h2 class="title-section text-center mb-2">Conoce más de los Planes Movistar Pospago</h2>
 		<h3 class="subtitle-section text-center mb-3">Escoge un plan para tus necesidades</h3>
