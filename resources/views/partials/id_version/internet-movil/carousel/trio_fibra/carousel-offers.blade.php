@@ -11,7 +11,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 129990,
+			price: 139990,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
@@ -33,7 +33,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 135990,
+			price: 145990,
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -61,7 +61,7 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 137990,
+			price: 147990,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -91,7 +91,7 @@
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
 			isRecommended: true,
-			price: 147990,
+			price: 157990,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',

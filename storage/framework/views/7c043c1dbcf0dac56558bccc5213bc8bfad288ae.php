@@ -27,13 +27,14 @@
 		),
         new OfferData(
 			title: 'Pospago',
-			speed: 'ILIMIDATOS',
+			speed: '75 GB',
 			speedUnit: '',
-			customBadgeLabel: 'Exclusivo clientes WOM',
-			price: 30990,
+			customBadgeLabel: '50% de dto. exclusivo online',
+			discount: 50,
+			price: 51990,
 			isRecommended: false,
 			hasPromo: false,
-			layout: 'mobile theme-purple ilimitado',
+			layout: 'mobile theme-green',
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-perplexity.webp',
