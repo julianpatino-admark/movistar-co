@@ -27,12 +27,6 @@ import FormSimple from "admark-landings/src/forms/form-simple";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 
 /**
- * Buttons
- */
-import { WppBtn } from "./modules/buttons/index";
-WppBtn();
-
-/**
  * Scroll
  */
 import NavClose from "./modules/nav/nav-close";
