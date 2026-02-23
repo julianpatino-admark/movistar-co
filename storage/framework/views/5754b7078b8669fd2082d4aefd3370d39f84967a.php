@@ -10,19 +10,20 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 129990,
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
+			price: 139990,
+			discount: 50,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -32,8 +33,9 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 135990,
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
+			price: 145990,
+			discount: 50,
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -44,13 +46,13 @@
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -60,8 +62,9 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
-			price: 137990,
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
+			price: 147990,
+			discount: 50,
 			isRecommended: true,
 			services: [
 				new ServiceData(
@@ -73,13 +76,13 @@
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30, 
+                    width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23, 
+                    width: 23,
                     height: 20
 				)
 			]
@@ -89,9 +92,10 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			isRecommended: true,
-			price: 147990,
+			price: 157990,
+			discount: 50,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',

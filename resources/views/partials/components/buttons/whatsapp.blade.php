@@ -1,13 +1,8 @@
-<div class="float-whatsapp" id="mainChatFloatContainer">
-    <div class="form-float">
-        @include('partials.components.forms.wppsimple',['id' => 'whatsapp-c2c', 'class'=>'form-whatsapp',  'showServices' => false])
-        <h5 class="float-whatsapp_title">
-            <img width="23" height="23" src="{{ Vite::asset('resources/img/common/logo-whatsapp-mini.png') }}" alt="Logo WhatsApp mini formato PNG">
-            <span>Ventas por WhatsApp</span>
-            <button type="button" class="btn-close" aria-label="Close"></button>
-        </h5>
-    </div>
-    <button class="btn-float" id="wppFloatButton">
-        <img width="82" height="82" src="{{Vite::asset('resources/img/common/logo-whatsapp.svg')}}" alt="WhatsApp Logo en formato SVG">
-    </button>
-</div>
+<a 
+    class="btn-float-whatsapp"
+    id="wppFloatButton"
+    href="https://api.whatsapp.com/send?phone=573234837159&text=Hola+quiero+informaci%C3%B3n+sobre+sus+productos&type=phone_number&app_absent=0"
+    target="_blank"
+>
+    <img width="82" height="82" src="{{Vite::asset('resources/img/common/logo-whatsapp.svg')}}" alt="WhatsApp Logo para contacto a ventas">
+</a>

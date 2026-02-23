@@ -12,14 +12,7 @@
 			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
 			isRecommended: true,
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/logo-win-lite.webp',
-                    text: '<b>¡WIN Lite</b> incluido en tu plan!',
-                    width: 38,
-                    height: 38
-                ),
-			]
+			services: []
 		),
         new OfferData(
 			speed: 900,

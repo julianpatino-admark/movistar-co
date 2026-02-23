@@ -14,11 +14,11 @@ versions.forEach(version => {
 
 export default defineConfig({
   plugins: [
-    basicSsl(),
     laravel({
       input: inputFiles,
       refresh: [
-        'resources/views/**'
+        'resources/views/**',
+        'resources/js/**'
       ],
     }),
   ],

@@ -58,7 +58,7 @@
 	@include('partials.layouts.footer.footer')
 	@include('partials.layouts.cta.mobile-fixed')
 
-	<!--@include('partials.components.buttons.whatsapp')-->
+	@include('partials.components.buttons.whatsapp')
 
     @if($modals === true)
         @section('modal')

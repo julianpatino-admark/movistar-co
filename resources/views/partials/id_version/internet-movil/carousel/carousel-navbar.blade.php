@@ -1,13 +1,8 @@
-<nav class="carousel-navbar">
+<nav class="carousel-navbar" style="--cols: 2">
     <ul>
         <li class="@if(request()->path() == 'internet-movil' || request()->path() == '/') active @endif">
             <a href="/internet-movil?{{request()->getQueryString()}}">
                 <b>Solo Internet + Pospago</b>
-            </a>
-        </li>
-        <li class="@if(request()->path() == 'internet-movil/duo') active @endif">
-            <a href="/internet-movil/duo?{{request()->getQueryString()}}">
-                <b>Dúo + Pospago</b>
             </a>
         </li>
         <li class="@if(request()->path() == 'internet-movil/trio') active @endif">

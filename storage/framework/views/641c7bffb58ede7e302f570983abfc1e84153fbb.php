@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			<?php endif; ?>
-			<img class="digital-partner-image" height="70" width="126" src="<?php echo e(Vite::asset('resources/img/common/partner-aliado-movistar.svg')); ?>" alt="Etiqueta de aliado digital Movistar" />
+			<img class="digital-partner-image" height="70" width="126" src="<?php echo e(Vite::asset('resources/img/common/partner-aliado-movistar.webp')); ?>" alt="Etiqueta de aliado digital Movistar" />
 			<div class="header_hamburguer d-lg-none">
 				<?php echo $__env->make('partials.components.buttons.hamburger', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 			</div>

@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			@endif
-			<img class="digital-partner-image" height="70" width="126" src="{{ Vite::asset('resources/img/common/partner-aliado-movistar.svg') }}" alt="Etiqueta de aliado digital Movistar" />
+			<img class="digital-partner-image" height="70" width="126" src="{{ Vite::asset('resources/img/common/partner-aliado-movistar.webp') }}" alt="Etiqueta de aliado digital Movistar" />
 			<div class="header_hamburguer d-lg-none">
 				@include('partials.components.buttons.hamburger')
 			</div>

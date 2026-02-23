@@ -58,7 +58,7 @@
 	<?php echo $__env->make('partials.layouts.footer.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	<?php echo $__env->make('partials.layouts.cta.mobile-fixed', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-	<!--<?php echo $__env->make('partials.components.buttons.whatsapp', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>-->
+	<?php echo $__env->make('partials.components.buttons.whatsapp', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <?php if($modals === true): ?>
         <?php $__env->startSection('modal'); ?>
@@ -82,5 +82,4 @@
 	
 <?php echo $__env->yieldSection(); ?>
 </body>
-</html>
-<?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/layouts/extend/master.blade.php ENDPATH**/ ?>
+</html><?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/layouts/extend/master.blade.php ENDPATH**/ ?>

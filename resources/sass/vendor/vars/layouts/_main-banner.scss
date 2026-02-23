@@ -4,10 +4,10 @@ $mb-width : (
 );
 
 $mb-height: (
-        xs : 453px,
+        xs : 476px,
         sm : 604px,
-        lg : 286px,
-        xl : 445px
+        lg : 316px,
+        xl : 460px
 );
 
 $mb-padding: (
@@ -50,8 +50,8 @@ $mb-fibra-sld-1: (
 $mb-bg-movil: (
         xs : #fff url('@img/generica/sld-3/main-banner-xs.webp') no-repeat center / 350px 100%,
         sm : #fff url('@img/generica/sld-3/main-banner-sm.webp') no-repeat center / 450px 100%,
-        md : #fff url('@img/generica/sld-3/main-banner-md.webp') no-repeat center / 100%,
-        lg : #fff url('@img/generica/sld-3/main-banner-lg.webp') no-repeat center / 100%,
+        md : #fff url('@img/generica/sld-3/main-banner-md.webp') no-repeat center / 1100px 100%,
+        lg : #fff url('@img/generica/sld-3/main-banner-lg.webp') no-repeat center / 1600px 100%,
         xl : #fff url('@img/generica/sld-3/main-banner-lg.webp') no-repeat center / 1600px 100%,
 );
 
