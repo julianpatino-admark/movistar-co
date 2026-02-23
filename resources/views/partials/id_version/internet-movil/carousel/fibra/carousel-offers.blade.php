@@ -10,16 +10,11 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 106990,
+			discount: 50,
 			isRecommended: true,
 			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-lite.webp',
-					text: '<b>¡WIN Lite</b> incluido en tu plan!',
-					width: 38,
-					height: 38
-				),
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
                     text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
@@ -39,8 +34,9 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 114990,
+			discount: 50,
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -67,8 +63,9 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 114990,
+			discount: 50,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
@@ -96,8 +93,9 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			isRecommended: true,
-			customBadgeLabel: '<b>Sin Fin</b> a máxima velocidad',
+			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 122990,
+			discount: 50,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',

@@ -6,10 +6,10 @@
     }
 
     @include media-breakpoint-up(lg) {
-        background: map_get($mb-bg-movil, lg);
+        background: map_get($mb-bg-movil, md);
     }
 
     @include media-breakpoint-up(xl) {
-        background: map_get($mb-bg-movil, xl);
+        background: map_get($mb-bg-movil, lg);
     }
 }

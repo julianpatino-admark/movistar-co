@@ -1,13 +1,8 @@
-<nav class="carousel-navbar">
+<nav class="carousel-navbar" style="--cols: 2">
     <ul>
         <li class="<?php if(request()->path() == 'internet-movil' || request()->path() == '/'): ?> active <?php endif; ?>">
             <a href="/internet-movil?<?php echo e(request()->getQueryString()); ?>">
                 <b>Solo Internet + Pospago</b>
-            </a>
-        </li>
-        <li class="<?php if(request()->path() == 'internet-movil/duo'): ?> active <?php endif; ?>">
-            <a href="/internet-movil/duo?<?php echo e(request()->getQueryString()); ?>">
-                <b>Dúo + Pospago</b>
             </a>
         </li>
         <li class="<?php if(request()->path() == 'internet-movil/trio'): ?> active <?php endif; ?>">

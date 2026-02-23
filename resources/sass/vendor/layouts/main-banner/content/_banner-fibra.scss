@@ -6,6 +6,10 @@
         background: map_get($mb-fibra-sld-1, sm);
     }
 
+    @include media-breakpoint-up(md){
+        background: map_get($mb-fibra-sld-1, md);
+    }
+
     @include media-breakpoint-up(lg){
 
         background: map_get($mb-fibra-sld-1, lg);

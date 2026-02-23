@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "pack:prod": "vite build && zip -r core_update.zip resources/views app config routes && zip -r public_update.zip public/build",
+    "pack:prod": "vite build && zip -r core_update.zip resources/views app config routes -x \"*.DS_Store\" -x \"*Zone.Identifier\" && zip -r public_update.zip public/build -x \"*.DS_Store\" -x \"*Zone.Identifier\"",
     "codeceptjs": "codeceptjs run --steps",
     "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
     "codeceptjs:ui": "codecept-ui --app",

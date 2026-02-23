@@ -11,25 +11,13 @@
 </nav>
 -->
 
-<nav class="carousel-navbar" style="--cols: 4">
+<nav class="carousel-navbar" style="--cols: 2">
     <ul>
         @section('navitems')
             <li class="@if(request()->path() == 'internet-hogar') active @endif">
                 <a href="/internet-hogar?{{request()->getQueryString()}}">
                     <b>Internet</b>
                     Fibra
-                </a>
-            </li>
-            <li class="@if(request()->path() == 'naked') active @endif">
-                <a href="/naked?{{request()->getQueryString()}}">
-                    <b>Pack Digital</b>
-                    Fibra + Movistar TV App
-                </a>
-            </li>
-            <li class="@if(request()->path() == 'duo-fibra') active @endif">
-                <a href="/duo-fibra?{{request()->getQueryString()}}">
-                    <b>Dúo</b>
-                    Fibra + telefonía
                 </a>
             </li>
             <li class="@if(request()->path() == 'trio-fibra') active @endif">

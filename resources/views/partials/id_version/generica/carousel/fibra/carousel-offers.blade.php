@@ -8,25 +8,18 @@
 		new OfferData(
 			speed: 900,
 			price: 94990,
-			discount: 30,
-			isRecommended: true, 
+			discount: 20,
+			isRecommended: true,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-lite.webp',
-					text: '<b>¡WIN Lite</b> incluido en tu plan!',
-					width: 38,
-					height: 38
-				)
-			]
+			priceNote: 'x 6 Meses.',
+			services: []
 		),
         new OfferData(
 			speed: 900,
 			price: 107990,
-			discount: 30,
+			discount: 20,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
@@ -39,9 +32,9 @@
         new OfferData(
 			speed: 900,
 			price: 105990,
-			discount: 30,
+			discount: 20,
 			title: 'con Movistar Total recibe',
-			priceNote: 'x 12 Meses.',
+			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
 					icon: 'resources/img/common/logo-disney-plus.webp',
