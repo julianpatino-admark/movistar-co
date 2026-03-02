@@ -17,7 +17,7 @@
 					<p>Te llamamos GRATIS</p>
 				</div>
 				<div class="modal-velocidades_form">
-					<?php echo $__env->make('partials.components.forms.simple',['id' => 'modal-velocidades', 'class' => 'form-simple black-theme', 'showServices' => false], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+					<?php echo $__env->make('partials.components.forms.simple',['id' => 'c2c-velocidades', 'class' => 'form-simple black-theme', 'showServices' => false], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 				</div>
 			</div>
 			<div class="modal-footer">

@@ -4,7 +4,7 @@
     $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
 @endphp
 
-<form id="{{ $id }}-form"
+<form id="{{ $id }}"
       method="post"
       data-toggle="form-simple"
       class="form @if(isset($class)){{$class}}@endif"
@@ -32,7 +32,7 @@
                 class="form-select"
                 required
             >
-                <option selected value="" hidden>Internet Hogar Fibra</option>
+                <option selected value="" hidden>Elige tu servicio</option>
                 <option value="internet">Internet Fibra</option>
                 <option value="movil">Móvil</option>
             </select>
@@ -45,6 +45,7 @@
     @endif
     <div>
         <input
+            id="{{ $id }}-phone"
             type="number"
             name="phone"
             class="form-control"
@@ -56,7 +57,8 @@
     </div>
     <div>
         <input
-            type="text" 
+            id="{{ $id }}-name"
+            type="text"
             name="name"
             class="form-control"
             placeholder="* Nombres y Apellidos"
@@ -83,30 +85,32 @@
     @endif
 
     <div class="form-simple_tyc">
-        <input type="checkbox" name="legal" id="legal" required>
-        <label for="legal" class="text-xxs">
-            Acepto
-            <a
-                href="#"
-                data-toggle="modal"
-                data-target="#modal-text"
-                data-content="{{url('/privacy')}}"
-                data-modal-title="Política de Privacidad"
-                title="Política de privacidad"
-            >
-                política de privacidad
-            </a>
-            y tratamiento de
-            <a
-                href="#"
-                data-toggle="modal"
-                data-target="#modal-text"
-                data-content="{{url('/privacy')}}"
-                data-modal-title="Política de Privacidad"
-                title="Política de privacidad"
-            >
-                datos personales y envío de mensajes vía WhatsApp.
-            </a>
+        <label class="text-xxs">
+            <input type="checkbox" name="legal" id="{{ $id }}-legal" required>
+            <span>
+                Acepto
+                <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+                >
+                    política de privacidad
+                </a>
+                y tratamiento de
+                <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#modal-text"
+                    data-content="{{url('/privacy')}}"
+                    data-modal-title="Política de Privacidad"
+                    title="Política de privacidad"
+                >
+                    datos personales y envío de mensajes vía WhatsApp.
+                </a>
+            </span>
         </label>
         <label for="legal" class="error d-block"></label>
     </div>

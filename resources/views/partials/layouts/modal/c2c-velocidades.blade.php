@@ -17,7 +17,7 @@
 					<p>Te llamamos GRATIS</p>
 				</div>
 				<div class="modal-velocidades_form">
-					@include('partials.components.forms.simple',['id' => 'modal-velocidades', 'class' => 'form-simple black-theme', 'showServices' => false])
+					@include('partials.components.forms.simple',['id' => 'c2c-velocidades', 'class' => 'form-simple black-theme', 'showServices' => false])
 				</div>
 			</div>
 			<div class="modal-footer">

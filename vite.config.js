@@ -18,7 +18,8 @@ export default defineConfig({
       input: inputFiles,
       refresh: [
         'resources/views/**',
-        'resources/js/**'
+        'resources/views/**',
+        'resources/sass/**'
       ],
     }),
   ],
