@@ -7,11 +7,11 @@
     $offers = collect([
 		new OfferData(
 			title: 'Pospago',
-			speed: '60 GB',
+			speed: '65 GB',
 			speedUnit: '',
 			customBadgeLabel: '50% de dto. exclusivo online',
 			discount: 50,
-			price: 49990,
+			price: 52990,
 			priceNote: 'x4 Meses.',
 			isRecommended: false,
 			hasPromo: false,
@@ -29,13 +29,12 @@
 			title: 'Pospago',
 			speed: 'ILIMIDATOS',
 			speedUnit: '',
-			customBadgeLabel: '50% de dto. exclusivo online',
-			discount: 50,
-			price: 72990,
-			priceNote: 'x4 Meses.',
+			customBadgeLabel: '',
+			price: 69990,
+			priceNote: 'Paga el siguiente mes',
 			isRecommended: false,
 			hasPromo: false,
-			layout: 'mobile theme-green',
+			layout: 'mobile ilimitado',
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-perplexity.webp',
@@ -51,6 +50,7 @@
 			speedUnit: '',
 			customBadgeLabel: 'Con Roaming Internacional',
 			price: 104990,
+			priceNote: 'Paga el siguiente mes',
 			isRecommended: false,
 			hasPromo: false,
 			layout: 'mobile ilimitado',
@@ -80,7 +80,7 @@
 
 
 <div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offert-carrousel-fibra">
+	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 
 		<h2 class="title-section text-center mb-2">Conoce más de los Planes Movistar Pospago</h2>
 		<h3 class="subtitle-section text-center mb-3">Escoge un plan para tus necesidades</h3>

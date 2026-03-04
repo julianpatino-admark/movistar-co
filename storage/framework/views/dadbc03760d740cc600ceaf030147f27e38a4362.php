@@ -16,22 +16,7 @@
 		),
         new OfferData(
 			speed: 900,
-			price: 107990,
-			discount: 20,
-			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
-					width: 42,
-					height: 23
-				)
-			]
-		),
-        new OfferData(
-			speed: 900,
-			price: 105990,
+			price: 112990,
 			discount: 20,
 			title: 'con Movistar Total recibe',
 			priceNote: 'x 6 Meses.',

@@ -34,80 +34,27 @@
 			speedUnit: '',
 			speedSubtitle: 'Ilimitado',
 			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
-			price: 145990,
-			discount: 50,
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
-					width: 42,
-					height: 23
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30,
-                    height: 9
-				),
-                new ServiceData(
-                    icon: 'resources/img/common/comparte.webp',
-                    text: '<b>15 GB</b> para compartir',
-                    width: 23,
-                    height: 20
-				)
-			]
-		),
-		new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
-			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
-			price: 147990,
-			discount: 50,
-			isRecommended: true,
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/logo-disney-plus.webp',
-                    text: '<b>¡Disney+</b> incluido en tu plan!',
-                    width: 26,
-                    height: 26
-                ),
-				new ServiceData(
-                    icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
-                    width: 30,
-                    height: 9
-				),
-                new ServiceData(
-                    icon: 'resources/img/common/comparte.webp',
-                    text: '<b>15 GB</b> para compartir',
-                    width: 23,
-                    height: 20
-				)
-			]
-		),
-        new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
-			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
-			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			isRecommended: true,
 			price: 157990,
 			discount: 50,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/logo-disney-plus.webp',
-                    text: '<b>¡Disney+</b> incluido en tu plan!',
+                    text: 'Elige <b>¡Disney+</b>',
                     width: 26,
                     height: 26
                 ),
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-play.webp',
-					text: '<b>Win Play</b> actívalo en tu servicio Hogar desde la App mi Movistar',
+					text: 'tal vez <b>Win Play</b>',
 					width: 42,
 					height: 23
+				),
+				new ServiceData(
+					icon: 'resources/img/common/logo-netflix.webp',
+					text: 'O que tal <b>Netflix</b>',
+					width: 56,
+					height: 22
 				),
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
@@ -127,7 +74,7 @@
 ?>
 
 <div class="carousel-wrapper ">
-	<div class="splide container position-relative" id="offer-carrousel">
+	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
 

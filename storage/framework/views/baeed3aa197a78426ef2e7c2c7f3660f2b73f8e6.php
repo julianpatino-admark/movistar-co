@@ -20,54 +20,9 @@
 				)
 			]
 		),
-        new OfferData(
-			speed: 900,
-			price: 142990,
-			discount: 10,
-			title: 'Internet + Fijo + TV',
-			isRecommended: true,
-			priceNote: 'x 6 Meses.',
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/icono-television.webp',
-					text: '<b>Movistar TV</b> Desde 90 canales HD',
-					width: 29,
-					height: 22
-				),
-                // Servicio 2: Disney+
-                new ServiceData(
-                    icon: 'resources/img/common/logo-disney-plus.webp',
-                    text: '<b>¡Disney+</b> incluido en tu plan!',
-                    width: 26,
-                    height: 26
-                ),
-			]
-		),
 		new OfferData(
 			speed: 900,
-			price: 148990,
-			discount: 10,
-			title: 'Internet + Fijo + TV',
-			isRecommended: true,
-			priceNote: 'x 6 Meses.',
-			services: [
-				new ServiceData(
-					icon: 'resources/img/common/icono-television.webp',
-					text: '<b>Movistar TV</b> Desde 90 canales HD',
-					width: 29,
-					height: 22
-				),
-                new ServiceData(
-					icon: 'resources/img/common/logo-win-sport.webp',
-					text: '<b>¡incluido en tu plan!</b>',
-					width: 56,
-					height: 22
-				)
-			]
-		),
-		new OfferData(
-			speed: 900,
-			price: 158990,
+			price: 149990,
 			discount: 10,
 			title: 'Internet + Fijo + TV',
 			priceNote: 'x 6 Meses.',
@@ -90,7 +45,7 @@
 ?>
 
 <div class="carousel-wrapper ">
-	<div class="splide container position-relative" id="offer-carrousel">
+	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 
 		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
 		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
