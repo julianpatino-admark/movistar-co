@@ -1,8 +1,30 @@
 @mixin ilimitado ($selector) {
+    #{$selector}_discount{
+        background-color: $color-blue-80;
+    }
+
     #{$selector}_header {
-        .main-speed b{
-            font-size: 40px;
-            font-weight: 700;
+        .main-speed{
+            b{
+                font-size: 38px;
+                font-weight: 900;
+            }
+
+            i{
+                font-size: 22px;
+                font-weight: 900;
+                font-style: normal;
+            }
+        }
+    }
+
+    #{$selector}_cta .btn-flex{
+        background: $color-blue-80;
+        border: 1px solid $color-blue-80;
+
+        &:hover{
+            color: $color-blue-80;
+            background: transparent;
         }
     }
 }
@@ -15,10 +37,6 @@
 }
 
 @mixin theme-green($selector){
-    #{$selector}_discount {
-       background: $color-green-27b825; 
-    }
-
     #{$selector}_cta .btn-flex{
         background: $color-green-27b825;
         border: $color-green-27b825;
@@ -115,6 +133,8 @@
             justify-content: center;
             align-items: center;
 
+            margin: 0;
+
             @include text-style($card-offer-header-subtitle-font-size);
 
             b{
@@ -126,7 +146,7 @@
     &_discount{
        padding: 5px 0;
 
-       background: $color-blue-80;
+       background: $color-blue-90;
 
         img {
             display: none;
@@ -135,7 +155,7 @@
         p{
             color: #fff;
             text-align: center;
-            font-size: 17px;
+            font-size: 13px;
             font-weight: 900;
 
             padding: 0;
@@ -221,10 +241,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            .btn-flex{
-                background: $color-blue-80;
-            }
         }
 
         &_services{
@@ -327,6 +343,31 @@
 
     &.ilimitado{
         @include ilimitado($self);
+
+        &.expanded {
+            .card-offer_header{
+                height: 136px;
+            }
+
+            .main-speed{
+                b{
+                    font-size: 42px;
+                }
+    
+                i{
+                    font-size: 22px;
+                }
+            }
+
+            #{$self}_cta .btn-flex{
+                background: $color-green-27b825;
+                border: $color-green-27b825;
+    
+                &:hover{
+                    background: transparent;
+                }
+            }
+        }
     }
 
     &.theme-green{

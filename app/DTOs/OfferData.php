@@ -13,7 +13,6 @@ class OfferData {
         public ?string $customBadgeLabel = null,
 
         // Nuevas Propiedades
-        public string $title = 'Internet',
         public bool $isRecommended = false,
         public bool $hasPromo = true,
         public array $services = [],

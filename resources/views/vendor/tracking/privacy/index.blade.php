@@ -5,8 +5,8 @@
 ])
 
 @section('metadata')
-	<title>{{config('app.name')}} - Error 404. Política de Privacidad</title>
-	<!-- inject-style src="../../css/purged/generica.css" -->
+	<title>Movistar Co | Politica de privacidad</title>
+	@vite(['resources/sass/generica.scss'])
 @stop
 
 @section('content')

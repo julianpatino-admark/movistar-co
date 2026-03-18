@@ -9,7 +9,6 @@
 			speed: 900,
 			price: 97990,
 			discount: 30,
-			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
 			isRecommended: true,
 			services: []
@@ -18,7 +17,6 @@
 			speed: 900,
 			price: 110990,
 			discount: 30,
-			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
 			services: [
                 new ServiceData(
@@ -33,7 +31,6 @@
 			speed: 900,
 			price: 108990,
 			discount: 30,
-			title: 'Internet + Telefonía fija',
 			priceNote: 'x 12 Meses.',
 			services: [
                 new ServiceData(

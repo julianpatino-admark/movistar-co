@@ -6,7 +6,7 @@
 
 @section('metadata')
 	<title>{{config('app.name')}}. Política de Cookies</title>
-	<!-- inject-style src="../../css/purged/generica.css" -->
+	@vite(['resources/sass/generica.scss'])
 @stop
 
 @section('content')

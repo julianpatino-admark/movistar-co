@@ -1,9 +1,11 @@
 .card-offer {
-    width: 265px;
+    width: 270px;
     height: 100%;
     position: relative;
 
     margin: 0 auto;
+
+    $self: &;
 
     *{
         font-family: $font-family-primary;
@@ -16,22 +18,27 @@
         left: calc(20%);
 
         color: white;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
 
-        border-radius: 8px;
+        border-radius: 6px;
         background-color: $color-green-10;
 
         padding: 5px 12px;
+
+        svg{
+            width: 13px;
+            height: 13px;
+        }
     }
 
-    &_wrapper {      
+    &_wrapper {
         display: flex;
         flex-direction: column;
-
+        
         height: 100%;
         overflow: hidden;
-        border-radius: 20px;
+        border-radius: 12px;
         box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.10);
     }
 
@@ -52,28 +59,23 @@
             //text-decoration-line: strikethrough;
         }
 
-        .main-title{
-            font-size: 14px;
-            font-weight: 500;
-            color: $card-offer-header-font-color;
-
-            padding: 0;
-            margin: 0;
-
-            > b{
-                font-weight: 700;
-            }
-        }
-
         .main-speed{
-            font-size: 40px;
-            line-height: 40px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: 38px;
+            line-height: 38px;
             font-weight: 400;
             color: $card-offer-header-font-color;
 
             & > b{
-                font-size: 48px;
-                font-weight: 800;
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+            & > i{
+                font-size: 17px;
+                line-height: 17px;
             }
         }
     }
@@ -91,10 +93,9 @@
             margin-right: 2px;
         }
 
-        p{
+        .months{
             color: $white;
             font-size: 12px;
-            font-weight: 700;
 
             padding: 0;
             margin: 0;
@@ -104,17 +105,18 @@
     &_body {
         flex: 1;
 
-        padding: 16px 16px 0 16px;
+        padding: 16px 22px 0 22px;
     }
 
         .badge-condition{            
             text-align: center;
+            font-style: italic;
             color: $color-blue-20;
-            font-size: 12px;
-            font-weight: 800;
+            font-size: 10px;
+            font-weight: 900;
             
             background: rgba(1, 157, 244, 0.20);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 5px 10px;
             margin-bottom: 20px;
         }
@@ -124,22 +126,25 @@
             flex-direction: column;
             align-items: center;
 
+            margin-bottom: 18px;
+
             &-number{
                 color: $color-blue-90;
-                font-size: 40px;
+                font-size: 49px;
                 font-weight: 800;
 
                 margin: 0;
 
                 span{
-                    font-size: 18px;
+                    font-size: 24px;
+                    font-weight: 700;
                     color: $color-blue-90;
                 }
             }
 
             &-text{
                 color: $color-grey-50;
-                font-size: 14px;
+                font-size: 15px;
                 font-weight: 500;
 
                 margin: 0;
@@ -155,18 +160,161 @@
             background: $color-grey-5;
 
             padding: 10px 0;
-            margin: 18px 0;
+            margin: 6px 0;
             
             p{
-                max-width: 105px;
+                max-width: 172px;
 
                 color: $color-grey-65;
-                font-size: 12px;
-                margin: 0 0 0 32px;
+                font-size: 11px;
+                margin: 0 0 0 12px;
+            }
+        }
+
+        .packages-list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 18px;
+
+            margin: 22px 0;
+
+            p{
+                grid-column: 1 / -1;
+
+                text-align: center;
+                color: $color-grey-50;
+                font-size: 13px;
+                font-weight: 400;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            .error-message {
+                display: none; /* Crucial: Oculto por defecto, el JS lo cambia a block */
+                color: #dc3545; /* Rojo de error clásico */
+                font-size: 0.875rem;
+                margin-bottom: 0;
+                font-weight: 500;
+                animation: fadeIn 0.3s ease; /* Pequeña animación para que no aparezca de golpe */
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-5px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .package-included{
+                position: relative;
+
+                display: flex;
+                place-items: center;
+                place-content: center;
+
+                border-radius: 9px;
+                background: $color-grey-5;
+                box-shadow: 0 1.643px 3.696px 0 rgba(0, 0, 0, 0.15);
+
+                height: 53px;
+
+                border: 1.347px solid rgba(0, 0, 0, 0);
+                transition: all 0.5s ease-in-out;
+
+                cursor: pointer;
+
+                .icon{
+                    position: absolute;
+                    opacity: 0;
+                    top: -8px;
+                    right: -8px;
+
+                    transition: all 0.2s ease-in-out;
+                }
+
+                &.selected{
+                    border: 1.347px solid #019DF4;
+    
+                    .icon{
+                        opacity: 1;
+                    }
+                }
+
             }
         }
 
     &_footer {
         padding: 0 16px 24px 16px;
     }
+
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        width: 350px;
+
+        #{$self}_title{
+            font-size: 18px;
+            border-radius: 9px;
+        }
+
+        #{$self}_header {
+            .main-speed{
+                & > b{
+                    font-size: 35px;
+                }
+
+                & > i{
+                    font-size: 20px;
+                }
+            }
+        }
+
+        #{$self}_discount {
+            padding: 9px 0;
+
+            .months{
+                font-size: 15px;
+            }
+        }
+
+        #{$self}_body {
+            .badge-condition{
+                font-size: 13px;
+            }
+
+            #{$self}_price{
+
+                &-number{
+                    font-size: 64px;
+
+                    span{
+                        font-size: 32px;
+                    }
+                }
+
+                &-text{
+                    font-size: 19px;
+                }
+            }
+
+            #{$self}_services{
+                p{
+                    font-size: 15px;
+                }
+
+                &:first-child img{
+                    width: 51px;
+                    height: auto;
+                }
+
+                &:last-child img{
+                    width: 27px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {}
 }

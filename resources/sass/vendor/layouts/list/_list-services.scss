@@ -1,6 +1,6 @@
 .list-services {
     background-color: $color-grey-10;
-    padding-bottom: 24px;
+    padding: 38px 0 24px 0;
 
     &_item {
         display: flex;
@@ -44,7 +44,7 @@
     }
 
     @include media-breakpoint-up(md) {
-        padding-bottom: 40px;
+        padding: 35px 0 40px 0;
 
         &_item {
             margin: 0 11px;

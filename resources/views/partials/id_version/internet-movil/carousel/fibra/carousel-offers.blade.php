@@ -6,68 +6,68 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
 		new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
+			speed: 'Fibra 900 Megas',
 			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
+			speedSubtitle: '+ Pospago ilimitado',
 			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 106990,
 			discount: 50,
-			isRecommended: true,
+			isRecommended: false,
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    text: '<b>Velocidad simétrica.</b>',
                     width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23,
-                    height: 20
+                    width: 21,
+                    height: 22
 				)
 			]
 		),
         new OfferData(
-			title: 'Internet + Pospago',
-			speed: '900 Megas +',
+			speed: 'Fibra 900 Megas',
 			speedUnit: '',
-			speedSubtitle: 'Ilimitado',
+			speedSubtitle: 'Pospago ilimitado + App de video',
 			isRecommended: true,
 			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
 			price: 124990,
 			discount: 50,
 			services: [
 				new ServiceData(
-                    icon: 'resources/img/common/logo-disney-plus.webp',
-                    text: 'Elige <b>¡Disney+</b>',
-                    width: 26,
-                    height: 26
-                ),
-				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: 'tal vez <b>Win Play</b>',
-					width: 42,
-					height: 23
-				),
-				new ServiceData(
-					icon: 'resources/img/common/logo-netflix.webp',
-					text: 'O que tal <b>Netflix</b>',
-					width: 56,
-					height: 22
-				),
-				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
-                    text: 'Velocidad simétrica <b>sube y baja a la misma velocidad</b>',
+                    text: '<b>Velocidad simétrica.</b>',
                     width: 30,
                     height: 9
 				),
                 new ServiceData(
                     icon: 'resources/img/common/comparte.webp',
                     text: '<b>15 GB</b> para compartir',
-                    width: 23,
-                    height: 20
+                    width: 21,
+                    height: 22
+				)
+			],
+			packages: [
+				new ServiceData(
+                    icon: 'resources/img/common/logo-disney-premium.webp',
+                    text: 'Elige <b>¡Disney+</b>',
+                    width: 56,
+                    height: 38
+                ),
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: 'tal vez <b>Win Play</b>',
+					width: 52,
+					height: 27
+				),
+				new ServiceData(
+					icon: 'resources/img/common/logo-netflix.webp',
+					text: 'O que tal <b>Netflix</b>',
+					width: 56,
+					height: 22
 				)
 			]
 		),

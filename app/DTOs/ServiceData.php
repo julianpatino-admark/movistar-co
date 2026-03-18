@@ -9,5 +9,6 @@ class ServiceData
         public string $text,
         public int $width = 26,
         public int $height = 26,
+        public?string $altText = null
     ) {}
 }

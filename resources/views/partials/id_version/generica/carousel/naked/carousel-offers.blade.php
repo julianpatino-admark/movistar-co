@@ -9,7 +9,6 @@
 			speed: 900,
 			price: 107990,
 			discount: 20,
-			title: 'Internet + Movistar Tv App',
 			priceNote: 'x 12 Meses.',
 			services: [
 				new ServiceData(
@@ -24,7 +23,6 @@
 			speed: 900,
 			price: 119990,
 			discount: 20,
-			title: 'Internet + Movistar Tv App',
 			isRecommended: true,
 			priceNote: 'x 12 Meses.',
 			services: [

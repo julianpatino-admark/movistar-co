@@ -46,6 +46,23 @@
     }
 }
 
+.btn-flex.btn-accent-d {
+    display: inline-flex;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff;
+    color: $color-blue-20;
+
+    border: 2px solid #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: #fff;
+        border: 2px solid #fff;
+        background: transparent;
+    }
+}
+
 .btn-dark{
     display: inline-flex;
     text-decoration: none;

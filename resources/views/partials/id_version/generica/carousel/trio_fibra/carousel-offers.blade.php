@@ -6,36 +6,65 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
         new OfferData(
-			speed: 900,
+			speed: 'Fibra 900',
+			speedUnit: '',
+			speedSubtitle: 'megas simétricas',
+			customBadgeLabel: '<b>10% Dto x 6 meses. Exclusivo Online</b>',
 			price: 131990,
 			discount: 10,
-			title: 'Internet + Fijo + TV',
-			priceNote: 'x 6 Meses.',
 			services: [
 				new ServiceData(
-					icon: 'resources/img/common/icono-television.webp',
-					text: '<b>Movistar TV</b> Desde 90 canales HD',
-					width: 29,
-					height: 22
+                    icon: 'resources/img/common/dos-decos.webp',
+                    text: '<b>TV con 1 deco</b> incluido.',
+                    width: 30,
+                    height: 9
+				),
+                new ServiceData(
+                    icon: 'resources/img/common/icono-television.webp',
+                    text: '<b>Movistar TV</b> desde 71 canales HD.',
+                    width: 23,
+                    height: 20
 				)
 			]
 		),
 		new OfferData(
-			speed: 900,
+			speed: 'Fibra 900',
+			speedUnit: '',
+			speedSubtitle: 'megas simétricas + App de video',
+			customBadgeLabel: '<b>10% Dto x 6 meses. Exclusivo Online</b>',
 			price: 149990,
 			discount: 10,
-			title: 'Internet + Fijo + TV',
-			priceNote: 'x 6 Meses.',
+			isRecommended: true,
 			services: [
 				new ServiceData(
-					icon: 'resources/img/common/icono-television.webp',
-					text: '<b>Movistar TV</b> Desde 90 canales HD',
-					width: 29,
-					height: 22
+                    icon: 'resources/img/common/dos-decos.webp',
+                    text: '<b>TV con 1 deco</b> incluido.',
+                    width: 30,
+                    height: 9
 				),
                 new ServiceData(
+                    icon: 'resources/img/common/icono-television.webp',
+                    text: '<b>Movistar TV</b> desde 71 canales HD.',
+                    width: 23,
+                    height: 20
+				)
+			],
+			packages: [
+				new ServiceData(
+                    icon: 'resources/img/common/logo-disney-premium.webp',
+                    text: 'Elige <b>¡Disney+</b>',
+                    width: 56,
+                    height: 38
+                ),
+				new ServiceData(
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: 'tal vez <b>Win Play</b>',
+					width: 52,
+					height: 27
+				),
+				new ServiceData(
 					icon: 'resources/img/common/logo-netflix.webp',
-					text: '<b>¡incluido en tu plan!</b>',
+					text: 'O que tal <b>Netflix</b>',
 					width: 56,
 					height: 22
 				)

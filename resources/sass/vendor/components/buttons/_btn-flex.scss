@@ -4,8 +4,8 @@
     place-content: center;
     align-items: center;
     font-weight: bold;
-    font-family: $btn-font;
-    font-size: $btn-font-size;
+    font-family: $font-family-primary;
+    font-size: 13px;
     color: $btn-color;
     background: $btn-bg;
     justify-content: space-around;
@@ -26,5 +26,20 @@
         text-decoration: none;
     }
 
+    &.disabled{
+        cursor: not-allowed;
+        color: #86888C;
+        background: #D3D4D3;
+        border: #86888C;
 
+        &:hover{
+            color: #86888C;
+            background: #D3D4D3;
+            border: 1px solid #86888C;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: $btn-font-size;
+    }
 }

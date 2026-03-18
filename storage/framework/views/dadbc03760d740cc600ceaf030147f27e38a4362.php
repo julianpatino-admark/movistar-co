@@ -6,24 +6,40 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
 		new OfferData(
-			speed: 900,
+			speed: 'Fibra 900',
+			speedUnit: '',
+			speedSubtitle: 'megas simétricas',
+			customBadgeLabel: '<b>20% Dto x 6 meses. Exclusivo Online</b>',
 			price: 94990,
 			discount: 20,
-			isRecommended: true,
-			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
 			services: []
 		),
         new OfferData(
-			speed: 900,
+			speed: 'Fibra 900',
+			speedUnit: '',
+			speedSubtitle: 'megas simétricas',
+			customBadgeLabel: '<b>20% Dto x 6 meses. Exclusivo Online</b>',
 			price: 112990,
 			discount: 20,
-			title: 'con Movistar Total recibe',
-			priceNote: 'x 6 Meses.',
-			services: [
+			isRecommended: true,
+			packages: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-disney-plus.webp',
-					text: '<b>¡Disney+</b> incluido en tu plan!'
+					icon: 'resources/img/common/logo-win-play.webp',
+					text: 'tal vez <b>Win Play</b>',
+					width: 52,
+					height: 27
+				),
+				new ServiceData(
+                    icon: 'resources/img/common/logo-disney-premium.webp',
+                    text: 'Elige <b>¡Disney+</b>',
+                    width: 56,
+                    height: 38
+                ),
+				new ServiceData(
+					icon: 'resources/img/common/logo-netflix.webp',
+					text: 'O que tal <b>Netflix</b>',
+					width: 56,
+					height: 23
 				)
 			]
 		),

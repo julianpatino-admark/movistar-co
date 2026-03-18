@@ -16,6 +16,9 @@
 
 	<?php if($offer->isRecommended): ?>
 		<div class="card-offer_title">
+			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+				<path d="M3.41185 10.6415L6.33661 8.87733L9.26136 10.6647L8.49536 7.3221L11.0719 5.09372L7.68292 4.79196L6.33661 1.63508L4.99029 4.76874L1.60129 5.0705L4.17786 7.3221L3.41185 10.6415ZM6.33661 9.97017L2.96618 12.0054C2.86714 12.0543 2.77521 12.0741 2.69041 12.0648C2.60623 12.0549 2.52421 12.0259 2.44436 11.9776C2.36389 11.928 2.30323 11.8581 2.26238 11.7677C2.22152 11.6774 2.21781 11.5786 2.25123 11.4715L3.14816 7.65543L0.181622 5.0835C0.0980577 5.01541 0.0429671 4.93402 0.0163503 4.83931C-0.0102665 4.7446 -0.004386 4.65392 0.0339917 4.56726C0.0723695 4.4806 0.123437 4.40942 0.187193 4.35371C0.251569 4.29986 0.338228 4.26333 0.447172 4.24415L4.3617 3.90246L5.88814 0.288762C5.93024 0.186628 5.9909 0.112967 6.07013 0.06778C6.14936 0.0225933 6.23819 0 6.33661 0C6.43503 0 6.52416 0.0225933 6.60401 0.06778C6.68386 0.112967 6.74422 0.186628 6.78507 0.288762L8.31151 3.90246L12.2251 4.24415C12.3347 4.26272 12.4216 4.29955 12.486 4.35464C12.5504 4.40911 12.6018 4.47998 12.6402 4.56726C12.6779 4.65392 12.6835 4.7446 12.6569 4.83931C12.6302 4.93402 12.5752 5.01541 12.4916 5.0835L9.52505 7.65543L10.422 11.4715C10.4566 11.5774 10.4532 11.6758 10.4118 11.7668C10.3703 11.8578 10.3093 11.9277 10.2289 11.9766C10.1496 12.0262 10.0676 12.0556 9.9828 12.0648C9.89862 12.0741 9.80701 12.0543 9.70797 12.0054L6.33661 9.97017Z" fill="white"/>
+			</svg>
 			Plan Recomendado
 		</div>
 	<?php endif; ?>
@@ -23,7 +26,6 @@
 	<div class="card-offer_wrapper">
 
 		<div class="card-offer_header">
-			<h4 class="main-title"><?php echo e($offer->title); ?></h4>
 			<h3 class="main-speed">
 				<b><?php echo e($offer->speed); ?></b>
 
@@ -33,7 +35,7 @@
 				<?php endif; ?>
 
 				<?php if($offer->speedSubtitle): ?>
-                    <br><i><?php echo e($offer->speedSubtitle); ?></i>
+                    <i><?php echo e($offer->speedSubtitle); ?></i>
                 <?php endif; ?>
 			</h3>
 		</div>
@@ -70,7 +72,7 @@
 			<?php if($offer->layout !== 'standard'): ?>
 				<div class="card-offer_cta">
 					<a
-						class="btn-flex btn-accent"
+						class="btn-flex btn-accent-b"
 						data-c2c="MOVIL DE <?php echo e($offer->speed); ?>"
 						data-toggle="modal"
 						data-modal-title="<?php echo e($offer->speed); ?>"
@@ -83,23 +85,45 @@
 				</div>
 			<?php endif; ?>
 
-			<?php $__currentLoopData = $offer->services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="card-offer_services">
-                    <img
-						width="<?php echo e($service->width); ?>"
-						height="<?php echo e($service->height); ?>"
-						src="<?php echo e(Vite::asset($service->icon)); ?>"
-						alt="Logo servicio"
-					>
-                    <p><?php echo $service->text; ?></p>
-                </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<div class="services-list">
+				<?php $__currentLoopData = $offer->services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+					<div class="card-offer_services">
+						<img
+							width="<?php echo e($service->width); ?>"
+							height="<?php echo e($service->height); ?>"
+							src="<?php echo e(Vite::asset($service->icon)); ?>"
+							alt="Logo servicio"
+						>
+						<p><?php echo $service->text; ?></p>
+					</div>
+				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			</div>
 
-			<?php $__currentLoopData = $offer->packages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $package): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-				<div class="package-included">
-					<p class="budget <?php echo e($package->theme ?? ''); ?>"><?php echo e($package->text); ?></p>
+			<?php if(!empty($offer->packages)): ?>
+				<div class="packages-list">
+					<p>Selecciona tu plataforma digital*</p>
+
+					<?php $__currentLoopData = $offer->packages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $package): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+						<div class="package-included">
+							<img
+								width="21"
+								height="21"
+								class="icon"
+								src="<?php echo e(Vite::asset('resources/img/common/icon-ott-checked.webp')); ?>"
+								alt="Icono de checked"
+							>
+							<img
+								width="<?php echo e($package->width); ?>"
+								height="<?php echo e($package->height); ?>"
+								src="<?php echo e(Vite::asset($package->icon)); ?>"
+								alt="Ott incluida"
+							>
+						</div>
+					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+					<p class="error-message"></p>
 				</div>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			<?php endif; ?>
 		</div>
 		<?php if($offer->layout === 'standard'): ?>
 			<div class="card-offer_footer">

@@ -34,7 +34,7 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Slide
  */
-import { initCarousels } from "./modules/carousel/index";
+import { initCarousels, selectOtts } from "./modules/carousel/index";
 
 /**
  * INIT
@@ -47,6 +47,7 @@ ModalShow.init();
 
 NavClose.init();
 initCarousels();
+selectOtts();
 
 import.meta.glob([
   '../img/**', 
