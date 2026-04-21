@@ -4,7 +4,7 @@ return [
     /**
      * Endpoint del cliente SOAP Cobalt (inserción de leads)
      */
-    'endpoint' => env('COBALT_WSDL_ENDPOINT', 'https://panel.digitalion.com/wss/cobalt.php?wsdl'),
+    'endpoint' => env('COBALT_WSDL_ENDPOINT', 'http://panel.digitalion.com/wss/cobalt.php?wsdl'),
 
 
     /**
