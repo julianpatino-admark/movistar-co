@@ -9,7 +9,7 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: '+ Pospago ilimitado',
-			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
+			customBadgeLabel: '<b>50% dto en el mes 2 y 3. Exclusivo Online</b>',
 			price: 139990,
 			discount: 50,
 			services: [
@@ -31,7 +31,7 @@
 			speed: '900 Megas +',
 			speedUnit: '',
 			speedSubtitle: 'Pospago ilimitado + App de video',
-			customBadgeLabel: '<b>50% Dto en el mes 2. Exclusivo Online</b>',
+			customBadgeLabel: '<b>50% dto en el mes 2 y 3. Exclusivo Online</b>',
 			isRecommended: true,
 			price: 157990,
 			discount: 50,

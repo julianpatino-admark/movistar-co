@@ -8,11 +8,12 @@
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Internet Hogar"/>
 	<meta name="description" content="Planes de internet hogar con FIBRA ÓPTICA, telefonía y tv con hasta el 20% de descuento por 12 meses ¡Pásate ya a Movistar!" />
-	<title>Movistar Co | Planes de internet y telefonía para el hogar</title>
-	<!-- inject-style src="../../css/splide-core.min.css" -->
-	<!-- inject-style src="../../css/internet-movil.css" -->
 	@vite(['resources/sass/internet-movil.scss', 'resources/js/generica.js'])
 @stop
+
+@section('title')
+	Movistar Co | Planes de internet y telefonía para el hogar
+@endsection
 
 @section('content')
 	@include('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 0 ])

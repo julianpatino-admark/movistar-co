@@ -33,12 +33,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="canonical" href="{{url()->current()}}/" />
-@section('metadata')
+	<title>@yield('title', 'Movistar')</title>
+	@section('metadata')
 	@show
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="main">
 	@if($top === true)

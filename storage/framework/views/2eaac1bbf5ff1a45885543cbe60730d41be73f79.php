@@ -129,7 +129,7 @@
 			<div class="card-offer_footer">
 				<button
 					class="btn-flex btn-carousel"
-					data-c2c="FIBRA <?php echo e($offer->speed); ?> MB COMBO PLUS : <?php echo e($offer->getFormattedDiscountPrice()); ?>"
+					data-c2c="<?php echo e($offer->speed); ?> MB : <?php echo e($offer->getFormattedDiscountPrice()); ?>"
 					data-toggle="modal"
 					data-modal-title="<?php echo e($offer->speed); ?> Mb"
 					data-target="#modal-velocidades"

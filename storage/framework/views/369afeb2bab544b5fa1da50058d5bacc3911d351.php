@@ -121,6 +121,7 @@
             id="btn-submit-<?php echo e($id); ?>-form"
             class="form-control btn-form bg-degraded"
             data-c2c="TE LLAMAMOS"
+            type="submit"
         >
             <div class="btn-form_content font-family-bold">
                 Llámame
@@ -131,5 +132,4 @@
         </button>
     </div>
 </form>
-
 <?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/components/forms/simple.blade.php ENDPATH**/ ?>

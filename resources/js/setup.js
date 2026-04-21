@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import $ from 'jquery';
 
 // Asignar a global INMEDIATAMENTE

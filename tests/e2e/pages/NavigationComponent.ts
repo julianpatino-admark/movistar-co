@@ -29,6 +29,6 @@ export class NavigationComponent {
             'carruselSecundario': this.secondaryCarouselNav
         };
 
-        await this.mainNav.getByRole('link', { name: linkName }).click();
+        await containers[menu].getByRole('link', { name: linkName }).click();
     };
 }

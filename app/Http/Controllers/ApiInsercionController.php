@@ -30,7 +30,7 @@ class ApiInsercionController extends Controller
             ], 422);
         }
 
-        $urlApiExterna = 'http://panel.digitalion.com/wss/cobalt-restapi/lead.php';
+        $urlApiExterna = config('services.digitalion.url');
 
         try {
             $response = Http::get($urlApiExterna, $datosValidados);

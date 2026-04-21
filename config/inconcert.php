@@ -15,7 +15,7 @@ return array(
     /**
      * Puerto o URL de inconcert (CON PROTOCOLO HTTP O HTTPS)
      */
-    'server_ip' 		=>			"http://52.210.157.225",
+    'server_ip' 		=>			"",
     'port' 				=>  		"8085",
     'import_id' 		=> 			"",
     'vcc' 				=> 			"",

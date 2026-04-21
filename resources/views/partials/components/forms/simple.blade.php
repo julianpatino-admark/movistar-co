@@ -120,6 +120,7 @@
             id="btn-submit-{{ $id }}-form"
             class="form-control btn-form bg-degraded"
             data-c2c="TE LLAMAMOS"
+            type="submit"
         >
             <div class="btn-form_content font-family-bold">
                 Llámame
@@ -130,4 +131,3 @@
         </button>
     </div>
 </form>
-

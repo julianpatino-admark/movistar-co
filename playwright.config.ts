@@ -22,7 +22,22 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['monocart-coverage-reports', {
+      name: 'Frontend Coverage',
+      outputDir: './tests/e2e/coverage-reports',
+      reports: ['lcovonly', 'v8'],
+      entryFilter: (entry) => entry.url.includes('resources/js'),
+      sourceFilter: (sourcePath) => sourcePath.search(/resources\/js\//) !== -1,
+      sourcePath: (path) => {
+        // Si la ruta viene sucia (ej: webpack:///./resources/js/generica.js)
+        // Esto la recorta y la deja exactamente como "resources/js/generica.js"
+        const match = path.match(/(resources\/js\/.*)/);
+        return match ? match[1] : path;
+      }
+    }]
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     ignoreHTTPSErrors: true,
@@ -36,19 +51,17 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
+    /*{
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+    },*/
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
 
     /* Test against mobile viewports. */

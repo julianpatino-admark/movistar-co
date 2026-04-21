@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 
 import { MainFormComponent } from './pages/MainFormComponent';
 import { FormularioData } from './utilities/interfaces';
@@ -22,6 +22,12 @@ test.describe('Pruebas en el formulario principal', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('');
+
+    // Esperamos a que el contenedor del formulario esté 100% interactivo
+    await page.locator('#c2c-main').waitFor({ state: 'visible' });
+
+    // Un pequeño respiro de medio segundo para que jQuery Validation se conecte
+    await page.waitForTimeout(500);
 
     mainForm = new MainFormComponent(page, '#c2c-main');
   });
@@ -59,7 +65,9 @@ test.describe('Pruebas en el formulario principal', () => {
 
     await mainForm.submitBtn.click();
 
-    await expect(page).toHaveURL(/.*gracias/);
+    await page.waitForURL(/.*gracias/, { timeout: 15000 });
+
+    await page.waitForLoadState('load');
     await expect(mainForm.tituloGracias).toBeVisible();
   });
 

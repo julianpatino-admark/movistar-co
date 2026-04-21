@@ -33,12 +33,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	
 	<link rel="canonical" href="<?php echo e(url()->current()); ?>/" />
-<?php $__env->startSection('metadata'); ?>
+	<title><?php echo $__env->yieldContent('title', 'Movistar'); ?></title>
+	<?php $__env->startSection('metadata'); ?>
 	<?php echo $__env->yieldSection(); ?>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="main">
 	<?php if($top === true): ?>

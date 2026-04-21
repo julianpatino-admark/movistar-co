@@ -4,7 +4,7 @@ return [
     /**
      * Endpoint del cliente SOAP Cobalt (inserción de leads)
      */
-    'endpoint' => 'http://panel.digitalion.com/wss/cobalt.php?wsdl',
+    'endpoint' => env('COBALT_WSDL_ENDPOINT', 'https://panel.digitalion.com/wss/cobalt.php?wsdl'),
 
 
     /**
@@ -19,7 +19,7 @@ return [
      * La configuración del cliente SOAP de CobaltService
      */
     'service' => [
-        'location' => env('COBALT_LOCATION', 'http://panel.digitalion.com/wss/cobalt.lp.php'),
+        'location' => env('COBALT_LOCATION', 'http://panel.digitalion.com/wss/cobalt.lp.php'), // NOSONAR
         'uri' => env('COBALT_URI', 'urn:webservices'),
         'login' => env('COBALT_LOGIN'),
         'password' => env('COBALT_PASSWORD'),

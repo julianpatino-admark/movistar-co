@@ -45,5 +45,5 @@ FormSimple.init();
 ToggleEnabled.init();
 ModalShow.init();
 
-NavClose.init();
+NavClose();
 initCarousels();

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures';
 import { NavigationComponent } from './pages/NavigationComponent';
 
 test.describe('Pruebas de Navegación Principal', () => {

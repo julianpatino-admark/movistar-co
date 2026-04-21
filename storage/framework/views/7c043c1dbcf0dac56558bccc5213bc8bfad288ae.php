@@ -10,18 +10,12 @@
 			speedUnit: '',
 			customBadgeLabel: '50% de dto. exclusivo online',
 			discount: 50,
-			price: 45990,
+			price: 47990,
 			priceNote: 'x2 Meses.',
 			isRecommended: false,
 			hasPromo: false,
 			layout: 'mobile theme-green',
 			services: [
-                new ServiceData(
-                    icon: 'resources/img/common/logo-perplexity.webp',
-                    text: '<b>Perplexity Pro</b>incluido en tu plan x 12 meses.',
-                    width: 28,
-                    height: 28
-				),
 				new ServiceData(
                     icon: 'resources/img/common/vowifi.webp',
                     text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
@@ -53,12 +47,6 @@
 			hasPromo: false,
 			layout: 'mobile theme-green',
 			services: [
-                new ServiceData(
-                    icon: 'resources/img/common/logo-perplexity.webp',
-                    text: '<b>Perplexity Pro</b>incluido en tu plan x 12 meses.',
-                    width: 28,
-                    height: 28
-				),
 				new ServiceData(
                     icon: 'resources/img/common/vowifi.webp',
                     text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
@@ -66,14 +54,14 @@
                     height: 28
 				),
 				new ServiceData(
-                    icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">15 GIGAS</span>para compartir.',
+                    icon: 'resources/img/common/RRSS.webp',
+                    text: '<b>Redes sociales</b>incluido en tu plan.',
                     width: 28,
                     height: 28
 				),
 				new ServiceData(
-                    icon: 'resources/img/common/messages.webp',
-                    text: '<b>SMS ilimitado</b> todo destino.',
+                    icon: 'resources/img/common/share-dataplan.webp',
+                    text: '<span style="font-weight:bold">15 GIGAS</span>para compartir.',
                     width: 28,
                     height: 28
 				),
@@ -91,12 +79,6 @@
 			layout: 'mobile ilimitado expanded',
 			services: [
 				new ServiceData(
-                    icon: 'resources/img/common/logo-perplexity.webp',
-                    text: '<b>Perplexity Pro</b>incluido en tu plan x 12 meses.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
                     icon: 'resources/img/common/vowifi.webp',
                     text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
                     width: 28,
@@ -104,7 +86,7 @@
 				),
 				new ServiceData(
                     icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">15 GIGAS</span>para compartir.',
+                    text: '<b>15 GIGAS</b>para compartir.',
                     width: 28,
                     height: 28
 				),
@@ -128,12 +110,6 @@
 			layout: 'mobile ilimitado',
 			services: [
 				new ServiceData(
-                    icon: 'resources/img/common/logo-perplexity.webp',
-                    text: '<b>Perplexity Pro</b>incluido en tu plan x 12 meses.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
                     icon: 'resources/img/common/vowifi.webp',
                     text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
                     width: 28,
@@ -141,7 +117,7 @@
 				),
 				new ServiceData(
                     icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">25 GB para Roaming </span>de datos y 15 GB para compartir.',
+                    text: '<span style="font-weight:bold">25 GB para Roaming </span>para usar hasta en 64 países.',
                     width: 28,
                     height: 28
 				),
