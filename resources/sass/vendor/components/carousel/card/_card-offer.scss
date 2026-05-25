@@ -171,77 +171,6 @@
             }
         }
 
-        .packages-list{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 18px;
-
-            margin: 22px 0;
-
-            p{
-                grid-column: 1 / -1;
-
-                text-align: center;
-                color: $color-grey-50;
-                font-size: 13px;
-                font-weight: 400;
-
-                margin: 0;
-                padding: 0;
-            }
-
-            .error-message {
-                display: none; /* Crucial: Oculto por defecto, el JS lo cambia a block */
-                color: #dc3545; /* Rojo de error clásico */
-                font-size: 0.875rem;
-                margin-bottom: 0;
-                font-weight: 500;
-                animation: fadeIn 0.3s ease; /* Pequeña animación para que no aparezca de golpe */
-            }
-
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(-5px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-
-            .package-included{
-                position: relative;
-
-                display: flex;
-                place-items: center;
-                place-content: center;
-
-                border-radius: 9px;
-                background: $color-grey-5;
-                box-shadow: 0 1.643px 3.696px 0 rgba(0, 0, 0, 0.15);
-
-                height: 53px;
-
-                border: 1.347px solid rgba(0, 0, 0, 0);
-                transition: all 0.5s ease-in-out;
-
-                cursor: pointer;
-
-                .icon{
-                    position: absolute;
-                    opacity: 0;
-                    top: -8px;
-                    right: -8px;
-
-                    transition: all 0.2s ease-in-out;
-                }
-
-                &.selected{
-                    border: 1.347px solid #019DF4;
-    
-                    .icon{
-                        opacity: 1;
-                    }
-                }
-
-            }
-        }
-
     &_footer {
         padding: 0 16px 24px 16px;
     }
@@ -300,6 +229,7 @@
 
             #{$self}_services{
                 p{
+                    max-width: fit-content;
                     font-size: 15px;
                 }
 
@@ -311,6 +241,36 @@
                 &:last-child img{
                     width: 27px;
                     height: auto;
+                }
+
+                &.packages{
+                    padding: 8px 16px;
+
+                    img{
+                        &:first-child{
+                            width: 70px;
+                            height: 51px;
+                            aspect-ratio: 42/31;
+
+                            margin-right: 18px ;
+                        }
+
+                        &:nth-child(2n){
+                            width: 67px;
+                            height: 32px;
+                            aspect-ratio: 66.80/32.00;
+
+                            margin-right: 15px;
+                        }
+                    }
+
+                    .package-notes{
+                        color: $color-grey-65;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: 0.175px;
+                    }
                 }
             }
         }

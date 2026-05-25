@@ -22,8 +22,8 @@
             </li>
             <li class="@if(request()->path() == 'trio-fibra') active @endif">
                 <a href="/trio-fibra?{{request()->getQueryString()}}">
-                    <b>Trio</b>
-                    Fibra + Telefonía + TV
+                    <b>Internet</b>
+                    Fibra + TV
                 </a>
             </li>
         @show

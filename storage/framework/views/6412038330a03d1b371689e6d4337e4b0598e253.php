@@ -17,7 +17,7 @@
 
 <?php $__env->startSection('content'); ?>
 	<?php echo $__env->make('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 1 ], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-	<?php echo $__env->make('partials.id_version.internet-movil.carousel.fibra.carousel-offers', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+	<?php echo $__env->make('partials.id_version.internet-movil.carousel.carousel-offers', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	<?php echo $__env->make('partials.layouts.banners.banner-simple', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	<?php echo $__env->make('partials.id_version.generica.list.list-services', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	<?php echo $__env->make('partials.layouts.conditions.collapse', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

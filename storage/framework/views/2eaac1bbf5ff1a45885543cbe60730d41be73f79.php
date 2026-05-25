@@ -97,33 +97,22 @@
 						<p><?php echo $service->text; ?></p>
 					</div>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-			</div>
-
-			<?php if(!empty($offer->packages)): ?>
-				<div class="packages-list">
-					<p>Selecciona tu plataforma digital*</p>
-
-					<?php $__currentLoopData = $offer->packages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $package): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-						<div class="package-included">
-							<img
-								width="21"
-								height="21"
-								class="icon"
-								src="<?php echo e(Vite::asset('resources/img/common/icon-ott-checked.webp')); ?>"
-								alt="Icono de checked"
-							>
+				<?php if(!empty($offer->packages)): ?>
+					<div class="card-offer_services packages">
+						<?php $__currentLoopData = $offer->packages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $package): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 							<img
 								width="<?php echo e($package->width); ?>"
 								height="<?php echo e($package->height); ?>"
 								src="<?php echo e(Vite::asset($package->icon)); ?>"
 								alt="Ott incluida"
 							>
-						</div>
-					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-					<p class="error-message"></p>
-				</div>
-			<?php endif; ?>
+						<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+						<?php if(!empty($offer->packagesNotes)): ?>
+							<div class="package-notes"><?php echo $offer->packagesNotes; ?></div>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
+			</div>
 		</div>
 		<?php if($offer->layout === 'standard'): ?>
 			<div class="card-offer_footer">

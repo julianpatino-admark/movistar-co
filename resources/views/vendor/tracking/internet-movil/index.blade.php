@@ -17,7 +17,7 @@
 
 @section('content')
 	@include('partials.id_version.internet-movil.main-banner', [ 'startFrom' => 1 ])
-	@include('partials.id_version.internet-movil.carousel.fibra.carousel-offers')
+	@include('partials.id_version.internet-movil.carousel.carousel-offers')
 	@include('partials.layouts.banners.banner-simple')
 	@include('partials.id_version.generica.list.list-services')
 	@include('partials.layouts.conditions.collapse')

@@ -82,33 +82,22 @@
 						<p>{!! $service->text !!}</p>
 					</div>
 				@endforeach
-			</div>
-
-			@if (!empty($offer->packages))
-				<div class="packages-list">
-					<p>Selecciona tu plataforma digital*</p>
-
-					@foreach ($offer->packages as $package)
-						<div class="package-included">
-							<img
-								width="21"
-								height="21"
-								class="icon"
-								src="{{ Vite::asset('resources/img/common/icon-ott-checked.webp') }}"
-								alt="Icono de checked"
-							>
+				@if (!empty($offer->packages))
+					<div class="card-offer_services packages">
+						@foreach ($offer->packages as $package)
 							<img
 								width="{{ $package->width }}"
 								height="{{ $package->height }}"
 								src="{{ Vite::asset($package->icon) }}"
 								alt="Ott incluida"
 							>
-						</div>
-					@endforeach
-
-					<p class="error-message"></p>
-				</div>
-			@endif
+						@endforeach
+						@if (!empty($offer->packagesNotes))
+							<div class="package-notes">{!! $offer->packagesNotes !!}</div>
+						@endif
+					</div>
+				@endif
+			</div>
 		</div>
 		@if ($offer->layout === 'standard')
 			<div class="card-offer_footer">

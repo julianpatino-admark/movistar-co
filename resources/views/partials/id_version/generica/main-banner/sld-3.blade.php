@@ -1,5 +1,12 @@
 <div class="main-banner sld-3">
     <div class="container">
+        <div class="box-ghost" aria-hidden="true" style="pointer-events: none;">
+            Movistar Total
+        </div>
+        <div class="main-banner_body">
+            <h1>Movistar Total <img width="101" height="30" src="{{ Vite::asset('resources/img/common/movistar-total.webp') }}" alt="Todos los servicios incluidos de Movistar "></h1>
+            <h2>Fibra 500 MEGAS <small>+TV + Pospago ilimitado</small></h2>
+        </div>
         <div class="main-banner_cta">
             <button
                 data-c2c="OFERTA MOVIL"

@@ -25,7 +25,7 @@ class OfferData {
 
         public string $layout = 'standard',
 
-
+        public string $packagesNotes = '',
     ){}
 
     public function getDiscountPrice(): float

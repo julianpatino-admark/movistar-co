@@ -8,9 +8,6 @@
             <div class="splide__slide">
                 @include('partials.id_version.generica.main-banner.sld-1')
             </div>
-            <div class="splide__slide">
-                @include('partials.id_version.generica.main-banner.sld-2')
-            </div>
         </div>
 
         <ul class="splide__pagination"></ul>

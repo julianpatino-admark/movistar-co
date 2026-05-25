@@ -11,9 +11,9 @@
     .container{
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
 
-        width: map_get($mb-width, xs);
+        // width: map_get($mb-width, xs);
         height: map_get($mb-height, xs);
         padding: map_get($mb-padding, xs);
 
@@ -44,7 +44,7 @@
 
     @include media-breakpoint-up(sm) {      
         .container{
-            width: map_get($mb-width, sm);
+            // width: map_get($mb-width, sm);
             height: map_get($mb-height, sm);
             padding: map_get($mb-padding, sm);
         }

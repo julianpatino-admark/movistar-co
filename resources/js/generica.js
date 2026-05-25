@@ -34,7 +34,7 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Slide
  */
-import { initCarousels, selectOtts } from "./modules/carousel/carousel";
+import { initCarousels } from "./modules/carousel/carousel";
 
 /**
  * INIT
@@ -47,7 +47,6 @@ ModalShow.init();
 
 NavClose();
 initCarousels();
-selectOtts();
 
 /* istanbul ignore next */
 import.meta.glob([

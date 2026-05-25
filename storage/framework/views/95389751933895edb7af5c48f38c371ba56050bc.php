@@ -1,10 +1,11 @@
 <?php $__env->startSection('metadata'); ?>
 	<meta name="keywords" content="MOVISTAR Móvil"/>
 	<meta name="description" content="Movistar pospago Móvil, datos y llamadas ilimitadas. Ademas de 50% de descuento en el segundo y tercer mes." />
-	<title>Movistar Co | Planes pospago móvil con llamadas ilimitadas</title>
-	<!-- inject-style src="../../css/splide-core.min.css" -->
-	<!-- inject-style src="../../css/movil.css" -->
 	<?php echo app('Illuminate\Foundation\Vite')(['resources/sass/movil.scss', 'resources/js/generica.js']); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('title'); ?>
+	Movistar Co | Planes pospago móvil con llamadas ilimitadas
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>

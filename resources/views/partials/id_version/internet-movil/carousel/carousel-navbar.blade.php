@@ -7,7 +7,7 @@
         </li>
         <li class="@if(request()->path() == 'internet-movil/trio') active @endif">
             <a href="/internet-movil/trio?{{request()->getQueryString()}}">
-                <b>Trío + Pospago</b>
+                <b>Internet + TV + Pospago</b>
             </a>
         </li>
     </ul>

@@ -6,11 +6,11 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
         new OfferData(
-			speed: '900 Megas +',
+			speed: '500 Megas +',
 			speedUnit: '',
 			speedSubtitle: '+ Pospago ilimitado',
 			customBadgeLabel: '<b>50% dto en el mes 2 y 3. Exclusivo Online</b>',
-			price: 139990,
+			price: 149900,
 			discount: 50,
 			services: [
 				new ServiceData(
@@ -23,29 +23,6 @@
                     icon: 'resources/img/common/icono-television.webp',
                     text: '<b>Movistar TV</b> desde 71 canales HD.',
                     width: 23,
-                    height: 20
-				)
-			]
-		),
-        new OfferData(
-			speed: '900 Megas +',
-			speedUnit: '',
-			speedSubtitle: 'Pospago ilimitado + App de video',
-			customBadgeLabel: '<b>50% dto en el mes 2 y 3. Exclusivo Online</b>',
-			isRecommended: true,
-			price: 157990,
-			discount: 50,
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/dos-decos.webp',
-                    text: '<b>TV con 2 decos</b> incluidos.',
-                    width: 48,
-                    height: 18
-				),
-                new ServiceData(
-                    icon: 'resources/img/common/icono-television.webp',
-                    text: '<b>Movistar TV</b> desde 71 canales HD.',
-                    width: 23, 
                     height: 20
 				)
 			],
@@ -61,15 +38,9 @@
 					text: 'tal vez <b>Win Play</b>',
 					width: 52,
 					height: 27
-				),
-				new ServiceData(
-					icon: 'resources/img/common/logo-netflix.webp',
-					text: 'O que tal <b>Netflix</b>',
-					width: 56,
-					height: 22
-				),
+				)
 			]
-		),
+		)
     ]);
 ?>
 

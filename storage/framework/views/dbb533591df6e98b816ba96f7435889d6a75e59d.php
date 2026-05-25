@@ -22,8 +22,8 @@
             </li>
             <li class="<?php if(request()->path() == 'trio-fibra'): ?> active <?php endif; ?>">
                 <a href="/trio-fibra?<?php echo e(request()->getQueryString()); ?>">
-                    <b>Trio</b>
-                    Fibra + Telefonía + TV
+                    <b>Internet</b>
+                    Fibra + TV
                 </a>
             </li>
         <?php echo $__env->yieldSection(); ?>

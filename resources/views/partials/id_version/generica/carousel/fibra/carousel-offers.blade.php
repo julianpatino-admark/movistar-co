@@ -6,59 +6,51 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
 		new OfferData(
-			speed: 'Fibra 900',
+			speed: 'Fibra 500',
 			speedUnit: '',
 			speedSubtitle: 'megas simétricas',
-			customBadgeLabel: '<b>20% Dto x 6 meses. Exclusivo Online</b>',
-			price: 94990,
-			discount: 20,
+			customBadgeLabel: '<b>50% dto x 1 mes. Exclusivo Online</b>',
+			price: 84900,
+			discount: 50,
 			services: []
 		),
-        new OfferData(
-			speed: 'Fibra 900',
+		new OfferData(
+			speed: 'Fibra 500',
 			speedUnit: '',
-			speedSubtitle: 'megas simétricas',
-			customBadgeLabel: '<b>20% Dto x 6 meses. Exclusivo Online</b>',
-			price: 112990,
-			discount: 20,
 			isRecommended: true,
-			packages: [
+			speedSubtitle: 'megas simétricas + TV',
+			customBadgeLabel: '<b>50% dto x 1 mes. Exclusivo Online</b>',
+			price: 107900,
+			discount: 50,
+			services: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-win-play.webp',
-					text: 'tal vez <b>Win Play</b>',
-					width: 52,
-					height: 27
+                    icon: 'resources/img/common/dos-decos.webp',
+                    text: '<b>TV con 1 deco</b> incluido.',
+                    width: 30,
+                    height: 9
 				),
-				new ServiceData(
-                    icon: 'resources/img/common/logo-disney-premium.webp',
-                    text: 'Elige <b>¡Disney+</b>',
-                    width: 56,
-                    height: 38
-                ),
-				new ServiceData(
-					icon: 'resources/img/common/logo-netflix.webp',
-					text: 'O que tal <b>Netflix</b>',
-					width: 56,
-					height: 23
+                new ServiceData(
+                    icon: 'resources/img/common/icono-television.webp',
+                    text: '<b>Movistar TV</b> desde 90 canales HD.',
+                    width: 23,
+                    height: 20
 				)
 			]
-		),
+		)
     ]);
 @endphp
 
 <div class="carousel-wrapper">
 	<div class="splide container position-relative" id="offert-carrousel-bogota-fibra">
 
-		<h2 class="title-section">¡Internet Fibra Óptica, el más rápido de Colombia!</h2>
-		<h3 class="subtitle-section">Planes de Internet Fibra óptica y línea fija, con velocidades que te dan libertad.</h3>
+		<h2 class="title-section">¡Activa nuestra oferta empaquetada!</h2>
+		<h3 class="subtitle-section">Planes Movistar Total + Pospago Ilimitado en una sola factura.</h3>
 
 		<div class="navbar-container">
 			<nav class="navbar-nav nav-carousel">
 				@include("partials.layouts.navbar.nav-items")
 			</nav>
 		</div>
-
-		@include('partials.id_version.generica.carousel.carousel-navbar')
 
 		<div class="splide__track">
 

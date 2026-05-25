@@ -7,7 +7,7 @@
         </li>
         <li class="<?php if(request()->path() == 'internet-movil/trio'): ?> active <?php endif; ?>">
             <a href="/internet-movil/trio?<?php echo e(request()->getQueryString()); ?>">
-                <b>Trío + Pospago</b>
+                <b>Internet + TV + Pospago</b>
             </a>
         </li>
     </ul>

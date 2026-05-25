@@ -22,7 +22,7 @@ import "admark-landings/src/validation/lang/messages_es";
 
 import "admark-landings/src/validation/phone";
 
-import LocalForms from "./modules/forms/index";
+import LocalForms from "./modules/forms/forms";
 import FormSimple from "admark-landings/src/forms/form-simple";
 import ToggleEnabled from "admark-landings/src/forms/toggle-enabled";
 
@@ -34,7 +34,7 @@ import NavClose from "./modules/nav/nav-close";
 /**
  * Slide
  */
-import { initCarousels } from "./modules/carousel/index";
+import { initCarousels } from "./modules/carousel/carousel";
 
 /**
  * INIT
