@@ -7,9 +7,9 @@
 			speed: 'Fibra 500 Megas',
 			speedUnit: '',
 			speedSubtitle: '+ Pospago ilimitado',
-			customBadgeLabel: '<b>50% dto x 2 meses. Exclusivo Online</b>',
+			customBadgeLabel: '<b>Dto x 12 meses. Exclusivo Online</b>',
 			price: 119900,
-			discount: 50,
+			discount: 24.946,
 			isRecommended: false,
 			packagesNotes: '<b>Disney</b> incluido en tu plan x 12 meses',
 			services: [
@@ -27,21 +27,15 @@
 				)
 			],
 			packages: [
-				new ServiceData(
-                    icon: 'resources/img/common/logo-disney-estandar.webp',
-                    text: 'Elige <b>¡Disney+</b>',
-                    width: 69,
-                    height: 51
-                ),
 			]
 		),
 		new OfferData(
 			speed: 'Fibra 500 Megas +',
 			speedUnit: '',
 			speedSubtitle: '+ TV + Pospago ilimitado',
-			customBadgeLabel: '<b>50% dto x 2 meses. Exclusivo Online</b>',
+			customBadgeLabel: '<b>Dto x 12 meses. Exclusivo Online</b>',
 			price: 149900,
-			discount: 50,
+			discount: 19.953,
 			isRecommended: true,
 			packagesNotes: 'Incluido en tu plan x 12 meses',
 			services: [
@@ -59,12 +53,6 @@
 				)
 			],
 			packages: [
-				new ServiceData(
-                    icon: 'resources/img/common/logo-disney-estandar.webp',
-                    text: 'Elige <b>¡Disney+</b>',
-                    width: 69,
-                    height: 51
-                ),
 				new ServiceData(
 					icon: 'resources/img/common/logo-win-futbol.webp',
 					text: 'tal vez <b>Win Play</b>',

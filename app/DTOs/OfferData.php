@@ -9,7 +9,7 @@ class OfferData {
     public function __construct(
         public string|int $speed,
         public int $price,
-        public ?int $discount = null,
+        public ?float $discount = null,
         public ?string $customBadgeLabel = null,
 
         // Nuevas Propiedades

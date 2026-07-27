@@ -18,13 +18,6 @@
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
 
     <?php if($showServices): ?>
-        <label
-            class="form-simple_title"
-            for="<?php echo e($id); ?>-selectServicios"
-        >
-            Escoge tus servicios
-        </label>
-
         <div class="mb-2">
             <label class="input-group-text statusLoader d-none"> <i class="select-loader"></i></label>
             <select
@@ -33,7 +26,7 @@
                 class="form-select"
                 required
             >
-                <option selected value="" hidden>Elige tu servicio</option>
+                <option value="" disabled selected hidden>Elige tu servicio</option>
                 <option value="internet">Internet Fibra</option>
                 <option value="movil">Móvil</option>
             </select>
@@ -68,23 +61,6 @@
         >
     </div>
 
-    <?php if($keyword == "cobertura"): ?>
-        <div>
-            <input type="text" name="direccion" class="form-control mb-0" placeholder="Dirección: Cll 103 # 13-30, Bogotá">
-        </div>
-
-        <div class="form-simple_addr">
-            <input type="checkbox" name="specialaddr" id="checkSpecialAddr" data-toggle="toggle-enabled" data-elements="#<?php echo e($id); ?>-inptDireccionAdicional">
-            <label for="checkSpecialAddr">
-                Mi dirección tiene especificaciones
-            </label>
-        </div>
-
-        <div>
-            <input type="text" class="form-control" id="<?php echo e($id); ?>-inptDireccionAdicional" name="direccionAdicional" placeholder="Apto 502, torre 1, piso 3, etc" disabled  required>
-        </div>
-    <?php endif; ?>
-
     <div class="form-simple_tyc">
         <label class="text-xxs">
             <input type="checkbox" name="legal" id="<?php echo e($id); ?>-legal" required>
@@ -98,9 +74,9 @@
                     data-modal-title="Política de Privacidad"
                     title="Política de privacidad"
                 >
-                    política de privacidad
+                    política de privacidad,
                 </a>
-                y tratamiento de
+                tratamiento de
                 <a
                     href="#"
                     data-toggle="modal"
@@ -116,20 +92,18 @@
         <label for="legal" class="error d-block"></label>
     </div>
 
-    <div class="mb-2">
-        <button
-            id="btn-submit-<?php echo e($id); ?>-form"
-            class="form-control btn-form bg-degraded"
-            data-c2c="TE LLAMAMOS"
-            type="submit"
-        >
-            <div class="btn-form_content font-family-bold">
-                Llámame
-            </div>
-            <span class="btn-form_loader">
-                <span class="loader"></span>
-            </span>
-        </button>
-    </div>
+    <button
+        id="btn-submit-<?php echo e($id); ?>-form"
+        class="form-control btn-form"
+        data-c2c="TE LLAMAMOS"
+        type="submit"
+    >
+        <div class="btn-form_content font-family-bold">
+            Llámame
+        </div>
+        <span class="btn-form_loader">
+            <span class="loader"></span>
+        </span>
+    </button>
 </form>
 <?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/components/forms/simple.blade.php ENDPATH**/ ?>
