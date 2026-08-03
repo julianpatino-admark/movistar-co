@@ -1,9 +1,7 @@
 <?php
-    // 1. Importamos la clase (es necesario el namespace completo)
     use App\DTOs\OfferData;
 	use App\DTOs\ServiceData;
 
-    // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
 		new OfferData(
 			speed: '50 GB',
@@ -11,7 +9,7 @@
 			customBadgeLabel: '20% dto x 5 mes. Exclusivo Online',
 			discount: 20,
 			price: 47900,
-			priceNote: 'x 1 mes. ',
+			priceNote: 'x 5 meses. ',
 			isRecommended: false,
 			hasPromo: false,
 			layout: 'mobile theme-green',
@@ -67,68 +65,6 @@
 				),
 			]
 		),
-        new OfferData(
-			speed: 'DATOS',
-			speedUnit: '',
-			speedSubtitle: 'ILIMIDATOS',
-			customBadgeLabel: '',
-			price: 69990,
-			priceNote: 'Paga el siguiente mes',
-			isRecommended: false,
-			hasPromo: false,
-			layout: 'mobile ilimitado expanded',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/vowifi.webp',
-                    text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<b>15 GIGAS</b>para compartir.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/messages.webp',
-                    text: '<b>Minutos ilimitados</b> a USA, Canadá, Pto. Rico y Colombia.',
-                    width: 28,
-                    height: 28
-				),
-			]
-		),
-		new OfferData(
-			speed: 'DATOS',
-			speedUnit: '',
-			speedSubtitle: 'ILIMIDATOS',
-			customBadgeLabel: 'Con Roaming Internacional',
-			price: 109900,
-			priceNote: 'Paga el siguiente mes',
-			isRecommended: false,
-			hasPromo: false,
-			layout: 'mobile ilimitado',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/vowifi.webp',
-                    text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">25 GB para Roaming </span>para usar hasta en 64 países.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/messages.webp',
-                    text: '<b>Minutos ilimitados</b> a USA, Canadá, Pto. Rico y Colombia.',
-                    width: 28,
-                    height: 28
-				),
-			]
-		)
     ]);
 ?>
 

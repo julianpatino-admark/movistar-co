@@ -238,28 +238,16 @@
                     height: auto;
                 }
 
-                &:last-child img{
-                    width: 27px;
-                    height: auto;
-                }
 
                 &.packages{
                     padding: 8px 16px;
 
                     img{
                         &:first-child{
-                            width: 70px;
-                            height: 51px;
-                            aspect-ratio: 42/31;
-
                             margin-right: 18px ;
                         }
 
                         &:nth-child(2n){
-                            width: 67px;
-                            height: 32px;
-                            aspect-ratio: 66.80/32.00;
-
                             margin-right: 15px;
                         }
                     }

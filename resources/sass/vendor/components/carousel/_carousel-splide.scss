@@ -5,6 +5,10 @@
 
 #offer-carrousel, #offert-carrousel-fibra{
 
+    .splide__list{
+        justify-content: center;
+    }
+
     .splide__track{
         padding: 30px 0 10px 0;
     }

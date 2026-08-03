@@ -20,7 +20,7 @@
 			isRecommended: true,
 			speedSubtitle: 'megas simétricas + TV',
 			customBadgeLabel: '<b>50% dto x 1 mes. Exclusivo Online</b>',
-			price: 107900,
+			price: 114900,
 			discount: 50,
 			services: [
 				new ServiceData(
@@ -31,7 +31,7 @@
 				),
                 new ServiceData(
                     icon: 'resources/img/common/icono-television.webp',
-                    text: '<b>Movistar TV</b> desde 90 canales HD.',
+                    text: '<b>Movistar TV</b> desde 73 canales HD.',
                     width: 23,
                     height: 20
 				)

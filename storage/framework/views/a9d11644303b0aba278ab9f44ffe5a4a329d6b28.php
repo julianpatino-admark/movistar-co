@@ -11,7 +11,7 @@
 			price: 119900,
 			discount: 24.946,
 			isRecommended: false,
-			packagesNotes: '<b>Disney</b> incluido en tu plan x 12 meses',
+			packagesNotes: 'incluido en tu plan x 12 meses',
 			services: [
 				new ServiceData(
                     icon: 'resources/img/common/velocidad-simetrica.webp',
@@ -27,6 +27,12 @@
 				)
 			],
 			packages: [
+				new ServiceData(
+					icon: 'resources/img/common/paramount-plus.webp',
+					text: 'tal vez <b>Paramount +</b>',
+					width: 67,
+					height: 42
+				)
 			]
 		),
 		new OfferData(
@@ -47,17 +53,23 @@
 				),
                 new ServiceData(
                     icon: 'resources/img/common/icono-television.webp',
-                    text: '<b>Movistar TV</b> desde 90 canales HD.',
+                    text: '<b>Movistar TV</b> desde 73 canales HD.',
                     width: 23,
                     height: 20
 				)
 			],
 			packages: [
 				new ServiceData(
-					icon: 'resources/img/common/logo-win-futbol.webp',
-					text: 'tal vez <b>Win Play</b>',
-					width: 66,
-					height: 32
+					icon: 'resources/img/common/logo-hbomax.webp',
+					text: 'tal vez <b>HBO Max</b>',
+					width: 70,
+					height: 30
+				),
+				new ServiceData(
+					icon: 'resources/img/common/paramount-plus.webp',
+					text: 'tal vez <b>Paramount +</b>',
+					width: 70,
+					height: 42
 				)
 			]
 		)
