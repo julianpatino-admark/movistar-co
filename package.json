@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "VITE_COVERAGE=true vite",
-    "build": "VITE_COVERAGE=true vite build",
+    "build": "vite build",
+    "build:coverage": "VITE_COVERAGE=true vite build",
     "pack:prod": "VITE_COVERAGE=true find . -name '*:Zone.Identifier' -not -path './node_modules/*' -not -path './.git/*' -delete && vite build && zip -r core_update.zip resources/views app bootstrap cache config database fonts lang storage routes && zip -r public_update.zip public/build",
     "pretest:e2e": "node -e \"fs.rmSync('tests/e2e/coverage-reports', { recursive: true, force: true })\"",
     "test:e2e": "playwright test",

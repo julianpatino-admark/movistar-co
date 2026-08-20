@@ -4,8 +4,8 @@
 RewriteEngine on
 
 ######INICIO NAVEGACION HTTPS######
-RewriteCond %{HTTPS} !=on [NC]
-RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP:X-Forwarded-Proto} ^http$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ######FIN DE NAVEGACION HTTPS######
 
 ###FIN DE REWRITE RULES###

@@ -20,10 +20,10 @@ export default defineConfig({
       refresh: true,
     }),
     istanbul({
-      include: ['resources/js/**/*'],
-      exclude: ['node_modules', 'tests/'],
-      extension: ['.js', '.ts', '.vue'],
-      requireEnv: false
+        include: ['resources/js/**/*'],
+        exclude: ['node_modules', 'tests/'],
+        extension: ['.js', '.ts', '.vue'],
+        requireEnv: true
     }),
   ],
   resolve: {
@@ -35,7 +35,7 @@ export default defineConfig({
   },
   build: {
     minify: 'esbuild',
-    sourcemap: true,
+    sourcemap: false,
   },
   server: {
     host: 'localhost'

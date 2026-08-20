@@ -22,18 +22,18 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule)
+   protected function schedule(Schedule $schedule)
     {
         $schedule
             ->command('queue:insert')
             ->everyFifteenMinutes()
-            ->sendOutputTo('storage/logs/crontabs/crontab.log')
+            ->withoutOverlapping()
             ->timezone('America/Bogota');
 
         $schedule
             ->command('cobalt:update')
             ->everyTwoHours()
-            ->sendOutputTo('storage/logs/crontabs/tsource.log')
+            ->withoutOverlapping()
             ->timezone('America/Bogota');
     }
 
