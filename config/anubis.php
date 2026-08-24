@@ -5,29 +5,35 @@ return [
     | Credenciales del servicio
     |--------------------------------------------------------------------
     */
-    'user' => 'DigTlmark',
+    'user' => env('ANUBIS_USER'),
 
-    'password' => 'zs4;oP7\u~',
+    'password' => env('ANUBIS_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------
     | URL del servicio de Anubis
     |--------------------------------------------------------------------
     */
-    'url' => 'https://wsc2c.tlmark.com/Digital.asmx?WSDL',
+    'url' => env(
+        'ANUBIS_URL',
+        'https://wsc2c.tlmark.com/Digital.asmx?WSDL'
+    ),
 
     /*
     |--------------------------------------------------------------------
     | El número de cliente de la campaña (Obtener de Anubis)
     |--------------------------------------------------------------------
     */
-    'client' => '032',
+    'client' => env('ANUBIS_CLIENT'),
 
     /*
     |--------------------------------------------------------------------
     | Si se Genera o No id de lead
     |--------------------------------------------------------------------
     */
-    'generate_id' => false
+    'generate_id' => filter_var(
+        env('ANUBIS_GENERATE_ID', false),
+        FILTER_VALIDATE_BOOLEAN
+    ),
 
 ];

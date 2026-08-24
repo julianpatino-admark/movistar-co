@@ -14,7 +14,7 @@ return array(
     | Contraseña para los envíos de formularios a través del Webhook
     |--------------------------------------------------------------------
     */
-    'webhook_password' => 'secret',
+    'webhook_password' => env('TRACKING_WEBHOOK_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------
