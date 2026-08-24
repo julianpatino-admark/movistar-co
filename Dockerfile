@@ -106,6 +106,7 @@ ENV PORT=8080
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+        ca-certificates \
         libxml2-dev \
         libcurl4-openssl-dev \
     && docker-php-ext-install -j"$(nproc)" \
@@ -117,6 +118,20 @@ RUN apt-get update \
     && a2enmod rewrite headers \
     && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && rm -rf /var/lib/apt/lists/*
+
+RUN printf '%s\n' \
+    'opcache.enable=1' \
+    'opcache.memory_consumption=128' \
+    'opcache.interned_strings_buffer=16' \
+    'opcache.max_accelerated_files=10000' \
+    'opcache.validate_timestamps=0' \
+    'opcache.revalidate_freq=0' \
+    > "$PHP_INI_DIR/conf.d/opcache-recommended.ini"
+
+RUN printf '%s\n' \
+        'ServerName localhost' \
+        > /etc/apache2/conf-available/servername.conf \
+    && a2enconf servername
 
 RUN printf '%s\n' \
         'Listen ${PORT}' \
