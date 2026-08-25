@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "admark/anubis",
-            "version": "9.0.1",
+            "version": "9.0.3",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:grupokonecta/web-composer-laravel-anubis.git",
-                "reference": "e516836c0319c1649d65749758d81736d8ef0f35"
+                "reference": "aef87d72ccd76c780e8fbdf3a82d8b5fa399ee2b"
             },
             "require": {
                 "admark/soap": "9.*",
@@ -49,7 +49,7 @@
                 }
             ],
             "description": "Paquete para acceder al servicio Anubis (obtención de id de lead, baja en legal, obtención de tsources...)",
-            "time": "2025-11-01T18:32:04+00:00"
+            "time": "2026-08-25T16:43:36+00:00"
         },
         {
             "name": "admark/cobalt",
