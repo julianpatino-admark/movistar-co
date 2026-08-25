@@ -68,7 +68,9 @@ class CobaltupdateTsourcesTest extends TestCase
 
         $this->assertDatabaseHas((new Tsource)->getTable(), [
             'tsource' => '0',
-            'phone' => '3001112233' // Heredó el teléfono del Tsource 1234
+            'phone' => '3001112233', // Heredó el teléfono del Tsource 1234
+            'priority' => 500,
+            'provider' => 'telemark-interno',
         ]);
     }
 

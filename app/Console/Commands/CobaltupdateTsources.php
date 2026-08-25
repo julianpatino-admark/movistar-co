@@ -58,32 +58,42 @@ class CobaltupdateTsources extends Command
     }
 
 
-    private function updateDefaultTsource(){
+    private function updateDefaultTsource(): void
+    {
+        $tsourceDefaultId = $this->cobalt->getDefaultTsource(
+            '0',
+            config('cobalt.default.microsite'),
+            '',
+            ''
+        );
 
-        $tsourdeDefaultId = $this->cobalt->getDefaultTsource('0',config('cobalt.default.microsite'),'','');
+        $tsourceDefault = Tsource::where(
+            'tsource',
+            $tsourceDefaultId
+        )->first();
 
-        $tsourceZero = Tsource::where('tsource','=','0')->first();
-        $tsourceDefault = Tsource::where('tsource','=', $tsourdeDefaultId)->first();
+        if ($tsourceDefault === null) {
+            $this->error(
+                "No se encontró la tsource por defecto {$tsourceDefaultId}"
+            );
 
-        if($tsourceZero === null){
-
-            $tsourceZero =  new Tsource([
-                'tsource' => '0',
-                'phone' => $tsourceDefault->phone
-            ]);
-
-            $tsourceZero->save();
-
-            $this->info('NEW TSOURCE: 0');
-
-        }else{
-            $tsourceZero->priority=500;
-            $tsourceZero->provider="telemark-interno";
-            $tsourceZero->save();
-            $this->info('EXISTENT TSOURCE: 0');
-
+            return;
         }
 
+        $tsourceZero = Tsource::updateOrCreate(
+            ['tsource' => 0],
+            [
+                'phone' => $tsourceDefault->phone,
+                'priority' => 500,
+                'provider' => 'telemark-interno',
+            ]
+        );
+
+        $this->info(
+            $tsourceZero->wasRecentlyCreated
+                ? 'NEW TSOURCE: 0'
+                : 'EXISTENT TSOURCE: 0'
+        );
     }
 
     private function updateAllTsources(){
