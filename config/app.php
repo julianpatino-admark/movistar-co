@@ -194,6 +194,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Admark\Tracking\TrackingServiceProvider::class,
+        Admark\Tracking\TrackingEventServiceProvider::class,
+
     ],
 
     /*

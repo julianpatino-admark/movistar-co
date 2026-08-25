@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1116b09d3a6af8f0cc198c55a911de1c",
+    "content-hash": "1e45b0e317bcb8e859f6e9ca4028068a",
     "packages": [
         {
             "name": "admark/anubis",
