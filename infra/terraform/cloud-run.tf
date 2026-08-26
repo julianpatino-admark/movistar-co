@@ -19,7 +19,7 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
     timeout                          = "300s"
 
     containers {
-      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:fad6384b800468225e19547289f9d12316b1f3b5aa6dfa6be0ea3c935c7c747e"
+      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:e0567b99847ba56e1a94d1cf01c6afc7bdfe4dbd5c057c9685011268f606e144"
 
       # El ENTRYPOINT original docker-php-entrypoint se conserva.
       # Le pasamos /bin/sh como argumentos para preparar SQLite
@@ -33,11 +33,17 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
 
           touch /tmp/movistar.sqlite
 
-          php artisan migrate \
-            --force \
-            --no-interaction
+            chown www-data:www-data /tmp/movistar.sqlite
+            chmod 660 /tmp/movistar.sqlite
 
-          exec apache2-foreground
+            php artisan migrate \
+                --force \
+                --no-interaction
+
+            php artisan cobalt:update \
+                 --no-interaction
+
+            exec apache2-foreground
         EOT
       ]
 
@@ -125,6 +131,28 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
           secret_key_ref {
             secret  = google_secret_manager_secret.movistar_runtime["laravel-app-key"].secret_id
             version = "1"
+          }
+        }
+      }
+
+      env {
+        name = "COBALT_LOGIN"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["cobalt-login"].secret_id
+            version = "1"
+          }
+        }
+      }
+
+      env {
+        name = "COBALT_PASSWORD"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["cobalt-password"].secret_id
+            version = "2"
           }
         }
       }
