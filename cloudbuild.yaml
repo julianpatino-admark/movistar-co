@@ -18,6 +18,8 @@ steps:
         chmod 600 "$$SSH_KEY_FILE"
 
         docker build \
+          --pull \
+          --no-cache \
           --target runtime \
           --ssh "default=$$SSH_KEY_FILE" \
           --secret id=known_hosts,src=.cloudbuild/known_hosts.bitbucket \

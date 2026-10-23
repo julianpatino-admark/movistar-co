@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM php:8.3-cli-bookworm AS php-deps
+FROM php:8.3.36-cli-trixie AS php-deps
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -15,7 +15,7 @@ RUN apt-get update \
         soap \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=composer:2.8.12 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 
@@ -100,7 +100,7 @@ RUN mkdir -p \
 # ---------------------------------------------------------
 # Production runtime
 # ---------------------------------------------------------
-FROM php:8.3-apache-bookworm AS runtime
+FROM php:8.3.36-apache-trixie AS runtime
 
 ENV PORT=8080
 

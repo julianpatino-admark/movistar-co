@@ -28,11 +28,10 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
     }
 
     containers {
-      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:e0567b99847ba56e1a94d1cf01c6afc7bdfe4dbd5c057c9685011268f606e144"
+      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:a9d61133cea4547f7d370207e08d3e3fa9af595361452ff5a5113182994e7806"
 
       # El ENTRYPOINT original docker-php-entrypoint se conserva.
-      # Le pasamos /bin/sh como argumentos para preparar SQLite
-      # antes de arrancar Apache.
+      # Preparamos SQLite y aplicamos migraciones antes de arrancar Apache.
       args = [
         "/bin/sh",
         "-c",
@@ -48,9 +47,6 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
             php artisan migrate \
                 --force \
                 --no-interaction
-
-            php artisan cobalt:update \
-                 --no-interaction
 
             exec apache2-foreground
         EOT
