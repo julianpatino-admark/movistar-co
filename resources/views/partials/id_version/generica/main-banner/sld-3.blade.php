@@ -5,7 +5,7 @@
         </div>
         <div class="main-banner_body">
             <h1>Movistar Total <img width="101" height="30" src="{{ Vite::asset('resources/img/common/movistar-total.webp') }}" alt="Todos los servicios incluidos de Movistar "></h1>
-            <h2>Fibra 500 MEGAS <small>+TV + Pospago ilimitado</small></h2>
+            <h2>Fibra 900 MEGAS <small>+TV + Pospago ilimitado</small></h2>
         </div>
         <div class="main-banner_cta">
             <button

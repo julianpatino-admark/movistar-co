@@ -1,0 +1,1 @@
+<div class="top-header"></div><?php /**PATH /home/julianjp/htdocs/movistar/resources/views/partials/layouts/header/top-header.blade.php ENDPATH**/ ?>

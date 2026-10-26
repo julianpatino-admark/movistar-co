@@ -6,16 +6,14 @@
     // 2. Creamos la colección de objetos DIRECTAMENTE aquí
     $offers = collect([
 		new OfferData(
-			speed: 'Fibra 500',
+			speed: 'Fibra 900',
 			speedUnit: '',
 			speedSubtitle: 'megas simétricas',
-			customBadgeLabel: '<b>50% dto x 1 mes. Exclusivo Online</b>',
-			price: 84900,
-			discount: 50,
+			price: 62826,
 			services: []
 		),
 		new OfferData(
-			speed: 'Fibra 500',
+			speed: 'Fibra 900',
 			speedUnit: '',
 			isRecommended: true,
 			speedSubtitle: 'megas simétricas + TV',

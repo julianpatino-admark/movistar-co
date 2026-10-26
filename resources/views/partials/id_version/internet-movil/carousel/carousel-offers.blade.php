@@ -4,7 +4,7 @@
 
     $offers = collect([
 		new OfferData(
-			speed: 'Fibra 500 Megas',
+			speed: 'Fibra 900 Megas',
 			speedUnit: '',
 			speedSubtitle: '+ Pospago ilimitado',
 			customBadgeLabel: '<b>Dto x 12 meses. Exclusivo Online</b>',
@@ -36,7 +36,7 @@
 			]
 		),
 		new OfferData(
-			speed: 'Fibra 500 Megas +',
+			speed: 'Fibra 900 Megas +',
 			speedUnit: '',
 			speedSubtitle: '+ TV + Pospago ilimitado',
 			customBadgeLabel: '<b>Dto x 12 meses. Exclusivo Online</b>',

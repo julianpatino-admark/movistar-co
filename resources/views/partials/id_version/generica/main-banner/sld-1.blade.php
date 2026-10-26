@@ -1,10 +1,10 @@
 <div class="main-banner sld-1">
     <div class="container">
         <div class="main-banner_body">
-            <h1><div class="fibra">Fibra 500</div> megas simétricas</h1>
+            <h1><div class="fibra">Fibra 900</div> megas simétricas</h1>
             <div class="promo-card">
                 <span class="dolar">$</span>42.450
-                <small><b>x 1 mes.</b> Luego $84.900</small>
+                <small><b>x 1 mes.</b> Luego $62.826</small>
             </div>
         </div>
         <div class="main-banner_cta">
@@ -21,4 +21,3 @@
         </div>
     </div>
 </div>
-
