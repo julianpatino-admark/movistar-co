@@ -6,6 +6,12 @@ locals {
     "anubis-password",
     "cobalt-login",
     "cobalt-password",
+    "gocontact-base-url",
+    "gocontact-username",
+    "gocontact-password",
+    "gocontact-database-id",
+    "gocontact-monitor-username",
+    "gocontact-monitor-password",
     "tracking-webhook-password",
   ])
 }

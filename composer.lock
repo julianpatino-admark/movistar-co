@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e45b0e317bcb8e859f6e9ca4028068a",
+    "content-hash": "5e305dd8016eac9aeedf0c2ab1325bea",
     "packages": [
         {
             "name": "admark/anubis",
@@ -94,6 +94,49 @@
             ],
             "description": "Paquete para acceder al servicio Cobalt",
             "time": "2024-01-31T19:33:18+00:00"
+        },
+        {
+            "name": "admark/gocontact",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "packages/admark/gocontact",
+                "reference": "9f1e7e4712f557f97e53df75ce64a61f5f5c2f4c"
+            },
+            "require": {
+                "illuminate/cache": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "illuminate/config": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "illuminate/database": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "illuminate/events": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "illuminate/http": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "php": "^8.0.2",
+                "psr/log": "^1.1 || ^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Admark\\GoContact\\GoContactServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Admark\\GoContact\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel integration for submitting leads to GoContact",
+            "transport-options": {
+                "symlink": false,
+                "relative": true
+            }
         },
         {
             "name": "admark/inconcert",

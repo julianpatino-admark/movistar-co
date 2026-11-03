@@ -156,10 +156,87 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
           }
         }
       }
+
+      env {
+        name = "GOCONTACT_BASE_URL"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-base-url"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name = "GOCONTACT_USERNAME"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-username"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name = "GOCONTACT_PASSWORD"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-password"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name = "GOCONTACT_DATABASE_ID"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-database-id"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name = "GOCONTACT_MONITOR_USERNAME"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-monitor-username"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name = "GOCONTACT_MONITOR_PASSWORD"
+
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["gocontact-monitor-password"].secret_id
+            version = "latest"
+          }
+        }
+      }
+
+      env {
+        name  = "GOCONTACT_LOG_LEVEL"
+        value = "info"
+      }
     }
   }
 
   depends_on = [
-    google_secret_manager_secret_iam_member.movistar_runtime_access["laravel-app-key"]
+    google_secret_manager_secret_iam_member.movistar_runtime_access["laravel-app-key"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-base-url"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-username"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-password"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-database-id"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-monitor-username"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-monitor-password"]
   ]
 }

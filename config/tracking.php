@@ -6,7 +6,7 @@ return array(
      * Admark\Inconcert\Inconcert
      * Admark\Transcom\Transcom
      */
-    'api' => 'Admark\Cobalt\Cobalt',
+    'api' => \Admark\GoContact\GoContact::class,
 
 
     /*
@@ -115,7 +115,7 @@ return array(
     | config
     | database
     */
-    'driver' => 'database',
+    'driver' => env('TRACKING_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------------------------------
