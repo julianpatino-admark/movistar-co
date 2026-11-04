@@ -1,0 +1,12 @@
+<div id="cta-sticky-desktop" class="cta-sticky-desktop_wrapper">
+	<div class="container">
+		<div class="cta-sticky-desktop">
+			<a class="btn-flex btn-accent" href="#" data-toggle="modal" data-target="#modal-c2c"
+			   data-hiden-element="#modal-header-phone"
+			   data-tag-page="/modal/cta-cabecera-desktop-fijo/c2c" data-c2c="TE LLAMAMOS">
+				@include('dev.components.icons.buttons.phone-signal')
+				Te llamamos GRATIS
+			</a>
+		</div>
+	</div>
+</div>

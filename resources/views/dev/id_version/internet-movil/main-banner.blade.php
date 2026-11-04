@@ -1,0 +1,9 @@
+@php $startFrom = $startFrom ?? 0; @endphp
+<div id="carouselBanner" class="splide" data-start-on="{{ $startFrom }}">
+    <div class="splide__track">
+        <div class="splide__list">
+            <div class="splide__slide">@include('dev.id_version.generica.main-banner.sld-3')</div>
+        </div>
+        <ul class="splide__pagination"></ul>
+    </div>
+</div>

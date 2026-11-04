@@ -56,6 +56,6 @@ class PromoCards extends Component
      */
     public function render()
     {
-        return view('components.promo-cards');
+        return view('vendor.components.promo-cards');
     }
 }

@@ -1,0 +1,26 @@
+<div class="mobile-card">
+    <img class="mobile-card_image" src="/img/banners/honor_5lite.webp" alt="Imagen de smartphone Honor modelo Magic 5 lite"/>
+    <div class="mobile-card_header">
+        <p class="brand">Honor</p>
+        <h2 class="model">Magic 5 Lite<br>256GB Verde<br>Esmeralda</h2>
+    </div>
+    <div class="mobile-card_body">
+        <p>
+            Max Ilimitado 69.90
+        </p>
+        <p class="price">S/ 1149</p>
+        <p>Precio del equipo</p>
+    </div>
+    <div class="mobile-card_footer">
+        <button
+            class="btn-flex btn-accent"
+            data-c2c="offer-one"
+            data-show-element="#modal-header-phone"
+            data-conversion-event="c2c_offer_one"
+            data-toggle="modal"
+            data-target="#modal-c2c"
+        >
+            LO QUIERO
+        </button>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+<picture class="<?php echo e($attributes->get('class')); ?>"><?php echo $srcSet; ?> <img src="<?php echo e($routeImage); ?>" <?php echo e($attributes->filter(fn (string $value, string $key) => $key !== 'class')); ?> /></picture><?php /**PATH /var/www/html/konecta/estructura/movistar-co/resources/views/vendor/components/responsive-image.blade.php ENDPATH**/ ?>

@@ -1,0 +1,1 @@
+@extends("vendor.id_version.main-carousel-nav")

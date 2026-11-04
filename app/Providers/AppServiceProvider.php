@@ -29,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::component('promo-cards', PromoCards::class);
         Blade::component('responsive-image', ResponsiveImage::class);
+        Blade::anonymousComponentPath(resource_path('views/vendor/components'));
     }
 }

@@ -5,12 +5,18 @@ module.exports = {
 
     entry: {
         "generica" : [
-            "./js/dev/index.js"
+            "./js/dev/generica.js"
+        ],
+        "movil" : [
+            "./js/dev/movil.js"
+        ],
+        "internet-movil" : [
+            "./js/dev/internet-movil.js"
         ]
     },
 
     output: {
-        path: path.resolve(__dirname, "./js/dist/"),
+        path: path.resolve(__dirname, "./public/js/dist/"),
         filename: "[name].bundle.js",
         environment : {
             arrowFunction : false

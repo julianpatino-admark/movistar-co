@@ -1,43 +1,34 @@
 import { test as baseTest } from '@playwright/test';
-import fs from 'fs';
-import path from 'path';
-import crypto from 'crypto';
 
-// 1. Exportamos 'expect' de forma directa para evitar el ciclo de Node.js
 export { expect } from '@playwright/test';
 
-// 2. Extendemos el test base de Playwright para automatizar la cobertura
+/**
+ * Fixture base (sin cobertura de Vite/Istanbul: el build ahora es gulp + webpack).
+ *
+ * El bundle JS se inyecta en el evento `load` de la página (ver footer-scripts),
+ * por lo que `page.goto` resuelve ANTES de que el JS esté listo. Esperamos a que
+ * jQuery + jquery-validation estén disponibles para evitar tests inestables.
+ */
 export const test = baseTest.extend({
-  context: async ({ context }, use) => {
-    
-    // Inyectamos el script para recolectar cobertura antes de cambiar de página
-    await context.addInitScript(() =>
-      window.addEventListener('beforeunload', () =>
-        (window as any).collectIstanbulCoverage(JSON.stringify((window as any).__coverage__))
-      ),
-    );
-    
-    // Creamos la carpeta temporal
-    await fs.promises.mkdir('tests/e2e/coverage-reports/.nyc_output', { recursive: true });
-    
-    // Exponemos la función a Node para guardar el archivo
-    await context.exposeFunction('collectIstanbulCoverage', (coverageJSON: string) => {
-      if (coverageJSON) {
-        fs.writeFileSync(
-          path.join('tests/e2e/coverage-reports/.nyc_output', `coverage_${crypto.randomUUID()}.json`), 
-          coverageJSON
-        );
+  page: async ({ page }, use) => {
+    const goto = page.goto.bind(page);
+
+    page.goto = (async (url: string, options?: Parameters<typeof goto>[1]) => {
+      const response = await goto(url, options);
+
+      if (response && response.status() === 200) {
+        await page
+          .waitForFunction(
+            () => (window as any).jQuery && (window as any).jQuery.fn.validate,
+            null,
+            { timeout: 8000 }
+          )
+          .catch(() => { /* páginas sin bundle JS (gracias, cookies, privacidad) */ });
       }
-    });
-    
-    // Ejecutamos el test real
-    await use(context);
-    
-    // Al terminar el test, extraemos la cobertura final
-    for (const page of context.pages()) {
-      await page.evaluate(() => 
-        (window as any).collectIstanbulCoverage(JSON.stringify((window as any).__coverage__))
-      );
-    }
-  }
+
+      return response;
+    }) as typeof page.goto;
+
+    await use(page);
+  },
 });

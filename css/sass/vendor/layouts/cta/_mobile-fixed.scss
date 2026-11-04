@@ -1,0 +1,93 @@
+.cta-mobile_wrapper {
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 7px;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+}
+
+.cta-mobile_btn-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.cta-mobile_btn {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: $cta-mobile-btn-color;
+    font-weight: bold;
+    font-family: $cta-mobile-btn-font;
+    font-size: $cta-mobile-btn-font-size;
+    border-radius: 6px;
+    line-height: 1;
+    border: 0;
+    flex-grow: 1;
+
+    svg {
+        margin-bottom: 3px;
+        height: 24px;
+        fill: $cta-mobile-svg-fill-color;
+    }
+}
+
+.cta-mobile_btn-phone {
+
+    background-image: url('/img/common/icon-white-phone_cta-mobile-xxs.webp');
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-size: 24px;
+    padding-top: $cta-mobile-btn-c2c_padding;
+    background-color: map_get($cta-mobile-bg-color_phone, normal);
+
+    &::before {
+
+        content: $cta-mobile-btn-call-content;
+        display: block;
+
+    }
+
+    &:hover {
+        color: $cta-mobile-btn-color;
+        background-color: map_get($cta-mobile-bg-color_phone, hover);
+    }
+
+}
+
+.cta-mobile_btn-c2c{
+    background-color: map_get($cta-mobile-bg-color_c2c, normal);
+
+    &:hover {
+        background-color: map_get($cta-mobile-bg-color_c2c, hover);
+    }
+}
+
+.cta-mobile_btn-calcula{
+    background-color: map_get($cta-mobile-bg-color_calcula, normal);
+
+    &:hover {
+        background-color: map_get($cta-mobile-bg-color_calcula, hover);
+    }
+}
+
+.cta-mobile_privacy {
+    padding: 5px;
+
+    p {
+        margin: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .cta-mobile_wrapper {
+        display: none;
+    }
+}

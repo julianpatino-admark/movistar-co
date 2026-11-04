@@ -26,6 +26,6 @@ class PromoCardsTest extends TestCase
         $view = $component->render();
 
         $this->assertInstanceOf(View::class, $view);
-        $this->assertEquals('components.promo-cards', $view->name());
+        $this->assertEquals('vendor.components.promo-cards', $view->name());
     }
 }
