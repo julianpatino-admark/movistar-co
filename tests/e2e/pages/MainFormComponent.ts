@@ -77,7 +77,10 @@ export class MainFormComponent {
                 contentType: 'application/json',
                 json: isSuccess
                     ? {
+                        status: true,
                         success: true,
+                        provider: 'test',
+                        leadId: 1,
                         message: "Formulario enviado correctamente."
                     } :
                     {

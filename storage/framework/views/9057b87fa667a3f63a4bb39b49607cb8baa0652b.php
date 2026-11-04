@@ -1,4 +1,0 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-	<path d="M25.333 9C29.016 9 32 11.955 32 15.6c0 3.644-2.984 6.6-6.667 6.6H6.667C2.984 22.2 0 19.244 0 15.6 0 11.955 2.984 9 6.667 9h18.666zM6.484 10.347a5.334 5.334 0 1 0 0 10.667 5.334 5.334 0 0 0 0-10.667z" fill="#FFF" fill-rule="evenodd"/>
-</svg>
-<?php /**PATH /home/konecta/htdocs/movistar/resources/views/partials/components/icons/buttons/toggle.blade.php ENDPATH**/ ?>

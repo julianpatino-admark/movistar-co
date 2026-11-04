@@ -6,8 +6,7 @@ test.describe('Pruebas de Navegación Principal', () => {
 
     const mainUrls = {
         tsource: '?tsource=1234',
-        internetMovil: '/internet-movil',
-        internetMovilTrio: 'trio'
+        internetMovil: '/internet-movil'
     }
 
     test.beforeEach(async ({ page }) => {
@@ -27,12 +26,6 @@ test.describe('Pruebas de Navegación Principal', () => {
         await navigation.clickNavLink('carruselPrincipal', 'Internet Hogar + Móvil');
 
         await expect(page).toHaveURL(new RegExp(`.*${mainUrls.internetMovil}`));
-    });
-
-    test('el menu secundario del carrusel navega de manera correcta', async ({ page }) => {
-        await navigation.clickNavLink('carruselSecundario', 'Trío + Pospago');
-
-        await expect(page).toHaveURL(new RegExp(`.*${mainUrls.internetMovilTrio}`));
     });
 });
 

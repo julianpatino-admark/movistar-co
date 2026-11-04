@@ -1,0 +1,156 @@
+.navbar-nav {
+    display: none;
+
+    ul{
+        display: flex;
+        grid-gap: 50px;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .nav-item{
+            font-size: map_get($navbar-font-size, xs);
+
+            .nav-link{
+                display: flex;
+                color: white;
+                font-family: $font-family-primary;
+
+                align-items: center;
+
+                padding: 0;
+
+                div.icono-default{
+                    background-size: cover;
+
+                    margin-right: 3px;
+                    
+                    &.movistar{
+                        width: 17.5px;
+                        height: 13px;
+                        // CAMBIO AQUÍ: Usamos el alias @img y quitamos la barra inicial /
+                        background-image: url("/img/menu/sprite-iconos-movistar.webp");
+                    }
+
+                    &.wifi{
+                        width: 17px;
+                        height: 13.3px;
+                        // CAMBIO AQUÍ
+                        background-image: url("/img/menu/sprite-iconos-wifi.webp");
+                    }
+
+                    &.movil{
+                        width: 15px;
+                        height: 22.3px;
+                        // CAMBIO AQUÍ
+                        background-image: url("/img/menu/sprite-iconos-movil.webp");
+                    }
+                }
+            }
+
+            &.active{
+                .nav-link{
+                    font-weight: bold;
+                    color: $color-brand-highlight;
+
+                    div.icono-default{
+                        
+                        &.movistar{
+                            background-position-x: -18.5px;
+                        }
+
+                        &.wifi{
+                            background-position-x: -19px;
+                        }
+    
+                        &.movil{
+                            background-position-x: -15.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex: 1;
+        display: inline-block;
+    
+        ul{
+            .nav-item {
+                font-size: map_get($navbar-font-size, md);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        ul{
+            grid-gap: 74px;
+        }
+    }
+}
+
+
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+
+.nav-carousel{
+    display: block;
+    flex: none;
+
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+    ul{
+        display: grid;
+        grid-template-columns: 265px;
+        grid-gap: 10px;
+
+        padding: 10px;
+
+        .nav-item {
+            background-color: $color-grey-15;
+            
+            &:first-child{
+                .nav-link{
+                    padding: 10px;
+                }
+            }
+
+            .nav-link{
+                justify-content: center;
+
+                font-size: 20px;
+                font-weight: 700;
+                color: $color-grey-30;
+
+                padding: 10px;
+
+                div.icono-default{
+                        
+                    &.movistar{
+                        background-position-x: calc((18.5px * 2) * -1);
+                    }
+
+                    &.wifi{
+                        background-position-x: calc((19px * 2) * -1);
+                    }
+
+                    &.movil{
+                        background-position-x: calc((15.5px * 2) * -1);
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        ul{
+            grid-template-columns: repeat(3, 265px);
+        }
+    }
+}

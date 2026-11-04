@@ -55,41 +55,11 @@ test.describe('Pruebas las modales de ofertas', () => {
 
     })
 
-    test('debe validar la selección única y exclusión mutua de paquetes OTT', async () => {
+    // Los paquetes OTT seleccionables (.package-included) se quitaron de las tarjetas
+    // en el rediseño de precios, por lo que ya no hay selección ni validación de OTT.
+    test('el botón LO QUIERO de la tarjeta abre la modal con el valor correcto', async () => {
       const offerCard = carousel.getOfferCardByIndex(1);
-      const firstOtt = carousel.getOttByIndex(offerCard, 0);
-      const secondOtt = carousel.getOttByIndex(offerCard, 1);
-      
-      // 1. Estado inicial: nada seleccionado
-      await expect(carousel.selectedOtts(offerCard)).toHaveCount(0);
-
-      await firstOtt.click();
-      await expect(firstOtt).toHaveClass(carousel.selectedRegExp);
-      await expect(await carousel.selectedOtts(offerCard)).toHaveCount(1);
-
-      // 3. Seleccionar el segundo (Exclusión mutua)
-      await secondOtt.click();
-
-      // Verificaciones abstractas
-      await expect(secondOtt).toHaveClass(carousel.selectedRegExp);
-      await expect(firstOtt).not.toHaveClass(carousel.selectedRegExp);
-
-      // La prueba definitiva centralizada en el COM
-      await expect(carousel.selectedOtts(offerCard)).toHaveCount(1);
-    });
-
-    test('debe validar que al seleccionar un OTT la modal abra con el valor correcto', async () => {
-      const offerCard = carousel.getOfferCardByIndex(1);
-
-      const ottParaSeleccionar = carousel.getOttByIndex(offerCard, 0);
-      await ottParaSeleccionar.click();
-
-      await expect(ottParaSeleccionar).toHaveClass(carousel.selectedRegExp);
-      await expect(carousel.selectedOtts(offerCard)).toHaveCount(1);
-
       const linkCotiza = offerCard.getByRole('button', { name: 'LO QUIERO' });
-
-      const expectedValue = await linkCotiza.getAttribute("data-c2c");
 
       await linkCotiza.click();
 
@@ -97,23 +67,6 @@ test.describe('Pruebas las modales de ofertas', () => {
 
       await modal.close();
       await expect(modal.root).toBeHidden();
-
-    })
-
-    test('debe mostrar error al intentar continuar sin seleccionar un paquete OTT', async ({ page }) => {      
-      // 2. Apuntamos a una tarjeta que tenga paquetes OTT (asumiendo que es la segunda, índice 1)
-      const offerCard = carousel.getOfferCardByIndex(1);
-      
-      // 3. Apuntamos al botón de continuar y al mensaje de error
-      const btnContinuar = offerCard.locator('.btn-flex.btn-carousel');
-      const errorMsg = offerCard.locator('.error-message');
-
-      await btnContinuar.click({ force: true });
-
-      await expect(errorMsg).toBeVisible();
-      await expect(errorMsg).toHaveText('Por favor, selecciona una opción antes de continuar.');
-      
-      await page.waitForTimeout(500);
     });
 
     test('valida la lógica de inactividad de la modal de retención', async ({ page }) => {

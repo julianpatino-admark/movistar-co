@@ -1,0 +1,1 @@
+<div class="top-header"></div><?php /**PATH /var/www/html/konecta/estructura/movistar-co/resources/views/vendor/layouts/header/top-header.blade.php ENDPATH**/ ?>

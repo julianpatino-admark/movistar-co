@@ -1,5 +1,6 @@
 var gutil = require("gulp-util");
 var versionLanding = gutil.env.version;
+var randomString = require("randomstring");
 var versionIndex = versionLanding === "generica" ? "index" : versionLanding;
 
 var constants = {
@@ -12,7 +13,7 @@ var constants = {
   },
 
   default: {
-    host: 'https://movistar.localhost/',
+    host: "http://landing-madre.local/",
     versionLanding: "generica",
   },
 };
@@ -45,7 +46,10 @@ var plugins = {
     },
   },
 
-  replace: [],
+  replace: [
+    ["dev.", "vendor."],
+    ["{js_version}", randomString.generate(16)],
+  ],
 
   purge: {
     /**
@@ -65,11 +69,10 @@ var plugins = {
 
     content: {
       default: [
-        "./resources/views/components/**/*.php",
         "./resources/views/dev/tracking/{versionLanding}.blade.php",
-        "./resources/views/dev/partials/id_version/{versionLanding}/**/*.php",
-        "./resources/views/dev/partials/components/**/*.php",
-        "./resources/views/dev/partials/layouts/**/*.php",
+        "./resources/views/dev/id_version/{versionLanding}/**/*.php",
+        "./resources/views/dev/components/**/*.php",
+        "./resources/views/dev/layouts/**/*.php",
         "./js/dist/{versionLanding}.js",
       ],
     },
@@ -97,7 +100,8 @@ var plugins = {
       /^carousel-/,
       /^splide/,
       "autocomplete-results",
-      "is-active"
+      "is-active",
+      /^is-/
     ],
   },
 
@@ -152,10 +156,7 @@ var plugins = {
 
     js: ["./js/dev/**/*.js"],
 
-    views: [
-      "./resources/views/components/**/*.php",
-      "./resources/views/dev/**/*.php",
-    ],
+    views: ["./resources/views/dev/**/*.php"],
   },
 };
 
