@@ -1,19 +1,35 @@
 # syntax=docker/dockerfile:1
 
-FROM php:8.3.36-cli-trixie AS php-deps
+FROM alpine:3.23 AS php-base
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+RUN apk upgrade --no-cache \
+    && apk add --no-cache \
         ca-certificates \
-        git \
-        openssh-client \
-        unzip \
-        libxml2-dev \
-    && docker-php-ext-install -j"$(nproc)" \
-        dom \
-        pdo_mysql \
-        soap \
-    && rm -rf /var/lib/apt/lists/*
+        php83 \
+        php83-ctype \
+        php83-curl \
+        php83-dom \
+        php83-fileinfo \
+        php83-iconv \
+        php83-mbstring \
+        php83-opcache \
+        php83-openssl \
+        php83-pdo_mysql \
+        php83-pdo_sqlite \
+        php83-phar \
+        php83-session \
+        php83-simplexml \
+        php83-soap \
+        php83-sodium \
+        php83-tokenizer \
+        php83-xml \
+        php83-xmlreader \
+        php83-xmlwriter \
+    && ln -s /usr/bin/php83 /usr/local/bin/php
+
+FROM php-base AS php-deps
+
+RUN apk add --no-cache git openssh-client unzip php83-zip
 
 COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
 
@@ -34,14 +50,9 @@ RUN --mount=type=ssh \
         --no-autoloader
 
 
-FROM node:20-bookworm-slim AS frontend
+FROM node:20-alpine AS frontend
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        git \
-        openssh-client \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache ca-certificates git openssh-client
 
 WORKDIR /app
 
@@ -95,63 +106,48 @@ RUN mkdir -p \
         --optimize \
         --no-interaction \
         --no-scripts \
-    && php artisan package:discover --ansi
+    && php artisan package:discover --ansi \
+    # Library lockfiles describe their standalone development dependencies.
+    && find vendor/admark -name composer.lock -type f -delete
 
 
 # ---------------------------------------------------------
 # Production runtime
 # ---------------------------------------------------------
-FROM php:8.3.36-apache-trixie AS runtime
+FROM php-base AS runtime
 
 ENV PORT=8080
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        libxml2-dev \
-        libcurl4-openssl-dev \
-    && docker-php-ext-install -j"$(nproc)" \
-        dom \
-        pdo_mysql \
-        soap \
-        curl \
-        opcache \
-    && a2enmod rewrite headers \
-    && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN printf '%s\n' \
-    'opcache.enable=1' \
-    'opcache.memory_consumption=128' \
-    'opcache.interned_strings_buffer=16' \
-    'opcache.max_accelerated_files=10000' \
-    'opcache.validate_timestamps=0' \
-    'opcache.revalidate_freq=0' \
-    > "$PHP_INI_DIR/conf.d/opcache-recommended.ini"
-
-RUN printf '%s\n' \
-        'ServerName localhost' \
-        > /etc/apache2/conf-available/servername.conf \
-    && a2enconf servername
-
-RUN printf '%s\n' \
-        'Listen ${PORT}' \
-        > /etc/apache2/ports.conf \
+RUN apk add --no-cache php83-apache2 \
+    && sed -i \
+        -e 's/^Listen 80$/Listen ${PORT}/' \
+        -e 's/^#LoadModule rewrite_module/LoadModule rewrite_module/' \
+        -e 's|^ErrorLog logs/error.log$|ErrorLog /proc/self/fd/2|' \
+        -e 's|CustomLog logs/access.log combined|CustomLog /proc/self/fd/1 combined|' \
+        /etc/apache2/httpd.conf \
     && printf '%s\n' \
+        'ServerName localhost' \
         '<VirtualHost *:${PORT}>' \
-        '    ServerName localhost' \
         '    DocumentRoot /var/www/html/public' \
-        '' \
         '    <Directory /var/www/html/public>' \
         '        Options -Indexes +FollowSymLinks' \
         '        AllowOverride All' \
         '        Require all granted' \
         '    </Directory>' \
-        '' \
-        '    ErrorLog /proc/self/fd/2' \
-        '    CustomLog /proc/self/fd/1 combined' \
         '</VirtualHost>' \
-        > /etc/apache2/sites-available/000-default.conf
+        > /etc/apache2/conf.d/movistar.conf \
+    && printf '%s\n' \
+        'expose_php=Off' \
+        'display_errors=Off' \
+        'log_errors=On' \
+        'opcache.enable=1' \
+        'opcache.memory_consumption=128' \
+        'opcache.interned_strings_buffer=16' \
+        'opcache.max_accelerated_files=10000' \
+        'opcache.validate_timestamps=0' \
+        'opcache.revalidate_freq=0' \
+        > /etc/php83/conf.d/99-movistar.ini \
+    && mkdir -p /run/apache2
 
 WORKDIR /var/www/html
 
@@ -166,6 +162,7 @@ COPY --from=php-app /app/storage ./storage
 COPY --from=php-app /app/vendor ./vendor
 COPY --from=php-app /app/artisan ./artisan
 COPY --from=php-app /app/composer.json ./composer.json
+COPY --from=php-app /app/composer.lock ./composer.lock
 
 COPY --from=frontend /app/public ./public
 
@@ -175,7 +172,7 @@ RUN mkdir -p \
         storage/framework/sessions \
         storage/framework/views \
         storage/logs \
-    && chown -R www-data:www-data \
+    && chown -R apache:apache \
         storage \
         bootstrap/cache \
     && chmod -R ug+rwX \
@@ -184,4 +181,4 @@ RUN mkdir -p \
 
 EXPOSE 8080
 
-CMD ["apache2-foreground"]
+CMD ["/usr/sbin/httpd", "-DFOREGROUND"]

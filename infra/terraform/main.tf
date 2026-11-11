@@ -9,6 +9,10 @@ resource "google_artifact_registry_repository" "movistar_landing" {
   repository_id = "movistar-landing"
   description   = "Movistar landing Docker images"
   format        = "DOCKER"
+
+  vulnerability_scanning_config {
+    enablement_config = "INHERITED"
+  }
 }
 
 resource "google_secret_manager_secret" "bitbucket_ssh_key" {

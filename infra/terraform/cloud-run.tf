@@ -19,13 +19,11 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
     timeout                          = "300s"
 
     containers {
-      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:e0567b99847ba56e1a94d1cf01c6afc7bdfe4dbd5c057c9685011268f606e144"
+      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3"
 
-      # El ENTRYPOINT original docker-php-entrypoint se conserva.
-      # Le pasamos /bin/sh como argumentos para preparar SQLite
-      # antes de arrancar Apache.
+      # Preparamos SQLite antes de arrancar Apache sobre Alpine.
+      command = ["/bin/sh"]
       args = [
-        "/bin/sh",
         "-c",
         <<-EOT
           set -eu
@@ -33,17 +31,16 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
 
           touch /tmp/movistar.sqlite
 
-            chown www-data:www-data /tmp/movistar.sqlite
+            chown apache:apache /tmp/movistar.sqlite
             chmod 660 /tmp/movistar.sqlite
 
-            php artisan migrate \
-                --force \
-                --no-interaction
+            su -s /bin/sh apache -c \
+                "php artisan migrate --force --no-interaction"
 
-            php artisan cobalt:update \
-                 --no-interaction
+            su -s /bin/sh apache -c \
+                "php artisan cobalt:update --no-interaction"
 
-            exec apache2-foreground
+            exec /usr/sbin/httpd -DFOREGROUND
         EOT
       ]
 

@@ -1,0 +1,554 @@
+{
+  "generated_at": "2026-11-10T20:30:53.467523-05:00",
+  "image_tag": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app:alpine-20261110",
+  "image_index_digest": "sha256:144c92357a0958d95199cc74511f63aed47d30d537465b458bcee114288acce4",
+  "runtime_digest": "sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+  "platform": "linux/amd64",
+  "base": "Alpine 3.23.8",
+  "php": "8.3.36",
+  "laravel": {
+    "before": "v9.52.21",
+    "after": "v9.52.21"
+  },
+  "updated_packages": [
+    {
+      "package": "league/flysystem",
+      "before": "3.30.2",
+      "after": "3.36.0"
+    },
+    {
+      "package": "symfony/http-foundation",
+      "before": "v6.4.46",
+      "after": "v6.4.50"
+    },
+    {
+      "package": "symfony/http-kernel",
+      "before": "v6.4.29",
+      "after": "v6.4.50"
+    },
+    {
+      "package": "symfony/mime",
+      "before": "v6.4.46",
+      "after": "v6.4.49"
+    },
+    {
+      "package": "symfony/routing",
+      "before": "v6.4.45",
+      "after": "v6.4.50"
+    },
+    {
+      "package": "phpunit/phpunit",
+      "before": "9.6.30",
+      "after": "9.6.38"
+    },
+    {
+      "package": "sebastian/comparator",
+      "before": "4.0.9",
+      "after": "4.0.10"
+    },
+    {
+      "package": "sebastian/exporter",
+      "before": "4.0.8",
+      "after": "4.0.9"
+    },
+    {
+      "package": "symfony/yaml",
+      "before": "v7.4.0",
+      "after": "v7.4.23"
+    }
+  ],
+  "composer_advisory_counts": {
+    "before": 19,
+    "after": 6
+  },
+  "composer_audit": {
+    "advisories": {
+      "laravel/framework": [
+        {
+          "advisoryId": "PKSA-b41t-wbzk-9q51",
+          "packageName": "laravel/framework",
+          "affectedVersions": "<10.50.4|>=11.0.0,<11.56.1|>=12.0.0,<12.68.0|>=13.0.0,<13.27.0",
+          "title": "Laravel TokenGuard authentication bypass through non-string API credentials",
+          "cve": "CVE-2026-114509",
+          "link": "https://github.com/advisories/GHSA-f9x3-7vq9-cph6",
+          "reportedAt": "2026-10-23T21:50:27+00:00",
+          "sources": [
+            {
+              "name": "GitHub",
+              "remoteId": "GHSA-f9x3-7vq9-cph6"
+            }
+          ],
+          "severity": "critical"
+        },
+        {
+          "advisoryId": "PKSA-d5tc-s1qs-h781",
+          "packageName": "laravel/framework",
+          "affectedVersions": ">=13.0.0,<13.30.0|<12.69.0",
+          "title": "Laravel: XSS in Debug Page Information",
+          "cve": "CVE-2026-102279",
+          "link": "https://github.com/advisories/GHSA-jh5r-qr3c-85q8",
+          "reportedAt": "2026-09-29T18:24:25+00:00",
+          "sources": [
+            {
+              "name": "GitHub",
+              "remoteId": "GHSA-jh5r-qr3c-85q8"
+            }
+          ],
+          "severity": "low"
+        },
+        {
+          "advisoryId": "PKSA-m5cs-t1y6-qpcs",
+          "packageName": "laravel/framework",
+          "affectedVersions": "<12.61.1|>=13.0.0,<13.12.0",
+          "title": "Laravel Framework: Temporary Signed URL Path Confusion",
+          "cve": null,
+          "link": "https://github.com/advisories/GHSA-crmm-hgp2-wgrp",
+          "reportedAt": "2026-06-17T13:54:13+00:00",
+          "sources": [
+            {
+              "name": "GitHub",
+              "remoteId": "GHSA-crmm-hgp2-wgrp"
+            }
+          ],
+          "severity": "medium"
+        },
+        {
+          "advisoryId": "PKSA-3r5d-mb8f-1qw9",
+          "packageName": "laravel/framework",
+          "affectedVersions": "<12.60.0|>=13.0.0,<=13.9.0",
+          "title": "Laravel Framework: CRLF injection in default email rule ",
+          "cve": null,
+          "link": "https://github.com/advisories/GHSA-5vg9-5847-vvmq",
+          "reportedAt": "2026-06-17T13:53:44+00:00",
+          "sources": [
+            {
+              "name": "GitHub",
+              "remoteId": "GHSA-5vg9-5847-vvmq"
+            }
+          ],
+          "severity": "high"
+        },
+        {
+          "advisoryId": "PKSA-mdq4-51ck-6kdq",
+          "packageName": "laravel/framework",
+          "affectedVersions": ">=9.0.0,<10.0.0|>=10.0.0,<11.0.0|>=11.0.0,<12.0.0|>=12.0.0,<12.60.0|>=13.0.0,<13.10.0",
+          "title": "Laravel CRLF injection in default email rule",
+          "cve": "CVE-2026-48019",
+          "link": "https://github.com/laravel/framework/security/advisories/GHSA-5vg9-5847-vvmq",
+          "reportedAt": "2026-05-19T18:13:00+00:00",
+          "sources": [
+            {
+              "name": "FriendsOfPHP/security-advisories",
+              "remoteId": "laravel/framework/CVE-2026-48019.yaml"
+            }
+          ],
+          "severity": null
+        },
+        {
+          "advisoryId": "PKSA-8qx3-n5y5-vvnd",
+          "packageName": "laravel/framework",
+          "affectedVersions": "<10.48.29|>=11.0.0,<11.44.1|>=12.0.0,<12.1.1",
+          "title": "Laravel has a File Validation Bypass",
+          "cve": "CVE-2025-27515",
+          "link": "https://github.com/advisories/GHSA-78fx-h6xr-vch4",
+          "reportedAt": "2025-03-05T19:09:39+00:00",
+          "sources": [
+            {
+              "name": "GitHub",
+              "remoteId": "GHSA-78fx-h6xr-vch4"
+            }
+          ],
+          "severity": "medium"
+        }
+      ]
+    },
+    "abandoned": [],
+    "filter": []
+  },
+  "artifact_analysis_summary": {
+    "CRITICAL": 1,
+    "HIGH": 1,
+    "LOW": 1,
+    "MEDIUM": 2
+  },
+  "os_vulnerability_occurrences": 0,
+  "previous_east_image_summary": {
+    "digest": "sha256:09269301209370b51719b73ed4813dda6c0f8eae345121c586701d71fb4a7c8e",
+    "findings_by_severity": {
+      "CRITICAL": 1,
+      "HIGH": 34,
+      "LOW": 106,
+      "MEDIUM": 29,
+      "MINIMAL": 136,
+      "None": 7
+    }
+  },
+  "initial_alpine_scan": {
+    "digest": "sha256:0dc9852d947d817a7d6b062b5a6ee37864744db38dfcf7762e971bd3ec5a47ef",
+    "findings_by_severity": {
+      "CRITICAL": 1,
+      "HIGH": 19,
+      "LOW": 7,
+      "MEDIUM": 20
+    },
+    "finding_source": "Historical standalone library lockfiles under vendor/admark. These are excluded from the final runtime. The application composer.lock is included in the final runtime."
+  },
+  "verification": {
+    "phpunit_tests": 15,
+    "phpunit_assertions": 47,
+    "http": {
+      "/": 200,
+      "/health": 200,
+      "/.env": 404,
+      "/ruta-inexistente": 404
+    },
+    "apache_config": "Syntax OK",
+    "composer_platform_requirements": "passed",
+    "terraform_validate": "passed",
+    "terraform_fmt_check": "passed",
+    "terraform_apply": "pending",
+    "terraform_plan": {
+      "create": 12,
+      "update": 3,
+      "destroy": 0,
+      "refresh": false
+    },
+    "sqlite_migrations": "passed using apache user"
+  },
+  "artifact_analysis": {
+    "discovery_summary": {
+      "discovery": [
+        {
+          "createTime": "2026-11-11T01:29:04.643381Z",
+          "discovery": {
+            "analysisCompleted": {
+              "analysisType": [
+                "GO",
+                "OS",
+                "COMPOSER",
+                "PYPI",
+                "RUBYGEMS",
+                "RUST",
+                "MAVEN",
+                "NPM",
+                "NUGET",
+                "SECRET"
+              ]
+            },
+            "analysisStatus": "FINISHED_SUCCESS",
+            "continuousAnalysis": "ACTIVE",
+            "lastScanTime": "2026-11-11T01:29:10.975332441Z",
+            "lastVulnerabilityUpdateTime": "2026-11-11T01:29:10.975332441Z"
+          },
+          "kind": "DISCOVERY",
+          "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/73d9452d-c55d-4154-a92f-3ef940d93983",
+          "noteName": "projects/goog-analysis/locations/us-central1/notes/PACKAGE_VULNERABILITY",
+          "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+          "updateTime": "2026-11-11T01:29:10.991842Z"
+        }
+      ]
+    },
+    "image_summary": {
+      "digest": "sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+      "fully_qualified_digest": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+      "registry": "us-central1-docker.pkg.dev",
+      "repository": "movistar-landing",
+      "slsa_build_level": "unknown"
+    },
+    "package_vulnerability_summary": {
+      "vulnerabilities": {
+        "CRITICAL": [
+          {
+            "createTime": "2026-11-11T01:29:10.719096Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/d3ed2ad5-4db6-429e-a252-83b3e68acf91",
+            "noteName": "projects/goog-vulnz/notes/CVE-2026-114509",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "vulnerability": {
+              "cvssScore": 9.2,
+              "cvssV4": {
+                "attackComplexity": "ATTACK_COMPLEXITY_LOW",
+                "attackRequirements": "ATTACK_REQUIREMENTS_PRESENT",
+                "attackVector": "ATTACK_VECTOR_NETWORK",
+                "baseScore": 9.2,
+                "exploitMaturity": "EXPLOIT_MATURITY_NOT_DEFINED",
+                "privilegesRequired": "PRIVILEGES_REQUIRED_NONE",
+                "subsequentSystemAvailabilityImpact": "IMPACT_NONE",
+                "subsequentSystemConfidentialityImpact": "IMPACT_NONE",
+                "subsequentSystemIntegrityImpact": "IMPACT_NONE",
+                "userInteraction": "USER_INTERACTION_NONE",
+                "vulnerableSystemAvailabilityImpact": "IMPACT_HIGH",
+                "vulnerableSystemConfidentialityImpact": "IMPACT_HIGH",
+                "vulnerableSystemIntegrityImpact": "IMPACT_HIGH"
+              },
+              "cvssVersion": "CVSS_VERSION_4",
+              "effectiveSeverity": "CRITICAL",
+              "fixAvailable": true,
+              "longDescription": "NIST vectors: CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "CRITICAL",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
+                        "index": 17
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "10.50.4",
+                    "kind": "NORMAL",
+                    "name": "10.50.4"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "severity": "CRITICAL",
+              "shortDescription": "CVE-2026-114509"
+            }
+          }
+        ],
+        "HIGH": [
+          {
+            "createTime": "2026-11-11T01:29:10.719096Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/ccf60156-ccdb-4f84-990c-2edfeae10b27",
+            "noteName": "projects/goog-vulnz/notes/GHSA-5vg9-5847-vvmq",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "vulnerability": {
+              "effectiveSeverity": "HIGH",
+              "fixAvailable": true,
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "HIGH",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
+                        "index": 17
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "12.60.0",
+                    "kind": "NORMAL",
+                    "name": "12.60.0"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "shortDescription": "GHSA-5vg9-5847-vvmq"
+            }
+          }
+        ],
+        "LOW": [
+          {
+            "createTime": "2026-11-11T01:29:10.719096Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/70551f42-97b7-4f62-95ce-57384d3967ba",
+            "noteName": "projects/goog-vulnz/notes/CVE-2026-102279",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "vulnerability": {
+              "cvssScore": 3.1,
+              "cvssVersion": "CVSS_VERSION_3",
+              "cvssv3": {
+                "attackComplexity": "ATTACK_COMPLEXITY_HIGH",
+                "attackVector": "ATTACK_VECTOR_NETWORK",
+                "availabilityImpact": "IMPACT_NONE",
+                "baseScore": 3.1,
+                "confidentialityImpact": "IMPACT_NONE",
+                "exploitabilityScore": 1.6,
+                "impactScore": 1.4,
+                "integrityImpact": "IMPACT_LOW",
+                "privilegesRequired": "PRIVILEGES_REQUIRED_NONE",
+                "scope": "SCOPE_UNCHANGED",
+                "userInteraction": "USER_INTERACTION_REQUIRED"
+              },
+              "effectiveSeverity": "LOW",
+              "fixAvailable": true,
+              "longDescription": "NIST vectors: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "LOW",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
+                        "index": 17
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "12.69.0",
+                    "kind": "NORMAL",
+                    "name": "12.69.0"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "severity": "LOW",
+              "shortDescription": "CVE-2026-102279"
+            }
+          }
+        ],
+        "MEDIUM": [
+          {
+            "createTime": "2026-11-11T01:29:10.719096Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/663d250f-216d-4863-bc7c-f2405a7d0061",
+            "noteName": "projects/goog-vulnz/notes/CVE-2025-27515",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "vulnerability": {
+              "cvssScore": 9.8,
+              "cvssVersion": "CVSS_VERSION_3",
+              "cvssv3": {
+                "attackComplexity": "ATTACK_COMPLEXITY_LOW",
+                "attackVector": "ATTACK_VECTOR_NETWORK",
+                "availabilityImpact": "IMPACT_HIGH",
+                "baseScore": 9.8,
+                "confidentialityImpact": "IMPACT_HIGH",
+                "exploitabilityScore": 3.9,
+                "impactScore": 5.9,
+                "integrityImpact": "IMPACT_HIGH",
+                "privilegesRequired": "PRIVILEGES_REQUIRED_NONE",
+                "scope": "SCOPE_UNCHANGED",
+                "userInteraction": "USER_INTERACTION_NONE"
+              },
+              "effectiveSeverity": "MEDIUM",
+              "fixAvailable": true,
+              "longDescription": "NIST vectors: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "MEDIUM",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
+                        "index": 17
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "10.48.29",
+                    "kind": "NORMAL",
+                    "name": "10.48.29"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "severity": "CRITICAL",
+              "shortDescription": "CVE-2025-27515"
+            }
+          },
+          {
+            "createTime": "2026-11-11T01:29:10.719096Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/e679bb7c-6b82-4273-83e9-6975c0db8426",
+            "noteName": "projects/goog-vulnz/notes/GHSA-crmm-hgp2-wgrp",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "vulnerability": {
+              "effectiveSeverity": "MEDIUM",
+              "fixAvailable": true,
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "MEDIUM",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
+                        "index": 17
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "12.61.1",
+                    "kind": "NORMAL",
+                    "name": "12.61.1"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "shortDescription": "GHSA-crmm-hgp2-wgrp"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
