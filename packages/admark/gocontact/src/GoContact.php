@@ -52,7 +52,7 @@ class GoContact
                 (string) $this->config->get('gocontact.contacts_path')
             );
             $payload = $this->mapPayload($data);
-            unset($payload['form_id'], $payload['id']);
+            unset($payload['form_id'], $payload['id'], $payload['form_data']);
 
             $stage = 'token_authentication';
             $token = $this->getToken();

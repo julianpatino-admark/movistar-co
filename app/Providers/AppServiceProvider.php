@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Admark\Tracking\Http\Requests\WebhookRequest;
+use App\Http\Requests\TrackingWebhookRequest;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
@@ -17,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(WebhookRequest::class, TrackingWebhookRequest::class);
     }
 
     /**

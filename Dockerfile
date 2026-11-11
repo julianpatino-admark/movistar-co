@@ -36,6 +36,7 @@ COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
 WORKDIR /app
 
 COPY composer.json composer.lock ./
+COPY packages/admark/anubis ./packages/admark/anubis
 COPY packages/admark/gocontact ./packages/admark/gocontact
 
 RUN mkdir -p -m 0700 /root/.ssh

@@ -17,6 +17,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertOk()->assertViewHas('phone_formatted', '601 0011217');
     }
 }

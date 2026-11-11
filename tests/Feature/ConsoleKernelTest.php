@@ -1,14 +1,13 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\TestCase;
 use Illuminate\Console\Scheduling\Schedule;
 use ReflectionClass;
 
-/**
- * @covers \App\Console\Kernel
- */
+#[CoversClass(\App\Console\Kernel::class)]
 class ConsoleKernelTest extends TestCase
 {
     public function test_el_metodo_schedule_se_ejecuta_correctamente()

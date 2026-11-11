@@ -1,13 +1,12 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\TestCase;
 use App\DTOs\OfferData;
 
-/**
- * @covers \App\DTOs\OfferData
- */
+#[CoversClass(\App\DTOs\OfferData::class)]
 class OfferDataTest extends TestCase
 {
     public function test_calcula_y_formatea_precios_con_descuento()

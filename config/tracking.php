@@ -1,7 +1,7 @@
 <?php
 
 $defaultSource = [
-    'phone' => '601 0011217',
+    'phone' => '6010011217',
     'provider' => 'telemark-interno',
     'batch_id' => 'MOVISTARCO_KDMA_C2CLN_Q12',
     'batch_suffix' => '',
@@ -82,10 +82,7 @@ return array(
         'CL_GEO' => '0 000 000 00',
         'CL' => '000 000 000',
 
-        'COL' => [
-            "regex" => '/(57)?(\d{3})(\d{7})/',
-            "format" => '$2 $3'
-        ],
+        'COL' => '000 0000000',
         'COL_GEO' => '00 0000 000 000',
 
         'CR' => '000 0000 0000',

@@ -2,13 +2,12 @@
 
 namespace Tests\Feature;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\TestCase;
 use App\View\Components\PromoCards;
 use Illuminate\View\View;
 
-/**
- * @covers \App\View\Components\PromoCards
- */
+#[CoversClass(\App\View\Components\PromoCards::class)]
 class PromoCardsTest extends TestCase
 {
    public function test_el_componente_asigna_propiedades_y_renderiza_vista()
