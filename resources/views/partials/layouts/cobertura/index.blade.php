@@ -11,7 +11,6 @@
               class="form form-cobertura"
               data-layer-page="/c2c/cobertura/conversion"
               action="{{url('/api/form/send')}}"
-              data-set="fill-cobalt"
         >
             {{csrf_field()}}
             <input type="hidden" name="c2c" value="COBERTURA">

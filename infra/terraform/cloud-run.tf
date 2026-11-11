@@ -138,28 +138,6 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
       }
 
       env {
-        name = "COBALT_LOGIN"
-
-        value_source {
-          secret_key_ref {
-            secret  = google_secret_manager_secret.movistar_runtime["cobalt-login"].secret_id
-            version = "1"
-          }
-        }
-      }
-
-      env {
-        name = "COBALT_PASSWORD"
-
-        value_source {
-          secret_key_ref {
-            secret  = google_secret_manager_secret.movistar_runtime["cobalt-password"].secret_id
-            version = "2"
-          }
-        }
-      }
-
-      env {
         name = "GOCONTACT_BASE_URL"
 
         value_source {

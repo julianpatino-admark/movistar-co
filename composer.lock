@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e305dd8016eac9aeedf0c2ab1325bea",
+    "content-hash": "5e3b9059eac9a1f3d6ff273dd419b280",
     "packages": [
         {
             "name": "admark/anubis",
@@ -50,50 +50,6 @@
             ],
             "description": "Paquete para acceder al servicio Anubis (obtención de id de lead, baja en legal, obtención de tsources...)",
             "time": "2026-08-25T16:43:36+00:00"
-        },
-        {
-            "name": "admark/cobalt",
-            "version": "0.16",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:grupokonecta/web-composer-laravel-cobalt.git",
-                "reference": "a7770fcfd33827190f9c6004fd02ce2aac820eb4"
-            },
-            "require": {
-                "ext-soap": "*",
-                "illuminate/support": "^9.19"
-            },
-            "require-dev": {
-                "laravel/framework": "^9.19",
-                "orchestra/testbench": "7.*",
-                "phpunit/phpunit": "^9.5.10"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Admark\\Cobalt\\CobaltServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Admark\\Cobalt\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Admark\\Cobalt\\Tests\\": "tests/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Víctor Molero Martín",
-                    "email": "victor.molero@grupoadmark.com"
-                }
-            ],
-            "description": "Paquete para acceder al servicio Cobalt",
-            "time": "2024-01-31T19:33:18+00:00"
         },
         {
             "name": "admark/gocontact",

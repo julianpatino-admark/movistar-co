@@ -16,7 +16,6 @@
     "admark/tracking": "9.*",
     "admark/inconcert": "9.*",
     "admark/anubis": "9.*",
-    "admark/cobalt": "0.16",
     "admark/gocontact": "^1.0"
   },
   "require-dev": {
@@ -60,10 +59,6 @@
     {
       "type": "git",
       "url": "git@bitbucket.org:grupokonecta/web-composer-laravel-time-helpers.git"
-    },
-    {
-      "type": "git",
-      "url" : "git@bitbucket.org:grupokonecta/web-composer-laravel-cobalt.git"
     }
   ],
   "autoload": {

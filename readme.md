@@ -55,5 +55,16 @@ Una vez se ha puesto a punto el proyecto se debe realizar la configuración de l
 * config/anubis.php
 * config/tracking.php
 
+## Arranque de la landing
 
+El catálogo de fuentes de tráfico está en `config/tracking.php`. La fuente
+`0` y el respaldo para fuentes desconocidas comparten teléfono, proveedor,
+lote y prioridad. Para agregar una campaña, registra su fuente en
+`source_phones` con los valores de enrutamiento correspondientes.
 
+Publica la nueva imagen, actualiza `movistar_runtime_image` en Terraform y
+configura las credenciales y la base de destino de GoContact. Con una base
+nueva, aplica primero la configuración del job de migraciones y ejecútalo
+antes de actualizar los servicios de Cloud Run. Los
+contenedores leen el catálogo de la aplicación en cada arranque, incluso
+cuando la tabla `tsources` está vacía.

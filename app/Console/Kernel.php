@@ -29,12 +29,6 @@ class Kernel extends ConsoleKernel
             ->everyFifteenMinutes()
             ->withoutOverlapping()
             ->timezone('America/Bogota');
-
-        $schedule
-            ->command('cobalt:update')
-            ->everyTwoHours()
-            ->withoutOverlapping()
-            ->timezone('America/Bogota');
     }
 
     /**

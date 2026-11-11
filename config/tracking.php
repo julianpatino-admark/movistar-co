@@ -1,4 +1,13 @@
 <?php
+
+$defaultSource = [
+    'phone' => '601 0011217',
+    'provider' => 'telemark-interno',
+    'batch_id' => 'MOVISTARCO_KDMA_C2CLN_Q12',
+    'batch_suffix' => '',
+    'priority' => 500,
+];
+
 return array(
 
     /**
@@ -22,6 +31,7 @@ return array(
     |--------------------------------------------------------------------
     */
     'webhook_tsource' => '0',
+    'webhook_batch_id' => $defaultSource['batch_id'],
 
     /*
     |--------------------------------------------------------------------
@@ -115,7 +125,7 @@ return array(
     | config
     | database
     */
-    'driver' => env('TRACKING_DRIVER', 'database'),
+    'driver' => 'config',
 
     /*
     |--------------------------------------------------------------------------------------------------
@@ -144,6 +154,7 @@ return array(
     */
 
     'source_phones'   =>  [
+        0 => $defaultSource,
         '1' =>  [
             'phone' => '900000001',
             'provider' => 'admark',
@@ -171,13 +182,7 @@ return array(
             'campaign' => 'CAMPAIGN_63',
             'adgroup_id' => '121408083769-118001226663-115637335574-123332188478',
         ],
-        'default' => [
-            'phone' => '601 0011217',
-            'provider' => 'admark',
-            'batch_id' => 'BATCH_DEFAULT',
-            'batch_suffix' => '_SUFFIX',
-            'priority' => 500
-        ]
+        'default' => $defaultSource,
     ],
 
     /**
