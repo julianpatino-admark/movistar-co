@@ -7,7 +7,6 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
   invoker_iam_disabled = true
   deletion_protection  = false
 
-  # Configuración temporal para validar la landing sin Cloud SQL.
   scaling {
     max_instance_count = 1
   }
@@ -28,30 +27,21 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
     }
 
     containers {
-      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3"
-
-      # Preparamos SQLite antes de arrancar Apache sobre Alpine.
-      command = ["/bin/sh"]
-      args = [
-        "-c",
-        <<-EOT
-          set -eu
-          cd /var/www/html
-
-          touch /tmp/movistar.sqlite
-
-            chown apache:apache /tmp/movistar.sqlite
-            chmod 660 /tmp/movistar.sqlite
-
-            su -s /bin/sh apache -c \
-                "php artisan migrate --force --no-interaction"
-
-            exec /usr/sbin/httpd -DFOREGROUND
-        EOT
-      ]
+      image = local.movistar_runtime_image
 
       ports {
         container_port = 8080
+      }
+
+      startup_probe {
+        timeout_seconds   = 5
+        period_seconds    = 5
+        failure_threshold = 24
+
+        http_get {
+          path = "/health"
+          port = 8080
+        }
       }
 
       resources {
@@ -116,15 +106,49 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
         value = "local"
       }
 
-      # Base de datos temporal de preview.
       env {
         name  = "DB_CONNECTION"
-        value = "sqlite"
+        value = "mysql"
+      }
+
+      env {
+        name  = "DB_HOST"
+        value = local.movistar_database_host
+      }
+
+      env {
+        name  = "DB_PORT"
+        value = "3306"
       }
 
       env {
         name  = "DB_DATABASE"
-        value = "/tmp/movistar.sqlite"
+        value = google_sql_database.movistar.name
+      }
+
+      env {
+        name  = "DB_USERNAME"
+        value = google_sql_user.movistar.name
+      }
+
+      env {
+        name = "DB_PASSWORD"
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["db-app-password"].secret_id
+            version = "1"
+          }
+        }
+      }
+
+      env {
+        name  = "CLOUD_SQL_PRIVATE_IP"
+        value = data.google_sql_database_instance.movistar.private_ip_address
+      }
+
+      env {
+        name  = "MYSQL_ATTR_SSL_CA"
+        value = "/etc/ssl/cloudsql-server-ca.pem"
       }
 
       env {
@@ -240,6 +264,7 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
 
   depends_on = [
     google_secret_manager_secret_iam_member.movistar_runtime_access["laravel-app-key"],
+    google_secret_manager_secret_iam_member.movistar_runtime_access["db-app-password"],
     google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-base-url"],
     google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-username"],
     google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-password"],

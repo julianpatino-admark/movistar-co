@@ -118,24 +118,7 @@ FROM php-base AS runtime
 
 ENV PORT=8080
 
-RUN apk add --no-cache php83-apache2 \
-    && sed -i \
-        -e 's/^Listen 80$/Listen ${PORT}/' \
-        -e 's/^#LoadModule rewrite_module/LoadModule rewrite_module/' \
-        -e 's|^ErrorLog logs/error.log$|ErrorLog /proc/self/fd/2|' \
-        -e 's|CustomLog logs/access.log combined|CustomLog /proc/self/fd/1 combined|' \
-        /etc/apache2/httpd.conf \
-    && printf '%s\n' \
-        'ServerName localhost' \
-        '<VirtualHost *:${PORT}>' \
-        '    DocumentRoot /var/www/html/public' \
-        '    <Directory /var/www/html/public>' \
-        '        Options -Indexes +FollowSymLinks' \
-        '        AllowOverride All' \
-        '        Require all granted' \
-        '    </Directory>' \
-        '</VirtualHost>' \
-        > /etc/apache2/conf.d/movistar.conf \
+RUN apk add --no-cache nginx php83-fpm tini gettext-envsubst \
     && printf '%s\n' \
         'expose_php=Off' \
         'display_errors=Off' \
@@ -147,7 +130,13 @@ RUN apk add --no-cache php83-apache2 \
         'opcache.validate_timestamps=0' \
         'opcache.revalidate_freq=0' \
         > /etc/php83/conf.d/99-movistar.ini \
-    && mkdir -p /run/apache2
+    && mkdir -p /run/nginx /run/php
+
+COPY docker/nginx.conf.template /etc/nginx/http.d/default.conf.template
+COPY docker/cloudsql-server-ca.pem /etc/ssl/cloudsql-server-ca.pem
+COPY docker/check-database.php /usr/local/bin/check-database.php
+COPY docker/php-fpm.conf /etc/php83/php-fpm.d/www.conf
+COPY --chmod=755 docker/entrypoint.sh /usr/local/bin/movistar-entrypoint
 
 WORKDIR /var/www/html
 
@@ -172,7 +161,7 @@ RUN mkdir -p \
         storage/framework/sessions \
         storage/framework/views \
         storage/logs \
-    && chown -R apache:apache \
+    && chown -R nginx:nginx \
         storage \
         bootstrap/cache \
     && chmod -R ug+rwX \
@@ -181,4 +170,4 @@ RUN mkdir -p \
 
 EXPOSE 8080
 
-CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/movistar-entrypoint"]

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-10T20:30:53.467523-05:00",
-  "image_tag": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app:alpine-20261110",
-  "image_index_digest": "sha256:144c92357a0958d95199cc74511f63aed47d30d537465b458bcee114288acce4",
-  "runtime_digest": "sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+  "generated_at": "2026-11-11T11:01:06.090226-05:00",
+  "image_tag": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app:nginx-cloudsql-20261110",
+  "image_index_digest": "sha256:4fb076f19af0bf98585a7f2e772f93c7ad61c4f37fc8fa97438e0eb7b5123536",
+  "runtime_digest": "sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
   "platform": "linux/amd64",
   "base": "Alpine 3.23.8",
   "php": "8.3.36",
@@ -196,61 +196,62 @@
   "verification": {
     "phpunit_tests": 15,
     "phpunit_assertions": 47,
-    "http": {
+    "nginx_http_cloud_sql": {
       "/": 200,
       "/health": 200,
-      "/.env": 404,
-      "/ruta-inexistente": 404
+      "vite_assets": 200
     },
-    "apache_config": "Syntax OK",
-    "composer_platform_requirements": "passed",
+    "preview_redirect": {
+      "status": 301,
+      "location": "/ruta-inexistente?ref=smoke"
+    },
+    "preview_health_status": 200,
+    "cloud_sql": {
+      "database": "movistar",
+      "connection": "Private IP with verified TLS",
+      "migrations_applied": 17,
+      "migration_execution": "movistar-migrations-dj796",
+      "migration_status_execution": "movistar-migrations-cg5fq"
+    },
     "terraform_validate": "passed",
-    "terraform_fmt_check": "passed",
-    "terraform_apply": "pending",
-    "terraform_plan": {
-      "create": 12,
-      "update": 3,
-      "destroy": 0,
-      "refresh": false
-    },
-    "sqlite_migrations": "passed using apache user"
+    "terraform_plan": "no changes"
   },
   "artifact_analysis": {
     "discovery_summary": {
       "discovery": [
         {
-          "createTime": "2026-11-11T01:29:04.643381Z",
+          "createTime": "2026-11-11T02:10:39.632910Z",
           "discovery": {
             "analysisCompleted": {
               "analysisType": [
                 "GO",
+                "MAVEN",
+                "NPM",
                 "OS",
                 "COMPOSER",
                 "PYPI",
                 "RUBYGEMS",
                 "RUST",
-                "MAVEN",
-                "NPM",
                 "NUGET",
                 "SECRET"
               ]
             },
             "analysisStatus": "FINISHED_SUCCESS",
             "continuousAnalysis": "ACTIVE",
-            "lastScanTime": "2026-11-11T01:29:10.975332441Z",
-            "lastVulnerabilityUpdateTime": "2026-11-11T01:29:10.975332441Z"
+            "lastScanTime": "2026-11-11T10:25:22.289589322Z",
+            "lastVulnerabilityUpdateTime": "2026-11-11T02:21:19.909202993Z"
           },
           "kind": "DISCOVERY",
-          "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/73d9452d-c55d-4154-a92f-3ef940d93983",
+          "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/f71594db-0085-4893-8f54-74d33531c9f0",
           "noteName": "projects/goog-analysis/locations/us-central1/notes/PACKAGE_VULNERABILITY",
-          "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-          "updateTime": "2026-11-11T01:29:10.991842Z"
+          "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+          "updateTime": "2026-11-11T10:25:22.407994Z"
         }
       ]
     },
     "image_summary": {
-      "digest": "sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-      "fully_qualified_digest": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
+      "digest": "sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+      "fully_qualified_digest": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
       "registry": "us-central1-docker.pkg.dev",
       "repository": "movistar-landing",
       "slsa_build_level": "unknown"
@@ -259,12 +260,12 @@
       "vulnerabilities": {
         "CRITICAL": [
           {
-            "createTime": "2026-11-11T01:29:10.719096Z",
+            "createTime": "2026-11-11T02:21:19.546317Z",
             "kind": "VULNERABILITY",
-            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/d3ed2ad5-4db6-429e-a252-83b3e68acf91",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/defe7675-14a0-4849-8364-5a2a5c301bcc",
             "noteName": "projects/goog-vulnz/notes/CVE-2026-114509",
-            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+            "updateTime": "2026-11-11T02:21:19.546317Z",
             "vulnerability": {
               "cvssScore": 9.2,
               "cvssV4": {
@@ -300,10 +301,10 @@
                     {
                       "filePath": "/var/www/html/composer.lock",
                       "layerDetails": {
-                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "chainId": "sha256:78c07282c448b0f59b6010e43c7fc3da3e0516d8ae0e0531d85b71b4687b9bd7",
                         "command": "COPY /app/composer.lock ./composer.lock # buildkit",
-                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
-                        "index": 17
+                        "diffId": "sha256:f1c315bb4fdd38f4dd13a1d0be0c2ecce5caae5437024fd5c2d33728ce4002a1",
+                        "index": 22
                       },
                       "lineNumber": 1520
                     }
@@ -326,12 +327,12 @@
         ],
         "HIGH": [
           {
-            "createTime": "2026-11-11T01:29:10.719096Z",
+            "createTime": "2026-11-11T02:21:19.546317Z",
             "kind": "VULNERABILITY",
-            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/ccf60156-ccdb-4f84-990c-2edfeae10b27",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/89a15ee4-da60-49d1-974b-9e4db9d0b72a",
             "noteName": "projects/goog-vulnz/notes/GHSA-5vg9-5847-vvmq",
-            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+            "updateTime": "2026-11-11T02:21:19.546317Z",
             "vulnerability": {
               "effectiveSeverity": "HIGH",
               "fixAvailable": true,
@@ -349,10 +350,10 @@
                     {
                       "filePath": "/var/www/html/composer.lock",
                       "layerDetails": {
-                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "chainId": "sha256:78c07282c448b0f59b6010e43c7fc3da3e0516d8ae0e0531d85b71b4687b9bd7",
                         "command": "COPY /app/composer.lock ./composer.lock # buildkit",
-                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
-                        "index": 17
+                        "diffId": "sha256:f1c315bb4fdd38f4dd13a1d0be0c2ecce5caae5437024fd5c2d33728ce4002a1",
+                        "index": 22
                       },
                       "lineNumber": 1520
                     }
@@ -374,12 +375,12 @@
         ],
         "LOW": [
           {
-            "createTime": "2026-11-11T01:29:10.719096Z",
+            "createTime": "2026-11-11T02:21:19.546317Z",
             "kind": "VULNERABILITY",
-            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/70551f42-97b7-4f62-95ce-57384d3967ba",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/2d00b7c1-7598-4bb5-b379-cf1058afe81b",
             "noteName": "projects/goog-vulnz/notes/CVE-2026-102279",
-            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+            "updateTime": "2026-11-11T02:21:19.546317Z",
             "vulnerability": {
               "cvssScore": 3.1,
               "cvssVersion": "CVSS_VERSION_3",
@@ -413,10 +414,10 @@
                     {
                       "filePath": "/var/www/html/composer.lock",
                       "layerDetails": {
-                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "chainId": "sha256:78c07282c448b0f59b6010e43c7fc3da3e0516d8ae0e0531d85b71b4687b9bd7",
                         "command": "COPY /app/composer.lock ./composer.lock # buildkit",
-                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
-                        "index": 17
+                        "diffId": "sha256:f1c315bb4fdd38f4dd13a1d0be0c2ecce5caae5437024fd5c2d33728ce4002a1",
+                        "index": 22
                       },
                       "lineNumber": 1520
                     }
@@ -439,12 +440,58 @@
         ],
         "MEDIUM": [
           {
-            "createTime": "2026-11-11T01:29:10.719096Z",
+            "createTime": "2026-11-11T02:21:19.546317Z",
             "kind": "VULNERABILITY",
-            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/663d250f-216d-4863-bc7c-f2405a7d0061",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/21aad002-bc6c-4053-ac3e-158cefb1a83c",
+            "noteName": "projects/goog-vulnz/notes/GHSA-crmm-hgp2-wgrp",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+            "updateTime": "2026-11-11T02:21:19.546317Z",
+            "vulnerability": {
+              "effectiveSeverity": "MEDIUM",
+              "fixAvailable": true,
+              "packageIssue": [
+                {
+                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "affectedPackage": "laravel/framework",
+                  "affectedVersion": {
+                    "fullName": "9.52.21",
+                    "kind": "NORMAL",
+                    "name": "9.52.21"
+                  },
+                  "effectiveSeverity": "MEDIUM",
+                  "fileLocation": [
+                    {
+                      "filePath": "/var/www/html/composer.lock",
+                      "layerDetails": {
+                        "chainId": "sha256:78c07282c448b0f59b6010e43c7fc3da3e0516d8ae0e0531d85b71b4687b9bd7",
+                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
+                        "diffId": "sha256:f1c315bb4fdd38f4dd13a1d0be0c2ecce5caae5437024fd5c2d33728ce4002a1",
+                        "index": 22
+                      },
+                      "lineNumber": 1520
+                    }
+                  ],
+                  "fixAvailable": true,
+                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
+                  "fixedPackage": "laravel/framework",
+                  "fixedVersion": {
+                    "fullName": "12.61.1",
+                    "kind": "NORMAL",
+                    "name": "12.61.1"
+                  },
+                  "packageType": "COMPOSER"
+                }
+              ],
+              "shortDescription": "GHSA-crmm-hgp2-wgrp"
+            }
+          },
+          {
+            "createTime": "2026-11-11T02:21:19.546317Z",
+            "kind": "VULNERABILITY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/2d79a8e4-b2fc-4b21-9854-530c93e3225f",
             "noteName": "projects/goog-vulnz/notes/CVE-2025-27515",
-            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-            "updateTime": "2026-11-11T01:29:10.719096Z",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:0a53053b7048b6b88df9be901917853360fe6d11885955d828fafffdd5a4afd3",
+            "updateTime": "2026-11-11T02:21:19.546317Z",
             "vulnerability": {
               "cvssScore": 9.8,
               "cvssVersion": "CVSS_VERSION_3",
@@ -478,10 +525,10 @@
                     {
                       "filePath": "/var/www/html/composer.lock",
                       "layerDetails": {
-                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
+                        "chainId": "sha256:78c07282c448b0f59b6010e43c7fc3da3e0516d8ae0e0531d85b71b4687b9bd7",
                         "command": "COPY /app/composer.lock ./composer.lock # buildkit",
-                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
-                        "index": 17
+                        "diffId": "sha256:f1c315bb4fdd38f4dd13a1d0be0c2ecce5caae5437024fd5c2d33728ce4002a1",
+                        "index": 22
                       },
                       "lineNumber": 1520
                     }
@@ -500,55 +547,21 @@
               "severity": "CRITICAL",
               "shortDescription": "CVE-2025-27515"
             }
-          },
-          {
-            "createTime": "2026-11-11T01:29:10.719096Z",
-            "kind": "VULNERABILITY",
-            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/e679bb7c-6b82-4273-83e9-6975c0db8426",
-            "noteName": "projects/goog-vulnz/notes/GHSA-crmm-hgp2-wgrp",
-            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3",
-            "updateTime": "2026-11-11T01:29:10.719096Z",
-            "vulnerability": {
-              "effectiveSeverity": "MEDIUM",
-              "fixAvailable": true,
-              "packageIssue": [
-                {
-                  "affectedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
-                  "affectedPackage": "laravel/framework",
-                  "affectedVersion": {
-                    "fullName": "9.52.21",
-                    "kind": "NORMAL",
-                    "name": "9.52.21"
-                  },
-                  "effectiveSeverity": "MEDIUM",
-                  "fileLocation": [
-                    {
-                      "filePath": "/var/www/html/composer.lock",
-                      "layerDetails": {
-                        "chainId": "sha256:8f9f777df06ac6d9218b227aaa4ce00bf88f128817e552e307b6b248beb66e43",
-                        "command": "COPY /app/composer.lock ./composer.lock # buildkit",
-                        "diffId": "sha256:23e06d54168aba813c9b3408a2feea7d94c4a9829dc27f69ee9e68f808cf1fbf",
-                        "index": 17
-                      },
-                      "lineNumber": 1520
-                    }
-                  ],
-                  "fixAvailable": true,
-                  "fixedCpeUri": "cpe:/o:alpine:alpine_linux:3.23",
-                  "fixedPackage": "laravel/framework",
-                  "fixedVersion": {
-                    "fullName": "12.61.1",
-                    "kind": "NORMAL",
-                    "name": "12.61.1"
-                  },
-                  "packageType": "COMPOSER"
-                }
-              ],
-              "shortDescription": "GHSA-crmm-hgp2-wgrp"
-            }
           }
         ]
       }
+    }
+  },
+  "deployment": {
+    "us-east1": {
+      "ready_revision": "movistar-landing-00010-dqt",
+      "traffic_percent": 100,
+      "startup_probe": "/health"
+    },
+    "us-central1": {
+      "ready_revision": "movistar-landing-00010-49j",
+      "traffic_percent": 100,
+      "startup_probe": "/health"
     }
   }
 }

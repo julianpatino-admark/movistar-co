@@ -7,7 +7,6 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
   invoker_iam_disabled = true
   deletion_protection  = false
 
-  # Configuración temporal para validar la landing sin Cloud SQL.
   scaling {
     max_instance_count = 1
   }
@@ -19,33 +18,34 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
     timeout                          = "300s"
 
     containers {
-      image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:40bcec778d1a5efddff0ff2cd4fce2b92a75edc95c614a796b09d00770f462d3"
+      image = local.movistar_runtime_image
 
-      # Preparamos SQLite antes de arrancar Apache sobre Alpine.
       command = ["/bin/sh"]
       args = [
         "-c",
         <<-EOT
           set -eu
-          cd /var/www/html
-
           touch /tmp/movistar.sqlite
-
-            chown apache:apache /tmp/movistar.sqlite
-            chmod 660 /tmp/movistar.sqlite
-
-            su -s /bin/sh apache -c \
-                "php artisan migrate --force --no-interaction"
-
-            su -s /bin/sh apache -c \
-                "php artisan cobalt:update --no-interaction"
-
-            exec /usr/sbin/httpd -DFOREGROUND
+          chown nginx:nginx /tmp/movistar.sqlite
+          chmod 660 /tmp/movistar.sqlite
+          su -s /bin/sh nginx -c "php artisan migrate --force --no-interaction"
+          exec /usr/local/bin/movistar-entrypoint
         EOT
       ]
 
       ports {
         container_port = 8080
+      }
+
+      startup_probe {
+        timeout_seconds   = 5
+        period_seconds    = 5
+        failure_threshold = 24
+
+        http_get {
+          path = "/health"
+          port = 8080
+        }
       }
 
       resources {
@@ -108,6 +108,11 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
       env {
         name  = "FILESYSTEM_DISK"
         value = "local"
+      }
+
+      env {
+        name  = "TRACKING_DRIVER"
+        value = "config"
       }
 
       # Base de datos temporal de preview.

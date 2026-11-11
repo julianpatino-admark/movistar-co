@@ -29,7 +29,9 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-             Route::get('/health', static function () {
+            Route::get('/health', static function () {
+                \Illuminate\Support\Facades\DB::connection()->getPdo();
+
                 return response()->json([
                     'status' => 'ok',
                 ]);

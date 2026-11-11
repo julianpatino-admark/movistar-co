@@ -1,0 +1,48 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /var/www/html/public;
+    index index.php;
+    server_tokens off;
+    absolute_redirect off;
+
+    access_log /dev/stdout;
+    error_log /dev/stderr warn;
+    client_max_body_size 2m;
+
+    if ($http_x_forwarded_proto = "http") {
+        return 301 https://$host$request_uri;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ ^(.+)/$ {
+        if (!-d $request_filename) {
+            return 301 $1$is_args$args;
+        }
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location = /index.php {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root/index.php;
+        fastcgi_param HTTP_AUTHORIZATION $http_authorization;
+        fastcgi_param HTTP_PROXY "";
+        fastcgi_pass 127.0.0.1:9000;
+    }
+
+    location ~ \.php$ {
+        return 404;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+
+    location ~* \.(woff|woff2|ttf|svg|eot|webp|jpg|jpeg|png|gif|ico|css|bundle\.js)$ {
+        expires 1y;
+        try_files $uri =404;
+    }
+}
