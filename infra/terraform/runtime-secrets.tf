@@ -2,6 +2,8 @@ locals {
   movistar_runtime_secrets = toset([
     "laravel-app-key",
     "db-app-password",
+    "db-runtime-password",
+    "db-session-password",
     "anubis-user",
     "anubis-password",
     "cobalt-login",
@@ -39,4 +41,22 @@ resource "google_secret_manager_secret_iam_member" "movistar_runtime_access" {
 
   role   = "roles/secretmanager.secretAccessor"
   member = google_service_account.movistar_cloud_build.member
+}
+resource "google_secret_manager_secret_iam_member" "movistar_production_access" {
+  for_each = toset([
+    "laravel-app-key",
+    "db-runtime-password",
+    "db-session-password",
+    "gocontact-base-url",
+    "gocontact-username",
+    "gocontact-password",
+    "gocontact-database-id",
+    "gocontact-monitor-username",
+    "gocontact-monitor-password",
+  ])
+
+  project   = google_secret_manager_secret.movistar_runtime[each.key].project
+  secret_id = google_secret_manager_secret.movistar_runtime[each.key].secret_id
+  role      = "roles/secretmanager.secretAccessor"
+  member    = data.google_service_account.movistar_production.member
 }

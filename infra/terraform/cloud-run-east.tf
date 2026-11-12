@@ -1,3 +1,7 @@
+locals {
+  movistar_production_image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:a038a5a28b2ee6fa8249c70c408a51c253041e83c0fed20aed376a577159a2ed"
+}
+
 resource "google_cloud_run_v2_service" "movistar_landing_east" {
   project  = "kn-co-cust-svc-movistar-prod"
   name     = "movistar-landing"
@@ -12,7 +16,7 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
   }
 
   template {
-    service_account = google_service_account.movistar_cloud_build.email
+    service_account = data.google_service_account.movistar_production.email
 
     max_instance_request_concurrency = 20
     timeout                          = "300s"
@@ -27,7 +31,7 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
     }
 
     containers {
-      image = local.movistar_runtime_image
+      image = local.movistar_production_image
 
       ports {
         container_port = 8080
@@ -83,7 +87,37 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
 
       env {
         name  = "SESSION_DRIVER"
-        value = "cookie"
+        value = "database"
+      }
+
+      env {
+        name  = "SESSION_CONNECTION"
+        value = "mysql_sessions"
+      }
+
+      env {
+        name  = "SESSION_ENCRYPT"
+        value = "true"
+      }
+
+      env {
+        name  = "SESSION_DB_DATABASE"
+        value = google_sql_database.sessions.name
+      }
+
+      env {
+        name  = "SESSION_DB_USERNAME"
+        value = google_sql_user.runtime["sessions"].name
+      }
+
+      env {
+        name = "SESSION_DB_PASSWORD"
+        value_source {
+          secret_key_ref {
+            secret  = google_secret_manager_secret.movistar_runtime["db-session-password"].secret_id
+            version = "2"
+          }
+        }
       }
 
       env {
@@ -128,15 +162,15 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
 
       env {
         name  = "DB_USERNAME"
-        value = google_sql_user.movistar.name
+        value = google_sql_user.runtime["application"].name
       }
 
       env {
         name = "DB_PASSWORD"
         value_source {
           secret_key_ref {
-            secret  = google_secret_manager_secret.movistar_runtime["db-app-password"].secret_id
-            version = "1"
+            secret  = google_secret_manager_secret.movistar_runtime["db-runtime-password"].secret_id
+            version = "2"
           }
         }
       }
@@ -240,14 +274,5 @@ resource "google_cloud_run_v2_service" "movistar_landing_east" {
     }
   }
 
-  depends_on = [
-    google_secret_manager_secret_iam_member.movistar_runtime_access["laravel-app-key"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["db-app-password"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-base-url"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-username"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-password"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-database-id"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-monitor-username"],
-    google_secret_manager_secret_iam_member.movistar_runtime_access["gocontact-monitor-password"]
-  ]
+  depends_on = [google_secret_manager_secret_iam_member.movistar_production_access]
 }

@@ -32,6 +32,12 @@ class RouteServiceProvider extends ServiceProvider
             Route::get('/health', static function () {
                 \Illuminate\Support\Facades\DB::connection()->getPdo();
 
+                if (config('session.driver') === 'database') {
+                    \Illuminate\Support\Facades\DB::connection(config('session.connection'))
+                        ->table(config('session.table'))
+                        ->exists();
+                }
+
                 return response()->json([
                     'status' => 'ok',
                 ]);
