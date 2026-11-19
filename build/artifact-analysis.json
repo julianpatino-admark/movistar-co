@@ -410,5 +410,83 @@
       "traffic_percent": 100,
       "startup_probe": "/health"
     }
+  },
+  "php_security_update": {
+    "verified_at": "2026-11-19T11:13:21.914153-05:00",
+    "php_before": "8.3.36",
+    "php_after": "8.3.37",
+    "official_base": "php:8.3.37-fpm-alpine3.23@sha256:8d5de0fd3f48bb3d79b28d6f7b9921b53cb608a9e8f3793f629e47623c198bd7",
+    "cloud_build_id": "742ef5fe-5aaa-4a04-9254-35b3a561b8c2",
+    "production_image": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:38f6e0bc8499ca8209e355c05a170a5523299513d7fbb41e6b3b4a20a6464b6a",
+    "production_revision": "movistar-landing-00019-jal",
+    "traffic_percent": 100,
+    "previous_revision": "movistar-landing-00012-xq7",
+    "local_image": "movistar-php:8.3.37",
+    "local_port": 18083,
+    "verification": {
+      "phpunit_tests": 20,
+      "phpunit_assertions": 82,
+      "composer_platform_requirements": "passed",
+      "composer_audit": {
+        "advisories": [],
+        "abandoned": [],
+        "filter": []
+      },
+      "cloud_sql_verified_tls": true,
+      "encrypted_session_roundtrip": "passed",
+      "gocontact_authentication": "passed",
+      "production_landing_http": 200,
+      "production_health_http": 200,
+      "production_health_revision_correlated": "movistar-landing-00019-jal",
+      "cookie_attributes": [
+        "Secure",
+        "HttpOnly",
+        "SameSite=Lax"
+      ],
+      "terraform_plan": "no changes",
+      "temporary_job_execution": "movistar-php837-verify-r7ljx",
+      "temporary_job_deleted": true
+    },
+    "artifact_analysis": {
+      "discovery_summary": {
+        "discovery": [
+          {
+            "createTime": "2026-11-19T16:05:08.848967Z",
+            "discovery": {
+              "analysisCompleted": {
+                "analysisType": [
+                  "OS",
+                  "RUST",
+                  "NUGET",
+                  "GO",
+                  "MAVEN",
+                  "NPM",
+                  "COMPOSER",
+                  "PYPI",
+                  "RUBYGEMS",
+                  "SECRET"
+                ]
+              },
+              "analysisStatus": "FINISHED_SUCCESS",
+              "continuousAnalysis": "ACTIVE",
+              "lastScanTime": "2026-11-19T16:11:53.065572662Z"
+            },
+            "kind": "DISCOVERY",
+            "name": "projects/kn-co-cust-svc-movistar-prod/locations/us-central1/occurrences/0104a06d-1460-4549-a13c-e6602708c735",
+            "noteName": "projects/goog-analysis/locations/us-central1/notes/PACKAGE_VULNERABILITY",
+            "resourceUri": "https://us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:38f6e0bc8499ca8209e355c05a170a5523299513d7fbb41e6b3b4a20a6464b6a",
+            "updateTime": "2026-11-19T16:11:53.082013Z"
+          }
+        ]
+      },
+      "image_summary": {
+        "digest": "sha256:38f6e0bc8499ca8209e355c05a170a5523299513d7fbb41e6b3b4a20a6464b6a",
+        "fully_qualified_digest": "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:38f6e0bc8499ca8209e355c05a170a5523299513d7fbb41e6b3b4a20a6464b6a",
+        "registry": "us-central1-docker.pkg.dev",
+        "repository": "movistar-landing",
+        "slsa_build_level": 3
+      }
+    },
+    "package_vulnerability_count": 0
   }
 }

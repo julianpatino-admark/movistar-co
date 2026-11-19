@@ -21,6 +21,7 @@ steps:
           --pull \
           --no-cache \
           --target runtime \
+          --build-arg "PHP_BASE_IMAGE=${_PHP_BASE_IMAGE}" \
           --ssh "default=$$SSH_KEY_FILE" \
           --secret id=known_hosts,src=.cloudbuild/known_hosts.bitbucket \
           --tag "us-central1-docker.pkg.dev/$PROJECT_ID/movistar-landing/app:build-$BUILD_ID" \
@@ -40,3 +41,6 @@ logsBucket: 'gs://kn-co-cust-svc-movistar-prod-build-logs'
 
 options:
   logging: GCS_ONLY
+
+substitutions:
+  _PHP_BASE_IMAGE: 'us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:1ba7cc8e4ad361e709b985c18475b30a2d98d7385f22f1c9cf141a09f9e31458'

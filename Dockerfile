@@ -1,35 +1,18 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine:3.23 AS php-base
+ARG PHP_BASE_IMAGE=php:8.3.37-fpm-alpine3.23@sha256:8d5de0fd3f48bb3d79b28d6f7b9921b53cb608a9e8f3793f629e47623c198bd7
+FROM ${PHP_BASE_IMAGE} AS php-base
 
 RUN apk upgrade --no-cache \
-    && apk add --no-cache \
-        ca-certificates \
-        php83 \
-        php83-ctype \
-        php83-curl \
-        php83-dom \
-        php83-fileinfo \
-        php83-iconv \
-        php83-mbstring \
-        php83-opcache \
-        php83-openssl \
-        php83-pdo_mysql \
-        php83-pdo_sqlite \
-        php83-phar \
-        php83-session \
-        php83-simplexml \
-        php83-soap \
-        php83-sodium \
-        php83-tokenizer \
-        php83-xml \
-        php83-xmlreader \
-        php83-xmlwriter \
-    && ln -s /usr/bin/php83 /usr/local/bin/php
+    && apk add --no-cache ca-certificates libxml2 libzip \
+    && apk add --no-cache --virtual .php-build-deps $PHPIZE_DEPS libxml2-dev libzip-dev \
+    && docker-php-ext-install -j2 pdo_mysql soap zip \
+    && apk del .php-build-deps \
+    && php -r 'exit(PHP_VERSION === "8.3.37" ? 0 : 1);'
 
 FROM php-base AS php-deps
 
-RUN apk add --no-cache git openssh-client unzip php83-zip
+RUN apk add --no-cache git openssh-client unzip
 
 COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
 
@@ -119,7 +102,7 @@ FROM php-base AS runtime
 
 ENV PORT=8080
 
-RUN apk add --no-cache nginx php83-fpm tini gettext-envsubst \
+RUN apk add --no-cache nginx tini gettext-envsubst \
     && printf '%s\n' \
         'expose_php=Off' \
         'display_errors=Off' \
@@ -130,13 +113,14 @@ RUN apk add --no-cache nginx php83-fpm tini gettext-envsubst \
         'opcache.max_accelerated_files=10000' \
         'opcache.validate_timestamps=0' \
         'opcache.revalidate_freq=0' \
-        > /etc/php83/conf.d/99-movistar.ini \
-    && mkdir -p /run/nginx /run/php
+        > /usr/local/etc/php/conf.d/99-movistar.ini \
+    && mkdir -p /run/nginx /run/php \
+    && rm /usr/local/etc/php-fpm.d/zz-docker.conf
 
 COPY docker/nginx.conf.template /etc/nginx/http.d/default.conf.template
 COPY docker/cloudsql-server-ca.pem /etc/ssl/cloudsql-server-ca.pem
 COPY docker/check-database.php /usr/local/bin/check-database.php
-COPY docker/php-fpm.conf /etc/php83/php-fpm.d/www.conf
+COPY docker/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
 COPY --chmod=755 docker/entrypoint.sh /usr/local/bin/movistar-entrypoint
 
 WORKDIR /var/www/html

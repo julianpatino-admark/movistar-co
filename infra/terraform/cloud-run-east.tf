@@ -1,5 +1,5 @@
 locals {
-  movistar_production_image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:a038a5a28b2ee6fa8249c70c408a51c253041e83c0fed20aed376a577159a2ed"
+  movistar_production_image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:38f6e0bc8499ca8209e355c05a170a5523299513d7fbb41e6b3b4a20a6464b6a"
 }
 
 resource "google_cloud_run_v2_service" "movistar_landing_east" {

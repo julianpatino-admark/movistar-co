@@ -14,8 +14,8 @@ fi
 
 envsubst '${PORT}' < /etc/nginx/http.d/default.conf.template > /etc/nginx/http.d/default.conf
 nginx -t
-php-fpm83 -t
-php-fpm83 --nodaemonize &
+php-fpm -t
+php-fpm --nodaemonize &
 php_pid=$!
 nginx -g 'daemon off;' &
 nginx_pid=$!
