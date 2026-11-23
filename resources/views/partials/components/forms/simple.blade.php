@@ -98,7 +98,7 @@
         type="submit"
     >
         <div class="btn-form_content font-family-bold">
-            Llámame
+            {{ $submitText ?? 'Llámame' }}
         </div>
         <span class="btn-form_loader">
             <span class="loader"></span>

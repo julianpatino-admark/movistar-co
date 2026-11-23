@@ -7,7 +7,7 @@ test.describe('Pruebas de Navegación Principal', () => {
     const mainUrls = {
         tsource: '?tsource=1234',
         internetMovil: '/internet-movil',
-        internetMovilTrio: 'trio'
+        internetHogar: '/internet-hogar'
     }
 
     test.beforeEach(async ({ page }) => {
@@ -29,10 +29,10 @@ test.describe('Pruebas de Navegación Principal', () => {
         await expect(page).toHaveURL(new RegExp(`.*${mainUrls.internetMovil}`));
     });
 
-    test('el menu secundario del carrusel navega de manera correcta', async ({ page }) => {
-        await navigation.clickNavLink('carruselSecundario', 'Trío + Pospago');
+    test('el selector de servicio abre Internet Hogar', async ({ page }) => {
+        await navigation.clickNavLink('carruselPrincipal', 'Internet Hogar');
 
-        await expect(page).toHaveURL(new RegExp(`.*${mainUrls.internetMovilTrio}`));
+        await expect(page).toHaveURL(new RegExp(`.*${mainUrls.internetHogar}`));
     });
 });
 
@@ -43,7 +43,6 @@ test.describe('Pruebas de Páginas de Error', () => {
         // Validamos a nivel de red (Backend)
         expect(response?.status()).toBe(404);
 
-        // Validamos a nivel visual (Frontend)
-        await expect(page).toHaveTitle(/Error/i);
+        await expect(page.getByRole('link', { name: 'Llévame a la home' })).toBeVisible();
     });
 });

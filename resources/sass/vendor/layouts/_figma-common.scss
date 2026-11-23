@@ -1,0 +1,52 @@
+// Shared chrome and conversion controls from the three Figma landing pages.
+.movil-redesign {
+    .movil-header {
+        &__notice { font-weight: 800; }
+        &__inner { min-height: 62.721px; padding-inline: 31px; }
+        &__brand img, &__menu img { display: block; width: auto; height: auto; max-width: none; }
+        &__menu { width: 37px; }
+        &__phone { min-height: 31.895px; text-decoration: none; font-weight: 600; line-height: 14.353px; span { font-size: 10.632px; } strong { font-size: 13.289px; font-weight: 800; } }
+        &__navigation .nav-link { display: flex; align-items: center; gap: 12px; }
+    }
+    .fiber-navigation-icon { display: block; flex-shrink: 0; img { display: block; width: auto; height: auto; max-width: none; } }
+    .movil-services .nav-link { color: #b6b7b7; }
+    .card-offer .card-offer_cta .btn-flex { font-weight: 800; }
+    .card-offer_discount p { font-weight: 700; }
+    .movil-advisor {
+        &__inner { padding-top: 30.555px; }
+        p { margin: 0 0 13.41px; line-height: 43.243px; }
+        .movil-button { min-height: 48.449px; }
+        &__image { margin-top: .788px; }
+    }
+    .condition-collapse_wrapper .btn-link { border: 0; }
+    .movil-footer__policies a { text-decoration: none; &:hover { text-decoration: underline; } }
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .movil-header {
+            &__inner { min-height: 72px; padding-inline: 50px; }
+            &__phone { min-height: 40.623px; line-height: 19.429px; span { font-size: 14.13px; } strong { font-size: 17.662px; } }
+        }
+        .movil-advisor {
+            &__inner { padding-top: 43.8px; }
+            h2 { line-height: 53.915px; }
+            p { margin: 3.97px 0 22.312px; line-height: 59.781px; }
+            .movil-button { min-height: 66.977px; }
+            &__image { height: 403.669px; margin-top: 16.926px; }
+        }
+    }
+    @media (min-width: 1200px) {
+        .movil-header {
+            &__inner { min-height: 112px; padding-inline: 0; }
+            &__phone { min-height: 66px; line-height: 27px; span { font-size: 20px; } strong { font-size: 25px; } }
+        }
+        .movil-advisor { &__inner { padding-top: 63px; } p { margin: 20px 0 25px; line-height: 43px; } .movil-button { min-height: 65px; } &__image { margin: 0; } }
+        .movil-hero__form {
+            .form-select { background-image: url('../../../img/internet-movil/redesign/form-arrow.svg'); background-size: 14.219px 14.219px; background-repeat: no-repeat; background-position: right 10px center; }
+            .form-select:invalid { color: #b6b7b7; }
+            .form-simple_description { white-space: nowrap; font-size: 15px; letter-spacing: -.65px; }
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1439px) {
+        .movil-hero__form .form-simple_description { white-space: normal; font-size: 13px; letter-spacing: -.4px; }
+    }
+    @media (max-width: 359px) { .movil-header__inner { gap: 8px; padding-inline: 18px; } }
+}

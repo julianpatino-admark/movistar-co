@@ -1,0 +1,76 @@
+.internet-movil-redesign {
+    .movil-services { width: 293px; padding: 13px 15px; ul { gap: 10px; } .nav-link { min-height: 44px; padding: 10px 4px; gap: 15px; font-size: 20px; line-height: 24px; letter-spacing: -1px; } }
+    .hogar-offers {
+        margin-top: 56px; margin-bottom: 22px;
+        .splide__track { padding-top: 61.437px; }
+        .splide__pagination { margin: 25.56px 0 21.281px; }
+        .card-offer {
+            height: 472.12px;
+            &_header { height: 93.65px; .main-speed b { font-size: 25.751px; line-height: 25.751px; font-weight: 900; } .main-speed i { font-size: 18.884px; line-height: 25.751px; font-weight: 500; } }
+            &_discount { min-height: 30.9px; padding: 5px 1px; p { font-size: 13.734px; line-height: 18px; letter-spacing: -.5px; } }
+            &_body { padding: 0 35px 20px; }
+            &_price { padding: 30px 0 17px; }
+            &_price-text { display: none; }
+            &_title img { display: block; width: auto; height: auto; max-width: none; }
+            .card-offer_cta .btn-flex { min-height: 41.2px; margin-bottom: 23.94px; }
+            &_services { min-height: 48.068px; margin-top: 5.15px; padding: 6px 15px; gap: 20px; picture { flex-basis: auto; } }
+            &.total-tv .card-offer_services:not(.packages) { padding-left: 32.09px; gap: 20px; }
+            .packages { justify-content: center; padding: 6px 12px; gap: 0; }
+            .packages__item { display: flex; align-items: center; gap: 14px; margin: 0; figcaption { white-space: nowrap; font-size: 10.3px; line-height: 13.734px; } picture { flex: 0 0 auto; } }
+            .packages--multiple { gap: 14px; .packages__item { flex-direction: column; gap: 0; } }
+            .packages__separator { flex: 0 0 auto; }
+        }
+    }
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .movil-services { width: 370px; padding: 16.4px 18.94px; ul { gap: 12.63px; } .nav-link { min-height: 55.56px; padding: 12.63px 4px; gap: 18.94px; font-size: 25.26px; line-height: 30.3px; letter-spacing: -1.26px; } }
+        .hogar-offers {
+            margin-top: 50.162px; margin-bottom: 15px;
+            .title-section { margin-bottom: 20px; line-height: 42.5px; }
+            .splide__track { padding-top: 35.36px; }
+            .splide__pagination { margin: 21.989px 0 20.614px; }
+            .terminos-condiciones { min-height: 50px; }
+            .card-offer {
+                height: 656.833px;
+                &_title { height: 35px; font-size: 20px; }
+                &_header { height: 131.366px; .main-speed b { font-size: 35.827px; line-height: 35.827px; } .main-speed i { font-size: 26.273px; line-height: 35.827px; } }
+                &_discount { min-height: 43px; padding: 7px 2px; p { font-size: 19.108px; line-height: 25px; letter-spacing: -.7px; } }
+                &_body { padding: 0 49px 28px; }
+                &_price { padding: 44px 0 16.24px; }
+                .card-offer_cta .btn-flex { min-height: 57.324px; margin-bottom: 33.48px; font-size: 19.108px; }
+                &_services { min-height: 66.887px; margin-top: 7.16px; padding: 9px 25px; gap: 21px; }
+                &.total-tv .card-offer_services:not(.packages) { padding-left: 30px; gap: 22px; }
+                .packages { padding: 9px 15px; }
+                .packages__item { gap: 20px; figcaption { font-size: 14.331px; line-height: 19.108px; } }
+                .packages--multiple { gap: 15px; }
+            }
+        }
+    }
+    @media (min-width: 900px) and (max-width: 1199px) {
+        .movil-services { width: 829px; padding: 10px; ul { gap: 10px; } .nav-link { min-height: 44px; padding: 10px 4px; gap: 12px; font-size: 20px; line-height: 24px; } }
+        .hogar-offers .card-offer_body { padding-inline: 35px; }
+    }
+    @media (min-width: 1200px) {
+        .movil-hero__form { bottom: 31px; }
+        .movil-services { width: 829px; padding: 10px; ul { gap: 10px; } .nav-link { min-height: 44px; padding: 10px 4px; gap: 20px; font-size: 20px; line-height: 24px; } }
+        .hogar-offers {
+            margin-top: 41px; margin-bottom: 41px;
+            .title-section { margin-bottom: 17px; line-height: 40px; }
+            .splide__track { padding-top: 36px; }
+            .terminos-condiciones { min-height: 73px; }
+            .card-offer {
+                height: 550px;
+                &_title { height: 36px; }
+                &_header { height: 108px; .main-speed b { font-size: 30px; line-height: 30px; } .main-speed i { font-size: 22px; line-height: 30px; } }
+                &_discount { min-height: 36px; padding: 8px 1px; p { font-size: 16px; line-height: 20px; } }
+                &_body { padding: 0 41px 24px; }
+                &_price { padding: 34px 0 31px; }
+                .card-offer_cta .btn-flex { min-height: 48px; margin-bottom: 28px; }
+                &_services { min-height: 56px; margin-top: 6px; padding: 8px 21px; gap: 20px; }
+                &.total-tv .card-offer_services:not(.packages) { padding-left: 41px; gap: 25px; }
+                .packages { padding: 7px 16px; }
+                .packages__item { gap: 22px; figcaption { font-size: 12px; line-height: 16px; } }
+                .packages--multiple { gap: 15px; }
+            }
+        }
+    }
+}

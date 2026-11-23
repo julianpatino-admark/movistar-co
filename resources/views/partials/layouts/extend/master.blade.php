@@ -37,12 +37,14 @@
 	@section('metadata')
 	@show
 </head>
-<body>
+<body class="@yield('body-class')">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2XDDSK" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div id="main">
-	@if($top === true)
+	@hasSection('page-header')
+		@yield('page-header')
+	@elseif($top === true)
 		@include("partials.layouts.header.top-header")
 		@include('partials.layouts.header.header')
 		<nav class="navbar-collapse collapse" id="navbarMobileCollapse">
@@ -56,10 +58,15 @@
 
 	@yield('content')
 
-	@include('partials.layouts.footer.footer')
-	@include('partials.layouts.cta.mobile-fixed')
-
-	@include('partials.components.buttons.whatsapp')
+	@hasSection('page-footer')
+		@yield('page-footer')
+	@else
+		@include('partials.layouts.footer.footer')
+	@endif
+	@if($floating_cta ?? true)
+		@include('partials.layouts.cta.mobile-fixed')
+		@include('partials.components.buttons.whatsapp')
+	@endif
 
     @if($modals === true)
         @section('modal')

@@ -1,0 +1,129 @@
+// Current Pospago campaign. Scoped so Internet Hogar keeps its approved layout.
+.movil-pospago {
+    .movil-hero {
+        margin: 30.434px auto 0; overflow: hidden; border-radius: 30px; text-align: center;
+        position: relative; display: block; width: calc(100% - 30px); max-width: 443px; height: 403.182px; min-height: 0;
+        background: #019df4;
+        &::after { content: ''; position: absolute; inset: 0 0 0 63.65%; z-index: 0; background: linear-gradient(to right, transparent, var(--movil-blue)); pointer-events: none; }
+        &__decoration {
+            position: absolute; top: 293px; left: 50%; width: 339.499px; height: 157.154px; transform: translateX(-50%);
+            picture { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-90deg) scaleX(-1); }
+            img { display: block; width: auto; height: auto; max-width: none; }
+        }
+        &__content { color: #fff; z-index: 1; position: absolute; top: 66px; left: 50%; display: block; width: min(275px, calc(100% - 40px)); min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; transform: translateX(-50%); }
+        h1 { margin: 0; font-weight: 700; color: #fff; font-size: 23.726px; font-style: italic; line-height: 38.336px; letter-spacing: -.5556px; white-space: nowrap; }
+        &__data { display: flex; align-items: center; justify-content: center; height: 89px; margin: 0; padding: 0; border-radius: 17px; color: #fff; background: #e63780; font-size: 86.118px; font-weight: 900; line-height: 111.29px; letter-spacing: -2.588px; }
+        &__terms { display: block; color: #fff; margin-top: -6.154px; font-size: 6.112px; line-height: 12.645px; }
+    }
+    .movil-services { margin-top: 30.434px; }
+    .movil-home { padding-bottom: 29px; }
+    .pospago-price {
+        display: grid; grid-template-columns: auto auto auto; align-items: center; justify-content: center; gap: 0; width: 100%; margin: -10.616px 0 0; padding: 0; border: 0; border-radius: 8px; color: #fff; background: transparent; font-weight: 700; font-style: italic; cursor: pointer;
+        &__currency { align-self: end; margin-bottom: 7.54px; font-size: 43.837px; line-height: 73.351px; letter-spacing: -1.7px; }
+        strong { font-size: 84.87px; line-height: 110px; letter-spacing: -3.33px; }
+        &__fraction { align-self: start; margin-top: 10.56px; font-size: 48.663px; line-height: 63.101px; letter-spacing: -1.467px; small { display: block; margin-top: -13.1px; font-size: 17.635px; line-height: 29.5px; letter-spacing: -.686px; } }
+    }
+    .movil-offers {
+        margin-top: 36.303px; margin-bottom: 20px;
+        .title-section, .subtitle-section { font-family: inherit; }
+        .title-section { width: calc(100vw - 15px); max-width: 345px; margin-bottom: 5px; line-height: 38px; margin-left: 50%; transform: translateX(-50%); span { display: inline-block; } }
+        .splide__track { padding-top: 0; }
+        .subtitle-section { margin-bottom: 25.978px; }
+        .splide__pagination { margin-top: 41px; margin-bottom: 0; li { display: flex; line-height: 0; } }
+    }
+    .card-offer {
+        max-width: 271px; height: 550px;
+        &_wrapper { border-width: 2px; }
+        &_header { height: 110px; background: var(--movil-blue) url('../../../img/movil/redesign/card-60-mobile.svg') center top no-repeat; .main-speed b { font-size: 70px; line-height: 80px; letter-spacing: -2px; } }
+        &_discount { min-height: 36px; padding: 5px 2px; background: var(--movil-cyan); p { font-size: 14px; font-weight: 700; line-height: 24px; letter-spacing: -1px; } }
+        &_body { padding: 0 26px 22px; }
+        &_price { padding: 30px 0 20px; }
+        &_price-number { font-size: 50px; line-height: 54px; span { font-size: 35px; } }
+        &_price-text { display: none; }
+        .card-offer_cta .btn-flex { width: 165px; min-height: 48px; margin-bottom: 48px; background: var(--movil-cyan); font-size: 16px; }
+        .services-list { display: grid; gap: 10px; }
+        &_services {
+            gap: 4px; min-height: 52px; margin: 0; padding: 6px 0 6px 11px;
+            picture { display: flex; flex: 0 0 37px; align-items: center; justify-content: center; }
+            img { width: auto; height: auto; max-width: none; }
+            picture img[src$="png"], picture img[src*="social-"] { width: 37px; height: 35px; object-fit: contain; }
+            p, p b { font-size: 12px; line-height: 16px; } p b { font-weight: 700; }
+        }
+        &.pospago-unlimited .card-offer_header { height: 146px; background-image: url('../../../img/movil/redesign/card-unlimited.svg'); .main-speed b { font-size: 55px; line-height: 56px; letter-spacing: -1px; } .main-speed i { color: #fff; font-size: 30px; font-weight: 700; font-style: normal; line-height: 36px; letter-spacing: .9px; } }
+    }
+    .movil-home {
+        &__card { display: grid; grid-template-columns: 32px 1fr; gap: 0 18px; height: 182px; padding: 21px 30px 22px; text-align: left; }
+        h2 { grid-column: 2; margin: 0 0 6px; font-size: 22px; line-height: 24px; }
+        &__description { display: contents; picture { position: relative; grid-column: 1; grid-row: 1 / 3; align-self: start; margin-top: 6px; } p { position: relative; grid-column: 2; margin: 0; font-size: 18px; line-height: 20px; } }
+        .movil-button { grid-column: 1 / 3; justify-self: center; min-width: 209px; min-height: 48px; margin-top: 14px; padding-inline: 14px; }
+    }
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .movil-hero {
+            width: calc(100% - 36px); height: 540.144px; margin-top: 43.978px; border-radius: 40px; min-height: 0;
+            &__decoration { top: 392px; width: 454.828px; height: 210.54px; }
+            &__content { top: 88.48px; width: 368px; min-height: 0; padding: 0; }
+            h1 { margin: 0; font-size: 31.785px; line-height: 51.359px; letter-spacing: -.744px; }
+            &__data { margin: 0; padding: 0; height: 119px; border-radius: 22.33px; font-size: 115.372px; line-height: 149.095px; letter-spacing: -3.467px; }
+            &__terms { margin-top: -8.23px; font-size: 8.188px; line-height: 16.941px; }
+        }
+        .pospago-price { margin-top: -14.055px; &__currency { margin-bottom: 10.09px; font-size: 58.728px; line-height: 98.268px; } strong { font-size: 113.7px; line-height: 147.433px; letter-spacing: -4.466px; } &__fraction { margin-top: 14.14px; font-size: 65.194px; line-height: 84.536px; small { margin-top: -17.545px; font-size: 23.625px; line-height: 39.532px; } } }
+        .movil-services { margin-top: 43.978px; }
+        .movil-offers { margin-top: 73.337px; margin-bottom: 30px; .title-section { width: calc(100vw - 30px); max-width: 450px; line-height: 45px; margin-bottom: 7px; } .subtitle-section { margin-bottom: 36px; } .splide__track { padding-top: 0; } .splide__pagination { margin-top: 45.125px; } .splide__pagination__page { width: 22.261px; height: 22.261px; } }
+        .card-offer {
+            height: 753px; max-width: 371px;
+            &_wrapper { border-width: 3px; }
+            &_header { height: 150px; background-image: url('../../../img/movil/redesign/card-60-tablet.svg'); .main-speed b { font-size: 95.836px; line-height: 110px; } }
+            &_discount { min-height: 49px; padding: 7px 3px; p { font-size: 20px; line-height: 33px; letter-spacing: -1.369px; } }
+            &_body { padding: 0 35px 28px; }
+            &_price { padding: 43px 0 20px; }
+            &_price-number { font-size: 68.455px; line-height: 80px; span { font-size: 47.918px; } }
+            .card-offer_cta .btn-flex { width: 226px; min-height: 66px; margin-bottom: 66px; font-size: 21.905px; }
+            .services-list { gap: 13px; }
+            &_services { min-height: 72px; padding: 9px 0 9px 15px; gap: 5px; picture { flex-basis: 51px; } img { width: auto; height: auto; } picture img[src$="png"], picture img[src*="social-"] { width: 50.656px; height: 48px; } p, p b { font-size: 16.429px; line-height: 21.905px; } }
+            &.pospago-unlimited .card-offer_header { height: 199px; background-image: none; .main-speed b { font-size: 75px; line-height: 80px; } .main-speed i { font-size: 41px; line-height: 49px; } }
+        }
+        .movil-home {
+            padding-bottom: 41.105px;
+            &__card { grid-template-columns: 39px 1fr; gap: 0 29px; width: 375px; height: 222px; padding: 27px 36px 26px; }
+            h2 { margin-bottom: 8px; font-size: 26.835px; line-height: 29.275px; }
+            &__description picture { margin-top: 14px; } &__description p { font-size: 21.956px; line-height: 24.396px; }
+            .movil-button { min-width: 255px; min-height: 59px; margin-top: 24px; font-size: 24.396px; }
+        }
+    }
+    @media (min-width: 900px) and (max-width: 1199px) {
+        .movil-hero { max-width: 900px; }
+        .movil-hero__decoration { left: 15%; }
+        .movil-offers .title-section { width: 100%; max-width: none; }
+    }
+    @media (min-width: 1200px) {
+        .movil-hero {
+            width: calc(100% - 70px); max-width: 1529px; margin-top: 61px; border-radius: 44px; height: 440px; min-height: 0;
+            background: linear-gradient(to bottom, transparent 234px, var(--movil-blue) 475px), #019df4;
+            &::after { display: none; }
+            &__decoration { top: -35px; left: min(0px, calc((100vw - 1600px) * .225)); width: 351.463px; height: 510px; transform: none; picture { top: 0; left: 0; transform: scaleX(-1); } }
+            &__content { top: 10px; left: 40.68%; width: 494px; min-height: 0; padding: 0; }
+            h1 { margin: 0; font-size: 40px; line-height: 69px; letter-spacing: -1px; }
+            &__data { margin: 0; padding: 0; height: 160px; border-radius: 30px; font-size: 155px; line-height: 200.306px; letter-spacing: -4.658px; }
+            &__terms { margin-top: -30px; font-size: 11px; line-height: 22.76px; }
+            &__form { position: absolute; right: clamp(56px, calc(56px + (100vw - 1200px) * .355), 199px); bottom: -20px; width: 391px; max-width: 30%; margin: 0; }
+        }
+        .pospago-price { margin-top: -19px; &__currency { margin-bottom: 14px; font-size: 78.9px; line-height: 132px; } strong { font-size: 152.754px; line-height: 198.073px; letter-spacing: -6px; } &__fraction { margin-top: 19.02px; font-size: 87.587px; line-height: 113.572px; small { margin-top: -23px; font-size: 31.74px; line-height: 53.11px; } } }
+        .movil-services { margin-top: 61px; }
+        .movil-offers {
+            margin-top: 41px; margin-bottom: 41px;
+            .subtitle-section { margin-bottom: 40px; }
+            #movil-offers { max-width: 1144px; }
+            .title-section { width: 100%; max-width: none; font-size: 50px; line-height: 40px; letter-spacing: -2px; margin-bottom: 14px; }
+            .splide__track { width: 592px; padding-top: 0; }
+        }
+        .card-offer { max-width: 272px; }
+        .movil-home {
+            &__card { grid-template-columns: 1fr 209px; grid-template-rows: 24px 40px; gap: 20px 28px; width: 562px; height: 147px; padding: 32px 26px 31px; }
+            h2 { grid-column: 1; margin: 0; }
+            &__description { display: flex; grid-column: 1; grid-row: 2; gap: 24px; picture { margin: 0; } p { font-size: 18px; line-height: 20px; } }
+            .movil-button { grid-column: 2; grid-row: 2; min-width: 209px; margin: 0; padding-inline: 14px; font-size: 20px; }
+        }
+    }
+    @media (min-width: 1200px) and (max-width: 1399px) { .movil-hero__content { transform: translateX(-50%) scale(.82); transform-origin: 50% 0; } }
+    @media (min-width: 1400px) and (max-width: 1499px) { .movil-hero__content { transform: translateX(-50%) scale(.9); transform-origin: 50% 0; } }
+}

@@ -10,7 +10,7 @@ test.describe('Pruebas en el Banner Principal (Carrusel)', () => {
 
         await page.locator('.splide__pagination').first().waitFor({ state: 'visible' });
 
-        mainBanner = new CarouselComponent(page, '#carouselBanner');
+        mainBanner = new CarouselComponent(page, '#internet-movil-banners');
     });
 
     test('debe deslizar al slide correcto al hacer clic en los puntos de paginación', async () => {
@@ -31,7 +31,7 @@ test.describe('Pruebas en el Banner Principal (Carrusel)', () => {
     });
 
     test('debe cambiar de slide al hacer swipe en vista móvil', async ({ page, browserName }) => {
-        test.skip(browserName !== 'chromium', 'El swipe táctil solo es estable en Chromium');
+        test.skip(browserName !== 'chromium' || (page.viewportSize()?.width ?? 1600) >= 1200, 'Esta interacción verifica la disposición móvil.');
 
         const slide1 = mainBanner.slides.nth(0);
         const slide2 = mainBanner.slides.nth(1);

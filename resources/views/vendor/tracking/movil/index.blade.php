@@ -1,20 +1,33 @@
-@extends('partials.layouts.extend.master', [ 'main_c2c_class' => "no-carousel"])
+@extends('partials.layouts.extend.master', ['main_c2c' => false, 'floating_cta' => false])
+
+@section('body-class', 'movil-redesign movil-pospago')
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Móvil"/>
-	<meta name="description" content="Movistar pospago Móvil, datos y llamadas ilimitadas. Ademas de 50% de descuento en el segundo y tercer mes." />
-	@vite(['resources/sass/movil.scss', 'resources/js/generica.js'])
+	<meta name="description" content="Conoce los planes Movistar Pospago: 60 GB por $53.900 o datos ilimitados por $69.900. Consulta beneficios, promociones y condiciones." />
+	@vite(['resources/sass/movil.scss', 'resources/js/movil.js'])
 @stop
 
 @section('title')
 	Movistar Co | Planes pospago móvil con llamadas ilimitadas
 @endsection
 
+@section('page-header')
+	@include('partials.id_version.movil.redesign.header')
+@endsection
+
 @section('content')
-	@include('partials.id_version.generica.main-banner.sld-4')
-	@include('partials.id_version.movil.carousel.carousel-offers')
-	@include('partials.layouts.banners.banner-simple')
-	@include('partials.id_version.movil.list.list-apps')
-	@include('partials.id_version.movil.list.list-services')
+	<main id="movil-content">
+		@include('partials.id_version.movil.redesign.hero')
+		<nav class="movil-services" aria-label="Tipo de servicio">
+			@include('partials.layouts.navbar.nav-items', ['navigationIcons' => 'services'])
+		</nav>
+		@include('partials.id_version.movil.carousel.carousel-offers')
+		@include('partials.id_version.movil.redesign.advisor', ['mobileInfo' => true])
+	</main>
+@stop
+
+@section('page-footer')
 	@include('partials.layouts.conditions.collapse')
+	@include('partials.id_version.movil.redesign.footer')
 @stop

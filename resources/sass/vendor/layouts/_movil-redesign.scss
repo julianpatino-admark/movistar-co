@@ -1,0 +1,556 @@
+// Scoped design system shared by /movil and /internet-hogar.
+@each $style, $file in (normal: 'variable', italic: 'variable-italic') {
+    @font-face {
+        font-family: 'DM Sans'; font-style: $style; font-weight: 100 1000; font-display: swap;
+        src: url('../../../fonts/dm-sans/#{$file}.ttf') format('truetype');
+    }
+}
+
+.movil-redesign {
+    --movil-blue: #001eb4;
+    --movil-ink: #00005a;
+    --movil-cyan: #44c8f5;
+    --movil-yellow: #ffbe00;
+
+    margin: 0;
+    color: var(--movil-ink);
+    background: #fff;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-optical-sizing: none; font-variation-settings: 'opsz' 14;
+
+    h1, h2, h3, button, input, select { font-family: inherit; }
+    p, a, span, li, label { font-family: inherit; color: inherit; }
+    a, button { touch-action: manipulation; }
+    .movil-header__desktop-navigation, .movil-hero__form { display: none; }
+    a:focus-visible, button:focus-visible {
+        outline: 3px solid var(--movil-yellow);
+        outline-offset: 4px;
+    }
+
+    .movil-skip-link {
+        position: fixed;
+        top: -100px;
+        left: 16px;
+        z-index: 20;
+        padding: 12px;
+        color: var(--movil-ink);
+        background: #fff;
+        &:focus { top: 8px; }
+    }
+
+    .movil-header {
+        position: relative;
+        z-index: 5;
+        background: var(--movil-blue);
+        &__notice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            min-height: 23px;
+            color: var(--movil-blue);
+            background: var(--movil-cyan);
+            font-size: 10px;
+            font-weight: 700;
+        }
+        &__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            max-width: 1120px;
+            min-height: 63px;
+            margin: auto;
+            padding: 8px 30px;
+        }
+        &__brand { display: flex; align-items: center; }
+        &__phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 101px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--movil-ink);
+            background: var(--movil-yellow);
+            line-height: 15px;
+            span { font-size: 11px; }
+            strong { font-size: 14px; text-decoration: underline; }
+            &:hover { color: var(--movil-ink); }
+        }
+        &__menu {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+        &__navigation {
+            border-top: 1px solid var(--movil-cyan);
+            ul { max-width: 1120px; margin: auto; padding: 12px 30px; list-style: none; }
+            .nav-link { padding: 12px 0; color: #fff; }
+            [aria-current] { color: var(--movil-yellow); }
+        }
+    }
+
+    .movil-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 10px 22px;
+        border: 0;
+        border-radius: 28px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -1px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        &--yellow { color: var(--movil-blue); background: var(--movil-yellow); }
+        &:hover { color: var(--movil-blue); filter: brightness(1.06); text-decoration: none; }
+    }
+
+    .movil-services {
+        width: 293px;
+        max-width: calc(100% - 40px);
+        margin: 48px auto 0;
+        padding: 13px 15px;
+        border-radius: 13px;
+        box-shadow: 0 4px 4px #00000026;
+        ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            min-height: 44px;
+            padding: 10px 4px;
+            border-radius: 5px;
+            color: #626161;
+            background: #f5f5f5;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: -1px;
+        }
+        .active .nav-link { color: var(--movil-blue); }
+        .icono-default {
+            flex-shrink: 0;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            &.movistar { width: 17.5px; height: 13px; background-image: url('../../../img/menu/sprite-iconos-movistar.webp'); background-position-x: -37px; }
+            &.wifi { width: 17px; height: 13.3px; background-image: url('../../../img/menu/sprite-iconos-wifi.webp'); background-position-x: -38px; }
+            &.movil { width: 15px; height: 22.3px; background-image: url('../../../img/menu/sprite-iconos-movil.webp'); background-position-x: -31px; }
+        }
+        .active .icono-default.movistar { background-position-x: -18.5px; }
+        .active .icono-default.wifi { background-position-x: -19px; }
+        .active .icono-default.movil { background-position-x: -15.5px; }
+    }
+
+    .movil-offers {
+        margin: 56px auto 22px;
+        .title-section, .subtitle-section, .terminos-condiciones { text-align: center; }
+        #movil-offers { max-width: 680px; padding: 0 24px; }
+        .title-section { max-width: 345px; margin: 0 auto 12px; color: var(--movil-blue); font-size: 30px; font-weight: 700; line-height: 35px; letter-spacing: -1px; }
+        .subtitle-section { margin: 0 0 30px; color: var(--movil-ink); font-size: 18px; line-height: 25px; }
+        .splide__track { padding-top: 31px; }
+        .splide__slide { height: auto; }
+        .splide__pagination { position: static; display: flex; gap: 36px; margin: 24px 0 20px; padding: 0; }
+        .splide__pagination__page { width: 16px; height: 16px; margin: 0; border: 0; border-radius: 50%; background: var(--movil-cyan); }
+        .splide__pagination__page.is-active { background: var(--movil-blue); }
+        .terminos-condiciones { max-width: 340px; margin: 0 auto; color: var(--movil-ink); font-size: 10px; line-height: 14px; }
+    }
+
+    .card-offer {
+        max-width: 272px;
+        height: 100%;
+        margin: 0 auto;
+        font-family: inherit;
+        * { font-family: inherit; }
+        &_title {
+            position: absolute;
+            bottom: 100%;
+            left: 7%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 86%;
+            height: 31px;
+            border-radius: 17px 17px 0 0;
+            color: var(--movil-ink);
+            background: var(--movil-yellow);
+            font-size: 17px;
+            font-weight: 700;
+            svg path { fill: currentColor; }
+        }
+        &_wrapper { height: 100%; border: 2px solid var(--movil-blue); border-radius: 13px; }
+        &_header {
+            height: 94px;
+            background: var(--movil-blue);
+            .main-speed b { color: #fff; font-size: 32px; font-weight: 700; line-height: 38px; }
+        }
+        &_discount { min-height: 31px; padding: 6px 4px; background: var(--movil-yellow); p { color: var(--movil-ink); font-size: 13px; font-weight: 700; } }
+        &_body { min-height: 0; padding: 0 34px 20px; }
+        &_price { padding: 26px 0 20px; }
+        &_price-number { color: var(--movil-ink); font-size: 43px; line-height: 50px; letter-spacing: -2px; span { font-size: 28px; } }
+        &_price-text { margin-top: 4px; color: var(--movil-ink); font-size: 12px; line-height: 16px; }
+        .card-offer_cta .btn-flex {
+            width: 166px;
+            min-height: 44px;
+            margin: 0 auto 26px;
+            padding: 10px;
+            border: 0;
+            border-radius: 24px;
+            color: var(--movil-ink);
+            background: var(--movil-cyan);
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: .8px;
+            &:hover { color: var(--movil-ink); background: var(--movil-cyan); filter: brightness(1.06); }
+        }
+        &_services {
+            justify-content: flex-start;
+            gap: 12px;
+            min-height: 48px;
+            margin: 6px 0 0;
+            padding: 7px 12px;
+            background: #f4f4f4;
+            img { flex-shrink: 0; margin: 0; }
+            p { width: auto; color: var(--movil-ink); font-size: 11px; line-height: 14px; b, span { color: inherit; font-size: 12px; font-weight: 700; line-height: 16px; } }
+        }
+    }
+
+    .movil-advisor {
+        background: var(--movil-cyan);
+        &__inner { max-width: 980px; margin: auto; padding-top: 31px; }
+        &__copy { padding: 0 20px; text-align: center; }
+        h2 { margin: 0; color: #fff; font-size: 35px; font-weight: 700; line-height: 39px; letter-spacing: -1px; }
+        p { margin: 14px 0 24px; font-size: 15px; font-weight: 600; line-height: 20px; }
+        .movil-button { min-width: 216px; }
+        &__image {
+            position: relative;
+            width: 308px;
+            max-width: 100%;
+            height: 292px;
+            margin: 0 auto;
+            overflow: hidden;
+            img { position: absolute; width: 105.67%; height: 139.32%; max-width: none; left: -2.92%; top: -4.26%; }
+        }
+    }
+
+    .movil-home {
+        padding: 30px 20px;
+        background: #f7f7f7;
+        &__card { position: relative; width: 308px; max-width: 100%; margin: auto; padding: 21px 16px 22px; text-align: center; }
+        &__background { position: absolute; inset: 0; z-index: 0; }
+        &__background img { display: block; }
+        h2, &__description, .movil-button { position: relative; }
+        h2 { margin: 0 0 13px; color: #fff; font-size: 22px; font-weight: 700; line-height: 24px; letter-spacing: -1px; }
+        &__description { display: flex; align-items: center; justify-content: center; gap: 22px; margin-bottom: 14px; text-align: left; p { margin: 0; color: #fff; font-size: 18px; line-height: 20px; letter-spacing: -1px; } }
+        .movil-button { padding: 10px 20px; }
+    }
+
+    .condition-collapse_wrapper {
+        margin: 0;
+        padding: 0;
+        color: var(--movil-blue);
+        background: var(--movil-cyan);
+        .container { padding: 0; }
+        .condition-collapse_header { margin: 0; padding: 0; border: 0; }
+        h2 { display: flex; justify-content: center; margin: 0; }
+        .btn-link { min-height: 32px; padding: 6px 16px; color: var(--movil-blue); font-size: 14px; font-weight: 400; line-height: 20px; text-decoration: none; &::before { content: '* '; } }
+        .condition-collapse_body { padding: 20px; background: #fff; font-size: 14px; line-height: 21px; }
+    }
+
+    .movil-footer {
+        color: #fff;
+        background: var(--movil-blue);
+        &__inner { display: flex; align-items: center; justify-content: center; gap: 28px; min-height: 86px; max-width: 1120px; margin: auto; padding: 18px 24px; }
+        &__policies { margin: 0; padding: 0; list-style: none; a { color: #fff; font-size: 12px; line-height: 16px; } }
+        &__phone { display: flex; flex-direction: column; padding-left: 28px; border-left: 1px solid var(--movil-yellow); color: var(--movil-yellow); font-size: 18px; line-height: 22px; a { color: inherit; font-weight: 700; text-decoration: underline; white-space: nowrap; } }
+    }
+
+    .hogar-help__background { display: none; }
+    @media (max-width: 1199px) {
+        .movil-help { position: relative; overflow: hidden; background: linear-gradient(var(--movil-cyan) 507px, #f7f7f7 507px); }
+        .hogar-help__background { position: absolute; top: 0; left: 50%; display: block; transform: translateX(-50%); pointer-events: none; img { display: block; width: auto; height: auto; max-width: none; } }
+        .movil-advisor, .movil-home { position: relative; background: transparent; }
+    }
+
+    @media (min-width: 768px) {
+        .movil-header__notice { min-height: 28px; font-size: 12px; }
+        .movil-header__inner { min-height: 80px; }
+        .movil-services { width: 680px; max-width: calc(100% - 64px); padding: 15px; }
+        .movil-services ul { grid-template-columns: repeat(3, 1fr); }
+        .movil-services .nav-link { height: 100%; font-size: 17px; gap: 8px; }
+        .movil-offers { margin-top: 48px; }
+        .movil-offers .title-section { max-width: none; font-size: 36px; line-height: 42px; }
+        .movil-offers .terminos-condiciones { max-width: none; margin-top: 24px; }
+        .movil-advisor__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+        .movil-advisor__copy { padding-bottom: 30px; }
+        .movil-home { padding: 30px; }
+    }
+
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .movil-help { background: linear-gradient(var(--movil-cyan) 726px, #f7f7f7 726px); }
+        .movil-header {
+            &__notice { min-height: 23px; font-size: 13px; gap: 20px; }
+            &__inner { max-width: 900px; min-height: 72px; padding: 10px 50px; }
+            &__brand img { width: 93px; height: 52px; }
+            &__phone { width: 136px; min-height: 41px; border-radius: 6px; line-height: 19.5px; span { font-size: 14px; } strong { font-size: 18px; } }
+        }
+
+        .movil-services {
+            width: 370px;
+            max-width: calc(100% - 48px);
+            margin-top: 44px;
+            padding: 16.4px 18.94px;
+            border-radius: 16.4px;
+            ul { grid-template-columns: 1fr; gap: 12.63px; }
+            .nav-link { min-height: 55.56px; height: auto; padding: 12.63px 4px; font-size: 25.26px; line-height: 30.3px; letter-spacing: -1.26px; gap: 18.94px; }
+            .icono-default.movistar { width: 22.1px; height: 16.42px; background-position-x: -46.72px; }
+            .icono-default.wifi { width: 21.47px; height: 16.8px; background-position-x: -48px; }
+            .icono-default.movil { width: 18.94px; height: 28.16px; background-position-x: -39.15px; }
+            .active .icono-default.movistar { background-position-x: -23.36px; }
+            .active .icono-default.wifi { background-position-x: -24px; }
+            .active .icono-default.movil { background-position-x: -19.57px; }
+        }
+
+        .movil-offers {
+            margin: 73px auto 30px;
+            #movil-offers { max-width: 850px; padding: 0 32px; }
+            .title-section { max-width: 430px; margin-bottom: 7px; font-size: 40px; line-height: 45px; letter-spacing: -2px; }
+            .subtitle-section { max-width: 440px; margin: 0 auto 36px; font-size: 23px; line-height: 30px; }
+            .splide__track { padding-top: 43px; }
+            .splide__pagination { gap: 48px; margin: 44px 0 32px; }
+            .splide__pagination__page { width: 22px; height: 22px; }
+            .terminos-condiciones { max-width: 440px; margin: 0 auto; font-size: 12px; line-height: 16px; }
+        }
+        .card-offer {
+            max-width: 371px;
+            &_title { height: 43px; border-radius: 23px 23px 0 0; font-size: 22px; }
+            &_wrapper { border-width: 3px; border-radius: 21px; }
+            &_header { height: 153px; .main-speed b { font-size: 80px; font-weight: 700; line-height: 96px; letter-spacing: -3px; } }
+            &_discount { min-height: 50px; padding: 11px 4px; background: var(--movil-cyan); p { font-size: 19px; line-height: 28px; letter-spacing: -.6px; } }
+            &_body { padding: 0 37px 38px; }
+            &_price { padding: 32px 0 20px; }
+            &_price-number { font-size: 68.5px; line-height: 80px; span { font-size: 48px; } }
+            &_price-text { margin-top: 4px; font-size: 16px; line-height: 22px; }
+            .card-offer_cta .btn-flex { width: 226px; min-height: 66px; margin-bottom: 45px; border-radius: 33px; font-size: 22px; line-height: 28px; }
+            &_services { gap: 14px; min-height: 72px; margin-top: 9px; padding: 11px 14px; border-radius: 11px; img { width: 40px; height: 40px; } p { font-size: 16.4px; line-height: 22px; b, span { font-size: 16.4px; line-height: 22px; } } }
+        }
+
+        .movil-advisor {
+            &__inner { display: block; max-width: 720px; padding-top: 44px; }
+            &__copy { padding: 0 20px; }
+            h2 { max-width: 411px; margin: auto; font-size: 48.4px; line-height: 54px; letter-spacing: -1.38px; }
+            p { margin: 4px 0 22px; font-size: 20.74px; line-height: 60px; }
+            .movil-button { min-width: 288px; min-height: 67px; border-radius: 34px; font-size: 26.85px; line-height: 32px; }
+            &__image { width: 426px; height: 404px; margin: 17px auto 0; }
+        }
+        .movil-home {
+            padding: 41px 20px 40px;
+            &__card { width: 375px; height: 222px; padding: 27px 26px 28px; }
+            h2 { margin-bottom: 16px; font-size: 24.4px; line-height: 29px; letter-spacing: -1.22px; }
+            &__description { gap: 22px; margin-bottom: 15px; p { font-size: 21.96px; line-height: 24px; letter-spacing: -1.22px; } }
+            .movil-button { min-width: 255px; min-height: 59px; padding: 12px 24px; border-radius: 30px; font-size: 24.4px; line-height: 30px; letter-spacing: -1.22px; }
+        }
+        .condition-collapse_wrapper .btn-link { min-height: 44px; font-size: 19.35px; line-height: 22px; }
+        .movil-footer {
+            &__inner { min-height: 119px; gap: 40px; padding: 24px; }
+            &__policies a { font-size: 16.6px; line-height: 22px; }
+            &__phone { padding-left: 40px; font-size: 24.9px; line-height: 30.4px; }
+        }
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+        .movil-services { width: 829px; padding: 10px; }
+        .movil-services ul { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .movil-services .nav-link { min-height: 44px; padding: 10px 4px; font-size: 20px; line-height: 24px; gap: 12px; }
+        .movil-offers .title-section, .movil-offers .subtitle-section { max-width: none; }
+        .movil-offers .terminos-condiciones { max-width: 766px; margin-top: 32px; }
+    }
+
+    @media (min-width: 1200px) {
+        .movil-header {
+            &__notice {
+                min-height: 33px;
+                justify-content: flex-end;
+                padding-inline: max(40px, calc((100% - 1144px) / 2));
+                font-size: 15px;
+            }
+            &__inner {
+                display: grid;
+                grid-template-columns: 183px auto 1fr;
+                gap: 56px;
+                width: calc(100% - 80px);
+                max-width: 1144px;
+                min-height: 112px;
+                padding: 0;
+            }
+            &__brand img { width: 133px; height: 74px; }
+            &__phone {
+                width: 201px;
+                min-height: 66px;
+                padding: 6px 12px;
+                border-radius: 8px;
+                line-height: 27px;
+                span { font-size: 20px; }
+                strong { font-size: 25px; }
+            }
+            &__menu, &__navigation { display: none; }
+            &__desktop-navigation {
+                display: block;
+                grid-column: 3;
+                grid-row: 1;
+                justify-self: end;
+                ul { display: flex; align-items: center; gap: 40px; margin: 0; padding: 0; list-style: none; }
+                .nav-link { display: flex; align-items: center; gap: 12px; padding: 12px 0; color: #fff; font-size: 20px; font-weight: 700; line-height: 24px; letter-spacing: -1px; white-space: nowrap; }
+                [aria-current] { color: var(--movil-cyan); }
+                .icono-default {
+                    flex-shrink: 0;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+                    &.movistar { width: 17.5px; height: 13px; background-image: url('../../../img/menu/sprite-iconos-movistar.webp'); }
+                    &.wifi { width: 17px; height: 13.3px; background-image: url('../../../img/menu/sprite-iconos-wifi.webp'); }
+                    &.movil { width: 15px; height: 22.3px; background-image: url('../../../img/menu/sprite-iconos-movil.webp'); }
+                }
+                .active .movistar { background-position-x: -18.5px; }
+                .active .wifi { background-position-x: -19px; }
+                .active .movil { background-position-x: -15.5px; }
+            }
+        }
+
+        .movil-hero__form {
+            align-self: end;
+            display: block;
+            width: min(391px, calc(100% - 40px));
+            min-height: 355px;
+            margin: 85px auto 0;
+            padding: 21px 30px 28px;
+            border-radius: 20px 20px 0 0;
+            color: var(--movil-ink);
+            background: #fff;
+            text-align: center;
+            h2 { margin: 0 0 10px; color: var(--movil-ink); font-size: 17px; font-weight: 700; line-height: 24px; letter-spacing: -.51px; }
+            > .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+            form > div { position: relative; }
+            .form-select, input.form-control {
+                width: 100%;
+                height: 32px;
+                margin-bottom: 8px;
+                padding: 5px 12px;
+                border: 0;
+                border-radius: 6px;
+                color: var(--movil-ink);
+                background: #ededed;
+                font-size: 14px;
+                line-height: 22px;
+            }
+            .form-select { padding-right: 30px; }
+            input.form-control { margin-bottom: 16px; }
+            .form-simple_description { margin-bottom: 8px; color: var(--movil-ink); font-size: 15px; line-height: 24px; letter-spacing: -.45px; }
+            .form-simple_tyc { margin: 12px 0; }
+            .form-simple_tyc .text-xxs { gap: 12px; align-items: flex-start; margin: 0; }
+            .form-simple_tyc .text-xxs span { color: var(--movil-ink); font-size: 9px; line-height: 12px; }
+            .form-simple_tyc a { text-decoration: underline; }
+            .form-simple_tyc input { flex: 0 0 15px; height: 15px; margin: 2px 0 0; border-color: var(--movil-blue); }
+            .btn-form { width: auto; min-height: 34px; height: 34px; margin: auto; padding: 0 28px; border: 0; border-radius: 24px; color: var(--movil-blue); background: var(--movil-yellow); font-size: 17px; line-height: 24px; }
+            .btn-form_content, .btn-form_loader { height: 34px; padding: 0; color: inherit; font-family: inherit; font-size: 17px; }
+            .btn-form.loading .btn-form_content, .btn-form.loading .btn-form_loader { top: -34px; }
+            // Reserve the space below each field so validation cannot move a clicked control.
+            label.error { position: absolute; top: 33px; left: 0; width: 100%; margin: 0; color: #b90000; font-size: 10px; line-height: 12px; }
+            .form-simple_tyc label.error { top: 100%; margin-top: 2px; }
+        }
+
+        .movil-services {
+            width: 829px;
+            margin-top: 91px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 15px #00000014;
+            .nav-link { gap: 20px; min-height: 44px; font-size: 20px; }
+        }
+
+        .movil-offers {
+            margin: 41px auto;
+            #movil-offers { max-width: 940px; width: calc(100% - 80px); padding: 0; }
+            .title-section { font-size: 40px; line-height: 40px; margin-bottom: 17px; }
+            .subtitle-section { margin-bottom: 40px; font-size: 30px; line-height: 40px; }
+            .splide__track { width: 684px; margin: auto; padding-top: 36px; }
+            .terminos-condiciones { max-width: 766px; min-height: 73px; margin: 40px auto 0; padding: 20px 0; font-size: 12px; line-height: 16px; }
+        }
+        .card-offer {
+            max-width: 318px;
+            &_title { height: 36px; border-radius: 20px 20px 0 0; font-size: 20px; }
+            &_wrapper { border-radius: 15px; }
+            &_header { height: 110px; .main-speed b { font-size: 38px; line-height: 44px; } }
+            &_discount { min-height: 36px; padding-block: 8px; p { font-size: 14px; line-height: 20px; } }
+            &_body { padding: 0 41px 24px; }
+            &_price { padding: 26px 0 20px; }
+            &_price-number { font-size: 50px; line-height: 54px; span { font-size: 35px; } }
+            &_price-text { font-size: 14px; line-height: 18px; }
+            .card-offer_cta .btn-flex { width: 165px; min-height: 48px; margin-bottom: 32px; font-size: 16px; }
+            &_services { min-height: 56px; padding: 8px 16px; p { font-size: 12px; line-height: 16px; b, span { font-size: 14px; } } }
+        }
+
+        .movil-help { position: relative; background: linear-gradient(var(--movil-cyan) 310px, #f7f7f7 310px); }
+        .movil-advisor {
+            background: transparent;
+            &__inner { position: relative; display: block; width: calc(100% - 80px); max-width: 1144px; height: 614px; padding-top: 63px; }
+            &__copy { position: relative; z-index: 1; width: 798px; padding: 0 0 0 11px; text-align: left; }
+            h2 { font-size: 52px; line-height: 49px; letter-spacing: -2px; br { display: none; } }
+            p { margin: 20px 0 25px; font-size: 32px; line-height: 43px; }
+            .movil-button { min-width: 289px; min-height: 65px; border-radius: 33px; font-size: 26px; }
+            &__image {
+                position: absolute;
+                right: clamp(-48px, calc(592px - 50vw), 0px);
+                bottom: 0;
+                width: 586px;
+                height: 547px;
+                margin: 0;
+                img { top: 0; left: 0; width: 99.93%; height: 133.82%; }
+            }
+        }
+        .movil-home {
+            position: absolute;
+            inset: 386px 0 auto;
+            width: calc(100% - 80px);
+            max-width: 1144px;
+            margin: auto;
+            padding: 0 0 0 2px;
+            background: transparent;
+            pointer-events: none;
+            &__card { display: grid; grid-template-columns: 1fr 209px; grid-template-rows: 24px 40px; align-items: end; gap: 20px 28px; width: 562px; height: 147px; margin: 0; padding: 32px 26px 31px; border-radius: 20px; background: var(--movil-blue); pointer-events: auto; }
+            &__background { display: none; }
+            h2 { grid-column: 1; grid-row: 1; margin: 0; white-space: nowrap; text-align: left; }
+            &__description { grid-column: 1; grid-row: 2; justify-content: flex-start; gap: 15px; margin: 0; }
+            &__description picture { flex-shrink: 0; }
+            .movil-button { grid-column: 2; grid-row: 2; align-self: end; min-width: 209px; white-space: nowrap; }
+        }
+
+        .condition-collapse_wrapper {
+            .container { max-width: 1144px; width: calc(100% - 80px); }
+            h2 { justify-content: flex-start; }
+            .btn-link { padding-inline: 0; }
+        }
+        .movil-footer {
+            &__inner { justify-content: flex-end; gap: 36px; max-width: 1144px; width: calc(100% - 80px); padding: 8px 0; }
+            &__policies { display: flex; gap: 24px; a { font-size: 15px; line-height: 20px; } li + li { padding-left: 24px; border-left: 1px solid var(--movil-yellow); } }
+            &__phone { padding-left: 36px; font-size: 17px; line-height: 28px; a { font-size: 24px; } }
+        }
+    }
+
+    @media (max-width: 359px) {
+        .movil-header__inner { gap: 8px; padding-inline: 18px; }
+        .movil-home__card { width: 308px; max-width: none; margin-inline: calc((100% - 308px) / 2); }
+        .movil-footer__inner { gap: 16px; padding-inline: 16px; }
+        .movil-footer__phone { padding-left: 16px; font-size: 16px; }
+    }
+}

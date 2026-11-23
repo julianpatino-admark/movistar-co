@@ -7,10 +7,11 @@ test('has title', async ({ page }) => {
   await page.goto('');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle('Movistar Co | Planes de internet y telefonía para el hogar');
+  await expect(page).toHaveTitle('Movistar Co | Planes de Internet Hogar + Móvil');
 });
 
 test.describe('Pruebas en el formulario principal', () => {
+  test.use({ viewport: { width: 1600, height: 1000 } });
   let mainForm: MainFormComponent;
 
   let datosValidados:FormularioData = {
@@ -24,12 +25,12 @@ test.describe('Pruebas en el formulario principal', () => {
     await page.goto('');
 
     // Esperamos a que el contenedor del formulario esté 100% interactivo
-    await page.locator('#c2c-main').waitFor({ state: 'visible' });
+    await page.locator('#c2c-internet-movil-desktop').waitFor({ state: 'visible' });
 
     // Un pequeño respiro de medio segundo para que jQuery Validation se conecte
     await page.waitForTimeout(500);
 
-    mainForm = new MainFormComponent(page, '#c2c-main');
+    mainForm = new MainFormComponent(page, '#c2c-internet-movil-desktop', '¡Llámame!');
   });
 
   test('debe mostrar errores de obligatoriedad si se envía vacío', async () => {
@@ -60,7 +61,7 @@ test.describe('Pruebas en el formulario principal', () => {
   });
 
   test('valida que se envie el formulario correctamente', async ({ page }) => {
-    mainForm.mockForm(200);
+    await mainForm.mockForm(200);
     await mainForm.fillForm(datosValidados);
 
     await mainForm.submitBtn.click();
@@ -72,7 +73,7 @@ test.describe('Pruebas en el formulario principal', () => {
   });
 
   test('valida que se envie el formulario y responda duplicado', async ({ page }) => {
-    mainForm.mockForm(422);
+    await mainForm.mockForm(422);
     await mainForm.fillForm(datosValidados);
 
     await mainForm.submitBtn.click();
@@ -80,6 +81,6 @@ test.describe('Pruebas en el formulario principal', () => {
     await expect(mainForm.modalResponseText).toBeVisible();
     await expect(mainForm.modalResponseText).toHaveText(mainForm.expectedErrors.duplicatedPhone);
 
-    await expect(page).toHaveTitle('Movistar Co | Planes de internet y telefonía para el hogar');
+    await expect(page).toHaveTitle('Movistar Co | Planes de Internet Hogar + Móvil');
   });
 });

@@ -1,24 +1,36 @@
-@php
-	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
-    $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
-@endphp
+@extends('partials.layouts.extend.master', ['main_c2c' => false, 'floating_cta' => false])
 
-@extends('partials.layouts.extend.master')
+@section('body-class', 'movil-redesign hogar-redesign')
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Internet Hogar"/>
-	<meta name="description" content="Planes de internet hogar con FIBRA ÓPTICA, telefonía y tv con hasta el 20% de descuento por 12 meses ¡Pásate ya a Movistar!" />
-	@vite(['resources/sass/generica.scss', 'resources/js/generica.js'])
+	<meta name="description" content="Encuentra tu plan de Internet Hogar con Fibra 900 megas simétricas desde $84.900 o Fibra 900 + TV por $109.155. Consulta cobertura y condiciones." />
+	@vite(['resources/sass/hogar.scss', 'resources/js/hogar.js'])
 @stop
 
 @section('title')
 	Movistar Co | Planes de internet y telefonía para el hogar
 @endsection
 
+@section('page-header')
+    @include('partials.id_version.movil.redesign.header', ['contentId' => 'hogar-content'])
+@endsection
+
 @section('content')
-	@include('partials.id_version.generica.main-banner')
-	@include('partials.id_version.generica.carousel.fibra.carousel-offers')
-	@include('partials.layouts.banners.banner-simple')
-	@include('partials.id_version.generica.list.list-services')
+    <main id="hogar-content">
+        @include('partials.layouts.redesign.fiber-hero')
+        <nav class="movil-services" aria-label="Elige tu servicio">
+            @include('partials.layouts.navbar.nav-items', ['navigationIcons' => 'services'])
+        </nav>
+        @include('partials.id_version.hogar.redesign.offers')
+        @include('partials.id_version.movil.redesign.advisor', [
+            'advisorC2c' => 'ASESORIA INTERNET HOGAR',
+            'advisorTag' => '/modal/internet-hogar/asesoria/c2c',
+        ])
+    </main>
+@endsection
+
+@section('page-footer')
 	@include('partials.layouts.conditions.collapse')
+    @include('partials.id_version.movil.redesign.footer')
 @stop

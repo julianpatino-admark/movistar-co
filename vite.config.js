@@ -1,17 +1,17 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import basicSsl from '@vitejs/plugin-basic-ssl';
 import istanbul from 'vite-plugin-istanbul';
 import path from 'path';
 
-const versions = ["generica", "movil", "internet-movil"]
-
-const inputFiles = [];
-
-versions.forEach(version => {
-  inputFiles.push(`resources/sass/${version}.scss`);
-  inputFiles.push(`resources/js/${version}.js`);
-});
+const inputFiles = [
+  'resources/sass/generica.scss',
+  'resources/sass/movil.scss',
+  'resources/js/movil.js',
+  'resources/sass/internet-movil.scss',
+  'resources/js/internet-movil.js',
+  'resources/sass/hogar.scss',
+  'resources/js/hogar.js',
+];
 
 export default defineConfig({
   plugins: [

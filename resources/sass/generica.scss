@@ -22,7 +22,6 @@
 @import "vendor/vars/layouts/navbar";
 @import "vendor/vars/layouts/footer";
 @import "vendor/vars/layouts/banner";
-@import "vendor/vars/layouts/main-banner";
 @import "vendor/vars/layouts/c2c";
 @import "vendor/vars/layouts/cta/cta";
 @import "vendor/vars/layouts/cta/mobile-fixed";
@@ -60,12 +59,6 @@
 @import "vendor/components/buttons/btn-float";
 
 
-@import "vendor/components/carousel/card/card-offer";
-@import "vendor/components/carousel/carousel-navbar";
-@import "vendor/components/carousel/carousel-splide";
-@import "vendor/components/carousel/carousel-indicators";
-@import "vendor/components/carousel/carousel-controls";
-// @import "vendor/components/carousel/carousel-offers";
 
 @import "vendor/components/loaders/loader";
 @import "vendor/components/loaders/loader-themes";
@@ -91,16 +84,11 @@
 @import "vendor/layouts/cta/mobile-fixed";
 @import "vendor/layouts/cta/sticky-desktop";
 @import "vendor/layouts/c2c/main";
-@import "vendor/layouts/list/list-services";
 @import "vendor/layouts/condition/collapse";
 @import "vendor/layouts/modal/modal-c2c";
 @import "vendor/layouts/footer/footer";
-@import "vendor/layouts/main-banner/main-banner";
-@import "vendor/layouts/carrousel/carrusel_generica";
 
 
-@import "vendor/layouts/banners/banner-simple";
-@import "vendor/layouts/banners/banner-cobertura";
 
 /*OTHER PAGES*/
 

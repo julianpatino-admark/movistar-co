@@ -5,7 +5,7 @@ export class C2CModalComponent {
     readonly offerTypeInput: Locator;
     readonly closeBtn: Locator;
 
-    constructor(page: Page, selector: string) {
+    constructor(private readonly page: Page, selector: string) {
         this.root = page.locator(selector);
         this.offerTypeInput = this.root.locator('[name="c2c"]');
 
@@ -13,6 +13,7 @@ export class C2CModalComponent {
     }
 
     async close(){
+        await this.page.waitForFunction(() => !(window as any).jQuery('#modal-velocidades').data('bs.modal')?._isTransitioning);
         await this.closeBtn.click();
 
         await this.root.waitFor({ state: 'hidden' });

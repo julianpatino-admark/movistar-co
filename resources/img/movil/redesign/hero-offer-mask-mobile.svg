@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="157.154" height="339.499" viewBox="0 0 157.154 339.499" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="MASCARA">
+<path id="Exclude" d="M157.154 339.499H6.63976C50.2349 280.586 63.5486 229.857 63.5486 160.763C59.8874 98.8541 39.584 46.9307 4.24096 0H157.154V339.499Z" fill="url(#paint0_linear_0_2574)"/>
+<path id="Intersect" d="M6.65684 0C44.3152 47.4166 66.5437 105.862 66.5437 169.084C66.5437 232.899 43.8965 291.847 5.59331 339.499C43.8968 291.847 59.8869 232.899 59.8869 169.084C59.8869 105.862 37.6585 47.4165 0 0H6.65684Z" fill="#E63780"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_2574" x1="118.305" y1="339.499" x2="118.094" y2="156.103" gradientUnits="userSpaceOnUse">
+<stop stop-color="#001EB4"/>
+<stop offset="1" stop-color="#019DF4"/>
+</linearGradient>
+</defs>
+</svg>

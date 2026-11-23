@@ -1,119 +1,47 @@
 @php
     use App\DTOs\OfferData;
-	use App\DTOs\ServiceData;
+    use App\DTOs\ServiceData;
 
+    $responsiveService = static fn (string $icon, string $text) => new ServiceData(
+        icon: 'resources/img/movil/redesign/'.$icon.'-mobile.svg', text: $text, altText: '',
+        sources: [
+            ['media' => '(min-width: 1200px)', 'icon' => 'resources/img/movil/redesign/'.$icon.'-mobile.svg'],
+            ['media' => '(min-width: 480px)', 'icon' => 'resources/img/movil/redesign/'.$icon.'-tablet.svg'],
+        ],
+    );
+    $social = new ServiceData(icon: 'resources/img/movil/redesign/social.png', text: '<b>Redes sociales</b>incluido en tu plan.', width: 37, height: 35, altText: '', sources: [['media' => '(min-width: 0px)', 'icon' => 'resources/img/movil/redesign/social.png']]);
+    $share = $responsiveService('share', '<b>15 GIGAS</b>de tu plan para compartir.');
+    // Use the displayed Figma prices without applying the campaign badge again.
     $offers = collect([
-		new OfferData(
-			speed: '50 GB',
-			speedUnit: '',
-			customBadgeLabel: '20% dto x 5 mes. Exclusivo Online',
-			discount: 20,
-			price: 47900,
-			priceNote: 'x 5 meses. ',
-			isRecommended: false,
-			hasPromo: false,
-			layout: 'mobile theme-green',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/vowifi.webp',
-                    text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/RRSS.webp',
-                    text: '<b>Redes sociales</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">15 GIGAS</span>para compartir.',
-                    width: 28,
-                    height: 28
-				),
-			]
-		),
-		new OfferData(
-			speed: '60 GB',
-			speedUnit: '',
-			customBadgeLabel: '20% de dto x 5 meses. exclusivo online',
-			discount: 20,
-			price: 53900,
-			priceNote: 'x 5 meses. ',
-			isRecommended: false,
-			hasPromo: false,
-			layout: 'mobile theme-green',
-			services: [
-				new ServiceData(
-                    icon: 'resources/img/common/vowifi.webp',
-                    text: '<b>Voz Wi-Fi</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/RRSS.webp',
-                    text: '<b>Redes sociales</b>incluido en tu plan.',
-                    width: 28,
-                    height: 28
-				),
-				new ServiceData(
-                    icon: 'resources/img/common/share-dataplan.webp',
-                    text: '<span style="font-weight:bold">15 GIGAS</span>para compartir.',
-                    width: 28,
-                    height: 28
-				),
-			]
-		),
+        new OfferData(
+            speed: '60 GB', speedUnit: '', price: 53900,
+            customBadgeLabel: '<b>20% dto x 3 meses.</b> Exclusivo online',
+            hasPromo: false, layout: 'mobile pospago-60',
+            services: [$social, $share, $responsiveService('calls', '<b>Llamadas ilimitadas</b>a todo operador nacional.')],
+        ),
+        new OfferData(
+            speed: 'DATOS', speedUnit: '', speedSubtitle: 'ILIMITADOS', price: 69900,
+            hasPromo: false, layout: 'mobile pospago-unlimited',
+            services: [$social, $share, new ServiceData(icon: 'resources/img/movil/redesign/network.svg', text: '<b>RED 4.5G / 5G</b>mejor cobertura y velocidad.', altText: '', sources: [['media' => '(min-width: 0px)', 'icon' => 'resources/img/movil/redesign/network.svg']])],
+        ),
     ]);
 @endphp
 
-
-<div class="carousel-wrapper">
-	<div class="splide container position-relative" id="offer-carrousel">
-
-		<h2 class="title-section text-center mb-2">Conoce más de los Planes Movistar Pospago</h2>
-		<h3 class="subtitle-section text-center mb-3">Escoge un plan para tus necesidades</h3>
-
-		<div class="navbar-container">
-			<nav class="navbar-nav nav-carousel">
-				@include("partials.layouts.navbar.nav-items")
-			</nav>
-		</div>
-
-		<div class="splide__track">
-
-			<div class="splide__list">
-				@foreach ($offers as $offer)
-					<div class="splide__slide">
-						<!-- card --->
-						<x-offer-card
-							:offer="$offer"
-							:offer-number="$loop->iteration"
-						/>
-					</div>
-				@endforeach
-			</div>
-		</div>
-
-		<div class="splide__arrows">
-			<button class="splide__arrow splide__arrow--prev">
-				@include('partials.components.icons.buttons.arrow-left')
-			</button>
-			<button class="splide__arrow splide__arrow--next">
-				@include('partials.components.icons.buttons.arrow-right')
-			</button>
-		</div>
-		<ul class="splide__pagination"></ul>
-
-		<p class="terminos-condiciones">
-			*Aplican términos y condiciones. Basado en el análisis realizado por Ookla de los datos de SpeedTest Intelligence® para el segundo y tercer trimestre de 2022. Las marcas registradas de Ookla se usan bajo licencia y se reimprimen con permiso.
-		</p>
-	</div>
-</div>
-
-
-
-
-
-
+<section class="carousel-wrapper movil-offers" aria-labelledby="movil-offers-title">
+    <div class="splide container position-relative" id="movil-offers">
+        <h2 class="title-section" id="movil-offers-title"><span>Conoce más de los</span> <span>planes Pospago</span></h2>
+        <p class="subtitle-section">Encuentra el plan perfecto para ti.</p>
+        <div class="splide__track">
+            <div class="splide__list">
+                @foreach($offers as $offer)
+                    <div class="splide__slide">
+                        <x-offer-card :offer="$offer" :offer-number="$loop->iteration" cta-text="¡LO QUIERO!"
+                            :c2c-label="'MOVIL DE '.($loop->first ? '60 GB' : 'DATOS ILIMITADOS').' : '.$offer->getFormattedPrice()"
+                            :modal-title="$loop->first ? '60 GB' : 'Datos ilimitados'" />
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <ul class="splide__pagination"></ul>
+    </div>
+</section>

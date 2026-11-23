@@ -1,0 +1,117 @@
+.internet-movil-redesign .total-hero {
+    position: relative; height: 450.133px; overflow: hidden; background: var(--movil-blue); color: #fff; text-align: center;
+    picture, img { display: block; }
+    picture img { width: auto; height: auto; max-width: none; }
+    &__stage { position: absolute; top: 0; left: 50%; width: 339.835px; height: 450.038px; transform: translateX(-50%); }
+    &__photo {
+        position: absolute; top: 0; left: 0; width: 100%; height: 269.61px; overflow: hidden;
+        img { position: absolute; top: 0; left: -8.06%; width: 118.43%; height: 100.07%; max-width: none; object-fit: cover; object-position: center top; }
+    }
+    &__mask { position: absolute; top: 159.95px; left: 0; width: 339.835px; height: 183.95px; pointer-events: none;
+        > picture { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg); }
+        .total-hero__mask-desktop { display: none; }
+        .total-hero__mask-blue { top: 93.85px; }
+        .total-hero__mask-yellow { top: 33.845px; }
+    }
+    &__content { position: absolute; top: 242.44px; left: 50%; width: 194px; transform: translateX(-50%); }
+    &__heading { display: flex; justify-content: space-between; align-items: center; height: 26px; margin-bottom: 5.45px; }
+    h2 { order: -1; margin: 0; color: var(--movil-yellow); font-size: 25.629px; font-weight: 700; line-height: 25.612px; letter-spacing: -.513px; white-space: nowrap; }
+    &__fiber { display: flex; flex-direction: column; justify-content: center; height: 53.822px; margin: 0 0 10.04px; border-radius: 8.679px; background: #00f52d; color: var(--movil-blue);
+        strong { font-size: 23.144px; font-weight: 700; line-height: 25.459px; letter-spacing: -1.736px; white-space: nowrap; }
+        em { font-size: 17.358px; font-weight: 700; line-height: 20.251px; letter-spacing: -1.025px; white-space: nowrap; }
+    }
+    &__benefits { display: flex; align-items: center; justify-content: center; height: 28px; gap: 14px;
+        p { margin: 0; }
+        strong, span { display: block; }
+    }
+    &__mobile { flex-shrink: 0; font-size: 10.345px; line-height: 13.902px; letter-spacing: -.323px; strong { font-size: 12.932px; line-height: 13.902px; letter-spacing: -.364px; } }
+    &__divider { position: relative; width: 1px; height: 20px; flex-shrink: 0; picture { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg); } }
+    &__logos { display: flex; align-items: center; justify-content: center; gap: 4px; }
+    &__streaming p { font-size: 10.345px; line-height: 13.902px; letter-spacing: -.323px; white-space: nowrap; }
+    &__tv { font-size: 10.163px; line-height: 10.798px; strong { font-size: 12.704px; } }
+    &__price { display: flex; justify-content: center; align-items: center; gap: 3px; height: 56px; margin: 8px auto 0; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--movil-yellow); font-size: 36.651px; font-weight: 700; line-height: 56px; letter-spacing: -1.754px; cursor: pointer; }
+    &__terms { display: block; margin-top: -6px; color: #fff; font-size: 5.638px; line-height: 13.776px; white-space: nowrap; }
+    &--tv {
+        .total-hero__photo { height: 232.705px; img { left: -12.73%; width: 112.73%; height: 100.02%; } }
+        .total-hero__content { top: 238.16px; }
+        .total-hero__heading { margin-bottom: 7.85px; }
+        .total-hero__fiber { margin-bottom: 15.5px; }
+        .total-hero__benefits { gap: 6px; }
+        .total-hero__mobile { font-size: 10.163px; strong { font-size: 12.704px; } }
+        .total-hero__price { margin-top: 6px; }
+    }
+    @media (min-width: 480px) and (max-width: 899px) {
+        height: 603.044px;
+        &__stage { width: 455.278px; height: 602.918px; }
+        &__photo { height: 361.2px; }
+        &__mask { top: 214.28px; width: 455.278px; height: 246.44px; .total-hero__mask-blue { top: 125.75px; } .total-hero__mask-yellow { top: 45.344px; } }
+        &__content { top: 324.78px; width: 259.736px; }
+        &__heading { height: 34.84px; margin-bottom: 7.3px; }
+        h2 { font-size: 34.335px; line-height: 34.313px; letter-spacing: -.687px; }
+        &__fiber { height: 72.106px; margin-bottom: 13.45px; border-radius: 11.628px; strong { font-size: 31.007px; line-height: 34.107px; letter-spacing: -2.326px; } em { font-size: 23.255px; line-height: 27.131px; letter-spacing: -1.373px; } }
+        &__benefits { height: 37.51px; gap: 18.76px; }
+        &__mobile { font-size: 13.86px; line-height: 18.624px; strong { font-size: 17.325px; line-height: 18.624px; } }
+        &__divider { height: 26.8px; }
+        &__streaming p { font-size: 13.86px; line-height: 18.624px; }
+        &__logos { gap: 5.36px; }
+        &__tv { font-size: 13.616px; line-height: 14.466px; strong { font-size: 17.02px; } }
+        &__price { height: 75.02px; gap: 4px; margin-top: 10.72px; font-size: 49.101px; line-height: 75.02px; letter-spacing: -2.35px; }
+        &__terms { margin-top: -8.04px; font-size: 7.554px; line-height: 18.456px; }
+        &--tv {
+            .total-hero__photo { height: 311.75px; }
+            .total-hero__content { top: 319.06px; }
+            .total-hero__heading { margin-bottom: 10.52px; }
+            .total-hero__fiber { margin-bottom: 20.76px; }
+            .total-hero__benefits { gap: 8.04px; }
+            .total-hero__mobile { font-size: 13.616px; strong { font-size: 17.02px; } }
+            .total-hero__price { margin-top: 8.04px; }
+        }
+    }
+    @media (min-width: 900px) {
+        height: 480px;
+        &__stage { top: -15px; width: 100%; height: 510px; }
+        &__photo { width: 34.92%; height: 471px; img { left: -16.41%; width: 145.29%; height: 100.05%; } }
+        &--stream .total-hero__photo { height: 510px; }
+        &__mask { top: 0; left: 27.73%; width: 276.062px; height: 510px;
+            > picture { top: 0; left: 0; transform: none; }
+            .total-hero__mask-desktop { display: block; width: auto; height: auto; max-width: none; }
+            .total-hero__mask-blue, .total-hero__mask-yellow { display: none; }
+        }
+        &__content { top: 65.23px; left: 75%; width: 334.88px; }
+        &__heading { flex-direction: column; height: 91.29px; margin-bottom: 16.47px; }
+        h2 { order: 0; font-size: 55px; line-height: 49.968px; letter-spacing: -1px; }
+        &__fiber { height: 93px; margin-bottom: 13.5px; border-radius: 15px; strong { font-size: 40px; line-height: 44px; letter-spacing: -3px; } em { font-size: 30px; line-height: 35px; letter-spacing: -2px; } }
+        &__benefits { height: 46.35px; gap: 14px; }
+        &__mobile { font-size: 17.674px; line-height: 23.749px; strong { font-size: 22.092px; line-height: 23.749px; } }
+        &__streaming p { font-size: 17.674px; line-height: 23.749px; }
+        &__logos { gap: 7px; }
+        &__tv { font-size: 17.674px; line-height: 18.778px; strong { font-size: 22.092px; } }
+        &__divider { height: 33.66px; }
+        &__price { height: 90px; margin-top: 8px; gap: 5px; font-size: 61.547px; line-height: 90px; letter-spacing: -2.946px; }
+        &__terms { margin-top: -8px; font-size: 12px; line-height: 23.134px; }
+        &--tv {
+            .total-hero__stage::before { content: ''; position: absolute; top: 465px; left: 0; width: 34.27%; height: 45px; background: #0065ff; }
+            .total-hero__photo { height: 471px; img { left: -16.41%; width: 145.29%; height: 100.05%; } }
+            .total-hero__content { top: 65.23px; }
+            .total-hero__heading { margin-bottom: 16.47px; }
+            .total-hero__fiber { margin-bottom: 13.5px; }
+            .total-hero__benefits { gap: 14px; }
+            .total-hero__mobile { font-size: 17.674px; strong { font-size: 22.092px; } }
+            .total-hero__price { margin-top: 8px; }
+        }
+    }
+    @media (min-width: 1200px) {
+        height: 440px;
+        &__stage { top: -35px; }
+        &__content, &--tv .total-hero__content { left: 36.69%; transform: none; }
+    }
+    @media (min-width: 1200px) and (max-width: 1439px) {
+        &__content, &--tv .total-hero__content { transform: scale(.82); transform-origin: 0 0; }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .internet-movil-redesign .total-banner .movil-hero__form .form-simple_description {
+        white-space: normal; font-size: 13px; letter-spacing: -.4px;
+    }
+}
