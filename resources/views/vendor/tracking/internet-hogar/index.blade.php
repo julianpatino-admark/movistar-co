@@ -4,13 +4,11 @@
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Internet Hogar"/>
-	<meta name="description" content="Encuentra tu plan de Internet Hogar con Fibra 900 megas simétricas desde $84.900 o Fibra 900 + TV por $109.155. Consulta cobertura y condiciones." />
+	<meta name="description" content="Encuentra en Ofertas Tienda planes Movistar de Fibra 900 desde $84.900 y Fibra 900 + TV por $109.155. Aplican condiciones y cobertura." />
 	@vite(['resources/sass/hogar.scss', 'resources/js/hogar.js'])
 @stop
 
-@section('title')
-	Movistar Co | Planes de internet y telefonía para el hogar
-@endsection
+@section('title', 'Ofertas Tienda | Internet Hogar Movistar con Fibra Óptica')
 
 @section('page-header')
     @include('partials.id_version.movil.redesign.header', ['contentId' => 'hogar-content'])

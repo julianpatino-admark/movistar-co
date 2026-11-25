@@ -22,8 +22,8 @@
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-	<link rel="canonical" href="{{url()->current()}}/" />
-	<title>@yield('title', 'Movistar')</title>
+	<title>@yield('title', config('seo.site_name'))</title>
+	@include('partials.layouts.seo')
 	@section('metadata')
 	@show
 </head>

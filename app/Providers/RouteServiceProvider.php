@@ -29,6 +29,9 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
+            Route::get('/robots.txt', [\App\Http\Controllers\SeoController::class, 'robots']);
+            Route::get('/sitemap.xml', [\App\Http\Controllers\SeoController::class, 'sitemap']);
+
             Route::get('/health', static function () {
                 \Illuminate\Support\Facades\DB::connection()->getPdo();
 

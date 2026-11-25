@@ -4,11 +4,11 @@
 
 @section('metadata')
     <meta name="keywords" content="MOVISTAR Internet Hogar + Móvil"/>
-    <meta name="description" content="Conoce Fibra 900 con Pospago ilimitado por $119.900 o con TV por $149.900. Promoción del 20% por 12 meses. Aplican condiciones y cobertura."/>
+    <meta name="description" content="En Ofertas Tienda conoce planes Movistar de Fibra 900 con Pospago ilimitado desde $119.900 y 20% de descuento por 12 meses. Aplican condiciones y cobertura."/>
     @vite(['resources/sass/internet-movil.scss', 'resources/js/internet-movil.js'])
 @endsection
 
-@section('title', 'Movistar Co | Planes de Internet Hogar + Móvil')
+@section('title', 'Ofertas Tienda | Planes Movistar Internet Hogar + Móvil')
 
 @section('page-header')
     @include('partials.id_version.movil.redesign.header', ['contentId' => 'internet-movil-content'])

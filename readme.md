@@ -10,6 +10,14 @@ Las vistas activas están en `resources/views/vendor/tracking`, los estilos comp
 
 Las rutas disponibles son `/`, `/internet-movil`, `/internet-hogar`, `/movil`, `/gracias`, `/privacy` y `/cookies`. Las URL desconocidas muestran la página 404.
 
+## Indexación y dominio público
+
+`SEO_PUBLIC_URL` define el origen que se anuncia a los buscadores; por defecto es `https://ofertastienda.co`. Es independiente de `APP_URL`, que puede apuntar a un servicio de Cloud Run. Las canónicas eliminan parámetros de campaña y barras finales; `/internet-movil` comparte la canónica de `/` porque muestra el mismo contenido. La navegación y los formularios conservan sus parámetros.
+
+`/sitemap.xml` publica las tres landings distintas y `/robots.txt` anuncia ese sitemap. Ambos endpoints se sirven sin iniciar sesiones. Las páginas de cualquier host distinto del dominio público, incluido preview, envían `X-Robots-Tag: noindex, follow`; se permite rastrearlas para que los buscadores puedan leer la exclusión. Las páginas de confirmación y 404 conservan su etiqueta `noindex`.
+
+La aplicación redirige las peticiones GET y HEAD de `www` al dominio público conservando ruta y parámetros. Para activar esa redirección también hay que configurar el DNS de `www` en Route 53 y su certificado/ruta en el balanceador de Google Cloud; un cambio de código no puede corregir un host que todavía apunta a otro alojamiento.
+
 ## Pruebas
 
 Con SQLite disponible, ejecuta `DB_CONNECTION=sqlite DB_DATABASE=:memory: vendor/bin/phpunit`. Las pruebas de navegador usan Playwright con `npm run test:e2e`; ajusta `use.baseURL` en `playwright.config.ts` según el servidor local. `npm run build:coverage` prepara la instrumentación de cobertura.

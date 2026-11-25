@@ -4,13 +4,11 @@
 
 @section('metadata')
 	<meta name="keywords" content="MOVISTAR Móvil"/>
-	<meta name="description" content="Conoce los planes Movistar Pospago: 60 GB por $53.900 o datos ilimitados por $69.900. Consulta beneficios, promociones y condiciones." />
+	<meta name="description" content="Conoce en Ofertas Tienda los planes Movistar Pospago: 60 GB por $53.900 o datos ilimitados por $69.900. Consulta beneficios y condiciones." />
 	@vite(['resources/sass/movil.scss', 'resources/js/movil.js'])
 @stop
 
-@section('title')
-	Movistar Co | Planes pospago móvil con llamadas ilimitadas
-@endsection
+@section('title', 'Ofertas Tienda | Planes Movistar Pospago')
 
 @section('page-header')
 	@include('partials.id_version.movil.redesign.header')

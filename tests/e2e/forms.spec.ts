@@ -7,7 +7,7 @@ test('has title', async ({ page }) => {
   await page.goto('');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle('Movistar Co | Planes de Internet Hogar + Móvil');
+  await expect(page).toHaveTitle('Ofertas Tienda | Planes Movistar Internet Hogar + Móvil');
 });
 
 test.describe('Pruebas en el formulario principal', () => {
@@ -81,6 +81,6 @@ test.describe('Pruebas en el formulario principal', () => {
     await expect(mainForm.modalResponseText).toBeVisible();
     await expect(mainForm.modalResponseText).toHaveText(mainForm.expectedErrors.duplicatedPhone);
 
-    await expect(page).toHaveTitle('Movistar Co | Planes de Internet Hogar + Móvil');
+    await expect(page).toHaveTitle('Ofertas Tienda | Planes Movistar Internet Hogar + Móvil');
   });
 });
