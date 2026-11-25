@@ -22,6 +22,8 @@ La aplicación redirige las peticiones GET y HEAD de `www` al dominio público c
 
 Con SQLite disponible, ejecuta `DB_CONNECTION=sqlite DB_DATABASE=:memory: vendor/bin/phpunit`. Las pruebas de navegador usan Playwright con `npm run test:e2e`; ajusta `use.baseURL` en `playwright.config.ts` según el servidor local. `npm run build:coverage` prepara la instrumentación de cobertura.
 
+Para comprobar el sitemap con la configuración de PHP que permite etiquetas cortas, ejecuta también `DB_CONNECTION=sqlite DB_DATABASE=:memory: php -d short_open_tag=1 vendor/bin/phpunit --filter=SeoTest`.
+
 ## Arranque de la landing
 
 El catálogo de fuentes de tráfico está en `config/tracking.php`. La fuente
