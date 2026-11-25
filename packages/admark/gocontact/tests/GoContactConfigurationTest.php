@@ -49,6 +49,8 @@ class GoContactConfigurationTest extends TestCase
             'GOCONTACT_USERNAME' => 'test-user@example.com',
             'GOCONTACT_PASSWORD' => 'unit-test-only-password',
             'GOCONTACT_DATABASE_ID' => 'test-database',
+            'GOCONTACT_ALTERNATE_DATABASE_ID' => '56',
+            'GOCONTACT_ALTERNATE_PERCENTAGE' => '40',
         ];
 
         foreach ($environment as $key => $value) {
@@ -65,6 +67,9 @@ class GoContactConfigurationTest extends TestCase
         $this->assertSame($environment['GOCONTACT_USERNAME'], $config['username']);
         $this->assertSame($environment['GOCONTACT_PASSWORD'], $config['password']);
         $this->assertSame($environment['GOCONTACT_DATABASE_ID'], $config['database_id']);
+        $this->assertSame($environment['GOCONTACT_ALTERNATE_DATABASE_ID'], $config['routing']['alternate_database_id']);
+        $this->assertSame($environment['GOCONTACT_ALTERNATE_PERCENTAGE'], $config['routing']['alternate_percentage']);
+        $this->assertSame($packageDefaults['routing'], $config['routing']);
         $this->assertSame('/poll', $config['base_path']);
         $this->assertSame('/auth/token', $config['token_path']);
         $this->assertSame('/api/databases/{database}/contacts', $config['contacts_path']);

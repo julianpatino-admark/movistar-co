@@ -182,6 +182,16 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
       }
 
       env {
+        name  = "GOCONTACT_ALTERNATE_DATABASE_ID"
+        value = "56"
+      }
+
+      env {
+        name  = "GOCONTACT_ALTERNATE_PERCENTAGE"
+        value = "40"
+      }
+
+      env {
         name = "GOCONTACT_MONITOR_USERNAME"
 
         value_source {

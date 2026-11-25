@@ -15,6 +15,7 @@ yarn-error.log
 .env.backup
 .env.production
 .phpunit.result.cache
+/.phpunit.cache/
 auth.json
 maintenance.php
 .DS_Store

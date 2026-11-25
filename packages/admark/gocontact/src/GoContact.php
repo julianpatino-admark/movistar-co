@@ -18,12 +18,14 @@ class GoContact
         private CacheRepository $cache,
         private ConfigRepository $config,
         private LoggerInterface $logger,
-        private ?EventDispatcher $events = null
+        private ?EventDispatcher $events = null,
+        private ?DatabaseRouter $router = null
     ) {
     }
 
     /**
-     * Send a lead payload to the configured GoContact database.
+     * Send a lead payload to its persisted GoContact database assignment.
+     * Automatic routing uses the internal forms.id from the payload.
      *
      * The optional lead ID is returned to callers for compatibility with
      * tracking packages; it is not sent as an undocumented API field.
@@ -38,6 +40,7 @@ class GoContact
         string|int|null $databaseId = null,
         string|int|null $leadId = null
     ): array {
+        $routeAutomatically = $databaseId === null && $this->router !== null;
         $databaseId ??= $this->config->get('gocontact.database_id');
         $startedAt = microtime(true);
         $formIdValue = $data['form_id'] ?? $data['id'] ?? null;
@@ -45,6 +48,11 @@ class GoContact
         $stage = 'configuration';
 
         try {
+            if ($routeAutomatically) {
+                $stage = 'database_routing';
+                $databaseId = $this->router->databaseFor($formId);
+            }
+            $stage = 'configuration';
             $this->validateConfiguration($databaseId);
             $contactsPath = str_replace(
                 '{database}',
@@ -64,17 +72,22 @@ class GoContact
                 $payload
             );
         } catch (GoContactException $exception) {
+            $attemptDatabaseId = $stage === 'database_routing' ? null : (string) $databaseId;
             $this->logger->error('GoContact lead submission failed', [
                 'event' => 'gocontact.lead.failed',
                 'stage' => $stage,
                 'form_id' => $formId,
-                'database_id' => (string) $databaseId,
+                'database_id' => $attemptDatabaseId,
                 'http_status' => $exception->httpStatus(),
                 'diagnostics' => $exception->diagnostics(),
                 'duration_ms' => (int) ((microtime(true) - $startedAt) * 1000),
             ]);
 
-            $this->dispatchAttempt($formId, null, false, $stage, $exception->httpStatus(), $exception->getMessage(), $exception->diagnostics(), (int) ((microtime(true) - $startedAt) * 1000));
+            $this->dispatchAttempt(
+                $formId, null, false, $stage, $exception->httpStatus(),
+                $exception->getMessage(), $exception->diagnostics(),
+                (int) ((microtime(true) - $startedAt) * 1000), $attemptDatabaseId
+            );
 
             throw $exception;
         }
@@ -91,7 +104,11 @@ class GoContact
             ?? Arr::get($response['body'], 'contact.id')
             ?? Arr::get($response['body'], 'contact_id');
         $providerLeadId = is_scalar($providerLeadId) ? (string) $providerLeadId : null;
-        $this->dispatchAttempt($formId, $providerLeadId, true, 'lead_submission', $response['http_status'], null, $response['diagnostics'], (int) ((microtime(true) - $startedAt) * 1000));
+        $this->dispatchAttempt(
+            $formId, $providerLeadId, true, 'lead_submission', $response['http_status'],
+            null, $response['diagnostics'], (int) ((microtime(true) - $startedAt) * 1000),
+            (string) $databaseId
+        );
 
         return [
             'status' => true,
@@ -105,7 +122,7 @@ class GoContact
         ];
     }
 
-    private function dispatchAttempt(?string $formId, ?string $providerLeadId, bool $successful, string $stage, ?int $httpStatus, ?string $error, array $diagnostics, int $durationMs): void
+    private function dispatchAttempt(?string $formId, ?string $providerLeadId, bool $successful, string $stage, ?int $httpStatus, ?string $error, array $diagnostics, int $durationMs, ?string $databaseId): void
     {
         if ($this->events === null) {
             return;
@@ -119,7 +136,8 @@ class GoContact
             $httpStatus,
             $error,
             $diagnostics,
-            $durationMs
+            $durationMs,
+            $databaseId
         ));
     }
 

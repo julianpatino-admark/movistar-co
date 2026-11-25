@@ -12,7 +12,8 @@ class GoContactSubmissionAttempted
         public ?int $httpStatus,
         public ?string $error,
         public array $diagnostics,
-        public int $durationMs
+        public int $durationMs,
+        public ?string $databaseId = null
     ) {
     }
 }

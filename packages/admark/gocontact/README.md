@@ -28,7 +28,9 @@ source control:
 GOCONTACT_BASE_URL=https://your-instance.gocontact.com
 GOCONTACT_USERNAME=api-user@your-instance.gocontact.com
 GOCONTACT_PASSWORD=secret
-GOCONTACT_DATABASE_ID=3
+GOCONTACT_DATABASE_ID=44
+GOCONTACT_ALTERNATE_DATABASE_ID=56
+GOCONTACT_ALTERNATE_PERCENTAGE=40
 GOCONTACT_MONITOR_USERNAME=monitor-user
 GOCONTACT_MONITOR_PASSWORD=use-a-strong-secret
 ```
@@ -51,6 +53,7 @@ certificate verification remains enabled.
 use Admark\GoContact\GoContact;
 
 $result = app(GoContact::class)->insert([
+    'form_id' => $persistedForm->id,
     'contact' => 'Example Contact',
     'first_phone' => '3000000000',
     'email' => 'example@example.com',
@@ -68,6 +71,28 @@ HTTP errors, the response body is logged up to 4 KB so provider validation
 messages can be diagnosed. Sensitive fields and exact values from the submitted
 payload and authentication request are redacted; credentials, tokens, and the
 lead payload are not logged.
+
+The container-managed client assigns each persisted `forms.id` to a database
+using a shared transactional counter. The alternate percentage must be an
+integer from 0 to 100. Complete blocks of 100 assignments match that percentage
+exactly; smaller blocks carry their fractional remainder forward. With 20%,
+every fifth assignment goes to the alternate database. Defaults are primary 44,
+alternate 56 and 40% (60% to primary, 40% to alternate). Both database IDs must be distinct and nonempty.
+
+Assignments are committed before the HTTP call, survive failures and retries,
+and are not recalculated after a configuration change. Changing the IDs or
+percentage resets the remainder for new assignments. Queue insertion assigns
+on the first submission attempt; it does not count waiting forms. Each form is
+counted once, even if the phone number appears on another form. Run the routing
+migration before rolling out the new client. No HTTP call is made if routing
+cannot be persisted. Do not use an in-memory cache as a routing counter.
+
+`insert()` requires the internal persisted form ID in `form_id` (or `id` for
+model arrays). The second argument remains the tracking ID, not the form ID.
+Routing fields are not sent to GoContact. `executeFlowState()` with an explicit
+database ID is a low-level override that bypasses automatic assignment; landing
+flows use `insert()`. A manually constructed client without a router retains
+the legacy single-database behavior.
 
 ## Monitor failures
 
@@ -95,17 +120,21 @@ Log files must remain accessible only to authorized server operators. Do not
 serve `storage/logs` as public web content.
 
 The package stores each attempt in `gocontact_submissions`, linked to `forms.id`
-and retaining GoContact's returned record ID when present. Queued submissions
+and retaining the chosen database ID and GoContact's returned record ID when present. Queued submissions
 use the original form ID as well. The private monitor is available at
 `/monitor/gocontact`; set `GOCONTACT_MONITOR_USERNAME` and
 `GOCONTACT_MONITOR_PASSWORD` to strong, unique deployment secrets. Basic
 authentication applies only to this route; it is rate limited and should only
 be accessed over HTTPS. Change its path with `GOCONTACT_MONITOR_PATH`.
+The monitor includes assignment totals and successful/failed attempt totals per
+database, plus a database filter. Attempts are not unique leads: retries add
+attempts but do not add assignments. Historical attempts retain a null database
+ID because their original destination cannot be inferred reliably.
 
 For a local/path Composer repository, ensure `packages/admark/gocontact` is
 listed in the root `composer.json` repositories and require `admark/gocontact`.
-After changing the package source, run `composer update admark/gocontact` (or
-`composer install` after committing the matching lock file) so Composer refreshes
+After changing only package source, run `composer reinstall admark/gocontact`
+so Composer refreshes
 the package installation and Laravel's package discovery manifest.
 
 ## Tests

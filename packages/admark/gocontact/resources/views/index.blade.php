@@ -20,9 +20,28 @@
 </head>
 <body>
     <h1>Monitoreo de envíos GoContact</h1>
+    <table>
+        <thead><tr><th>BD de destino</th><th>Leads asignados</th><th>Intentos exitosos</th><th>Intentos fallidos</th></tr></thead>
+        <tbody>
+            @forelse ($assignments as $assignment)
+                <tr>
+                    <td>{{ $assignment->database_id }}</td>
+                    <td>{{ $assignment->total }}</td>
+                    <td>{{ $totals->get($assignment->database_id)->successful ?? 0 }}</td>
+                    <td>{{ $totals->get($assignment->database_id)->failed ?? 0 }}</td>
+                </tr>
+            @empty
+                <tr><td colspan="4">No hay asignaciones registradas.</td></tr>
+            @endforelse
+        </tbody>
+    </table>
+    <p>Totales históricos desde la activación del reparto, sin aplicar filtros. Los reintentos conservan su BD y no aumentan los leads asignados.</p>
     <form method="get" action="{{ route('gocontact.monitor') }}">
         <label>ID de forms
             <input type="number" min="1" name="form_id" value="{{ request('form_id') }}">
+        </label>
+        <label>BD de destino
+            <input type="text" name="database_id" value="{{ request('database_id') }}">
         </label>
         <label>Resultado
             <select name="status">
@@ -37,7 +56,7 @@
     <table>
         <thead>
             <tr>
-                <th>Fecha</th><th>forms.id</th><th>lead_id tracking</th><th>ID GoContact</th>
+                <th>Fecha</th><th>forms.id</th><th>BD de destino</th><th>lead_id tracking</th><th>ID GoContact</th>
                 <th>Estado</th><th>Etapa</th><th>HTTP</th><th>Request ID</th><th>Duración</th><th>Error</th>
             </tr>
         </thead>
@@ -46,6 +65,7 @@
                 <tr>
                     <td>{{ $attempt->created_at }}</td>
                     <td>{{ $attempt->form_id ?? '—' }}</td>
+                    <td>{{ $attempt->database_id ?? '—' }}</td>
                     <td>{{ $attempt->tracking_lead_id ?? '—' }}</td>
                     <td>{{ $attempt->gocontact_id ?? '—' }}</td>
                     <td class="{{ $attempt->successful ? 'ok' : 'failed' }}">{{ $attempt->successful ? 'Exitoso' : 'Fallido' }}</td>
@@ -56,7 +76,7 @@
                     <td>{{ $attempt->error ?? '—' }}</td>
                 </tr>
             @empty
-                <tr><td colspan="10">No hay envíos registrados con esos filtros.</td></tr>
+                <tr><td colspan="11">No hay envíos registrados con esos filtros.</td></tr>
             @endforelse
         </tbody>
     </table>

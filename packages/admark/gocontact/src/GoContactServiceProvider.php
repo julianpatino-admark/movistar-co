@@ -34,7 +34,8 @@ class GoContactServiceProvider extends ServiceProvider
                 $app->make(CacheRepository::class),
                 $app->make(ConfigRepository::class),
                 $app->make('gocontact.logger'),
-                $app->make(EventDispatcher::class)
+                $app->make(EventDispatcher::class),
+                $app->make(DatabaseRouter::class)
             );
         });
     }

@@ -14,6 +14,7 @@ class StoreSubmissionAttempt
         try {
             DB::table('gocontact_submissions')->insert([
                 'form_id' => $event->formId,
+                'database_id' => $event->databaseId,
                 'gocontact_id' => $event->providerLeadId,
                 'successful' => $event->successful,
                 'stage' => $event->stage,

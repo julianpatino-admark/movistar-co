@@ -4,7 +4,11 @@ return [
     'base_url' => env('GOCONTACT_BASE_URL'),
     'username' => env('GOCONTACT_USERNAME'),
     'password' => env('GOCONTACT_PASSWORD'),
-    'database_id' => env('GOCONTACT_DATABASE_ID'),
+    'database_id' => env('GOCONTACT_DATABASE_ID', '44'),
+    'routing' => [
+        'alternate_database_id' => env('GOCONTACT_ALTERNATE_DATABASE_ID', '56'),
+        'alternate_percentage' => env('GOCONTACT_ALTERNATE_PERCENTAGE', 40),
+    ],
     'base_path' => env('GOCONTACT_BASE_PATH', '/poll'),
     'token_path' => env('GOCONTACT_TOKEN_PATH', '/auth/token'),
     'contacts_path' => env('GOCONTACT_CONTACTS_PATH', '/api/databases/{database}/contacts'),
