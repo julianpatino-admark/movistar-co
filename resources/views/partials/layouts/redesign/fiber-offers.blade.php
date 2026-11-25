@@ -7,7 +7,7 @@
             <div class="splide__list">
                 @foreach($offers as $offer)
                     <div class="splide__slide">
-                        <x-offer-card :offer="$offer" :offer-number="$loop->iteration" :cta-before-services="true"
+                        <x-offer-card :offer="$offer" :offer-number="$loop->iteration"
                             :c2c-label="mb_strtoupper($offer->speed.' '.$offer->speedSubtitle).' : '.$offer->getFormattedDiscountPrice()"
                             :modal-title="$offer->speed.' '.$offer->speedSubtitle"
                             :cta-text="$offerCtaText ?? '¡LO QUIERO!'" :recommended-label="$offerRecommendedLabel ?? 'Plan recomendado'"

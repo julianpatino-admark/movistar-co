@@ -1,0 +1,37 @@
+.not-found-page {
+    #main { display: flex; flex-direction: column; min-height: 100vh; }
+    .not-found {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        &__inner { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 39.279px 16px 29.278px; }
+        &__image { position: relative; overflow: hidden; width: 299px; max-width: 100%; aspect-ratio: 299 / 187.453; transform: translateX(-.5px); img { position: absolute; top: -22.89%; left: 0; display: block; width: 100.09%; height: 122.81%; max-width: none; } }
+        &__content { width: 290px; max-width: 100%; margin-top: 13.547px; text-align: center; }
+        h1 { margin: 0; color: var(--movil-blue); font-size: 30px; font-weight: 700; line-height: 1.286; letter-spacing: -1.5px; }
+        p { margin: 6.42px 0 0; color: #000; font-size: 16px; line-height: 1.18; letter-spacing: -1px; }
+        &__home { width: 191px; min-height: 44.722px; margin-top: 28.36px; padding: 8px; border-radius: 22.361px; color: var(--movil-blue); background: var(--movil-cyan); font-size: 18.634px; line-height: normal; letter-spacing: -.9317px; transform: translateX(-.5px); }
+    }
+
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .not-found {
+            &__inner { padding-top: 32px; padding-bottom: 43.278px; }
+            &__image { width: 354.106px; aspect-ratio: 354.106 / 222; transform: translateX(.05px); }
+            &__content { width: 388px; margin-top: 8px; }
+            h1 { font-size: 35px; letter-spacing: -2px; }
+            h1, p { transform: translateX(5px); }
+            p { margin-top: 0; font-size: 18px; }
+            &__home { margin-top: 33.51px; }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .not-found {
+            &__inner { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 574px; align-items: start; width: calc(100% - 80px); max-width: 1144px; min-height: 691px; margin: auto; padding: 205px 0 80px; }
+            &__image { position: absolute; top: 156px; left: -20px; width: min(605px, calc(100% - 539px)); max-width: none; aspect-ratio: 605 / 379.294; transform: none; }
+            &__content { position: relative; left: 3px; grid-column: 2; width: 574px; margin: 0; }
+            h1 { font-size: 60px; line-height: 78px; letter-spacing: -3.3px; white-space: nowrap; }
+            p { margin-top: 15px; font-size: 28px; line-height: 1.3; letter-spacing: -1.4px; }
+            &__home { width: 269.063px; min-height: 63px; margin-top: 53.2px; border-radius: 31.5px; font-size: 26.25px; letter-spacing: -1.3125px; }
+        }
+    }
+}

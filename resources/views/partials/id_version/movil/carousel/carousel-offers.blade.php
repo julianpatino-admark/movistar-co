@@ -16,12 +16,12 @@
         new OfferData(
             speed: '60 GB', speedUnit: '', price: 53900,
             customBadgeLabel: '<b>20% dto x 3 meses.</b> Exclusivo online',
-            hasPromo: false, layout: 'mobile pospago-60',
+            layout: 'mobile pospago-60',
             services: [$social, $share, $responsiveService('calls', '<b>Llamadas ilimitadas</b>a todo operador nacional.')],
         ),
         new OfferData(
             speed: 'DATOS', speedUnit: '', speedSubtitle: 'ILIMITADOS', price: 69900,
-            hasPromo: false, layout: 'mobile pospago-unlimited',
+            layout: 'mobile pospago-unlimited',
             services: [$social, $share, new ServiceData(icon: 'resources/img/movil/redesign/network.svg', text: '<b>RED 4.5G / 5G</b>mejor cobertura y velocidad.', altText: '', sources: [['media' => '(min-width: 0px)', 'icon' => 'resources/img/movil/redesign/network.svg']])],
         ),
     ]);

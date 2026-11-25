@@ -3,7 +3,7 @@
     <div class="movil-footer__inner">
         <ul class="movil-footer__policies">
             @foreach(['privacy' => 'Política de privacidad', 'cookies' => 'Política de cookies'] as $path => $label)
-                <li><a href="{{ url($path) }}" data-toggle="modal" data-target="#modal-content" data-content="{{ url($path) }}" data-modal-title="{{ $label }}" data-tag-page="/modal/{{ $path }}">{{ $label }}</a></li>
+                <li><a href="{{ url($path) }}" data-toggle="modal" data-target="#modal-content" data-content="{{ url($path) }}" data-modal-title="{{ $path === 'privacy' ? 'Políticas de privacidad' : $label }}" data-tag-page="/modal/{{ $path }}">{{ $label }}</a></li>
             @endforeach
         </ul>
         @if($keyword !== 'nonum' && strlen($phone) >= 9)

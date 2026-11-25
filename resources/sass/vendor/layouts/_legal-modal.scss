@@ -1,0 +1,21 @@
+.movil-redesign .legal-modal {
+    .modal-dialog { display: flex; align-items: center; width: 460px; max-width: calc(100% - 32px); min-height: calc(100% - 32px); margin: 16px auto; pointer-events: none; }
+    .modal-content { display: flex; flex-direction: column; height: 665px; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: hidden; border: 0; border-radius: 25px 25px 0 0; background: #fff; pointer-events: auto; }
+    .legal-modal__header { position: relative; z-index: 1; flex: 0 0 79px; height: 79px; padding: 0; border: 0; background: var(--movil-blue); }
+    .legal-modal__background { position: absolute; top: -2px; left: -4px; }
+    .legal-modal__brand { position: absolute; top: 8px; left: 9px; }
+    img { display: block; width: auto; height: auto; max-width: none; }
+    .close { position: absolute; top: 10px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; }
+    .legal-modal__title { flex-shrink: 0; min-height: 37px; margin: 0; padding: 7px 24px 6px; color: var(--movil-blue); background: var(--movil-yellow); font-size: 21px; font-weight: 700; line-height: 24px; letter-spacing: -1px; text-align: center; }
+    .modal-body { display: flex; flex-direction: column; min-height: 0; padding: 14px 24px 12px; overflow: hidden; }
+    .modal_content { flex: 1; min-height: 0; overflow-x: hidden; overflow-y: auto; overflow-wrap: anywhere; color: #000; font-size: 11px; font-weight: 400; line-height: normal; }
+    .modal_content {
+        p { margin: 0 0 14px; &:last-child { margin-bottom: 0; } }
+        ul { margin: 0; padding: 0; list-style: none; }
+        li { margin: 0; padding: 0; }
+        h4, h5, h6 { margin: 14px 0; font-size: 11px; font-weight: 700; &:first-child { margin-top: 0; } }
+        b, strong { font-weight: 700; }
+        a { color: #019df4; text-decoration: underline; }
+    }
+    .loader { margin: 20px auto; border-color: var(--movil-blue); border-bottom-color: transparent; }
+}

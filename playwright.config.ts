@@ -31,8 +31,8 @@ export default defineConfig({
       entryFilter: (entry) => entry.url.includes('resources/js'),
       sourceFilter: (sourcePath) => sourcePath.search(/resources\/js\//) !== -1,
       sourcePath: (path) => {
-        // Si la ruta viene sucia (ej: webpack:///./resources/js/generica.js)
-        // Esto la recorta y la deja exactamente como "resources/js/generica.js"
+        // Si la ruta viene sucia (ej: webpack:///./resources/js/landing.js)
+        // Esto la recorta y la deja exactamente como "resources/js/landing.js"
         const match = path.match(/(resources\/js\/.*)/);
         return match ? match[1] : path;
       }

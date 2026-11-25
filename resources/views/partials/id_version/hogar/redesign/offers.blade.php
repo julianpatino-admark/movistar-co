@@ -16,7 +16,7 @@
     $offers = collect([
         new OfferData(
             speed: 'Fibra 900', speedUnit: '', speedSubtitle: 'MEGAS + TV',
-            price: 109155, hasPromo: false, isRecommended: true, layout: 'fiber-tv',
+            price: 109155, isRecommended: true, layout: 'fiber-tv',
             customBadgeLabel: '<b>50% DTO x 1 mes.</b> Exclusivo Online',
             services: [
                 new ServiceData(icon: 'resources/img/hogar/redesign/deco.svg', text: '<b>TV con 1 deco</b>incluido', altText: ''),
@@ -25,7 +25,7 @@
         ),
         new OfferData(
             speed: 'Fibra 900', speedUnit: '', speedSubtitle: 'MEGAS simétricas',
-            price: 84900, hasPromo: false, layout: 'fiber-only',
+            price: 84900, layout: 'fiber-only',
             customBadgeLabel: '<b>50% DTO x 1 mes.</b> Exclusivo Online',
             services: [
                 $responsiveService('speed', '<b>Velocidad simétrica</b>'),

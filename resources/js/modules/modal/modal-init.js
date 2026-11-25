@@ -1,39 +1,34 @@
 import "bootstrap/js/dist/modal.js";
 
-let idleTime = 0;
-let idleInterval;
-const $retencionModal = document.getElementById("modal-retencion");
+// Initialize dialogs without showing them; Bootstrap owns focus, Escape and backdrop handling.
+document.querySelectorAll(".modal").forEach(el => $(el).modal({ show: false }));
 
-function timerIncrement() {
-  idleTime = idleTime + 1;
-  if (idleTime > 1) {
-    $($retencionModal).modal("show");
-    clearInterval(idleInterval);
-  }
-}
+const retention = document.getElementById("modal-retencion");
+if (retention) {
+  const delay = 21000;
+  let timer;
+  let shown = false;
 
+  const cancel = () => clearTimeout(timer);
+  const schedule = () => {
+    cancel();
+    if (shown || document.hidden || document.querySelector(".modal.show")) return;
+    timer = setTimeout(() => {
+      if (document.hidden || document.querySelector(".modal.show")) return;
+      $(retention).modal("show");
+    }, delay);
+  };
 
-$(".modal").each(function () {
-  $(this).modal();
-});
-
-document.querySelectorAll(".modal").forEach((el) => {
-  if (el.id !== "modal-retencion") $(el).modal();
-});
-
-const a = window.location.toString();
-
-if (!a.includes("gracias")) {
-  // Increment the idle time counter every minute.
-  idleInterval = setInterval(timerIncrement, 10500); // 1 minute
-
-  // Zero the idle timer on mouse movement.
-  document.addEventListener("mousemove", (e) => (idleTime = 0));
-
-  document.addEventListener("keypress", (e) => (idleTime = 0));
-
-  $($retencionModal).on("show.bs.modal", function (event) {
-    const $retencionForm = $retencionModal.querySelector("form");
-    $retencionForm.dataset.layerPage = "/c2c/retencion/conversion";
+  ["pointermove", "keydown", "touchstart", "scroll"].forEach(event => {
+    document.addEventListener(event, schedule, { passive: true });
   });
+  document.addEventListener("visibilitychange", schedule);
+  $(document).on("show.bs.modal", ".modal", cancel);
+  $(document).on("hidden.bs.modal", ".modal", schedule);
+  $(retention).on("show.bs.modal", () => {
+    shown = true;
+    cancel();
+    retention.querySelector("form").dataset.layerPage = "/c2c/retencion/conversion";
+  });
+  schedule();
 }

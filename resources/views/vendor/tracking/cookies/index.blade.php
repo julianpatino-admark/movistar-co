@@ -1,24 +1,17 @@
-@extends('partials.layouts.extend.master',[
-    'nav' => false,
-    'header_phone' => false,
-    'main_c2c' => false
-])
+@extends('partials.layouts.extend.status', ['statusContentId' => 'legal-content'])
+
+@section('body-class', 'movil-redesign legal-page')
+@section('title', 'Movistar Co | Política de cookies')
 
 @section('metadata')
-    <title>Movistar Co | Política de cookies</title>
-    @vite(['resources/sass/generica.scss'])
+    @vite(['resources/sass/legal.scss', 'resources/js/landing.js'])
 @stop
 
 @section('content')
-    <div class="main_wrapper pt-4 pb-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="modal_content-data">
-                        @include('partials.layouts.texts.cookies')
-                    </div>
-                </div>
-            </div>
+    <main class="legal-content" id="legal-content">
+        <h1>Política de cookies</h1>
+        <div class="modal_content-data">
+            @include('partials.layouts.texts.cookies')
         </div>
-    </div>
+    </main>
 @stop

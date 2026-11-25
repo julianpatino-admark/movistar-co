@@ -1,78 +1,9 @@
-// Shared foundations for the redesigned landing pages and their active forms/modals.
-@import "bootstrap";
-@import "vendor/mixins/fontface";
-//VARS
-
-@import "vendor/vars/color";
-@import "vendor/vars/font";
-@import "vendor/vars/shadow";
-@import "vendor/vars/vendor";
-@import "vendor/vars/background";
-@import "vendor/vars/border-raidus";
-
-// VARS - LAYOUT
-@import "vendor/vars/layout/text";
-@import "vendor/vars/layout/form";
-@import "vendor/vars/layout/comun";
-@import "vendor/vars/layout/main";
-
-//VARS - LAYOUTS
-@import "vendor/vars/layouts/header";
-@import "vendor/vars/layouts/header-phone";
-@import "vendor/vars/layouts/header-phone-client";
-@import "vendor/vars/layouts/navbar";
-@import "vendor/vars/layouts/footer";
-@import "vendor/vars/layouts/banner";
-@import "vendor/vars/layouts/c2c";
-@import "vendor/vars/layouts/cta/cta";
-@import "vendor/vars/layouts/cta/mobile-fixed";
-@import "vendor/vars/layouts/list";
-@import "vendor/vars/layouts/condition/collapse";
-@import "vendor/vars/layouts/gracias";
-
-//VARS - COMPONENTS
-@import "vendor/vars/components/buttons/btn-carousel";
-@import "vendor/vars/components/buttons/btn-flex";
-@import "vendor/vars/components/buttons/btn-flex-themes";
-@import "vendor/vars/components/buttons/btn-form";
-@import "vendor/vars/components/carousel/card-offer_movil";
-@import "vendor/vars/components/form-underline";
-@import "vendor/vars/components/loader";
-@import "vendor/vars/components/modal";
-
-@import "vendor/layout/text";
-@import "vendor/layout/form";
-
-@import "vendor/helpers/backgrounds";
-@import "vendor/helpers/highlight";
-@import "vendor/helpers/text";
-
-@import "vendor/components/animations/animations";
-@import "vendor/components/buttons/btn-form";
-@import "vendor/components/buttons/btn-flex";
-@import "vendor/components/buttons/btn-flex-themes";
-@import "vendor/components/buttons/btn-carousel";
-
-@import "vendor/components/carousel/card/card-offer_movil";
-@import "vendor/components/carousel/carousel-splide";
-@import "vendor/components/carousel/carousel-indicators";
-@import "vendor/components/carousel/carousel-controls";
-
-@import "vendor/components/loaders/loader";
-@import "vendor/components/loaders/loader-themes";
-@import "vendor/components/forms/simple";
-@import "vendor/components/forms/underline";
-@import "vendor/components/modal/brand";
-@import "vendor/components/modal/c2c";
-@import "vendor/components/modal/text";
-@import "vendor/components/modal/header-phone";
-@import "vendor/components/modal/retencion";
-
-@import "vendor/layouts/condition/collapse";
-@import "vendor/layouts/modal/modal-c2c";
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+// Shared foundations for the current Figma landing pages, forms and modals.
+@import 'bootstrap';
+@import 'vendor/components/conversion-controls';
 @import '@splidejs/splide/dist/css/splide-core.min.css';
-
 @import 'vendor/layouts/movil-redesign';
 @import 'vendor/layouts/figma-common';
+@import 'vendor/layouts/lead-modals';
+@import 'vendor/layouts/legal-modal';
+@import 'vendor/layouts/response-modal';

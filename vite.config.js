@@ -4,7 +4,10 @@ import istanbul from 'vite-plugin-istanbul';
 import path from 'path';
 
 const inputFiles = [
-  'resources/sass/generica.scss',
+  'resources/sass/legal.scss',
+  'resources/sass/thankyou.scss',
+  'resources/sass/not-found.scss',
+  'resources/js/landing.js',
   'resources/sass/movil.scss',
   'resources/js/movil.js',
   'resources/sass/internet-movil.scss',

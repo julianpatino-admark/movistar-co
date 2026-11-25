@@ -1,13 +1,12 @@
-@extends('partials.layouts.extend.master',[
-    'nav' => false,
-    'header_phone' => true,
-    'main_c2c' => false
-])
+@extends('partials.layouts.extend.status', ['statusContentId' => 'not-found-content'])
+
+@section('body-class', 'movil-redesign not-found-page')
+
+@section('title', 'Movistar Co | Error 404. Página no encontrada')
 
 @section('metadata')
-	<title>{{config('app.name')}} - Error 404. Página no encontrada</title>
-	<!-- inject-style src="../../css/purged/generica.css" -->
-    @vite(['resources/sass/generica.scss'])
+    <meta name="robots" content="noindex, follow">
+    @vite(['resources/sass/not-found.scss', 'resources/js/landing.js'])
 @stop
 
 @section('content')

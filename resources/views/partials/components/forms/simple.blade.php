@@ -1,14 +1,13 @@
 @php
     $showServices = isset($showServices) ? $showServices : true;
-    $keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
-    $keyword = (app('request')->get('mod') !== null)?app('request')->get('mod'):$keyword;
+    $modalForm = $modalForm ?? false;
 @endphp
 
 <form id="{{ $id }}"
       method="post"
       data-toggle="form-simple"
       class="form @if(isset($class)){{$class}}@endif"
-      data-layer-page="/c2c/principal/conversion"
+      data-layer-page="{{ $formLayerPage ?? '/c2c/principal/conversion' }}"
       action="{{url('/api/form/send')}}">
     {{csrf_field()}}
     <input type="hidden" name="c2c" value="LLÁMAME GRATIS">
@@ -17,7 +16,8 @@
     <input type="hidden" name="batch_id" value="MOVISTARCO_KDMA_C2CLN_Q12">
 
     @if($showServices)
-        <div class="mb-2">
+        <div class="{{ $modalForm ? 'lead-modal-field lead-modal-field--service' : 'mb-2' }}">
+            @if($modalForm)<label class="sr-only" for="{{ $id }}-selectServicios">Elige tu servicio</label>@endif
             <label class="input-group-text statusLoader d-none"> <i class="select-loader"></i></label>
             <select
                 id="{{ $id }}-selectServicios"
@@ -25,36 +25,41 @@
                 class="form-select"
                 required
             >
-                <option value="" disabled selected hidden>Elige tu servicio</option>
+                <option value="" disabled selected hidden>{{ $servicePlaceholder ?? 'Elige tu servicio' }}</option>
                 <option value="internet">Internet Fibra</option>
                 <option value="movil">Móvil</option>
             </select>
         </div>
 
+    @endif
+
+    @if($showServices || $modalForm)
         <p class="form-simple_description">
             ¡Déjanos tus datos y te ofrecemos el mejor precio!
         </p>
 
     @endif
-    <div>
+    <div @if($modalForm) class="lead-modal-field lead-modal-field--phone" @endif>
+        @if($modalForm)<label class="sr-only" for="{{ $id }}-phone">Número de celular</label>@endif
         <input
             id="{{ $id }}-phone"
             type="number"
             name="phone"
             class="form-control"
-            placeholder="* Número de Celular"
+            placeholder="{{ $phonePlaceholder ?? '* Número de Celular' }}"
             data-rule-phone="col"
             data-test-id="input-c2c-phone"
             required
         >
     </div>
-    <div>
+    <div @if($modalForm) class="lead-modal-field lead-modal-field--name" @endif>
+        @if($modalForm)<label class="sr-only" for="{{ $id }}-name">Nombres y apellidos</label>@endif
         <input
             id="{{ $id }}-name"
             type="text"
             name="name"
             class="form-control"
-            placeholder="* Nombres y Apellidos"
+            placeholder="{{ $namePlaceholder ?? '* Nombres y Apellidos' }}"
             data-test-id="input-c2c-name"
             required
         >
@@ -70,7 +75,7 @@
                     data-toggle="modal"
                     data-target="#modal-text"
                     data-content="{{url('/privacy')}}"
-                    data-modal-title="Política de Privacidad"
+                    data-modal-title="Políticas de privacidad"
                     title="Política de privacidad"
                 >
                     política de privacidad,
@@ -81,14 +86,14 @@
                     data-toggle="modal"
                     data-target="#modal-text"
                     data-content="{{url('/privacy')}}"
-                    data-modal-title="Política de Privacidad"
+                    data-modal-title="Políticas de privacidad"
                     title="Política de privacidad"
                 >
                     datos personales y envío de mensajes vía WhatsApp.
                 </a>
             </span>
         </label>
-        <label for="legal" class="error d-block"></label>
+        <label for="{{ $modalForm ? $id.'-legal' : 'legal' }}" class="error d-block"></label>
     </div>
 
     <button
@@ -97,7 +102,7 @@
         data-c2c="TE LLAMAMOS"
         type="submit"
     >
-        <div class="btn-form_content font-family-bold">
+        <div class="btn-form_content">
             {{ $submitText ?? 'Llámame' }}
         </div>
         <span class="btn-form_loader">

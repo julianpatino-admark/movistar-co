@@ -1,12 +1,5 @@
 @php
-	$top = isset($top)?$top:true;
-	$nav = isset($nav)?$nav:true;
-	$header_phone = isset($header_phone)?$header_phone:true;
-	$phone = ($header_phone === true)?$phone:"0";
-	$main_c2c = isset($main_c2c)?$main_c2c:true;
-	$main_c2c_class = $main_c2c_class ?? "";
     $modals = isset($modals)?$modals:true;
-	$keyword = (app('request')->get('keyword') !== null)?app('request')->get('keyword'):'';
 @endphp
 
 <!doctype html>
@@ -29,9 +22,6 @@
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	
 	<link rel="canonical" href="{{url()->current()}}/" />
 	<title>@yield('title', 'Movistar')</title>
 	@section('metadata')
@@ -44,16 +34,8 @@
 <div id="main">
 	@hasSection('page-header')
 		@yield('page-header')
-	@elseif($top === true)
-		@include("partials.layouts.header.top-header")
-		@include('partials.layouts.header.header')
-		<nav class="navbar-collapse collapse" id="navbarMobileCollapse">
-			@include("partials.layouts.navbar.nav-items")
-		</nav>
-
-	@endif
-	@if($main_c2c === true)
-		@include('partials.layouts.c2c.main', [ "c2c_class" => $main_c2c_class ])
+	@else
+		@include('partials.id_version.movil.redesign.header')
 	@endif
 
 	@yield('content')
@@ -61,24 +43,18 @@
 	@hasSection('page-footer')
 		@yield('page-footer')
 	@else
-		@include('partials.layouts.footer.footer')
-	@endif
-	@if($floating_cta ?? true)
-		@include('partials.layouts.cta.mobile-fixed')
-		@include('partials.components.buttons.whatsapp')
+		@include('partials.layouts.conditions.collapse')
+		@include('partials.id_version.movil.redesign.footer')
 	@endif
 
     @if($modals === true)
         @section('modal')
             @include('partials.layouts.modal.c2c')
             @include('partials.layouts.modal.c2c-velocidades')
-            @include('partials.layouts.modal.rgpd-config')
-            @include('partials.layouts.modal.info-basica-privacidad')
-            @include('partials.layouts.modal.privacy')
-            @include('partials.layouts.modal.loaded-content')
-            @include('partials.layouts.modal.legal')
+            @include('partials.layouts.modal.legal-document', ['modalId' => 'modal-text', 'modalTitle' => 'Políticas de privacidad'])
+            @include('partials.layouts.modal.legal-document', ['modalId' => 'modal-content', 'modalTitle' => 'Políticas de privacidad'])
             @include('partials.layouts.modal.response')
-            @include('partials.layouts.modal.manual')
+            @include('partials.layouts.modal.legal-document', ['modalId' => 'modal-manual', 'modalTitle' => 'Tratamiento de datos personales', 'documentPartial' => 'partials.layouts.texts.tratamiento-datos', 'preserveText' => true])
 			@include('partials.layouts.modal.retencion')
         @show
     @endif

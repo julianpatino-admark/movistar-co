@@ -111,7 +111,7 @@
         text-decoration: none;
         cursor: pointer;
         &--yellow { color: var(--movil-blue); background: var(--movil-yellow); }
-        &:hover { color: var(--movil-blue); filter: brightness(1.06); text-decoration: none; }
+        &:hover { text-decoration: none; }
     }
 
     .movil-services {
@@ -138,17 +138,6 @@
             letter-spacing: -1px;
         }
         .active .nav-link { color: var(--movil-blue); }
-        .icono-default {
-            flex-shrink: 0;
-            background-repeat: no-repeat;
-            background-size: auto 100%;
-            &.movistar { width: 17.5px; height: 13px; background-image: url('../../../img/menu/sprite-iconos-movistar.webp'); background-position-x: -37px; }
-            &.wifi { width: 17px; height: 13.3px; background-image: url('../../../img/menu/sprite-iconos-wifi.webp'); background-position-x: -38px; }
-            &.movil { width: 15px; height: 22.3px; background-image: url('../../../img/menu/sprite-iconos-movil.webp'); background-position-x: -31px; }
-        }
-        .active .icono-default.movistar { background-position-x: -18.5px; }
-        .active .icono-default.wifi { background-position-x: -19px; }
-        .active .icono-default.movil { background-position-x: -15.5px; }
     }
 
     .movil-offers {
@@ -166,10 +155,14 @@
     }
 
     .card-offer {
+        position: relative;
+        display: block;
+        width: 100%;
         max-width: 272px;
         height: 100%;
         margin: 0 auto;
         font-family: inherit;
+        background: #fff;
         * { font-family: inherit; }
         &_title {
             position: absolute;
@@ -188,17 +181,20 @@
             font-weight: 700;
             svg path { fill: currentColor; }
         }
-        &_wrapper { height: 100%; border: 2px solid var(--movil-blue); border-radius: 13px; }
+        &_wrapper { height: 100%; overflow: hidden; border: 2px solid var(--movil-blue); border-radius: 13px; }
         &_header {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
             height: 94px;
             background: var(--movil-blue);
+            .main-speed { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin: 0; color: #fff; font-size: 12px; font-weight: 900; line-height: 12px; }
             .main-speed b { color: #fff; font-size: 32px; font-weight: 700; line-height: 38px; }
         }
-        &_discount { min-height: 31px; padding: 6px 4px; background: var(--movil-yellow); p { color: var(--movil-ink); font-size: 13px; font-weight: 700; } }
-        &_body { min-height: 0; padding: 0 34px 20px; }
+        &_discount { min-height: 31px; padding: 6px 4px; background: var(--movil-yellow); p { margin: 0; padding: 0; color: var(--movil-ink); font-size: 13px; font-weight: 700; text-align: center; } }
+        &_body { display: block; min-height: 0; padding: 0 34px 20px; text-align: center; }
         &_price { padding: 26px 0 20px; }
-        &_price-number { color: var(--movil-ink); font-size: 43px; line-height: 50px; letter-spacing: -2px; span { font-size: 28px; } }
-        &_price-text { margin-top: 4px; color: var(--movil-ink); font-size: 12px; line-height: 16px; }
+        &_price-number { margin: 0; color: var(--movil-ink); font-size: 43px; font-weight: 700; line-height: 50px; letter-spacing: -2px; span { font-size: 28px; } }
+        &_price-text { margin: 4px 0 0; color: var(--movil-ink); font-size: 12px; line-height: 16px; }
+        &_cta { display: flex; align-items: center; justify-content: center; }
         .card-offer_cta .btn-flex {
             width: 166px;
             min-height: 44px;
@@ -212,17 +208,20 @@
             font-weight: 700;
             line-height: 20px;
             letter-spacing: .8px;
-            &:hover { color: var(--movil-ink); background: var(--movil-cyan); filter: brightness(1.06); }
         }
         &_services {
+            display: flex;
+            align-items: center;
             justify-content: flex-start;
             gap: 12px;
             min-height: 48px;
             margin: 6px 0 0;
             padding: 7px 12px;
             background: #f4f4f4;
+            border-radius: 8px;
+            * { text-align: left; }
             img { flex-shrink: 0; margin: 0; }
-            p { width: auto; color: var(--movil-ink); font-size: 11px; line-height: 14px; b, span { color: inherit; font-size: 12px; font-weight: 700; line-height: 16px; } }
+            p { display: flex; flex-direction: column; align-items: flex-start; width: auto; margin: 0; color: var(--movil-ink); font-size: 11px; line-height: 14px; b, span { color: inherit; font-size: 12px; font-weight: 700; line-height: 16px; } }
         }
     }
 
@@ -261,11 +260,21 @@
         padding: 0;
         color: var(--movil-blue);
         background: var(--movil-cyan);
-        .container { padding: 0; }
+        .container { width: 298px; max-width: calc(100% - 62px); padding: 0; }
         .condition-collapse_header { margin: 0; padding: 0; border: 0; }
+        .condition-collapse_header:has([aria-expanded='true']) { padding-top: 16px; }
         h2 { display: flex; justify-content: center; margin: 0; }
-        .btn-link { min-height: 32px; padding: 6px 16px; color: var(--movil-blue); font-size: 14px; font-weight: 400; line-height: 20px; text-decoration: none; &::before { content: '* '; } }
-        .condition-collapse_body { padding: 20px; background: #fff; font-size: 14px; line-height: 21px; }
+        .btn-link { display: flex; align-items: center; min-height: 32px; padding: 6px 16px; color: var(--movil-blue); font-size: 14px; font-weight: 400; line-height: 20px; text-decoration: none; &::before { content: '*'; margin-right: .25em; } &:focus { box-shadow: none; } }
+        .condition-collapse_body {
+            padding: 4px 0 24px;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+            text-decoration: underline;
+            text-underline-position: under;
+            p { margin: 0; color: inherit; }
+            strong { font-weight: 700; }
+        }
     }
 
     .movil-footer {
@@ -314,12 +323,6 @@
             border-radius: 16.4px;
             ul { grid-template-columns: 1fr; gap: 12.63px; }
             .nav-link { min-height: 55.56px; height: auto; padding: 12.63px 4px; font-size: 25.26px; line-height: 30.3px; letter-spacing: -1.26px; gap: 18.94px; }
-            .icono-default.movistar { width: 22.1px; height: 16.42px; background-position-x: -46.72px; }
-            .icono-default.wifi { width: 21.47px; height: 16.8px; background-position-x: -48px; }
-            .icono-default.movil { width: 18.94px; height: 28.16px; background-position-x: -39.15px; }
-            .active .icono-default.movistar { background-position-x: -23.36px; }
-            .active .icono-default.wifi { background-position-x: -24px; }
-            .active .icono-default.movil { background-position-x: -19.57px; }
         }
 
         .movil-offers {
@@ -362,6 +365,11 @@
             .movil-button { min-width: 255px; min-height: 59px; padding: 12px 24px; border-radius: 30px; font-size: 24.4px; line-height: 30px; letter-spacing: -1.22px; }
         }
         .condition-collapse_wrapper .btn-link { min-height: 44px; font-size: 19.35px; line-height: 22px; }
+        .condition-collapse_wrapper {
+            .container { width: 397.333px; }
+            .condition-collapse_header:has([aria-expanded='true']) { padding-top: 21.333px; }
+            .condition-collapse_body { padding: 5.333px 0 32px; font-size: 13.333px; line-height: 18.667px; }
+        }
         .movil-footer {
             &__inner { min-height: 119px; gap: 40px; padding: 24px; }
             &__policies a { font-size: 16.6px; line-height: 22px; }
@@ -413,17 +421,6 @@
                 ul { display: flex; align-items: center; gap: 40px; margin: 0; padding: 0; list-style: none; }
                 .nav-link { display: flex; align-items: center; gap: 12px; padding: 12px 0; color: #fff; font-size: 20px; font-weight: 700; line-height: 24px; letter-spacing: -1px; white-space: nowrap; }
                 [aria-current] { color: var(--movil-cyan); }
-                .icono-default {
-                    flex-shrink: 0;
-                    background-repeat: no-repeat;
-                    background-size: auto 100%;
-                    &.movistar { width: 17.5px; height: 13px; background-image: url('../../../img/menu/sprite-iconos-movistar.webp'); }
-                    &.wifi { width: 17px; height: 13.3px; background-image: url('../../../img/menu/sprite-iconos-wifi.webp'); }
-                    &.movil { width: 15px; height: 22.3px; background-image: url('../../../img/menu/sprite-iconos-movil.webp'); }
-                }
-                .active .movistar { background-position-x: -18.5px; }
-                .active .wifi { background-position-x: -19px; }
-                .active .movil { background-position-x: -15.5px; }
             }
         }
 
@@ -536,7 +533,9 @@
         }
 
         .condition-collapse_wrapper {
-            .container { max-width: 1144px; width: calc(100% - 80px); }
+            .container { max-width: 1135px; width: calc(100% - 80px); }
+            .condition-collapse_header:has([aria-expanded='true']) { padding-top: 21px; }
+            .condition-collapse_body { padding: 8px 0 28px; font-size: 14px; line-height: 16px; text-align: left; }
             h2 { justify-content: flex-start; }
             .btn-link { padding-inline: 0; }
         }

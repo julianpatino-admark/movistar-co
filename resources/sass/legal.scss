@@ -1,0 +1,18 @@
+@import 'landing-redesign';
+@import 'vendor/layouts/status-page';
+
+.legal-page {
+    #main { display: flex; flex-direction: column; min-height: 100vh; }
+    .legal-content {
+        flex: 1;
+        width: calc(100% - 48px);
+        max-width: 1144px;
+        margin: 32px auto;
+        overflow-wrap: anywhere;
+        font-size: 16px;
+        line-height: 1.6;
+        h1 { margin-bottom: 24px; color: var(--movil-blue); font-size: clamp(28px, 4vw, 40px); font-weight: 700; }
+        h5 { margin-top: 24px; font-size: 18px; font-weight: 700; }
+        a { color: var(--movil-blue); text-decoration: underline; }
+    }
+}

@@ -1,59 +1,18 @@
-# Landing Madre
-La landing madre es un proyecto que contiene una estructura básica de landing para el inicio rápido de proyectos. 
+# Movistar Colombia
 
-El repositorio contiene dos submódulos de GIT, uno para las vistas y otro para el CSS.
+Landings de Internet + Móvil, Internet Hogar y Pospago con Laravel, Blade, Sass y Vite. Comparten la cabecera, el pie, los formularios y los recursos del rediseño Figma.
 
-Si los submódulos no se clonan al mismo tiempo que la landing madre se puede lanzar el siguiente comando de git:
-`git submodule update --init`
+## Desarrollo
 
-Antes de empezar a trabajar con este proyecto **hay que cerciorarse de que los dos submódulos se encuentran en su rama master**. Es posible que al clonar el proyecto estos dos submódulos no sean detectados por nuestro IDE o no estén en la rama correcta.
+Instala las dependencias con `composer install` y `npm ci`, configura el entorno y ejecuta `php artisan serve` junto con `npm run dev`. `npm run build` genera los recursos de producción en `public/build`.
 
-En PHPStorm podemos definir la ubicación de estos dos submódulos entrando en **PHP Storm > Preferences > Version Control**.
-Se deben añadir las rutas correspondientes de los submódulos en esa ventana y seleccionar el tipo de repositorio correcto.
+Las vistas activas están en `resources/views/vendor/tracking`, los estilos compartidos en `resources/sass/_landing-redesign.scss` y las imágenes en las carpetas `resources/img/*/redesign`. Las fuentes locales y sus licencias están en `resources/fonts`.
 
-Las ubicaciones de los dos submódulos pueden encontrarse en el archivo [.gitmodules](https://bitbucket.org/rockethall/landing-madre/src/master/.gitmodules).
+Las rutas disponibles son `/`, `/internet-movil`, `/internet-hogar`, `/movil`, `/gracias`, `/privacy` y `/cookies`. Las URL desconocidas muestran la página 404.
 
-## Cómo usar este proyecto
-Este proyecto debe mantenerse siempre actualizado con las últimas versiones y configuraciones de las herramientas utilizadas. 
+## Pruebas
 
-Se propone un diseño de landing básica pero todos aquellos elementos necesarios que se suelen incluir en los proyectos.
-
-Para iniciar un proyecto a través de esta landing se deben seguir los siguientes pasos (repetir con cada uno de los submódulos):
-
-**El proyecto es una landing única:**
-
-1. Clonar el proyecto
-2. Definir la ubicación de los submódulos
-3. Hacer checkout en master en todas las ramas
-4. Copiar todo el contenido del submódulo sass-landing en la carpeta css/sass
-5. Copiar todo el contenido del submódulo views landing en la carpeta resources/views/dev
-6. Eliminar los submódulos siguiendo los siguientes pasos:
-
-   1. Eliminar la sección correspondiente en el archivo .gitmodules
-   2. Ejecutar el comando `git add .gitmodules`
-   3. Ejecutar el comando `git rm --cached ruta_al_submodulo`
-   4. Ejecutar el comando `rm -rf .git/modules/ruta_al_submodulo`
-   5. Hacer commit `git commit -m "Submódulo SASS Lanmding eliminado"`
-   6. Eliminar ahora los archivos del submódulo `rm -rf path_to_submodule`
-
-**El proyecto son varias landings diferentes pero con un aspecto y contenido muy similar:** En este caso los submódulos nos pueden servir como herramienta para compartir vistas entra las diferentes landings.
-
-1. Clonar el proyecto
-2. Crear dos repositorios para los submódulos en bitbucket
-3. Cambiar el repositorio remoto de los submódulos en el proyecto.
-4. Modificar la URL de los submódulos en .gitmodules
-5. Lanzar el comando `git submodule sync`
-6. Lanzar comando `git submodule update --init --recursive --remote`
-
-## Configuración del proyecto
-
-Una vez se ha puesto a punto el proyecto se debe realizar la configuración de las herramientas utilizadas:
-
-* gulpfile.config.js
-* webpack.config.js
-* config/inconcert.php
-* config/anubis.php
-* config/tracking.php
+Con SQLite disponible, ejecuta `DB_CONNECTION=sqlite DB_DATABASE=:memory: vendor/bin/phpunit`. Las pruebas de navegador usan Playwright con `npm run test:e2e`; ajusta `use.baseURL` en `playwright.config.ts` según el servidor local. `npm run build:coverage` prepara la instrumentación de cobertura.
 
 ## Arranque de la landing
 

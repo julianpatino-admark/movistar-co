@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Modal Roboto'; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url('../../../fonts/roboto/variable.ttf') format('truetype');
+}
+
+.movil-redesign .lead-modal {
+    --field-height: 41.166px;
+    --field-font: 20.583px;
+    --field-gap: 10.26px;
+    --form-top: 17.33px;
+    --description-top: 19.31px;
+    --description-font: 19.297px;
+    --description-line: 30.845px;
+    --phone-top: 10.31px;
+    --legal-top: 32.18px;
+    --legal-font: 11.578px;
+    --legal-line: 15.437px;
+    --legal-inset: 22px;
+    --legal-gap: 27.6px;
+    --checkbox-size: 19.84px;
+    --button-top: 33.53px;
+    --button-height: 43.711px;
+    --button-width: 199.39px;
+    --button-font: 28.302px;
+
+    .modal-dialog { display: flex; align-items: center; width: 503px; max-width: calc(100% - 32px); min-height: calc(100% - 32px); margin: 16px auto; padding: 0; pointer-events: none; }
+    .modal-content { position: relative; display: block; width: 100%; border: 0; border-radius: 26px; background: #fff; box-shadow: 0 8px 40px #0002; pointer-events: auto; }
+    .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .lead-modal__header { position: relative; height: 62px; border-radius: 26px 26px 0 0; background: var(--movil-blue); }
+    .lead-modal__body { padding: 24.03px 41px 32px; color: var(--movil-ink); }
+    h2 { margin: 0 -3px; font-size: 21.87px; font-weight: 700; line-height: 30.845px; letter-spacing: -.6561px; text-align: center; }
+    .lead-modal__close { position: absolute; z-index: 3; top: 9px; right: 14px; display: grid; place-items: center; width: 44px; height: 44px; margin: 0; padding: 0; border: 0; border-radius: 50%; background: transparent; opacity: 1; cursor: pointer; img { display: block; width: auto; height: auto; max-width: none; } }
+    .lead-modal-brand { position: absolute; pointer-events: none; }
+    .lead-modal-brand__variant { position: relative; width: 100%; height: 100%; }
+    .lead-modal-brand__part { position: absolute; display: block; width: auto; height: auto; max-width: none; }
+    .lead-modal-brand__part--0 { top: 29.36%; left: 9.625%; }
+    .lead-modal-brand__part--1 { top: calc(14.44% - .583px); left: calc(44.18% - .42px); }
+    .lead-modal-brand__part--2 { top: 33.37%; left: 68.11%; }
+    .lead-modal-brand__part--3 { top: 63.84%; left: 71.08%; }
+    .lead-modal-brand__part--4 { top: 20.44%; left: 80.11%; }
+    .lead-modal-brand__part--5 { top: 33.25%; left: 79.58%; }
+    .lead-modal-brand__part--6 { top: 34.38%; left: 62.39%; }
+    .lead-modal-brand__part--7 { top: 24.78%; left: 62.14%; }
+    .lead-modal-brand__part--8 { top: 28.125%; left: 53.81%; }
+    .lead-modal-brand--form { top: 2.667px; left: 24px; width: 129px; height: 57.333px; }
+
+    .lead-modal-form {
+        max-width: none; margin: var(--form-top) 0 0; padding: 0;
+        .lead-modal-field { position: relative; margin: 0; }
+        .form-select, input.form-control { display: block; width: 100%; height: var(--field-height); min-height: var(--field-height); margin: 0; padding: 0 24px; border: 0; border-radius: 10.292px; color: var(--movil-ink); background-color: #ededed; background-image: none; box-shadow: none; font-family: inherit; font-size: var(--field-font); font-weight: 400; line-height: var(--field-height); text-align: center; }
+        input.form-control::placeholder { color: #aeaeae; opacity: 1; }
+        input[type=number] { appearance: textfield; &::-webkit-inner-spin-button, &::-webkit-outer-spin-button { appearance: none; margin: 0; } }
+        .form-select { appearance: none; background-image: url('../../../img/internet-movil/redesign/form-arrow.svg'); background-repeat: no-repeat; background-position: right 13px center; background-size: auto; text-align-last: center; &:invalid { color: #aeaeae; } }
+        .form-simple_description { margin: var(--description-top) -1px 0; color: var(--movil-ink); font-size: var(--description-font); font-weight: 400; line-height: var(--description-line); letter-spacing: -.5789px; text-align: center; }
+        .lead-modal-field--phone { margin-top: var(--phone-top); }
+        .lead-modal-field--name { margin-top: var(--field-gap); }
+        .form-simple_tyc { display: block; margin: var(--legal-top) var(--legal-inset) 0; padding: 0; }
+        .form-simple_tyc .text-xxs { display: grid; grid-template-columns: var(--checkbox-size) minmax(0, 1fr); align-items: start; gap: var(--legal-gap); width: 100%; margin: 0; padding: 0; color: var(--movil-ink); font-size: var(--legal-font); font-weight: 400; line-height: var(--legal-line); letter-spacing: -.3473px; text-align: left; span { color: inherit; font-size: inherit; line-height: inherit; } a { color: inherit; font-weight: 600; text-decoration: underline; } }
+        .form-simple_tyc input[type=checkbox] { display: grid; place-items: center; width: var(--checkbox-size); height: var(--checkbox-size); min-width: 0; margin: 3.86px 0 0; padding: 0; border: 1.286px solid var(--movil-blue); border-radius: 3.859px; background: #fff; appearance: none; cursor: pointer; &:checked { background-color: var(--movil-blue); } }
+        .btn-form { display: flex; align-items: center; justify-content: center; width: var(--button-width); max-width: 100%; min-height: var(--button-height); height: auto; margin: var(--button-top) auto 0; padding: 0 12px; border: 0; border-radius: 65px; color: var(--movil-blue); background: var(--movil-yellow); font-size: var(--button-font); font-weight: 700; line-height: var(--button-height); }
+        .btn-form_content { top: 0; width: 100%; height: auto; margin: 0; padding: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: 700; line-height: inherit; }
+        .btn-form_loader { position: absolute; inset: 0; height: 100%; }
+        .btn-form.loading .btn-form_content, .btn-form.loading .btn-form_loader { top: 0; }
+        label.error { position: static; display: block; width: 100%; margin: 4px 0 0; color: #a01832; font-size: 12px; line-height: 16px; text-align: left; &:empty { display: none !important; } }
+        input.error, select.error { outline: 1px solid #a01832; }
+        .btn-form.loading { color: var(--movil-blue); background: var(--movil-yellow); }
+    }
+
+    &--retention {
+        --field-height: 27.066px; --field-font: 12.992px; --field-gap: 5.444px; --form-top: 16.852px;
+        --description-top: 21.671px; --description-font: 10.826px; --description-line: 15.157px; --phone-top: 4.312px;
+        --legal-top: 29.219px; --legal-font: 8.661px; --legal-line: 10.826px; --legal-inset: 14.25px; --legal-gap: 15.15px; --checkbox-size: 14.0744px;
+        --button-top: 22.34px; --button-height: 31px; --button-width: 167px; --button-font: 22px;
+
+        .modal-dialog { width: 300px; }
+        .modal-content { overflow: hidden; border-radius: 16px 16px 21px 21px; }
+        .lead-modal__body { padding: 23px 21px 37.44px; }
+        .lead-modal__close { top: 0; right: -3px; &::before { position: absolute; z-index: -1; width: 22px; height: 22px; border-radius: 50%; background: #fff; content: ''; } }
+        .lead-retention-intro { margin: 0 -2px; color: var(--movil-ink); font-size: 13.608px; font-weight: 400; line-height: 17.319px; text-align: center; strong { display: block; font-size: 22.267px; font-weight: 800; line-height: 29.69px; } }
+        .lead-modal-form {
+            .form-select { background-image: url('../../../img/modals/redesign/retention-arrow-mobile.svg'); }
+            .lead-modal-field--phone input { background-image: url('../../../img/modals/redesign/retention-phone-mobile.svg'); background-repeat: no-repeat; background-position: center; }
+            .form-simple_tyc { font-family: 'Modal Roboto', Arial, sans-serif; .text-xxs { color: #000; letter-spacing: 0; text-align: center; a { color: var(--movil-blue); font-weight: 700; } } }
+            .form-simple_tyc input[type=checkbox] { margin-top: 0; border: 0; border-radius: 0; background-image: url('../../../img/modals/redesign/retention-checkbox-mobile.svg'); background-position: center; background-repeat: no-repeat; }
+            .btn-form { transform: translateX(-6.5px); }
+        }
+        .lead-retention-promo { position: relative; overflow: hidden; height: 250px; border-radius: 16px 16px 0 0; color: #fff; background: var(--movil-blue); }
+        .lead-retention-promo__copy { position: relative; z-index: 1; padding: 20px 29px 0; h2 { margin: 0; color: #fff; font-size: 35px; font-weight: 800; line-height: 42px; letter-spacing: -2.3px; text-align: left; } > p { margin: 3px 0 0; color: #fff; font-size: 16px; font-weight: 500; line-height: 21px; letter-spacing: -.8546px; strong { color: var(--movil-yellow); font-weight: 800; } } }
+        .lead-retention-promo__apps { display: block; margin-top: 16px; img { display: block; width: auto; height: auto; max-width: none; } }
+        .lead-retention-promo__copy .lead-retention-promo__terms { position: absolute; top: 217px; left: 29px; margin: 0; font-size: 9px; line-height: 24.496px; letter-spacing: -.8447px; }
+        .lead-retention-promo__curve { position: absolute; top: 25px; right: 0; img { display: block; width: auto; height: auto; max-width: none; } }
+        .lead-retention-promo__bottom { display: none; }
+        .lead-modal-brand--retention { top: 190px; left: 171.75px; width: 119.25px; height: 53px; }
+        .lead-modal-brand__variant--horizontal { display: none; }
+    }
+
+    @media (max-width: 539px) {
+        &--conversion {
+            --field-font: clamp(15px, 3.8vw, 20.583px); --description-font: clamp(12px, 3.5vw, 19.297px);
+            --legal-inset: 0px; --legal-gap: 14px; --legal-font: 10px; --legal-line: 14px;
+            .lead-modal__body { padding-inline: 22px; }
+            h2 { font-size: clamp(16px, 4vw, 21.87px); }
+        }
+    }
+
+    @media (min-width: 800px) {
+        &--retention {
+            --field-height: 29.625px; --field-font: 14.219px; --field-gap: 5.935px; --form-top: 18.475px;
+            --description-top: 23.695px; --description-font: 11.849px; --description-line: 16.589px; --phone-top: 4.731px;
+            --legal-top: 31.98px; --legal-font: 9.479px; --legal-line: 11.849px; --legal-inset: 16px; --legal-gap: 16.6px; --checkbox-size: 15.4041px;
+            --button-top: 25.622px;
+            .modal-dialog { width: 762px; }
+            .modal-content { display: grid; grid-template-columns: 400px minmax(0, 1fr); align-items: stretch; border-radius: 16px 21px 21px 16px; }
+            .lead-modal__body { padding: 27px 40px 32px; }
+            .lead-modal__close { top: 0; right: -1px; &::before { display: none; } }
+            .lead-retention-intro { font-size: 14.894px; line-height: 18.955px; strong { font-size: 24.371px; line-height: 32.495px; } }
+            .lead-modal-form {
+                .form-select { background-image: url('../../../img/internet-movil/redesign/form-arrow.svg'); }
+                .lead-modal-field--phone input { background-image: none; }
+                .form-simple_tyc input[type=checkbox] { background-image: url('../../../img/modals/redesign/retention-checkbox-desktop.svg'); }
+                .btn-form { transform: translateX(-6px); }
+            }
+            .lead-retention-promo { height: auto; min-height: 400px; border-radius: 16px 0 0 16px; }
+            .lead-retention-promo__copy { padding: 70px 38px 0; h2 { font-size: 40px; line-height: 48px; letter-spacing: -1.0718px; } > p { margin-top: 8px; font-size: 21.366px; line-height: 24.784px; } }
+            .lead-retention-promo__apps { margin-top: 26px; }
+            .lead-retention-promo__copy .lead-retention-promo__terms { position: static; margin-top: 4px; font-size: 10.593px; }
+            .lead-retention-promo__curve { top: 5px; }
+            .lead-retention-promo__bottom { position: absolute; bottom: 11.16px; left: 0; display: block; width: 136.885px; height: 164.826px; img { position: absolute; top: 50%; left: 50%; display: block; width: auto; height: auto; max-width: none; transform: translate(-50%, -50%) rotate(90deg) scaleX(-1); } }
+            .lead-modal-brand--retention { top: auto; bottom: 9.778px; left: 250px; width: 140px; height: 62.222px; }
+            .lead-modal-brand__variant--vertical { display: none; }
+            .lead-modal-brand__variant--horizontal { display: block; }
+        }
+    }
+}

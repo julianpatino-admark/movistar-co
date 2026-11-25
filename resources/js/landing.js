@@ -17,7 +17,6 @@ import CallMetrics from "admark-landings/src/analytics/callmetrics";
 /**
  * Formularios
  */
-import "jquery-validation/dist/localization/messages_es";
 import "admark-landings/src/validation/lang/messages_es";
 
 import "admark-landings/src/validation/phone";
@@ -44,5 +43,5 @@ NavClose();
 
 /* istanbul ignore next */
 import.meta.glob([
-  '../img/**', 
+  '../img/**/redesign/*',
 ]);

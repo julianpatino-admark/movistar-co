@@ -2,7 +2,13 @@
 
 namespace App\Exceptions;
 
+use Admark\Tracking\Http\Repositories\TsourceRepository;
+use Admark\Tracking\Http\Services\ConfigService;
+use Admark\Tracking\Http\Services\TsourceService;
+use Admark\Tracking\Http\Services\ViewService;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -45,6 +51,25 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+        $this->renderable(function (NotFoundHttpException $e, Request $request) {
+            if ($request->expectsJson()) {
+                return null;
+            }
+
+            $sources = app(config('tracking.driver') === 'database' ? TsourceRepository::class : TsourceService::class);
+            $source = $request->query('tsource');
+            $phone = $sources->getPhone($source);
+
+            return response()->view('tracking::errors.404', [
+                'tsource' => $sources->getTrackingSource($source),
+                'id_version' => app(ViewService::class)->getVersion($request->query('id_version')),
+                'batch_suffix' => $sources->getBatchSuffix($source),
+                'phone' => $phone,
+                'phone_formatted' => formatPhone($phone, app(ConfigService::class)->getViewPhoneFormat()),
+                'provider' => $sources->getProviderName($source),
+            ], 404);
+        });
+
         $this->reportable(function (Throwable $e) {
             //
         });

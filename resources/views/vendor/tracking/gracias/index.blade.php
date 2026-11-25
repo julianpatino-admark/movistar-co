@@ -1,16 +1,10 @@
-@extends('partials.layouts.extend.master',[
-    'nav' => false,
-    'header_phone' => false,
-    'main_c2c' => false,
-    'footer_form' => false,
-    'main_cta_mobile' => false,
-    'header_relative' => true
-])
+@extends('partials.layouts.extend.status', ['statusContentId' => 'thankyou-content'])
+
+@section('body-class', 'movil-redesign thankyou-page')
 
 @section('metadata')
-    @vite(['resources/sass/generica.scss'])
-
-	<link rel="shortcut icon" type="image/svg" href="{{ asset('/img/common/favicon.svg') }}">
+    <meta name="robots" content="noindex, follow">
+    @vite(['resources/sass/thankyou.scss', 'resources/js/landing.js'])
 @stop
 
 @section('title')

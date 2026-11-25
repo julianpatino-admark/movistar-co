@@ -12,9 +12,7 @@ class OfferData {
         public ?float $discount = null,
         public ?string $customBadgeLabel = null,
 
-        // Nuevas Propiedades
         public bool $isRecommended = false,
-        public bool $hasPromo = true,
         public array $services = [],
         public array $packages = [],
 

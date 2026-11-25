@@ -1,4 +1,4 @@
-@extends('partials.layouts.extend.master', ['main_c2c' => false, 'floating_cta' => false])
+@extends('partials.layouts.extend.master')
 
 @section('body-class', 'movil-redesign movil-pospago')
 

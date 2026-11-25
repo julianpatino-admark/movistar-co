@@ -1,0 +1,27 @@
+// Shared header and footer geometry for confirmation and error pages.
+.thankyou-page, .not-found-page {
+    .movil-header__desktop-navigation .nav-link { color: var(--movil-cyan); }
+    .movil-footer {
+        &__inner { display: grid; grid-template-columns: 151px 1fr; gap: 0; width: 292px; max-width: calc(100% - 32px); padding: 18px 0; }
+        &__policies li { line-height: 16px; }
+        &__phone { padding-left: 29px; }
+    }
+
+    @media (min-width: 480px) and (max-width: 1199px) {
+        .condition-collapse_wrapper .btn-link { min-height: 42.667px; padding-block: 10.667px; font-size: 18.667px; line-height: 21.333px; }
+        .movil-footer {
+            &__inner { grid-template-columns: 200px 1fr; width: 389.333px; min-height: 114.666px; gap: 0; padding: 24px 0; }
+            &__policies li { line-height: 21.333px; }
+            &__policies a { font-size: 16px; line-height: 21.333px; }
+            &__phone { padding-left: 40px; font-size: 24px; line-height: 29.333px; }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .movil-footer {
+            &__inner { display: flex; width: calc(100% - 80px); max-width: 1144px; gap: 36px; padding: 8px 0; }
+            &__policies li { line-height: 20px; }
+            &__phone { min-width: 188px; padding-left: 36px; }
+        }
+    }
+}

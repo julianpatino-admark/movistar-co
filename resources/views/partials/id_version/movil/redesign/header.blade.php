@@ -1,4 +1,5 @@
 @php($keyword = request()->query('keyword', ''))
+@php($brandAssetPath = $brandAssetPath ?? 'resources/img/internet-movil/redesign')
 <a class="movil-skip-link" href="#{{ $contentId ?? 'movil-content' }}">Ir al contenido</a>
 <header class="movil-header" id="header">
     <div class="movil-header__notice">
@@ -7,9 +8,9 @@
     <div class="movil-header__inner">
         <a class="movil-header__brand" href="{{ url('/') . (request()->getQueryString() ? '?' . request()->getQueryString() : '') }}" aria-label="Movistar, inicio">
             <picture>
-                <source media="(min-width: 1200px)" srcset="{{ Vite::asset('resources/img/internet-movil/redesign/brand-desktop.svg') }}">
-                <source media="(min-width: 480px)" srcset="{{ Vite::asset('resources/img/internet-movil/redesign/brand-tablet.svg') }}">
-                <img src="{{ Vite::asset('resources/img/internet-movil/redesign/brand-mobile.svg') }}" alt="Movistar y Tigo">
+                <source media="(min-width: 1200px)" srcset="{{ Vite::asset($brandAssetPath.'/brand-desktop.svg') }}">
+                <source media="(min-width: 480px)" srcset="{{ Vite::asset($brandAssetPath.'/brand-tablet.svg') }}">
+                <img src="{{ Vite::asset($brandAssetPath.'/brand-mobile.svg') }}" alt="Movistar y Tigo">
             </picture>
         </a>
         @if(strlen($phone) >= 9 && $keyword !== 'nonum')

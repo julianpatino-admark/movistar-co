@@ -57,7 +57,6 @@ RUN --mount=type=ssh \
 
 COPY resources ./resources
 COPY public ./public
-COPY fonts ./public/fonts
 
 RUN npm run build
 

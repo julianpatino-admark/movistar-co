@@ -9,7 +9,7 @@ export class C2CModalComponent {
         this.root = page.locator(selector);
         this.offerTypeInput = this.root.locator('[name="c2c"]');
 
-        this.closeBtn = this.root.getByLabel('Close');
+        this.closeBtn = this.root.getByLabel('Cerrar', { exact: true });
     }
 
     async close(){

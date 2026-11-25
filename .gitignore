@@ -18,7 +18,6 @@ yarn-error.log
 auth.json
 maintenance.php
 .DS_Store
-/tests/JS/output
 **/*.db
 local.db
 **/*.sqlite
@@ -31,6 +30,9 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/tests/e2e/coverage-reports/
+/build/logs/
+/build/artifact-analysis.json
 /.scannerwork/
 
 # Terraform

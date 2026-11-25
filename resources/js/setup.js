@@ -9,5 +9,3 @@ import "bootstrap/js/dist/util.js";
 import "bootstrap/js/dist/collapse.js";
 import "jquery-validation";
 import "jquery-validation/dist/localization/messages_es";
-
-console.log('Setup global cargado: jQuery está listo.');
