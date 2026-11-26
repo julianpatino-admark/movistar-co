@@ -1,86 +1,53 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex,nofollow">
-    <title>Monitoreo de envíos GoContact</title>
-    <style>
-        body { font: 14px/1.5 Arial, sans-serif; color: #202124; margin: 2rem; }
-        h1 { font-size: 1.5rem; }
-        form { display: flex; gap: .75rem; align-items: end; margin: 1rem 0; }
-        label { display: grid; gap: .25rem; }
-        input, select, button { padding: .5rem; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { text-align: left; border-bottom: 1px solid #ddd; padding: .6rem; vertical-align: top; }
-        .ok { color: #176b35; } .failed { color: #a32121; }
-        nav { margin-top: 1rem; }
-        @media (max-width: 760px) { body { margin: 1rem; overflow-x: auto; } table { min-width: 900px; } }
-    </style>
-</head>
-<body>
-    <h1>Monitoreo de envíos GoContact</h1>
-    <table>
-        <thead><tr><th>BD de destino</th><th>Leads asignados</th><th>Intentos exitosos</th><th>Intentos fallidos</th></tr></thead>
-        <tbody>
-            @forelse ($assignments as $assignment)
-                <tr>
-                    <td>{{ $assignment->database_id }}</td>
-                    <td>{{ $assignment->total }}</td>
-                    <td>{{ $totals->get($assignment->database_id)->successful ?? 0 }}</td>
-                    <td>{{ $totals->get($assignment->database_id)->failed ?? 0 }}</td>
-                </tr>
-            @empty
-                <tr><td colspan="4">No hay asignaciones registradas.</td></tr>
-            @endforelse
-        </tbody>
-    </table>
-    <p>Totales históricos desde la activación del reparto, sin aplicar filtros. Los reintentos conservan su BD y no aumentan los leads asignados.</p>
-    <form method="get" action="{{ route('gocontact.monitor') }}">
-        <label>ID de forms
-            <input type="number" min="1" name="form_id" value="{{ request('form_id') }}">
-        </label>
-        <label>BD de destino
-            <input type="text" name="database_id" value="{{ request('database_id') }}">
-        </label>
-        <label>Resultado
-            <select name="status">
-                <option value="">Todos</option>
-                <option value="failed" @selected(request('status') === 'failed')>Fallidos</option>
-                <option value="successful" @selected(request('status') === 'successful')>Exitosos</option>
-            </select>
-        </label>
-        <button type="submit">Filtrar</button>
+@extends('monitor.shell')
+@section('title', 'Monitoreo de leads')
+@section('content')
+@php
+    $successRate = $summary->total ? round($summary->successful * 100 / $summary->total, 1) : 0;
+    $assignedTotal = $assignments->sum('total');
+    $stageNames = ['configuration' => 'Configuración', 'database_routing' => 'Asignación de BD', 'token_authentication' => 'Autenticación GoContact', 'lead_submission' => 'Envío del lead'];
+@endphp
+<div class="page-heading"><div><span class="eyebrow">OPERACIÓN A LA VISTA</span><h1>Monitoreo de leads</h1><p>Consulta cada envío, su destino y el resultado de la integración.</p></div><div class="page-actions"><span>Actualizado {{ now()->format('d/m/Y · H:i') }}</span><a class="button button--secondary" href="{{ request()->fullUrl() }}">@include('monitor.partials.icon', ['name' => 'refresh']) Actualizar</a></div></div>
+<div class="metrics" aria-label="Resumen de los filtros actuales">
+    <article class="metric"><div class="metric__label">Intentos registrados <span class="metric__icon">@include('monitor.partials.icon', ['name' => 'grid'])</span></div><strong>{{ number_format($summary->total, 0, ',', '.') }}</strong><p>Según los filtros actuales</p></article>
+    <article class="metric"><div class="metric__label">Envíos exitosos <span class="metric__icon metric__icon--green">@include('monitor.partials.icon', ['name' => 'check'])</span></div><strong>{{ number_format($summary->successful ?? 0, 0, ',', '.') }}</strong><p><span class="text-success">{{ $successRate }} %</span> de los intentos filtrados</p></article>
+    <article class="metric"><div class="metric__label">Intentos fallidos <span class="metric__icon metric__icon--red">@include('monitor.partials.icon', ['name' => 'alert'])</span></div><strong>{{ number_format($summary->failed ?? 0, 0, ',', '.') }}</strong><p>Consulta el detalle para revisarlos</p></article>
+    <article class="metric"><div class="metric__label">Tiempo de respuesta <span class="metric__icon">@include('monitor.partials.icon', ['name' => 'clock'])</span></div><strong>{{ number_format($summary->duration ?? 0, 0, ',', '.') }}<small>ms</small></strong><p>Promedio de los intentos filtrados</p></article>
+</div>
+<section class="panel distribution">
+    <div class="section-heading"><div><h2>Distribución por base de datos</h2><p>Histórico de asignaciones desde la activación del reparto. Cada lead se cuenta una sola vez.</p></div><span class="section-symbol">@include('monitor.partials.icon', ['name' => 'database'])</span></div>
+    <div class="distribution__items">
+    @forelse ($assignments as $assignment)
+        @php $share = $assignedTotal ? round($assignment->total * 100 / $assignedTotal, 1) : 0; @endphp
+        <article class="distribution__item"><div class="distribution__top"><span class="database-chip">BD {{ $assignment->database_id }}</span><strong>{{ number_format($assignment->total, 0, ',', '.') }} <small>leads · {{ $share }} %</small></strong></div><progress value="{{ $share }}" max="100" aria-label="Proporción de leads asignados a BD {{ $assignment->database_id }}">{{ $share }} %</progress><p>{{ number_format($totals->get($assignment->database_id)->successful ?? 0, 0, ',', '.') }} intentos exitosos <span>·</span> {{ number_format($totals->get($assignment->database_id)->failed ?? 0, 0, ',', '.') }} fallidos</p></article>
+    @empty
+        <p class="empty-distribution">Las bases de destino aparecerán aquí cuando se asigne el primer lead.</p>
+    @endforelse
+    </div>
+    <p class="distribution__note">Los reintentos conservan su BD y suman intentos, sin aumentar los leads asignados. Este histórico no cambia con los filtros.</p>
+</section>
+<section class="panel activity">
+    <div class="section-heading"><div><h2>Actividad de envíos <span class="count-label">{{ number_format($attempts->total(), 0, ',', '.') }}</span></h2><p>Busca un registro o combina filtros para revisar su resultado.</p></div><span class="badge badge--neutral">Más recientes primero</span></div>
+    @include('monitor.partials.messages')
+    <form class="filters" method="get" action="{{ route('gocontact.monitor') }}">
+        <div class="filter-search"><label for="q">ID de GoContact o de tracking</label><div class="search-field">@include('monitor.partials.icon', ['name' => 'search'])<input id="q" type="search" name="q" value="{{ request('q') }}" maxlength="191" placeholder="Buscar ID exacto"></div></div>
+        <div><label for="form_id">ID del lead</label><input id="form_id" type="number" min="1" name="form_id" value="{{ request('form_id') }}" placeholder="Ej. 124"></div>
+        <div><label for="database_id">BD de destino</label><select id="database_id" name="database_id"><option value="">Todas las bases</option>@foreach($databaseOptions as $databaseId)<option value="{{ $databaseId }}" @selected((string)request('database_id') === (string)$databaseId)>BD {{ $databaseId }}</option>@endforeach</select></div>
+        <div><label for="status">Resultado</label><select id="status" name="status"><option value="">Todos los resultados</option><option value="successful" @selected(request('status')==='successful')>Exitosos</option><option value="failed" @selected(request('status')==='failed')>Fallidos</option></select></div>
+        <div><label for="from">Desde</label><input id="from" type="date" name="from" value="{{ request('from') }}"></div>
+        <div><label for="to">Hasta</label><input id="to" type="date" name="to" value="{{ request('to') }}"></div>
+        <div class="filter-actions"><button class="button button--primary" type="submit">@include('monitor.partials.icon', ['name' => 'filter']) Aplicar filtros</button><a class="button button--text" href="{{ route('gocontact.monitor') }}">Limpiar</a></div>
     </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Fecha</th><th>forms.id</th><th>BD de destino</th><th>lead_id tracking</th><th>ID GoContact</th>
-                <th>Estado</th><th>Etapa</th><th>HTTP</th><th>Request ID</th><th>Duración</th><th>Error</th>
-            </tr>
-        </thead>
-        <tbody>
-            @forelse ($attempts as $attempt)
-                <tr>
-                    <td>{{ $attempt->created_at }}</td>
-                    <td>{{ $attempt->form_id ?? '—' }}</td>
-                    <td>{{ $attempt->database_id ?? '—' }}</td>
-                    <td>{{ $attempt->tracking_lead_id ?? '—' }}</td>
-                    <td>{{ $attempt->gocontact_id ?? '—' }}</td>
-                    <td class="{{ $attempt->successful ? 'ok' : 'failed' }}">{{ $attempt->successful ? 'Exitoso' : 'Fallido' }}</td>
-                    <td>{{ $attempt->stage }}</td>
-                    <td>{{ $attempt->http_status ?? '—' }}</td>
-                    <td>{{ $attempt->request_id ?? '—' }}</td>
-                    <td>{{ $attempt->duration_ms }} ms</td>
-                    <td>{{ $attempt->error ?? '—' }}</td>
-                </tr>
-            @empty
-                <tr><td colspan="11">No hay envíos registrados con esos filtros.</td></tr>
-            @endforelse
-        </tbody>
-    </table>
-
-    <nav>{{ $attempts->links() }}</nav>
-</body>
-</html>
+    <div class="table-scroll" role="region" aria-label="Historial de envíos" tabindex="0">
+    <table class="attempts-table"><caption class="sr-only">Intentos de envío a GoContact según los filtros seleccionados.</caption><thead><tr><th scope="col">Fecha y hora</th><th scope="col">Lead / tracking</th><th scope="col">Destino</th><th scope="col">Resultado</th><th scope="col">Duración</th><th scope="col"><span class="sr-only">Acciones</span></th></tr></thead><tbody>
+    @forelse ($attempts as $attempt)
+        <tr><td><strong>{{ \Carbon\Carbon::parse($attempt->created_at)->format('d M Y') }}</strong><small>{{ \Carbon\Carbon::parse($attempt->created_at)->format('H:i:s') }}</small></td><td><strong class="lead-id">{{ $attempt->form_id ? '#'.$attempt->form_id : 'Sin lead asociado' }}</strong><small class="truncate" title="{{ $attempt->tracking_lead_id }}">{{ $attempt->tracking_lead_id ?? 'Sin ID de tracking' }}</small></td><td>@if($attempt->database_id)<span class="database-chip">BD {{ $attempt->database_id }}</span>@else<span class="muted">Sin registro</span>@endif</td><td><span class="badge {{ $attempt->successful ? 'badge--success' : 'badge--error' }}">@include('monitor.partials.icon', ['name' => $attempt->successful ? 'check' : 'alert']){{ $attempt->successful ? 'Exitoso' : 'Fallido' }}</span><small>{{ $stageNames[$attempt->stage] ?? $attempt->stage }} @if($attempt->http_status) · {{ $attempt->http_status }} @endif</small></td><td class="duration-cell">{{ number_format($attempt->duration_ms, 0, ',', '.') }} <span>ms</span></td><td><button class="detail-button" type="button" data-dialog-open="attempt-{{ $attempt->id }}" aria-label="Ver detalle del intento {{ $attempt->id }}">Ver detalle @include('monitor.partials.icon', ['name' => 'arrow'])</button></td></tr>
+    @empty
+        <tr><td colspan="6"><div class="empty-state"><span class="empty-symbol">@include('monitor.partials.icon', ['name' => 'search'])</span><h3>{{ request()->hasAny(['q','status','form_id','database_id','from','to']) ? 'No encontramos resultados' : 'Todo listo para el primer envío' }}</h3><p>{{ request()->hasAny(['q','status','form_id','database_id','from','to']) ? 'Prueba con otros filtros o limpia la búsqueda para ver toda la actividad.' : 'Los intentos aparecerán aquí cuando se envíen los primeros leads a GoContact.' }}</p>@if(request()->query())<a class="button button--secondary" href="{{ route('gocontact.monitor') }}">Limpiar filtros</a>@endif</div></td></tr>
+    @endforelse
+    </tbody></table></div>
+    <div class="pagination-bar"><p>@if($attempts->total())Mostrando <strong>{{ $attempts->firstItem() }}–{{ $attempts->lastItem() }}</strong> de <strong>{{ $attempts->total() }}</strong> intentos @else Sin intentos para mostrar @endif</p><nav aria-label="Paginación">@if($attempts->onFirstPage())<span class="page-link is-disabled">Anterior</span>@else<a class="page-link" href="{{ $attempts->previousPageUrl() }}">Anterior</a>@endif<span class="page-current">{{ $attempts->currentPage() }} / {{ $attempts->lastPage() }}</span>@if($attempts->hasMorePages())<a class="page-link" href="{{ $attempts->nextPageUrl() }}">Siguiente</a>@else<span class="page-link is-disabled">Siguiente</span>@endif</nav></div>
+</section>
+@foreach($attempts as $attempt)
+<dialog class="attempt-dialog" id="attempt-{{ $attempt->id }}" aria-labelledby="attempt-title-{{ $attempt->id }}"><div class="dialog-heading"><div><span class="eyebrow">DETALLE DEL INTENTO</span><h2 id="attempt-title-{{ $attempt->id }}">{{ $attempt->form_id ? 'Lead #'.$attempt->form_id : 'Envío sin lead asociado' }}</h2></div><button class="icon-button" type="button" data-dialog-close aria-label="Cerrar detalle">@include('monitor.partials.icon', ['name' => 'close'])</button></div><span class="badge {{ $attempt->successful ? 'badge--success' : 'badge--error' }}">{{ $attempt->successful ? 'Envío exitoso' : 'Intento fallido' }}</span><dl class="detail-list"><div><dt>Fecha y hora</dt><dd>{{ $attempt->created_at }} · Colombia</dd></div><div><dt>BD de destino</dt><dd>{{ $attempt->database_id ?? 'Sin registro histórico' }}</dd></div><div><dt>ID de GoContact</dt><dd>{{ $attempt->gocontact_id ?? 'No disponible' }}</dd></div><div><dt>ID de tracking</dt><dd>{{ $attempt->tracking_lead_id ?? 'No disponible' }}</dd></div><div><dt>Etapa</dt><dd>{{ $stageNames[$attempt->stage] ?? $attempt->stage }}</dd></div><div><dt>Estado HTTP</dt><dd>{{ $attempt->http_status ?? 'Sin respuesta HTTP' }}</dd></div><div><dt>Request ID</dt><dd>{{ $attempt->request_id ?? 'No disponible' }}</dd></div><div><dt>Duración</dt><dd>{{ $attempt->duration_ms }} ms</dd></div></dl>@if($attempt->error)<div class="notice notice--error"><div><strong>Motivo registrado</strong><p>{{ $attempt->error }}</p></div></div>@endif<p class="field-hint">Un reintento conserva el destino del lead y genera un nuevo registro en el historial.</p><button class="button button--secondary button--full" type="button" data-dialog-close>Cerrar detalle</button></dialog>
+@endforeach
+@endsection

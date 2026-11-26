@@ -15,6 +15,7 @@ locals {
     "gocontact-monitor-username",
     "gocontact-monitor-password",
     "tracking-webhook-password",
+    "monitor-initial-password",
   ])
 }
 
@@ -59,4 +60,11 @@ resource "google_secret_manager_secret_iam_member" "movistar_production_access" 
   secret_id = google_secret_manager_secret.movistar_runtime[each.key].secret_id
   role      = "roles/secretmanager.secretAccessor"
   member    = data.google_service_account.movistar_production.member
+}
+
+resource "google_secret_manager_secret_iam_member" "monitor_initial_password_reader" {
+  project   = google_secret_manager_secret.movistar_runtime["monitor-initial-password"].project
+  secret_id = google_secret_manager_secret.movistar_runtime["monitor-initial-password"].secret_id
+  role      = "roles/secretmanager.secretAccessor"
+  member    = "user:julian.patino@konecta.com"
 }

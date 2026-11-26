@@ -19,7 +19,7 @@ class SearchVisibility
         $response = $next($request);
 
         // Crawlers must be able to fetch preview pages to see this directive.
-        if (!Seo::isPublicHost($request)) {
+        if (!Seo::isPublicHost($request) && !$response->headers->has('X-Robots-Tag')) {
             $response->headers->set('X-Robots-Tag', 'noindex, follow');
         }
 

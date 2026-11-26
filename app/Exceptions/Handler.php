@@ -51,6 +51,15 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
+        $this->renderable(function (\Symfony\Component\HttpKernel\Exception\HttpExceptionInterface $e, Request $request) {
+            if (!$request->expectsJson() && ($request->is('monitor', 'monitor/*') || $request->route()?->getName() === 'gocontact.monitor')
+                && in_array($e->getStatusCode(), [403, 419, 429], true)) {
+                return response()->view('monitor.auth.error', ['statusCode' => $e->getStatusCode()], $e->getStatusCode(), $e->getHeaders())
+                    ->header('Cache-Control', 'no-store, private')->header('X-Robots-Tag', 'noindex, nofollow')
+                    ->header('Referrer-Policy', 'no-referrer');
+            }
+        });
+
         $this->renderable(function (NotFoundHttpException $e, Request $request) {
             if ($request->expectsJson()) {
                 return null;

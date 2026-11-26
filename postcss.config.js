@@ -5,6 +5,7 @@ export default {
         (purgecss.default || purgecss)({
             content: [
                 './resources/views/**/*.blade.php',
+                './packages/admark/gocontact/resources/views/**/*.blade.php',
                 './resources/js/**/*.js',
             ],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],

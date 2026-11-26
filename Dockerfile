@@ -57,6 +57,7 @@ RUN --mount=type=ssh \
 
 COPY resources ./resources
 COPY public ./public
+COPY packages/admark/gocontact/resources/views ./packages/admark/gocontact/resources/views
 
 RUN npm run build
 

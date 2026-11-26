@@ -224,13 +224,11 @@ class GoContactRoutingTest extends TestCase
     {
         config([
             'gocontact.routing.alternate_percentage' => 50,
-            'gocontact.monitor.username' => 'monitor',
-            'gocontact.monitor.password' => 'test-password',
         ]);
         app(GoContact::class)->insert($this->form()->toArray());
         app(GoContact::class)->insert($this->form()->toArray());
 
-        $this->withHeaders(['Authorization' => 'Basic '.base64_encode('monitor:test-password')])
+        $this->actingAs(\App\Models\User::factory()->create(['monitor_access' => true]))
             ->get('/monitor/gocontact?database_id=56')
             ->assertOk()->assertSee('BD de destino')->assertViewHas('assignments', fn ($items) => $items->count() === 2)
             ->assertViewHas('attempts', fn ($items) => $items->total() === 1 && $items->first()->database_id === '56')

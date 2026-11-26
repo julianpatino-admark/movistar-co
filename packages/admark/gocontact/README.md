@@ -31,8 +31,6 @@ GOCONTACT_PASSWORD=secret
 GOCONTACT_DATABASE_ID=44
 GOCONTACT_ALTERNATE_DATABASE_ID=56
 GOCONTACT_ALTERNATE_PERCENTAGE=40
-GOCONTACT_MONITOR_USERNAME=monitor-user
-GOCONTACT_MONITOR_PASSWORD=use-a-strong-secret
 ```
 
 The package requests a token with Basic Authentication at
@@ -122,10 +120,12 @@ serve `storage/logs` as public web content.
 The package stores each attempt in `gocontact_submissions`, linked to `forms.id`
 and retaining the chosen database ID and GoContact's returned record ID when present. Queued submissions
 use the original form ID as well. The private monitor is available at
-`/monitor/gocontact`; set `GOCONTACT_MONITOR_USERNAME` and
-`GOCONTACT_MONITOR_PASSWORD` to strong, unique deployment secrets. Basic
-authentication applies only to this route; it is rate limited and should only
-be accessed over HTTPS. Change its path with `GOCONTACT_MONITOR_PATH`.
+`/monitor/gocontact`. The host application supplies Laravel session authentication,
+the `viewGoContactMonitor` gate and a dedicated persistent rate limiter through
+`gocontact.monitor.middleware`. Accounts require explicit `monitor_access`
+permission; there is no public registration or Basic Auth fallback. Change the
+monitor path with `GOCONTACT_MONITOR_PATH`; authentication routes remain under
+`/monitor`. See the root README for provisioning and email configuration.
 The monitor includes assignment totals and successful/failed attempt totals per
 database, plus a database filter. Attempts are not unique leads: retries add
 attempts but do not add assignments. Historical attempts retain a null database

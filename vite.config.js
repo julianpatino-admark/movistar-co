@@ -4,6 +4,8 @@ import istanbul from 'vite-plugin-istanbul';
 import path from 'path';
 
 const inputFiles = [
+  'resources/sass/monitor.scss',
+  'resources/js/monitor.js',
   'resources/sass/legal.scss',
   'resources/sass/thankyou.scss',
   'resources/sass/not-found.scss',

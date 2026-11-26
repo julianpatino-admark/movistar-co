@@ -18,7 +18,6 @@ return [
     'log_channel' => env('GOCONTACT_LOG_CHANNEL', 'gocontact'),
     'monitor' => [
         'path' => env('GOCONTACT_MONITOR_PATH', '/monitor/gocontact'),
-        'username' => env('GOCONTACT_MONITOR_USERNAME'),
-        'password' => env('GOCONTACT_MONITOR_PASSWORD'),
+        'middleware' => ['web', \App\Http\Middleware\MonitorHeaders::class, \App\Http\Middleware\ThrottleMonitor::class.':monitor', 'auth:web', 'auth.session', 'can:viewGoContactMonitor'],
     ],
 ];

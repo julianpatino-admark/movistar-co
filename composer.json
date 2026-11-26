@@ -9,14 +9,15 @@
   "type": "project",
   "require": {
     "php": "^8.3",
+    "admark/anubis": "^12.0",
+    "admark/gocontact": "^1.0",
+    "admark/inconcert": "^12.0",
+    "admark/tracking": "^12.0",
     "guzzlehttp/guzzle": "^7.2",
+    "laravel/fortify": "^1.30",
     "laravel/framework": "^12.72",
     "laravel/sanctum": "^4.0",
-    "laravel/tinker": "^2.7",
-    "admark/tracking": "^12.0",
-    "admark/inconcert": "^12.0",
-    "admark/anubis": "^12.0",
-    "admark/gocontact": "^1.0"
+    "laravel/tinker": "^2.7"
   },
   "require-dev": {
     "fakerphp/faker": "^1.9.1",
@@ -101,6 +102,9 @@
   "config": {
     "preferred-install": "dist",
     "sort-packages": true,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.3.37"
+    }
   }
 }

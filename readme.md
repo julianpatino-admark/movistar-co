@@ -70,6 +70,86 @@ se omite. Ejecútala con `vendor/bin/phpunit --filter=GoContactRoutingConcurrenc
 apuntando a una base MySQL **exclusiva para pruebas**, porque reconstruye sus
 tablas. Verifica 10 procesos simultáneos, incluyendo reintentos del mismo lead.
 
+## Acceso al monitor
+
+El monitor usa cuentas individuales de Laravel con Fortify, sesiones y un
+permiso `monitor_access` que está deshabilitado por defecto. No hay registro
+público. Las credenciales compartidas `GOCONTACT_MONITOR_USERNAME` y
+`GOCONTACT_MONITOR_PASSWORD` dejan de usarse; sus secretos se pueden conservar
+durante una eventual reversión del despliegue.
+
+Las pantallas están en `/monitor/login`, `/monitor/forgot-password`,
+`/monitor/reset-password/{token}` y `/monitor/account`. El historial conserva
+`/monitor/gocontact`. Los filtros y las métricas de intentos se aplican juntos;
+la distribución por BD muestra el histórico de asignaciones sin filtros.
+
+Después de migrar, crea la primera cuenta desde una terminal conectada a la
+base del entorno correspondiente:
+
+```bash
+php artisan monitor:user julian.patino@konecta.com --name="Julián Patiño"
+```
+
+El comando solicita y confirma la contraseña sin mostrarla. También permite
+actualizar una contraseña o revocar el permiso con
+`php artisan monitor:user correo@empresa.com --revoke`. No existe una contraseña
+inicial fija ni se crean usuarios automáticamente al arrancar la aplicación.
+Para un job no interactivo de Cloud Run, utiliza `--name` y
+`--password-file=/ruta/del/secreto` con un archivo montado desde Secret Manager;
+la contraseña no debe ir en los argumentos del proceso.
+
+`MONITOR_CACHE_STORE=database` mantiene los límites de intentos entre peticiones
+y contenedores en las tablas `cache` y `cache_locks`. Es independiente de
+`CACHE_DRIVER`, de la caché de tokens de GoContact y de los límites de la landing.
+Se necesitan estas tablas y la migración `add_monitor_access_to_users` antes de
+publicar la versión. La cuenta debe estar preparada antes de sustituir el
+acceso compartido en producción.
+
+La recuperación por correo está desactivada hasta disponer de un proveedor.
+La pantalla lo indica y permite volver al inicio de sesión. Para activarla,
+configura `MAIL_MAILER=smtp`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`,
+`MAIL_PASSWORD`, `MAIL_ENCRYPTION`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME` y
+`MONITOR_PASSWORD_RESET_EMAIL_ENABLED=true`. Guarda las credenciales en Secret
+Manager. Ajusta `MONITOR_PUBLIC_URL` al origen HTTPS del entorno; este origen
+fijo evita generar enlaces a partir de cabeceras Host no confiables. Prueba
+la entrega real antes de habilitarla. El enlace caduca en 60 minutos, se utiliza
+una vez y la respuesta no revela si un correo pertenece a una cuenta.
+
+Las contraseñas se almacenan con hash. El cambio de contraseña requiere la
+contraseña actual y las otras sesiones deberán volver a autenticarse. La
+revocación del permiso bloquea inmediatamente la consulta del monitor y la
+recuperación con tokens previamente emitidos.
+
+Para probar las cuatro pruebas del monitor en navegador, instala Chromium con
+`npx playwright install chromium` y ejecuta `npm run test:e2e:monitor` después de
+`npm run build`. Esta configuración inicia su propio servidor en el puerto 8091,
+migra una base SQLite exclusiva en `/tmp/movistar-monitor-browser.sqlite` y carga
+datos ficticios. No utiliza la base configurada en `.env` ni envía correos o leads.
+La cuenta de las pruebas no se crea en otros entornos. Estas pruebas se ejecutan
+por separado de las pruebas de las landings.
+
+### Primera activación en producción
+
+Construir la imagen nueva y ejecutar `movistar-migrations` en `us-east1` con esa
+misma imagen antes de publicar el servicio. La base de producción es independiente
+de la local: crear la cuenta una sola vez mediante el job administrativo
+`movistar-monitor-user`. Su contraseña se obtiene del archivo montado desde
+`monitor-initial-password` en Secret Manager y se guarda como hash en Cloud SQL.
+No colocar el valor de la contraseña en Terraform ni en argumentos del job.
+
+El job administrativo se ejecuta manualmente; un despliegue no lo ejecuta.
+Volver a ejecutarlo restablece la contraseña al valor actual del secreto y
+revoca las otras sesiones, por lo que no debe ejecutarse en cada publicación.
+Para recuperar el acceso mientras no hay correo, cargar una contraseña nueva
+en el secreto y ejecutar el job deliberadamente.
+
+Después de activar la versión, acceder a `https://ofertastienda.co/monitor/login`
+con `julian.patino@konecta.com`. Consultar la contraseña inicial en Secret Manager,
+iniciar sesión y cambiarla desde **Mi cuenta**. La cuenta persiste en Cloud SQL
+entre reinicios y despliegues. La recuperación por correo permanece desactivada.
+La compilación Docker incluye las vistas del paquete GoContact para conservar
+los estilos de su tabla al procesar el CSS.
+
 ## Catálogo de fuentes
 
 El catálogo de fuentes de tráfico está en `config/tracking.php`. La fuente

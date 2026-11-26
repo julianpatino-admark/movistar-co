@@ -192,25 +192,18 @@ resource "google_cloud_run_v2_service" "movistar_landing" {
       }
 
       env {
-        name = "GOCONTACT_MONITOR_USERNAME"
-
-        value_source {
-          secret_key_ref {
-            secret  = google_secret_manager_secret.movistar_runtime["gocontact-monitor-username"].secret_id
-            version = "latest"
-          }
-        }
+        name  = "MONITOR_CACHE_STORE"
+        value = "database"
       }
 
       env {
-        name = "GOCONTACT_MONITOR_PASSWORD"
+        name  = "MONITOR_PASSWORD_RESET_EMAIL_ENABLED"
+        value = "false"
+      }
 
-        value_source {
-          secret_key_ref {
-            secret  = google_secret_manager_secret.movistar_runtime["gocontact-monitor-password"].secret_id
-            version = "latest"
-          }
-        }
+      env {
+        name  = "MONITOR_PUBLIC_URL"
+        value = "https://ofertastienda.co"
       }
 
       env {

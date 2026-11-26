@@ -1,19 +1,2 @@
 <?php
-
-return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
-
-    'failed' => 'Las credenciales ingresadas no son las correctas.',
-    'throttle' => 'Demasiados intentos de ingreso. Por favor intentalo otra vez en :seconds segundos.',
-
-];
+return ['failed' => 'El correo o la contraseña no son correctos, o la cuenta no tiene acceso al monitor.', 'password' => 'La contraseña no es correcta.', 'throttle' => 'Demasiados intentos. Inténtalo de nuevo en :seconds segundos.'];
