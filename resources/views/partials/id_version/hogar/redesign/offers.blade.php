@@ -17,6 +17,7 @@
         new OfferData(
             speed: 'Fibra 900', speedUnit: '', speedSubtitle: 'MEGAS + TV',
             price: 109155, isRecommended: true, layout: 'fiber-tv',
+            legalText: 'Tarifa de referencia estratos 1 al 3, Servicio prestado por UNE o por COLTEL. Aplica para clientes nuevos.',
             customBadgeLabel: '<b>50% DTO x 1 mes.</b> Exclusivo Online',
             services: [
                 new ServiceData(icon: 'resources/img/hogar/redesign/deco.svg', text: '<b>TV con 1 deco</b>incluido', altText: ''),
@@ -26,6 +27,7 @@
         new OfferData(
             speed: 'Fibra 900', speedUnit: '', speedSubtitle: 'MEGAS simétricas',
             price: 84900, layout: 'fiber-only',
+            legalText: 'Tarifa de referencia estratos 1 al 3, Servicio prestado por UNE o por COLTEL. Aplica para clientes nuevos.',
             customBadgeLabel: '<b>50% DTO x 1 mes.</b> Exclusivo Online',
             services: [
                 $responsiveService('speed', '<b>Velocidad simétrica</b>'),

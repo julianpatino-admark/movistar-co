@@ -74,3 +74,13 @@
         }
     }
 }
+
+.internet-movil-redesign .hogar-offers .card-offer {
+    height: 508px;
+    @media (min-width: 480px) and (max-width: 1199px) { height: 707px; }
+    @media (min-width: 1200px) {
+        height: 590px;
+        &_price { padding: 30px 0 30px; }
+        &_legal { max-width: 258px; }
+    }
+}

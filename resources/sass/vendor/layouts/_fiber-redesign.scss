@@ -92,3 +92,36 @@
         .movil-services .nav-link { font-size: 19px; gap: 8px; }
     }
 }
+
+// Keep the tariff reference inside each promotion at every carousel size.
+.hogar-redesign .hogar-offers .card-offer {
+    height: 480px;
+    &_body { display: flex; flex-direction: column; padding-bottom: 18px; }
+    &_legal {
+        flex-shrink: 0;
+        align-self: center;
+        width: calc(100% + 28px);
+        max-width: 237px;
+        margin: auto 0 0;
+        padding-top: 18px;
+        color: #50535a;
+        font-family: Inter, sans-serif;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 10px;
+        text-align: center;
+    }
+    @media (min-width: 480px) and (max-width: 1199px) {
+        height: 667px;
+        &_legal { font-size: 11px; line-height: 14px; padding-top: 24px; }
+    }
+    @media (min-width: 1200px) {
+        height: 530px;
+        &_body { padding-bottom: 24px; }
+        &_header .main-speed { transform: translateY(2px); b { line-height: 30px; } }
+        &_price-number { letter-spacing: normal; }
+        &_price { padding: 38px 0 18px; }
+        .card-offer_cta .btn-flex { width: 193px; margin-bottom: 28px; font-weight: 800; }
+        &_legal { font-size: 9px; line-height: 11px; padding-top: 18px; }
+    }
+}

@@ -97,6 +97,9 @@
                     </div>
                 @endif
 			</div>
+            @if($offer->legalText)
+                <p class="card-offer_legal">{{ $offer->legalText }}</p>
+            @endif
 		</div>
 	</div>
 </div>
