@@ -4,7 +4,7 @@ locals {
     if dns.connection_type == "PRIVATE_SERVICES_ACCESS"
   ]), ".")
 
-  movistar_runtime_image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:7df38135b7368e9e05f4c520a6583557ed0519af9a91004dc6abe25ad5b99aba"
+  movistar_runtime_image = "us-central1-docker.pkg.dev/kn-co-cust-svc-movistar-prod/movistar-landing/app@sha256:acbda2178fbc0d35a4f7091c2757d39f644f7436f96144b81d05bff1d5a49d91"
 }
 
 resource "google_cloud_run_v2_job" "movistar_migrations" {
